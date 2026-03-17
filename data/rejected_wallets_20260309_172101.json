@@ -1,0 +1,99 @@
+[
+  {
+    "address": "3rAsGLrCeDfij8FyqB7zayFQCHMtKhw6mtBA71joGsQY",
+    "realized_pnl_usd": -5313.727675518087,
+    "win_rate": 0.16666666666666666,
+    "traded_times": 28,
+    "traded_token_count": 6,
+    "top5_tokens": [
+      {
+        "realized_pnl": 9.344812290345562,
+        "realized_roi": 0.015473680773436723,
+        "token_address": "WETZjtprkDMCcUxPi9PfWnowMRZkiGGHDb9rABuRZ2U",
+        "token_symbol": "WET",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -43.37048322169453,
+        "realized_roi": -0.2048278533260637,
+        "token_address": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+        "token_symbol": "JLP",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -1501.396552679977,
+        "realized_roi": -0.11813760321076343,
+        "token_address": "AzVCECC5zr21ikYQne4Xtoh3SVg848duPHUHb3M7bonk",
+        "token_symbol": "FREYA",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -3778.3054519067614,
+        "realized_roi": -0.9633629161396452,
+        "token_address": "6NcdiK8B5KK2DzKvzvCfqi8EHaEqu48fyEzC8Mm9pump",
+        "token_symbol": "STONKS",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:55.478241",
+    "nansen_label": "\ud83e\udd13 Smart Trader [3rAsGLrC]",
+    "nansen_labels_seen": [
+      "Smart Trader"
+    ],
+    "total_volume_usd_24h": 999.9036878523835,
+    "reject_reason": "PnL=-5313.73 < 0, WinRate=16.67% < 25%"
+  },
+  {
+    "address": "F9wsCFEh6351hrPq7oi3Badr4JpFnTr3qeqczBFDhUf2",
+    "realized_pnl_usd": -1200.8293517007094,
+    "win_rate": 0.4,
+    "traded_times": 54,
+    "traded_token_count": 15,
+    "top5_tokens": [
+      {
+        "realized_pnl": 466.9264799983579,
+        "realized_roi": 0.3062627051241624,
+        "token_address": "Ge8baxy8SCtTNumMTeHXULrguEpTDaoVYuPL2AGipump",
+        "token_symbol": "\u26a0\ufe0f DIVINE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 409.95256853230273,
+        "realized_roi": 1.0615359072455917,
+        "token_address": "NopK9qESRHrP7b8TSPmgVbpWpovHUk49KDnhGPm8Mub",
+        "token_symbol": "\u26a0\ufe0f APEBAMA",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 288.0991785149327,
+        "realized_roi": 0.24963636805690825,
+        "token_address": "HeMtKjiwCohxM8dnMABCVooJREEPc2vY1YWU4nH8pump",
+        "token_symbol": "CRUST",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -310.47720002318005,
+        "realized_roi": -0.713966263193636,
+        "token_address": "67feJikde9fihckH64DVwCjL4Jex3U8JEns55TQRpump",
+        "token_symbol": "\u26a0\ufe0f CHUD",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -1712.2359532594278,
+        "realized_roi": -0.4120174567237434,
+        "token_address": "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump",
+        "token_symbol": "PUNCH",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:59.986106",
+    "nansen_label": "\ud83e\udd13 customrpcbundledaislopwormholeliquidityblockchainprotocoldefi.sol [F9wsCFEh]",
+    "nansen_labels_seen": [
+      "Smart Trader"
+    ],
+    "total_volume_usd_24h": 630.9333594426739,
+    "reject_reason": "PnL=-1200.83 < 0"
+  }
+]

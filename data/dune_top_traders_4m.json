@@ -1,0 +1,4002 @@
+[
+  {
+    "first_trade": "2026-01-23 16:01:04.000 UTC",
+    "last_trade": "2026-03-05 23:59:35.000 UTC",
+    "total_volume_usd": 149261080380.09003,
+    "trade_count": 3857690,
+    "unique_tokens_bought": 5647,
+    "wallet": "7rLLyPshmbCmHVeNMbenPfY4drhpwXAkb5x66tSgigfM"
+  },
+  {
+    "first_trade": "2025-12-30 17:31:19.000 UTC",
+    "last_trade": "2026-01-23 07:28:11.000 UTC",
+    "total_volume_usd": 15162720654.126186,
+    "trade_count": 213181,
+    "unique_tokens_bought": 613,
+    "wallet": "2pCLcceoVx5rKsPjsf5AfkTx7Jkyc5vxbanjS4CYz91Y"
+  },
+  {
+    "first_trade": "2025-11-09 09:38:15.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 11744412831.306536,
+    "trade_count": 7243847,
+    "unique_tokens_bought": 42,
+    "wallet": "CreQJ2t94QK5dsxUZGXfPJ8Nx7wA9LHr5chxjSMkbNft"
+  },
+  {
+    "first_trade": "2025-12-05 06:06:03.000 UTC",
+    "last_trade": "2026-01-21 16:04:36.000 UTC",
+    "total_volume_usd": 10728746485.814219,
+    "trade_count": 1089217,
+    "unique_tokens_bought": 482,
+    "wallet": "3pRFBVniYq3hrYWDHCp7oU3u5QqpsDcRm456JsycMUmf"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 10382373384.809217,
+    "trade_count": 8395107,
+    "unique_tokens_bought": 54,
+    "wallet": "BMnT51N4iSNhWU5PyFFgWwFvN1jgaiiDr9ZHgnkm3iLJ"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 9987106020.550367,
+    "trade_count": 10010102,
+    "unique_tokens_bought": 60,
+    "wallet": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa"
+  },
+  {
+    "first_trade": "2026-01-16 12:02:43.000 UTC",
+    "last_trade": "2026-01-25 00:31:44.000 UTC",
+    "total_volume_usd": 8100572741.792508,
+    "trade_count": 303308,
+    "unique_tokens_bought": 251,
+    "wallet": "DH23s4BrDixPvo182ey1cqSrfc4bQEqTu1cXntT6LCU8"
+  },
+  {
+    "first_trade": "2026-01-21 12:31:35.000 UTC",
+    "last_trade": "2026-03-09 05:59:53.000 UTC",
+    "total_volume_usd": 7921518610.963865,
+    "trade_count": 5946299,
+    "unique_tokens_bought": 16,
+    "wallet": "2ZtZRPvs8fKuRjGq6Gmye6hDeCeQuhe2B4zFuZ5ftb2a"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:42.000 UTC",
+    "last_trade": "2026-03-05 23:53:06.000 UTC",
+    "total_volume_usd": 5755858158.197698,
+    "trade_count": 1023930,
+    "unique_tokens_bought": 3933,
+    "wallet": "7zUTej53fAwtPDy9FmC5sJRZnimYEsXVjyd8Sc1UNfL9"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:40.000 UTC",
+    "last_trade": "2026-03-05 23:53:02.000 UTC",
+    "total_volume_usd": 5755650730.9797735,
+    "trade_count": 1023841,
+    "unique_tokens_bought": 3932,
+    "wallet": "EhGM1nNekRc9imLxFwLG9VxCjeqV8KwmZXEuGCkxWzKQ"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:44.000 UTC",
+    "last_trade": "2026-03-05 23:53:02.000 UTC",
+    "total_volume_usd": 5755581520.981459,
+    "trade_count": 1023853,
+    "unique_tokens_bought": 3932,
+    "wallet": "5myKNEWo4HRemiKaptCX12uLp515Sg5jMeThWvn284Ph"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:44.000 UTC",
+    "last_trade": "2026-03-05 23:53:01.000 UTC",
+    "total_volume_usd": 5755406280.258113,
+    "trade_count": 1023788,
+    "unique_tokens_bought": 3933,
+    "wallet": "GQWDzDUjyufxddbu2eBi2hr6CW1G8v5wHKg7iz9ioBoX"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:37.000 UTC",
+    "last_trade": "2026-03-05 23:52:58.000 UTC",
+    "total_volume_usd": 5755091297.952236,
+    "trade_count": 1023794,
+    "unique_tokens_bought": 3933,
+    "wallet": "3rRppNqA4sUZcvxiWuGNMYsk5Eyiswoq8N4gMcEehDQf"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:42.000 UTC",
+    "last_trade": "2026-03-05 23:53:06.000 UTC",
+    "total_volume_usd": 5754821095.7263975,
+    "trade_count": 1023830,
+    "unique_tokens_bought": 3933,
+    "wallet": "2FFzLVXEALrfANyxrJ48zjE8KtaBe4n21QWrQbQLZNNk"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:40.000 UTC",
+    "last_trade": "2026-03-05 23:53:09.000 UTC",
+    "total_volume_usd": 5754482314.112675,
+    "trade_count": 1023737,
+    "unique_tokens_bought": 3932,
+    "wallet": "H6YcGSgfhRrXtU53mrbADA3ASALo1QrRSuZjH1pNyQqH"
+  },
+  {
+    "first_trade": "2026-01-27 02:09:38.000 UTC",
+    "last_trade": "2026-03-05 23:53:09.000 UTC",
+    "total_volume_usd": 5753744758.502294,
+    "trade_count": 1023559,
+    "unique_tokens_bought": 3932,
+    "wallet": "GcP67iPdcE1C62nLipVzge5gktESJg8TaHW1CdCwUQKa"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-03 20:57:11.000 UTC",
+    "total_volume_usd": 5079466929.873809,
+    "trade_count": 2667428,
+    "unique_tokens_bought": 108,
+    "wallet": "foxMFk9faHggM4HWQWETCPSDvMbWx8LSv4c9CrkmBx6"
+  },
+  {
+    "first_trade": "2025-11-22 18:41:19.000 UTC",
+    "last_trade": "2026-02-03 22:01:55.000 UTC",
+    "total_volume_usd": 4473336389.4796,
+    "trade_count": 2863720,
+    "unique_tokens_bought": 322,
+    "wallet": "k2btrGEvdgv7UmgVbD7Phci9EGWCo9QPU6T7yga9xs9"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-09 05:59:53.000 UTC",
+    "total_volume_usd": 4201926911.919306,
+    "trade_count": 2569907,
+    "unique_tokens_bought": 396,
+    "wallet": "2dRR9CaNrEsHm3UqZacEf8AoDuDx4NGQyMhGxG71NzkN"
+  },
+  {
+    "first_trade": "2025-11-22 11:51:40.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 3757921892.486752,
+    "trade_count": 5464025,
+    "unique_tokens_bought": 22,
+    "wallet": "4swoALYuvetDK6N3ak1Knc1bMLbm7nzkxCW1nqjPWGRV"
+  },
+  {
+    "first_trade": "2025-11-13 12:59:10.000 UTC",
+    "last_trade": "2026-01-20 02:05:01.000 UTC",
+    "total_volume_usd": 3747356494.641736,
+    "trade_count": 730441,
+    "unique_tokens_bought": 1800,
+    "wallet": "C5hGycwYcr5oCUvV3siSP1y31RScAEP9QvtFwvHtYarM"
+  },
+  {
+    "first_trade": "2025-11-18 08:14:13.000 UTC",
+    "last_trade": "2026-01-20 02:05:04.000 UTC",
+    "total_volume_usd": 3747062969.887192,
+    "trade_count": 730509,
+    "unique_tokens_bought": 1799,
+    "wallet": "5n3DWKMogDqLbt6TSuPkuczhfPLgcTS4gydz9KQktZ4u"
+  },
+  {
+    "first_trade": "2025-11-18 08:13:23.000 UTC",
+    "last_trade": "2026-01-20 02:04:57.000 UTC",
+    "total_volume_usd": 3746950991.263529,
+    "trade_count": 730477,
+    "unique_tokens_bought": 1799,
+    "wallet": "4nmbKdVJ6dnhchGiLBCjj28fQXdfoWAkA84NS9WBZPgT"
+  },
+  {
+    "first_trade": "2025-11-13 13:02:42.000 UTC",
+    "last_trade": "2026-01-20 02:05:04.000 UTC",
+    "total_volume_usd": 3746285918.7795105,
+    "trade_count": 730349,
+    "unique_tokens_bought": 1800,
+    "wallet": "2FwncH74KtQ1ytX5NDebEr9oPuWiLZfAjh7TGpz5UMvD"
+  },
+  {
+    "first_trade": "2025-11-18 08:13:22.000 UTC",
+    "last_trade": "2026-01-20 02:05:07.000 UTC",
+    "total_volume_usd": 3743655591.864081,
+    "trade_count": 730000,
+    "unique_tokens_bought": 1799,
+    "wallet": "p4UGRoR6ExxCDgPxPSjSsberYB4qV1vDGGP6sU7wS4V"
+  },
+  {
+    "first_trade": "2025-11-13 13:02:43.000 UTC",
+    "last_trade": "2026-01-20 02:05:08.000 UTC",
+    "total_volume_usd": 3743548180.099763,
+    "trade_count": 729993,
+    "unique_tokens_bought": 1800,
+    "wallet": "Ex2qYm9yEmc1Ac2JtpxAta4ARMmsVhexEq3JmtQvVbMs"
+  },
+  {
+    "first_trade": "2025-11-18 08:14:16.000 UTC",
+    "last_trade": "2026-01-20 02:04:58.000 UTC",
+    "total_volume_usd": 3742193852.2224674,
+    "trade_count": 729858,
+    "unique_tokens_bought": 1799,
+    "wallet": "FxYg9zpUqzjfURWbWuTosdYNy9JZHVLhBu8dGRKkiPQ4"
+  },
+  {
+    "first_trade": "2025-11-18 08:13:24.000 UTC",
+    "last_trade": "2026-01-20 02:05:00.000 UTC",
+    "total_volume_usd": 3741429761.6727014,
+    "trade_count": 729678,
+    "unique_tokens_bought": 1799,
+    "wallet": "3w6N2ByBvnBoxcecBxTVphpGLu2sPLERvTv2qA4CaQR6"
+  },
+  {
+    "first_trade": "2025-11-09 12:45:15.000 UTC",
+    "last_trade": "2025-12-06 16:57:20.000 UTC",
+    "total_volume_usd": 3521404636.38596,
+    "trade_count": 50626,
+    "unique_tokens_bought": 293,
+    "wallet": "5haDuU25YKQ3yQeNX86KDHsiFSPrK4BBvBx3oMpQtq2z"
+  },
+  {
+    "first_trade": "2025-11-20 15:15:33.000 UTC",
+    "last_trade": "2026-03-09 05:54:06.000 UTC",
+    "total_volume_usd": 3186604318.417891,
+    "trade_count": 1520966,
+    "unique_tokens_bought": 197,
+    "wallet": "A3vFkGBrj4MRugemEXWdSFztWgBXi9eQPtD3V28Va7WH"
+  },
+  {
+    "first_trade": "2025-11-24 22:55:38.000 UTC",
+    "last_trade": "2026-03-09 05:59:48.000 UTC",
+    "total_volume_usd": 3081172203.8259726,
+    "trade_count": 1208443,
+    "unique_tokens_bought": 639,
+    "wallet": "ggEzRKFZz4V7wU6mizcUrMqHNB5ptQsLT7sxRkyoe4e"
+  },
+  {
+    "first_trade": "2025-11-09 10:59:20.000 UTC",
+    "last_trade": "2026-01-27 13:01:17.000 UTC",
+    "total_volume_usd": 2925181061.925652,
+    "trade_count": 56032,
+    "unique_tokens_bought": 765,
+    "wallet": "GwhBkvhwwbS2Vr86DdoA12f9oNxs1y1wjd5Xykbv7DCK"
+  },
+  {
+    "first_trade": "2025-12-08 13:45:15.000 UTC",
+    "last_trade": "2026-03-09 05:55:15.000 UTC",
+    "total_volume_usd": 2894700360.948368,
+    "trade_count": 1964229,
+    "unique_tokens_bought": 7,
+    "wallet": "J8hVkBNKobntWqLspa3yhXEkvb8vZ9S9NiHgirN9yvV3"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:58.000 UTC",
+    "last_trade": "2026-03-06 03:24:01.000 UTC",
+    "total_volume_usd": 2869657722.3953156,
+    "trade_count": 1116987,
+    "unique_tokens_bought": 396,
+    "wallet": "FATEorZGqsxg11TmJVRdX5WZ12bQpdS2Va9L7iHWzcHr"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-03-08 21:03:20.000 UTC",
+    "total_volume_usd": 2840384092.797193,
+    "trade_count": 2734163,
+    "unique_tokens_bought": 22,
+    "wallet": "93U65rT9tdPCwzpXVp4o6FUax7w4nmxtat44nmZtqV3x"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:58.000 UTC",
+    "last_trade": "2026-03-09 05:58:34.000 UTC",
+    "total_volume_usd": 2774186797.36885,
+    "trade_count": 448387,
+    "unique_tokens_bought": 2064,
+    "wallet": "CEEXTqHaqbVriXoW4uvdaPShkMaHg9AWnFXLS1nS887C"
+  },
+  {
+    "first_trade": "2025-12-09 14:52:49.000 UTC",
+    "last_trade": "2026-03-05 04:19:27.000 UTC",
+    "total_volume_usd": 2686455811.35616,
+    "trade_count": 713569,
+    "unique_tokens_bought": 22,
+    "wallet": "5Y8qP9AavHyG69gTMbJP6v3Cj85VnDimdE1GZtfdV1WL"
+  },
+  {
+    "first_trade": "2026-01-04 15:01:38.000 UTC",
+    "last_trade": "2026-01-27 23:29:47.000 UTC",
+    "total_volume_usd": 2685367421.5489426,
+    "trade_count": 1048796,
+    "unique_tokens_bought": 23,
+    "wallet": "CwhHRY1Dys5supiVSru4aSCFaqHbtxb3Xvxm4w6g34DR"
+  },
+  {
+    "first_trade": "2025-11-09 12:23:06.000 UTC",
+    "last_trade": "2026-01-28 13:02:49.000 UTC",
+    "total_volume_usd": 2618040904.662906,
+    "trade_count": 46329,
+    "unique_tokens_bought": 715,
+    "wallet": "HvakxF83X8cckVc1jiMTyXtWvF74SisJEXod4J1Dz7vC"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:15.000 UTC",
+    "last_trade": "2025-12-08 13:36:48.000 UTC",
+    "total_volume_usd": 2554619990.396213,
+    "trade_count": 1745552,
+    "unique_tokens_bought": 5,
+    "wallet": "Gwwnuytsvw7DC1Wea2QF5TMSS9Az81zDfUN1YwtiDLRx"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-02-18 00:34:29.000 UTC",
+    "total_volume_usd": 2419061216.014209,
+    "trade_count": 931639,
+    "unique_tokens_bought": 502,
+    "wallet": "yUwUyoufLrCmjcgURefVzvAfpcaZ2so6be4uDziT9aH"
+  },
+  {
+    "first_trade": "2025-12-04 06:16:43.000 UTC",
+    "last_trade": "2026-01-02 16:11:55.000 UTC",
+    "total_volume_usd": 1945146905.1908777,
+    "trade_count": 656776,
+    "unique_tokens_bought": 11,
+    "wallet": "C325nLvdpvVDEyHF9boBrov5S2DBt718z9mZonWPD6vz"
+  },
+  {
+    "first_trade": "2026-02-06 07:24:25.000 UTC",
+    "last_trade": "2026-03-09 05:59:33.000 UTC",
+    "total_volume_usd": 1841772843.1210916,
+    "trade_count": 1584771,
+    "unique_tokens_bought": 13,
+    "wallet": "h1ugBpBpSPuf61bJuSSCokCjeuEurDuixvBcWrHSaZ3"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-03-09 05:59:07.000 UTC",
+    "total_volume_usd": 1807524456.787024,
+    "trade_count": 4303457,
+    "unique_tokens_bought": 28981,
+    "wallet": "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51"
+  },
+  {
+    "first_trade": "2026-01-09 18:52:11.000 UTC",
+    "last_trade": "2026-03-09 05:59:53.000 UTC",
+    "total_volume_usd": 1714170902.2327402,
+    "trade_count": 2369083,
+    "unique_tokens_bought": 143,
+    "wallet": "3dozCLAkkP2crzAggABNwFejj2LjAAFJSpDkVDDoBWwu"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:49.000 UTC",
+    "last_trade": "2026-03-09 05:59:28.000 UTC",
+    "total_volume_usd": 1676560353.65831,
+    "trade_count": 1542423,
+    "unique_tokens_bought": 427,
+    "wallet": "2EZsc3KXSRusWxWnzEd7efQFcaxYpoh5LkwtvWohNKZB"
+  },
+  {
+    "first_trade": "2025-11-11 17:28:07.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1591298485.9278286,
+    "trade_count": 4418481,
+    "unique_tokens_bought": 1772,
+    "wallet": "4RVWyf5fvgPSp319ziZ194wA3RUJ9bi4MB5c9jHzLciH"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:34.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1577105966.5479558,
+    "trade_count": 4384531,
+    "unique_tokens_bought": 1769,
+    "wallet": "1MVBDyqimFQEXpmGaxfm1AKbUBWGRa8jJuNaeuYuy9F"
+  },
+  {
+    "first_trade": "2025-11-13 14:06:05.000 UTC",
+    "last_trade": "2026-03-02 02:42:48.000 UTC",
+    "total_volume_usd": 1557072048.3870225,
+    "trade_count": 1706880,
+    "unique_tokens_bought": 30,
+    "wallet": "1989zAmZBwkwR6g8S3H8gkDhHRm3P11gpurN7faJqDu"
+  },
+  {
+    "first_trade": "2025-11-11 17:28:02.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1554036798.413286,
+    "trade_count": 4397755,
+    "unique_tokens_bought": 1772,
+    "wallet": "YdqnFaRgLTCX4fVzAj3TKhpj6Tg76cULMDJzZrAk1Ws"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:10.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1548281624.7289388,
+    "trade_count": 4391592,
+    "unique_tokens_bought": 1774,
+    "wallet": "9XBoZMTVr6EEc87MHXyggE2zPCwuSy9c1p4qWucZ76Tn"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:18.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1544287566.2194266,
+    "trade_count": 4399349,
+    "unique_tokens_bought": 1774,
+    "wallet": "9YfmGRzKjgMYVkWbR5WaBKVNoBydKHCgpyMrxWFQwzk1"
+  },
+  {
+    "first_trade": "2025-11-10 14:02:32.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1541768636.8823771,
+    "trade_count": 4402109,
+    "unique_tokens_bought": 1773,
+    "wallet": "44QfkBicwJjwpt63rnz864W9DcKtzKxD4nyXaLVLoM3o"
+  },
+  {
+    "first_trade": "2025-11-11 17:29:25.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1541138093.4543178,
+    "trade_count": 4416140,
+    "unique_tokens_bought": 1772,
+    "wallet": "2zcG6efoahQWKA7hKntusEkvzt5bMzvenmxZrp5JSR49"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:04.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1541041671.5679061,
+    "trade_count": 4448234,
+    "unique_tokens_bought": 1772,
+    "wallet": "GZX91x59NpZfv4Qkp3rrDjoHdsBkmDJiQfVr1rWCJK1t"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:38.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1539003699.1842804,
+    "trade_count": 4414301,
+    "unique_tokens_bought": 1775,
+    "wallet": "4RypVP9yUZSrnzgr4jv7b1z53rCS4Tz9aBseHi6BPmUE"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:14.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1526649071.501791,
+    "trade_count": 4410282,
+    "unique_tokens_bought": 1772,
+    "wallet": "5m4VGV3u16U9QkKd74Ffc6ziv1Zqs44cVmA3oajAxkM6"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:41.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1525184748.2669313,
+    "trade_count": 4418143,
+    "unique_tokens_bought": 1773,
+    "wallet": "GzsC8hgycbd3drScsyrERVUPhEU8wwT5Wp51QvqaDsQd"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:05.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1514540620.6025312,
+    "trade_count": 4423214,
+    "unique_tokens_bought": 1772,
+    "wallet": "8Y9mjAFjqhu2Yc9WLQoCqu11xdMW8zGhimXrgRQS5rir"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:12.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1511669321.0087552,
+    "trade_count": 4428017,
+    "unique_tokens_bought": 1772,
+    "wallet": "EHybAixmLa12LiAxaCg1XHQBz17fUKX9iP411RmY4Acz"
+  },
+  {
+    "first_trade": "2025-11-11 17:30:33.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 1505788069.3691356,
+    "trade_count": 4389453,
+    "unique_tokens_bought": 1773,
+    "wallet": "TA9TMUtfqBim7nehQrEjotUwdteqMyWUZFMT5tbAphm"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:30.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1498208331.3767247,
+    "trade_count": 4405143,
+    "unique_tokens_bought": 1772,
+    "wallet": "9eWNHqhPeYgpgD9uvf512ByVWnuEPrZK31aibitLgyZ8"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:02.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1497447688.6788073,
+    "trade_count": 4419781,
+    "unique_tokens_bought": 1774,
+    "wallet": "8C3bNc1KoojDqsSp7RdrGJcmNQFvUTFkGo5Wr4c1yPV8"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:14.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 1484854156.8934817,
+    "trade_count": 4389964,
+    "unique_tokens_bought": 1772,
+    "wallet": "5eKXMMPUQBN1utwx9Vsqz5ZfGbSSAm7GL1Jzy5eexbyv"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:30.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 1481374090.979853,
+    "trade_count": 4371386,
+    "unique_tokens_bought": 1774,
+    "wallet": "AgLNvjbT2RzEnHp6zuj1zU97tuSynf5ninDSVDnkYKMd"
+  },
+  {
+    "first_trade": "2025-11-11 17:28:19.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1469008543.2412112,
+    "trade_count": 4382147,
+    "unique_tokens_bought": 1772,
+    "wallet": "AvRXwy68XtEHgSRRET5odcicGev4P5eoA3QVFmvsTaq5"
+  },
+  {
+    "first_trade": "2025-12-10 08:41:05.000 UTC",
+    "last_trade": "2026-02-08 00:25:25.000 UTC",
+    "total_volume_usd": 1467736090.5841393,
+    "trade_count": 392784,
+    "unique_tokens_bought": 10,
+    "wallet": "2npqrs8E9iWPGjRhWp7BsD9nG62xnBm9Av4rWgqF3ZPK"
+  },
+  {
+    "first_trade": "2025-11-20 17:58:56.000 UTC",
+    "last_trade": "2026-01-30 20:44:02.000 UTC",
+    "total_volume_usd": 1465550634.732379,
+    "trade_count": 1488964,
+    "unique_tokens_bought": 18,
+    "wallet": "AG2UQKHngd3p6pTLJjS5Bk1eRVAEJAvNA89f6VmJrQUk"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:24.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 1465290990.941377,
+    "trade_count": 4349377,
+    "unique_tokens_bought": 1769,
+    "wallet": "4W111nfvgbzQf7rciNtijXjh69LqjZvUwvHJNEiCVd9J"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:58.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 1464707552.6516368,
+    "trade_count": 4371310,
+    "unique_tokens_bought": 1770,
+    "wallet": "A6m2M7om56YomueB1vUmURGSMeUaBRGen51tFoE4AcuW"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:08.000 UTC",
+    "last_trade": "2026-03-09 05:59:49.000 UTC",
+    "total_volume_usd": 1446020241.702914,
+    "trade_count": 4368045,
+    "unique_tokens_bought": 1772,
+    "wallet": "9mcUSSDb4FfXdySfzTFC3wifurHEYptnZVtY3aWdMvgL"
+  },
+  {
+    "first_trade": "2025-11-11 17:25:58.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1443720330.9845512,
+    "trade_count": 4374985,
+    "unique_tokens_bought": 1773,
+    "wallet": "EZQiSmPiXnfQrJzCEqYS5f8NBhoTPro4jQznEGRkcP9R"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-03-05 09:03:14.000 UTC",
+    "total_volume_usd": 1441070508.6323957,
+    "trade_count": 1309368,
+    "unique_tokens_bought": 12,
+    "wallet": "rvj7Dc3xGh1eVFw9UTRpkxks9cdYyJd4MQk4Bk9zA9b"
+  },
+  {
+    "first_trade": "2025-11-11 17:30:47.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1439666090.1511958,
+    "trade_count": 4335962,
+    "unique_tokens_bought": 1772,
+    "wallet": "3KjjosmECzyixDahw59YhM9ZjeqMdWcpTbkFFSwox5aq"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:12.000 UTC",
+    "last_trade": "2026-03-09 05:59:48.000 UTC",
+    "total_volume_usd": 1432100750.6962123,
+    "trade_count": 4356628,
+    "unique_tokens_bought": 1771,
+    "wallet": "6NQxNKjqG7nybhudHzvdU3qhkb6pJjCpTX1zuqw6DhU8"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:06.000 UTC",
+    "last_trade": "2026-03-09 05:59:53.000 UTC",
+    "total_volume_usd": 1431471121.5298998,
+    "trade_count": 4338511,
+    "unique_tokens_bought": 1770,
+    "wallet": "7K86CpuL7US62bZGLsYYy8w7C53fjktaDVx5jKawFfSk"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:44.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1424901628.887883,
+    "trade_count": 4319901,
+    "unique_tokens_bought": 1771,
+    "wallet": "CaQwkomh5FgmzRW28wQsZ6YPMoK938v4v8CFWJ4vLgYn"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:10.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 1412247443.9149215,
+    "trade_count": 4304178,
+    "unique_tokens_bought": 1772,
+    "wallet": "C7tqCtVurDakyksQF2tUq4EbTLiCrt9WffR4sEaT78cT"
+  },
+  {
+    "first_trade": "2025-11-11 17:27:22.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 1408546416.2453623,
+    "trade_count": 4296652,
+    "unique_tokens_bought": 1765,
+    "wallet": "2MPXvHpMt7KEoYDB1rWv2Kk5o1TKHHmCEwq5QYnDTYkX"
+  },
+  {
+    "first_trade": "2025-11-11 17:26:00.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 1395676862.510425,
+    "trade_count": 4282452,
+    "unique_tokens_bought": 1770,
+    "wallet": "ExCZTxX1gV27Aeg7jb4hQBqkwDKHZnETEeWb9otCNBc"
+  },
+  {
+    "first_trade": "2025-12-06 17:02:53.000 UTC",
+    "last_trade": "2025-12-16 00:13:09.000 UTC",
+    "total_volume_usd": 1366082759.0926592,
+    "trade_count": 53927,
+    "unique_tokens_bought": 28,
+    "wallet": "BffKos6zsWjQZbH3rtpmZfB8PWFcXJAzjU1EoZJKU1WF"
+  },
+  {
+    "first_trade": "2025-11-16 13:42:16.000 UTC",
+    "last_trade": "2026-01-05 13:54:03.000 UTC",
+    "total_volume_usd": 1270218493.0498133,
+    "trade_count": 1037271,
+    "unique_tokens_bought": 6,
+    "wallet": "E97bx4R7JPPePE9cMp8p6TEG73j3Hu73itSZh8ZE5Jdy"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-03-04 09:37:27.000 UTC",
+    "total_volume_usd": 1246961628.1797447,
+    "trade_count": 1209295,
+    "unique_tokens_bought": 35,
+    "wallet": "A8A9GoxfmcjY2QAQ8tYS98SqDBF6hUFDmxAKBsLw29sL"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-02-18 00:12:34.000 UTC",
+    "total_volume_usd": 1237977559.2765036,
+    "trade_count": 582164,
+    "unique_tokens_bought": 854,
+    "wallet": "xUwUxxg5eLEVfowp1ki2we8JWJjukkriVLY39c55nqa"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:07.000 UTC",
+    "last_trade": "2026-03-09 05:47:08.000 UTC",
+    "total_volume_usd": 1229044554.353252,
+    "trade_count": 1692554,
+    "unique_tokens_bought": 124,
+    "wallet": "theo9SfM3dKgKFbq4kFVmEXwSQ1pdr61wDqEWXKJpYs"
+  },
+  {
+    "first_trade": "2025-11-22 14:02:44.000 UTC",
+    "last_trade": "2026-01-07 10:59:49.000 UTC",
+    "total_volume_usd": 1140268306.4913437,
+    "trade_count": 973195,
+    "unique_tokens_bought": 42,
+    "wallet": "2EZdYSXrs8yjwTiMntXYvEL4cTLHYdagyNJAnvMKiEJV"
+  },
+  {
+    "first_trade": "2025-11-14 07:00:35.000 UTC",
+    "last_trade": "2026-03-09 05:53:30.000 UTC",
+    "total_volume_usd": 1136963348.5638201,
+    "trade_count": 1665322,
+    "unique_tokens_bought": 120,
+    "wallet": "han5oo9sy98473nuWU7PwkdgpJVFvQEQ14S5CCdbeYQ"
+  },
+  {
+    "first_trade": "2026-01-23 17:55:47.000 UTC",
+    "last_trade": "2026-01-25 20:20:20.000 UTC",
+    "total_volume_usd": 1130368660,
+    "trade_count": 4508,
+    "unique_tokens_bought": 35,
+    "wallet": "FFc6UPHpd7bdBAD5uuvFNNeuPanvKEMsBjNmnxyvV9QK"
+  },
+  {
+    "first_trade": "2025-11-13 16:45:26.000 UTC",
+    "last_trade": "2026-01-24 17:17:19.000 UTC",
+    "total_volume_usd": 1124339670.3150923,
+    "trade_count": 1889977,
+    "unique_tokens_bought": 159,
+    "wallet": "AE861PyrYJXm2TuxiMc8Ecwo4YYgAHfcYum3GWpSRFe3"
+  },
+  {
+    "first_trade": "2026-02-03 20:07:12.000 UTC",
+    "last_trade": "2026-02-23 18:46:13.000 UTC",
+    "total_volume_usd": 1120898628.7263746,
+    "trade_count": 464217,
+    "unique_tokens_bought": 196,
+    "wallet": "smRrAfKKYG7Gvxghgz1e8nr6CX3fy8EVf5y4RA1s3FB"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-03-09 05:59:54.000 UTC",
+    "total_volume_usd": 1109763335.821924,
+    "trade_count": 2210034,
+    "unique_tokens_bought": 76,
+    "wallet": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA"
+  },
+  {
+    "first_trade": "2025-12-18 00:34:22.000 UTC",
+    "last_trade": "2025-12-30 00:33:17.000 UTC",
+    "total_volume_usd": 1092336831.2577755,
+    "trade_count": 70826,
+    "unique_tokens_bought": 59,
+    "wallet": "6Bi7qnz3Vt2C7sxxt8yDNYyDnqg8wrv8iPAhi3gPxffV"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-03-09 05:53:30.000 UTC",
+    "total_volume_usd": 1082258630.8112803,
+    "trade_count": 2308919,
+    "unique_tokens_bought": 152,
+    "wallet": "enzog436vHy38bMhNR9XDENrvhxPK7y8wBQri852rhG"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:02.000 UTC",
+    "last_trade": "2026-03-09 05:59:48.000 UTC",
+    "total_volume_usd": 1046432581.8608665,
+    "trade_count": 2196150,
+    "unique_tokens_bought": 2162,
+    "wallet": "CatyeC3LgBxub7HcpW2n7cZZZ66CUKdcZ8DzHucHrSiP"
+  },
+  {
+    "first_trade": "2026-02-03 21:03:22.000 UTC",
+    "last_trade": "2026-03-09 05:59:22.000 UTC",
+    "total_volume_usd": 970555043.1768398,
+    "trade_count": 468569,
+    "unique_tokens_bought": 54,
+    "wallet": "nobpsatDkikkdJTkWyhmqR5K3j9eipvqVJHYjkq5UWh"
+  },
+  {
+    "first_trade": "2025-11-13 03:17:31.000 UTC",
+    "last_trade": "2026-02-03 04:02:27.000 UTC",
+    "total_volume_usd": 964079058.2946497,
+    "trade_count": 1127729,
+    "unique_tokens_bought": 36,
+    "wallet": "Dog1YVcGCdTYNpRpwUdod7zAGjztVL1ZeHAVYaYD1h5Q"
+  },
+  {
+    "first_trade": "2025-11-09 09:37:55.000 UTC",
+    "last_trade": "2026-03-09 05:55:46.000 UTC",
+    "total_volume_usd": 935973259.5935658,
+    "trade_count": 1225442,
+    "unique_tokens_bought": 231,
+    "wallet": "Cr6vUmtz58dtsyDJX2GKbifgYf7zvwgPt9HyJvwMRLL8"
+  },
+  {
+    "first_trade": "2025-11-21 09:17:49.000 UTC",
+    "last_trade": "2026-03-08 23:48:57.000 UTC",
+    "total_volume_usd": 932034947.9858518,
+    "trade_count": 404628,
+    "unique_tokens_bought": 14,
+    "wallet": "88S3zQ4RhahQJSMrusV3sxhZXJewo4oQ3ErNTXaN9VgR"
+  },
+  {
+    "first_trade": "2025-11-09 09:36:07.000 UTC",
+    "last_trade": "2026-03-09 05:53:47.000 UTC",
+    "total_volume_usd": 916836232.1398976,
+    "trade_count": 789161,
+    "unique_tokens_bought": 805,
+    "wallet": "888SGnyhGzqQuuWDVL48tn7xJsAEV259mK9V4YEcUn6f"
+  },
+  {
+    "first_trade": "2025-11-09 19:47:36.000 UTC",
+    "last_trade": "2026-03-09 04:35:18.000 UTC",
+    "total_volume_usd": 895346220.0588056,
+    "trade_count": 2000145,
+    "unique_tokens_bought": 176,
+    "wallet": "9TXFVx8N9dPneS3ETRt8KWtUXLRUsz6j6JM3bEXqkR3Z"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2026-02-25 05:12:49.000 UTC",
+    "total_volume_usd": 859381660.4998795,
+    "trade_count": 978508,
+    "unique_tokens_bought": 1499,
+    "wallet": "GjahQFtep4oprPUhds9pBEPCjisSN8drpNkJng4d3UJe"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2026-02-25 05:12:53.000 UTC",
+    "total_volume_usd": 858871199.3923683,
+    "trade_count": 978030,
+    "unique_tokens_bought": 1495,
+    "wallet": "ZRn8egBKC2wAcTnf1LfdBKQADjNdi7DR6ZuK3weTdo9"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-25 05:12:43.000 UTC",
+    "total_volume_usd": 858477551.1341417,
+    "trade_count": 977193,
+    "unique_tokens_bought": 1500,
+    "wallet": "8xGn9P6pqnWAEW9HwKg9zLZa7e8d1VVRU95HxLXaWCid"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-02-25 05:13:02.000 UTC",
+    "total_volume_usd": 857975773.9940108,
+    "trade_count": 977154,
+    "unique_tokens_bought": 1500,
+    "wallet": "F2BLkiAoFAKcPRwV6u1H7mkjmbY2U4pCZEvu3kyBu8ym"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-02-25 05:12:59.000 UTC",
+    "total_volume_usd": 857876457.4799842,
+    "trade_count": 976393,
+    "unique_tokens_bought": 1501,
+    "wallet": "9BTvEPWq63NWKDNK9S35HLvst6pboC48EPMhxWDGyLct"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-02-25 05:12:59.000 UTC",
+    "total_volume_usd": 857760191.283177,
+    "trade_count": 976553,
+    "unique_tokens_bought": 1500,
+    "wallet": "DvJCVpV6u8akhfYMJ8zGeX5e9sqaLXTkmrJqWLi51mck"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:07.000 UTC",
+    "last_trade": "2026-02-25 05:12:57.000 UTC",
+    "total_volume_usd": 857668438.8200414,
+    "trade_count": 976209,
+    "unique_tokens_bought": 1502,
+    "wallet": "FXmfD9jm9DaGcJJ697CDYpsbkXLy6vAVoMkieRpdbnTc"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-02-25 05:13:04.000 UTC",
+    "total_volume_usd": 857411851.6333433,
+    "trade_count": 976109,
+    "unique_tokens_bought": 1502,
+    "wallet": "2G91d7tNFGvbMK1Wh9GYGxNKWUy1sEoWJ4RnbaGeeHKj"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-25 05:13:04.000 UTC",
+    "total_volume_usd": 857321092.3348511,
+    "trade_count": 975967,
+    "unique_tokens_bought": 1492,
+    "wallet": "HZE96esZYDkRhimYuCW9rprYMfKvRuiB2cgChZGeyLpR"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-25 05:12:51.000 UTC",
+    "total_volume_usd": 857262064.985882,
+    "trade_count": 975998,
+    "unique_tokens_bought": 1500,
+    "wallet": "7xSnbYJb8FeSh8GDqRhoBuf2cgGn8QcKZbtKysXaE7od"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-02-25 05:13:03.000 UTC",
+    "total_volume_usd": 857054463.0448368,
+    "trade_count": 975909,
+    "unique_tokens_bought": 1498,
+    "wallet": "ExjGMKaNRSJPhjNcrUrBDZBr8uc8KycexfrG7rmU9PSA"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-25 05:12:52.000 UTC",
+    "total_volume_usd": 856904493.1550999,
+    "trade_count": 975747,
+    "unique_tokens_bought": 1489,
+    "wallet": "EcBxqSKKzWyBLhLLiw9VCrCvd6UwHG9A4TZ1sphpGqxf"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-02-25 05:13:03.000 UTC",
+    "total_volume_usd": 856642172.0157181,
+    "trade_count": 975523,
+    "unique_tokens_bought": 1501,
+    "wallet": "9qRpTuMvux3BcytdFqiSKaV7DPRAbi7Jbw4cPUCvHzYs"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-02-25 05:12:56.000 UTC",
+    "total_volume_usd": 856209902.798972,
+    "trade_count": 974708,
+    "unique_tokens_bought": 1499,
+    "wallet": "Ekgf4t9v94XNA58yqTxv3YiPmVz2h3vyv5dgn4ktpc9a"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-02-25 05:13:04.000 UTC",
+    "total_volume_usd": 855977827.2373998,
+    "trade_count": 974795,
+    "unique_tokens_bought": 1501,
+    "wallet": "ET8FnfzBz9CjAHCubQq1vwV8dDnvN4zLReYjAA3D18sF"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-02-25 05:13:03.000 UTC",
+    "total_volume_usd": 855880397.8515792,
+    "trade_count": 974481,
+    "unique_tokens_bought": 1503,
+    "wallet": "FfixpdLBjEWRC7mWxMt1zmCh361YLcjvsqiEmJ8UqZ1Q"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-02-25 05:12:36.000 UTC",
+    "total_volume_usd": 855813291.0192878,
+    "trade_count": 974155,
+    "unique_tokens_bought": 1495,
+    "wallet": "8k9BABvHJ8WMv8zLxrp8cs88ao6MN1veRM8XUgutckn6"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:14.000 UTC",
+    "last_trade": "2026-02-25 05:12:58.000 UTC",
+    "total_volume_usd": 855500399.3886143,
+    "trade_count": 973913,
+    "unique_tokens_bought": 1498,
+    "wallet": "AVpEyxKqctAXiSxzgR6Zbe4P5cuZkabWAEhGY2j7QEaD"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:11.000 UTC",
+    "last_trade": "2026-02-25 05:13:04.000 UTC",
+    "total_volume_usd": 855276473.8730288,
+    "trade_count": 973744,
+    "unique_tokens_bought": 1494,
+    "wallet": "5kFFrcQPgLY1CwXJqUmzvm6mYv78zd5gR2nXSYNo2WV"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-02-25 05:13:00.000 UTC",
+    "total_volume_usd": 853661743.335237,
+    "trade_count": 971918,
+    "unique_tokens_bought": 1497,
+    "wallet": "8i3iJrjwYyFrQYcqSiGpvimvQwEP5UqN3nZDVL4XTLGJ"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-02-25 05:12:46.000 UTC",
+    "total_volume_usd": 851870942.928043,
+    "trade_count": 969835,
+    "unique_tokens_bought": 1502,
+    "wallet": "Dgcvgp5Tw2ySMnJNNwxYgUHAe2fsSrkfVqThuGdKmMRj"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:45.000 UTC",
+    "last_trade": "2026-02-25 05:12:57.000 UTC",
+    "total_volume_usd": 825941061.9565794,
+    "trade_count": 939659,
+    "unique_tokens_bought": 1496,
+    "wallet": "HCQvsHevxMo9gy7TdnRhh4ejDHyyvvXkaQgecNseEPyL"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-02-25 05:12:56.000 UTC",
+    "total_volume_usd": 825466297.3957684,
+    "trade_count": 939429,
+    "unique_tokens_bought": 1491,
+    "wallet": "HUMoSiv7PNKUNGLPkWKuy8weSHE8EYkGq4SoATct1fbB"
+  },
+  {
+    "first_trade": "2025-11-09 12:52:10.000 UTC",
+    "last_trade": "2026-02-25 08:30:04.000 UTC",
+    "total_volume_usd": 824706946.1006556,
+    "trade_count": 297557,
+    "unique_tokens_bought": 697,
+    "wallet": "HkAop6zTAB933j7nhhUSGwLL5eKZyQizcZsgiL1MjMq1"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-12 00:29:55.000 UTC",
+    "total_volume_usd": 806815775.9028537,
+    "trade_count": 762199,
+    "unique_tokens_bought": 23,
+    "wallet": "XndwnW9XivrgwhuccqVY73FBfCtMfN5F8XB61bFJk5s"
+  },
+  {
+    "first_trade": "2026-01-24 19:47:30.000 UTC",
+    "last_trade": "2026-03-08 23:55:37.000 UTC",
+    "total_volume_usd": 804438132.6438148,
+    "trade_count": 236003,
+    "unique_tokens_bought": 5,
+    "wallet": "4YBTtoRorgBgfD54ndXMCKZ3tLpMoCsuBUAe6g7qs7VC"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 802444337.5696666,
+    "trade_count": 2280925,
+    "unique_tokens_bought": 137,
+    "wallet": "HYe4vSaEGqQKnDrxWDrk3o5H2gznv7qtij5G6NNG8WHd"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:21.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 769472525.579888,
+    "trade_count": 2211794,
+    "unique_tokens_bought": 994,
+    "wallet": "5DLPnGX6RUB5YepQUnyYTtRiywBUaAm2RPvqsNcVgh65"
+  },
+  {
+    "first_trade": "2026-01-11 20:05:40.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 768309216.3770134,
+    "trade_count": 2219250,
+    "unique_tokens_bought": 994,
+    "wallet": "BcwFSsTEWD7txciVFBAnhaM7hbw6GYeVNMDFM7SpVxXa"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:30.000 UTC",
+    "last_trade": "2026-03-09 05:59:57.000 UTC",
+    "total_volume_usd": 766769539.6038038,
+    "trade_count": 2229813,
+    "unique_tokens_bought": 994,
+    "wallet": "3EHbeTTUHVeqBNQNkWtk7jGAjfxAQHADDtJGkDZa46Z8"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:21.000 UTC",
+    "last_trade": "2026-03-09 05:59:54.000 UTC",
+    "total_volume_usd": 766591791.3353565,
+    "trade_count": 2223864,
+    "unique_tokens_bought": 994,
+    "wallet": "4ZwYf8okEL7vgyBDZEcas2mcpDAVujsgtthxRHCMDqyP"
+  },
+  {
+    "first_trade": "2026-01-11 20:04:40.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 764946734.6341906,
+    "trade_count": 2212099,
+    "unique_tokens_bought": 993,
+    "wallet": "5cgHgU68WvHHyBdp684q8po9S77zrb685345SMqhVxXd"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:19.000 UTC",
+    "last_trade": "2026-01-01 02:40:29.000 UTC",
+    "total_volume_usd": 764136522.3056495,
+    "trade_count": 611972,
+    "unique_tokens_bought": 28,
+    "wallet": "AAAAA4WQFj5MByDDxmraSAtumvWk8eNTAL5421SAdLRA"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:29.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 763439021.4829917,
+    "trade_count": 2224890,
+    "unique_tokens_bought": 994,
+    "wallet": "8jpTrTnBCp7NRSgZmCdA7sgasBUuFcr7YLY92dKpaCGa"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:22.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 762965763.1908828,
+    "trade_count": 2227933,
+    "unique_tokens_bought": 993,
+    "wallet": "GeDBD9tMvrGrxgnkS1SHneNjrmmY3mr1yRRqcSgkBVkZ"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 762830125.7473531,
+    "trade_count": 2196411,
+    "unique_tokens_bought": 991,
+    "wallet": "2fPCxpdcAqm51CpM5CaSqCzY8XWfSg9Y9RAsSwXWR7tY"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:21.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 762491149.6176354,
+    "trade_count": 2199655,
+    "unique_tokens_bought": 989,
+    "wallet": "BUfaRC4kD2xMveV8YxaoiikqM8455mM4u7uJggJ1vSNJ"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 758441448.5794569,
+    "trade_count": 2220765,
+    "unique_tokens_bought": 992,
+    "wallet": "4P2gmEUBnG91MLUZgLH3zKs2MtFyUW5VPJ1jNrp1xhkq"
+  },
+  {
+    "first_trade": "2025-11-09 11:02:24.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 757682146.2888967,
+    "trade_count": 2224743,
+    "unique_tokens_bought": 993,
+    "wallet": "437E4LvLmFG6Stp3ZRwGBzmsEBXuCBcU4NyVNuAdAeje"
+  },
+  {
+    "first_trade": "2026-01-11 20:03:39.000 UTC",
+    "last_trade": "2026-03-09 05:58:51.000 UTC",
+    "total_volume_usd": 755883961.2690443,
+    "trade_count": 2213955,
+    "unique_tokens_bought": 993,
+    "wallet": "JRp2Qv9MNjCozuXo7RdWepuRspP9utTcPgEowiXowY4"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:29.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 755852147.5079943,
+    "trade_count": 2225665,
+    "unique_tokens_bought": 993,
+    "wallet": "6LKDhDmK1oGyZfYuHdy92LMvyQdrkoHtgv3o3HJn5p7M"
+  },
+  {
+    "first_trade": "2026-01-11 20:06:41.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 755671316.5666847,
+    "trade_count": 2217508,
+    "unique_tokens_bought": 993,
+    "wallet": "8wNhJMoAnx6cyxZAZbdGvLfgRyVNsiKKHxfMcwwaQMrq"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:25.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 752108722.4743938,
+    "trade_count": 2224176,
+    "unique_tokens_bought": 992,
+    "wallet": "6VbZcZpDZWGyuKFqNcEPu4a6ZrMB7C9R892b6T4c1HM"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:24.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 751587399.6658387,
+    "trade_count": 2204823,
+    "unique_tokens_bought": 990,
+    "wallet": "AujeNcchJkDzoQtTN6JwwxZikonfZGFBs7i1pRkAfo1c"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:30.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 750960978.9394212,
+    "trade_count": 2216415,
+    "unique_tokens_bought": 994,
+    "wallet": "AgGWu4Xy3fHw2vLSwsRYCDgFpihL2e49coAzsoedT7FS"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:30.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 750668286.5559018,
+    "trade_count": 2216379,
+    "unique_tokens_bought": 992,
+    "wallet": "4vaC5BNCPfowanUseDL2SwzkPrjuwoGwkPuaB8BH1jcb"
+  },
+  {
+    "first_trade": "2025-12-16 13:59:20.000 UTC",
+    "last_trade": "2026-02-06 15:14:23.000 UTC",
+    "total_volume_usd": 747562887.540532,
+    "trade_count": 262612,
+    "unique_tokens_bought": 18,
+    "wallet": "99WHBf1vR8XQtMsMKFU3JMh6ZihZSVSGDjVtyABbAM9J"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:25.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 746759165.6157523,
+    "trade_count": 2179695,
+    "unique_tokens_bought": 989,
+    "wallet": "DHrPHLqpk4uF9Qq2XEg5RWnVCw1pdj3VQNFgnvoM3v29"
+  },
+  {
+    "first_trade": "2026-01-11 20:10:26.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 746723526.4441966,
+    "trade_count": 2197827,
+    "unique_tokens_bought": 988,
+    "wallet": "ABLrfmtZ4LZQfbzZEVQwFbgh13baUKFTEJhfSJwayS88"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:16.000 UTC",
+    "last_trade": "2026-03-09 05:59:49.000 UTC",
+    "total_volume_usd": 714410446.5913286,
+    "trade_count": 2556374,
+    "unique_tokens_bought": 82560,
+    "wallet": "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn"
+  },
+  {
+    "first_trade": "2025-11-21 18:48:12.000 UTC",
+    "last_trade": "2026-03-09 05:59:56.000 UTC",
+    "total_volume_usd": 713287017.3601915,
+    "trade_count": 510357,
+    "unique_tokens_bought": 2061,
+    "wallet": "5d8tDay1ZDV4XVUBtTvFvQiLxDe8dz2ZCdsrkmTDcbm5"
+  },
+  {
+    "first_trade": "2025-12-18 12:08:16.000 UTC",
+    "last_trade": "2026-03-09 05:41:57.000 UTC",
+    "total_volume_usd": 709949078.4837391,
+    "trade_count": 58750,
+    "unique_tokens_bought": 11,
+    "wallet": "2uVaeXJu9QjZ7JgzUFCwJWLZ3jgBrLkDhxtoNDh2Zm9Q"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-02-02 14:03:17.000 UTC",
+    "total_volume_usd": 701496022.4234204,
+    "trade_count": 1698280,
+    "unique_tokens_bought": 20,
+    "wallet": "AnyiYYecsbzSW9P35R3dy6Js2KpPCxaF7vpspMeWS6bV"
+  },
+  {
+    "first_trade": "2025-11-09 13:24:42.000 UTC",
+    "last_trade": "2026-03-09 03:12:35.000 UTC",
+    "total_volume_usd": 698827777.8687053,
+    "trade_count": 17554,
+    "unique_tokens_bought": 30,
+    "wallet": "JA6br2dFCkmKuiKXCsw5pinx5FrYHqR8eNCMydBp4Qr5"
+  },
+  {
+    "first_trade": "2026-01-29 15:04:40.000 UTC",
+    "last_trade": "2026-03-04 11:51:36.000 UTC",
+    "total_volume_usd": 692016907.9085042,
+    "trade_count": 359421,
+    "unique_tokens_bought": 964,
+    "wallet": "4ydhY1paBSepu8Pec91U4sjGAXjhveZmb8gphBP8uxv"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-09 05:59:29.000 UTC",
+    "total_volume_usd": 686316736.4900477,
+    "trade_count": 1665481,
+    "unique_tokens_bought": 1077,
+    "wallet": "avg1twbiWyaGiaw8o7gF9uYho5CvBRSwt6xJZuEZuME"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-03-09 05:57:23.000 UTC",
+    "total_volume_usd": 685852793.3399891,
+    "trade_count": 1132952,
+    "unique_tokens_bought": 9544,
+    "wallet": "gasTzr94Pmp4Gf8vknQnqxeYxdgwFjbgdJa4msYRpnB"
+  },
+  {
+    "first_trade": "2025-11-09 13:55:03.000 UTC",
+    "last_trade": "2026-02-18 17:42:37.000 UTC",
+    "total_volume_usd": 682664893.6991333,
+    "trade_count": 719188,
+    "unique_tokens_bought": 309,
+    "wallet": "68HKBoDYFRK9DsXZgGuP7357D6ASrosHfLZYpvBiLbwK"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-02-25 05:18:39.000 UTC",
+    "total_volume_usd": 672452140.5918293,
+    "trade_count": 921185,
+    "unique_tokens_bought": 1391,
+    "wallet": "Gr7nUz6M7YqszicbYNtiP4fr26UZbLbnLNqtU3E5LB15"
+  },
+  {
+    "first_trade": "2025-12-07 14:31:19.000 UTC",
+    "last_trade": "2025-12-16 14:43:17.000 UTC",
+    "total_volume_usd": 671375681.8287653,
+    "trade_count": 10350,
+    "unique_tokens_bought": 91,
+    "wallet": "HdLPnsRYP2XZZg2Vw1xq2fnsVa3dAn8dsBLtji4n2rd2"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:10.000 UTC",
+    "last_trade": "2026-02-25 05:18:32.000 UTC",
+    "total_volume_usd": 670200751.7660654,
+    "trade_count": 917773,
+    "unique_tokens_bought": 1392,
+    "wallet": "3pqKpMQnm9JbeNKAZdwvdWZeC2vG5AtiAhQpxGWBgazM"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:29.000 UTC",
+    "last_trade": "2026-02-25 05:18:10.000 UTC",
+    "total_volume_usd": 669805012.350064,
+    "trade_count": 917621,
+    "unique_tokens_bought": 1389,
+    "wallet": "3qekGVTn2hTFrazNB3b5BLoeC1XJyEfFEbKYbSPKw3hg"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-02-25 05:18:31.000 UTC",
+    "total_volume_usd": 669050916.1626378,
+    "trade_count": 917167,
+    "unique_tokens_bought": 1389,
+    "wallet": "DBG1rvxUUiQEXSYrWMAqQdzrvVSXHt1JcLZy3tKLa1Xq"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-02-25 05:18:39.000 UTC",
+    "total_volume_usd": 668986753.9670713,
+    "trade_count": 917020,
+    "unique_tokens_bought": 1387,
+    "wallet": "9135nqk9WfZhu2PexoySr1dxzBJ2UhYnN26NwVfijfck"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2026-02-25 05:18:30.000 UTC",
+    "total_volume_usd": 668955907.416355,
+    "trade_count": 916798,
+    "unique_tokens_bought": 1397,
+    "wallet": "6kUXq36EXtTya2eddBjycGcNpsNQLnCkLrf69bHSvhxi"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:12.000 UTC",
+    "last_trade": "2026-02-25 05:18:23.000 UTC",
+    "total_volume_usd": 668952750.420194,
+    "trade_count": 916771,
+    "unique_tokens_bought": 1391,
+    "wallet": "35QwT8uDg2hJ4kbyDkNoRA3y1ykG36wqxSWyicy23qSb"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-02-25 05:18:30.000 UTC",
+    "total_volume_usd": 668840647.7372471,
+    "trade_count": 916387,
+    "unique_tokens_bought": 1388,
+    "wallet": "CdGPXH5hZVXxiUUcqp9z1vC8WGYezbX3fBrwuyodWfac"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-02-25 05:18:38.000 UTC",
+    "total_volume_usd": 668838761.6167345,
+    "trade_count": 916656,
+    "unique_tokens_bought": 1389,
+    "wallet": "EdrXQLtkm1sjEspvjeis8qnaByzyZYkE2WeneNhWEPia"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:45.000 UTC",
+    "last_trade": "2026-02-25 05:18:32.000 UTC",
+    "total_volume_usd": 668719879.2131709,
+    "trade_count": 917003,
+    "unique_tokens_bought": 1384,
+    "wallet": "AVm881mDFekHYE5aBNsGPfP8ducuSuQrMCpaAV1Eoh5B"
+  },
+  {
+    "first_trade": "2025-11-09 09:37:10.000 UTC",
+    "last_trade": "2026-02-25 05:18:22.000 UTC",
+    "total_volume_usd": 668320681.3064276,
+    "trade_count": 916498,
+    "unique_tokens_bought": 1390,
+    "wallet": "CZUhSTHNB7Qbz92ZLnAjJmkFiQk1uErpp86Bctb6eBoU"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:14.000 UTC",
+    "last_trade": "2026-02-25 05:18:24.000 UTC",
+    "total_volume_usd": 668249569.5857164,
+    "trade_count": 915739,
+    "unique_tokens_bought": 1390,
+    "wallet": "ETqVg6rt4ZWK1Sj1cTUXd7tT3Q7h48YJ8ZjZ3A2Nxd44"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-02-25 05:18:32.000 UTC",
+    "total_volume_usd": 668196582.3625147,
+    "trade_count": 914926,
+    "unique_tokens_bought": 1389,
+    "wallet": "HgZDiuJBz4D5MLMvG3hm2bHQ9UvSyiAJmxXnoncWvmQB"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:30.000 UTC",
+    "last_trade": "2026-02-25 05:18:35.000 UTC",
+    "total_volume_usd": 667955585.095672,
+    "trade_count": 915213,
+    "unique_tokens_bought": 1387,
+    "wallet": "A4V921xJakZ14YaBTVKBGYBRd9eJ3EEAsXhQUMbtvHur"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:58.000 UTC",
+    "last_trade": "2026-02-25 05:18:17.000 UTC",
+    "total_volume_usd": 667834771.8451077,
+    "trade_count": 915355,
+    "unique_tokens_bought": 1387,
+    "wallet": "CGoos4zitJngucy1ug6sWueNJstKqcAxN9DNvh3MNztD"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-02-25 05:18:31.000 UTC",
+    "total_volume_usd": 667753975.5896775,
+    "trade_count": 915018,
+    "unique_tokens_bought": 1387,
+    "wallet": "HuJ9AoLPtZewCNuET3tWwvvE9VBFuzrikGD7phfSnT9x"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:07.000 UTC",
+    "last_trade": "2026-02-25 05:18:42.000 UTC",
+    "total_volume_usd": 667717471.5083551,
+    "trade_count": 916236,
+    "unique_tokens_bought": 1392,
+    "wallet": "AX2688BCJEzmzNwJsKajCFxW4rkRceT42hi65PssxMcg"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-02-25 05:18:41.000 UTC",
+    "total_volume_usd": 667629805.7066339,
+    "trade_count": 915531,
+    "unique_tokens_bought": 1391,
+    "wallet": "CeM8gF1cT7WuzCfmxDXUK7cANCB3PNGimF3TmQ29n2Dg"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-02-25 05:18:19.000 UTC",
+    "total_volume_usd": 667428971.0217754,
+    "trade_count": 915223,
+    "unique_tokens_bought": 1391,
+    "wallet": "2PDF2gyXBwMcwZpRzhp9SqXnhm6fa5Q9pFziFLsNLPv1"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:48.000 UTC",
+    "last_trade": "2026-02-25 05:18:42.000 UTC",
+    "total_volume_usd": 666797721.7686862,
+    "trade_count": 913831,
+    "unique_tokens_bought": 1390,
+    "wallet": "Bjyxe2sGW9eVY5KuhfNVhBEUPW4wiQ818oS9PZWUHVcS"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:23.000 UTC",
+    "last_trade": "2026-02-25 05:18:34.000 UTC",
+    "total_volume_usd": 666796847.6299281,
+    "trade_count": 915685,
+    "unique_tokens_bought": 1385,
+    "wallet": "AhfDzNmre4E213w8iV9LAUgEKiBLSvdenpHnWQJZGxp5"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:18.000 UTC",
+    "last_trade": "2026-02-25 05:18:40.000 UTC",
+    "total_volume_usd": 665835830.2720454,
+    "trade_count": 913803,
+    "unique_tokens_bought": 1386,
+    "wallet": "5TrZG9kok3oDfjrunUq33hM7deXqBjoJAePLGVpR2qfB"
+  },
+  {
+    "first_trade": "2025-12-30 15:32:46.000 UTC",
+    "last_trade": "2026-01-23 03:42:45.000 UTC",
+    "total_volume_usd": 663768734.6727374,
+    "trade_count": 13874,
+    "unique_tokens_bought": 122,
+    "wallet": "FeQFN1QjQy3mJqjNwziKb5teHJYYGbJ6DUNWtxU841Ji"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:11.000 UTC",
+    "last_trade": "2026-02-25 05:18:14.000 UTC",
+    "total_volume_usd": 661925597.4255931,
+    "trade_count": 907307,
+    "unique_tokens_bought": 1390,
+    "wallet": "AiiWHBr1rdAPf1YZTZQkBAQxRUvUvS2jLx3hrKb7K9vT"
+  },
+  {
+    "first_trade": "2025-12-17 09:38:36.000 UTC",
+    "last_trade": "2025-12-29 13:48:05.000 UTC",
+    "total_volume_usd": 659983797.9647359,
+    "trade_count": 12597,
+    "unique_tokens_bought": 70,
+    "wallet": "5HLP3eekdfA23YMmXjyRSnHuZoU2kiCj8Ma3KdmnaiCk"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-02-25 05:18:38.000 UTC",
+    "total_volume_usd": 655744450.3857113,
+    "trade_count": 896590,
+    "unique_tokens_bought": 1389,
+    "wallet": "3cEASajnZb5EYiHnmvvi5joazKtbwMEwm7uoePJHdtsx"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-02-06 10:10:20.000 UTC",
+    "total_volume_usd": 651017029.3256499,
+    "trade_count": 632026,
+    "unique_tokens_bought": 345,
+    "wallet": "3y5u6tGmYwoFpLgfRYcjxRLj6g4FYHfoG3Z3g4ChGas5"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:15.000 UTC",
+    "last_trade": "2026-02-25 05:18:25.000 UTC",
+    "total_volume_usd": 640351111.8453588,
+    "trade_count": 872836,
+    "unique_tokens_bought": 1319,
+    "wallet": "4VghHZ4JgDcsVDa3QSge3LZUY3KowrUi9QXMiBrTpECj"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-25 05:18:41.000 UTC",
+    "total_volume_usd": 638538516.6873888,
+    "trade_count": 870278,
+    "unique_tokens_bought": 1317,
+    "wallet": "ALwUvnKdraUPZaD14UbyNPJyYJFtZdxAiaMH7ygYzUb3"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:47.000 UTC",
+    "last_trade": "2026-03-08 23:58:48.000 UTC",
+    "total_volume_usd": 637647229.4935684,
+    "trade_count": 763912,
+    "unique_tokens_bought": 145,
+    "wallet": "8zrxRCK1HjFNGhsvc7NJXfj2ybPxR3p25FhwFmEeyrAe"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-25 05:18:05.000 UTC",
+    "total_volume_usd": 634501667.3667004,
+    "trade_count": 864506,
+    "unique_tokens_bought": 1314,
+    "wallet": "DFKUmoZ7Xptpf9KhTRaA8hhLRxxcm8nNeYnuA8Z7Euz4"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:13.000 UTC",
+    "last_trade": "2026-02-25 05:18:40.000 UTC",
+    "total_volume_usd": 634223843.8928646,
+    "trade_count": 870471,
+    "unique_tokens_bought": 1389,
+    "wallet": "CKy8tC7H5xQvxiwJi79TZAD5oDkDyxzsizAAmqpvkeZA"
+  },
+  {
+    "first_trade": "2025-11-09 10:15:54.000 UTC",
+    "last_trade": "2026-03-09 05:58:35.000 UTC",
+    "total_volume_usd": 631075794.7166383,
+    "trade_count": 1101141,
+    "unique_tokens_bought": 3346,
+    "wallet": "gtagyESa99t49VmUqnnfsuowYnigSNKuYXdXWyXWNdd"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-09 05:49:46.000 UTC",
+    "total_volume_usd": 610516007.3081424,
+    "trade_count": 345575,
+    "unique_tokens_bought": 273,
+    "wallet": "C9u2k7T22tbM7C53wMWZHKqVJ85eiBdrvjCu6gLvMAhe"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-02-25 05:18:33.000 UTC",
+    "total_volume_usd": 609303812.1579759,
+    "trade_count": 829943,
+    "unique_tokens_bought": 1313,
+    "wallet": "HJnVAZzxhwkbA9DDx1x3qrfuE615vduhEuQSfAcbbTqY"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-04 03:58:35.000 UTC",
+    "total_volume_usd": 605814856.9344169,
+    "trade_count": 2159391,
+    "unique_tokens_bought": 72,
+    "wallet": "5cU5rbxAcpaGoPyms9jKoXQX5EiZzD3DNmwzbC3qE8Sd"
+  },
+  {
+    "first_trade": "2026-01-16 17:24:49.000 UTC",
+    "last_trade": "2026-01-29 14:58:14.000 UTC",
+    "total_volume_usd": 585185656.3073165,
+    "trade_count": 159477,
+    "unique_tokens_bought": 657,
+    "wallet": "3jYbdzmguLBDSrHUrVo7FPkhu8aCjGQaAcNsv8KuBQFF"
+  },
+  {
+    "first_trade": "2025-11-09 09:36:56.000 UTC",
+    "last_trade": "2026-02-06 12:39:32.000 UTC",
+    "total_volume_usd": 578078738.5658734,
+    "trade_count": 1239117,
+    "unique_tokens_bought": 297,
+    "wallet": "ATQs6A92eUzdxTBsQhRJxxJDpgYDTGvLnU4e5mMEfY3k"
+  },
+  {
+    "first_trade": "2025-12-05 06:13:41.000 UTC",
+    "last_trade": "2025-12-12 12:55:46.000 UTC",
+    "total_volume_usd": 574412922.8502283,
+    "trade_count": 72867,
+    "unique_tokens_bought": 50,
+    "wallet": "H1L3dqd6zrtmcSSWKbMYY1SBRPssSr2hYgzLVMwFLwst"
+  },
+  {
+    "first_trade": "2025-12-05 20:59:19.000 UTC",
+    "last_trade": "2026-03-08 23:57:39.000 UTC",
+    "total_volume_usd": 574218686.238781,
+    "trade_count": 560821,
+    "unique_tokens_bought": 19,
+    "wallet": "AvvCWo5ZWR7gQkBpMqZhYQRnB8pg17tYgdBeyMv2X3u6"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 565627805.2305068,
+    "trade_count": 1236289,
+    "unique_tokens_bought": 87,
+    "wallet": "4GQeEya6ZTwvXre4Br6ZfDyfe2WQMkcDz2QbkJZazVqS"
+  },
+  {
+    "first_trade": "2026-01-02 02:16:36.000 UTC",
+    "last_trade": "2026-01-07 11:57:52.000 UTC",
+    "total_volume_usd": 531565789.7551784,
+    "trade_count": 127950,
+    "unique_tokens_bought": 391,
+    "wallet": "DkV8QZdg5GH7Bb5NteLJVYCF2mwBSCFt7AcTnmVvTfeW"
+  },
+  {
+    "first_trade": "2025-12-05 06:06:01.000 UTC",
+    "last_trade": "2025-12-12 12:55:42.000 UTC",
+    "total_volume_usd": 524444119.7334382,
+    "trade_count": 65970,
+    "unique_tokens_bought": 48,
+    "wallet": "H6AaJMrvn8s1evSZYhytRimrd7k6qQYgGBybwFmk4wsA"
+  },
+  {
+    "first_trade": "2025-11-09 09:36:21.000 UTC",
+    "last_trade": "2026-03-09 05:51:37.000 UTC",
+    "total_volume_usd": 519835058.39779246,
+    "trade_count": 185632,
+    "unique_tokens_bought": 2596,
+    "wallet": "HxjwdF326ZunmUwC1iXhfgL3ku78YsksN6n7Rfxzwr6b"
+  },
+  {
+    "first_trade": "2025-12-05 06:13:55.000 UTC",
+    "last_trade": "2025-12-12 12:55:45.000 UTC",
+    "total_volume_usd": 519766453.28867453,
+    "trade_count": 65356,
+    "unique_tokens_bought": 48,
+    "wallet": "63qBrf18fSgjDtXjZRHvfgR5mV3Z5ptNxqLhttpt9vQJ"
+  },
+  {
+    "first_trade": "2025-12-05 06:13:47.000 UTC",
+    "last_trade": "2025-12-12 12:55:46.000 UTC",
+    "total_volume_usd": 516478653.5633237,
+    "trade_count": 64789,
+    "unique_tokens_bought": 48,
+    "wallet": "HPXWi95kqsvjM5sgivo8eASL1HHWuWrKTs5NeZuo7do1"
+  },
+  {
+    "first_trade": "2026-01-07 06:21:31.000 UTC",
+    "last_trade": "2026-03-02 07:31:20.000 UTC",
+    "total_volume_usd": 512395530.0279103,
+    "trade_count": 652571,
+    "unique_tokens_bought": 31,
+    "wallet": "E5UBNwkEH98qzVsxa5GsL29WzyxGmj5fYKRt4wRvXyYp"
+  },
+  {
+    "first_trade": "2026-01-13 14:15:45.000 UTC",
+    "last_trade": "2026-03-08 23:47:57.000 UTC",
+    "total_volume_usd": 470228457.88161784,
+    "trade_count": 17226,
+    "unique_tokens_bought": 69,
+    "wallet": "AZ2hpSLkQu974wKD7Bxv7w9YZg399ZhBcboSLtRabq9v"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2025-12-09 03:02:30.000 UTC",
+    "total_volume_usd": 468279112.20844704,
+    "trade_count": 251759,
+    "unique_tokens_bought": 23,
+    "wallet": "GEY5xH8AiPQbaKCq9pfFUY8rZrhjqGTJpusvG3JumGEP"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-02-25 05:13:00.000 UTC",
+    "total_volume_usd": 443928353.47732705,
+    "trade_count": 505609,
+    "unique_tokens_bought": 1485,
+    "wallet": "9JSRy83ogWPbVtaN7DnVaM7DbzjdGLvswU9nnZb6Tmr9"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-02-25 05:13:03.000 UTC",
+    "total_volume_usd": 442193808.72293055,
+    "trade_count": 503686,
+    "unique_tokens_bought": 1477,
+    "wallet": "GcEZxUk5yRvNdUVYLWnusJF8G82Pepn1girWZWQwV16e"
+  },
+  {
+    "first_trade": "2025-11-09 17:20:09.000 UTC",
+    "last_trade": "2026-03-02 22:54:20.000 UTC",
+    "total_volume_usd": 432484762.14703774,
+    "trade_count": 94046,
+    "unique_tokens_bought": 12,
+    "wallet": "9az5xpAV8KJ2Q2Jb1ZvBpvfUa5Cj4dZirbgvfPF5XsB8"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-09 05:53:22.000 UTC",
+    "total_volume_usd": 428754624.7289096,
+    "trade_count": 352062,
+    "unique_tokens_bought": 400,
+    "wallet": "B4RRE8DrRRLAH3d6CAqmSixLdcurwnic1h83rEYmSY4s"
+  },
+  {
+    "first_trade": "2026-02-05 06:31:34.000 UTC",
+    "last_trade": "2026-03-09 05:59:33.000 UTC",
+    "total_volume_usd": 427371126.0308601,
+    "trade_count": 1129710,
+    "unique_tokens_bought": 15,
+    "wallet": "AHBoJBkSZwipA8wf31WgyGM9H8k8GzYAb9Mqih4mEPbB"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:02.000 UTC",
+    "last_trade": "2026-03-09 05:57:09.000 UTC",
+    "total_volume_usd": 421621324.80937093,
+    "trade_count": 406732,
+    "unique_tokens_bought": 2919,
+    "wallet": "7dGrdJRYtsNR8UYxZ3TnifXGjGc9eRYLq9sELwYpuuUu"
+  },
+  {
+    "first_trade": "2025-12-11 09:00:12.000 UTC",
+    "last_trade": "2026-01-07 11:12:04.000 UTC",
+    "total_volume_usd": 410023427.3211353,
+    "trade_count": 393150,
+    "unique_tokens_bought": 32,
+    "wallet": "2EZxP9X1Kfuf2sxyBPfi2VsBbr6iJeepuv5tEiAHscAh"
+  },
+  {
+    "first_trade": "2025-12-02 06:22:49.000 UTC",
+    "last_trade": "2026-03-09 05:54:54.000 UTC",
+    "total_volume_usd": 404945943.6999912,
+    "trade_count": 812895,
+    "unique_tokens_bought": 83,
+    "wallet": "CodeP7hrXAAThQyogRLwdKLJ5iTjDfM4nBrYN2QQVzd"
+  },
+  {
+    "first_trade": "2025-11-09 10:54:17.000 UTC",
+    "last_trade": "2026-03-08 23:59:35.000 UTC",
+    "total_volume_usd": 403152478.79992855,
+    "trade_count": 1536200,
+    "unique_tokens_bought": 8,
+    "wallet": "YubVwWeg1vHFr17Q7HQQETcke7sFvMabqU8wbv8NXQW"
+  },
+  {
+    "first_trade": "2026-01-16 19:23:43.000 UTC",
+    "last_trade": "2026-01-23 11:59:06.000 UTC",
+    "total_volume_usd": 392769232.7304958,
+    "trade_count": 43920,
+    "unique_tokens_bought": 40,
+    "wallet": "23ZZmoCZdnuvDKQZ8X38AxJrybWWwVEHYpuskyhgw2tD"
+  },
+  {
+    "first_trade": "2026-01-31 00:06:57.000 UTC",
+    "last_trade": "2026-03-06 17:23:08.000 UTC",
+    "total_volume_usd": 383626636.8101275,
+    "trade_count": 243664,
+    "unique_tokens_bought": 43,
+    "wallet": "21DKc1iFV7athBMkHCvHhai77CA7qSkCW2qMphgXyihV"
+  },
+  {
+    "first_trade": "2025-11-09 12:21:08.000 UTC",
+    "last_trade": "2026-03-09 03:39:29.000 UTC",
+    "total_volume_usd": 383219878.23195004,
+    "trade_count": 148035,
+    "unique_tokens_bought": 52,
+    "wallet": "2bhkQ6uVn32ddiG4Fe3DVbLsrExdb3ubaY6i1G4szEmq"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-03-09 05:35:15.000 UTC",
+    "total_volume_usd": 380777710.75641847,
+    "trade_count": 597128,
+    "unique_tokens_bought": 3571,
+    "wallet": "F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-02-05 12:53:44.000 UTC",
+    "total_volume_usd": 379854288.0551904,
+    "trade_count": 405579,
+    "unique_tokens_bought": 2914,
+    "wallet": "BMqY42E7Nx1FGCy6SVvRbF8KUWwmWfCLeUnsPb635fAJ"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-05 12:54:20.000 UTC",
+    "total_volume_usd": 378714022.6020219,
+    "trade_count": 404517,
+    "unique_tokens_bought": 2900,
+    "wallet": "GTgP2wfsFvZK8euANoGtYeY8NP8cKMx9M4cgVbZc3t22"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-02-05 12:54:16.000 UTC",
+    "total_volume_usd": 378255405.037383,
+    "trade_count": 404170,
+    "unique_tokens_bought": 2906,
+    "wallet": "CW782zHde9nJMeHZHV1eZi4mcHKmxcrP45Aq8YvrZ82X"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:19.000 UTC",
+    "last_trade": "2026-02-05 12:54:23.000 UTC",
+    "total_volume_usd": 377910612.6369922,
+    "trade_count": 403398,
+    "unique_tokens_bought": 2919,
+    "wallet": "61uN4m8zCgiBj3aQkRgnY1VksVfi3XS3voBUsj2AeNyi"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:37.000 UTC",
+    "last_trade": "2026-02-05 12:52:04.000 UTC",
+    "total_volume_usd": 377862113.9296683,
+    "trade_count": 403462,
+    "unique_tokens_bought": 2904,
+    "wallet": "CnLnEeD8E6vgDkNbGjr5LzC2JCWcPX5XHEvhp4vnsXst"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-02-05 12:54:06.000 UTC",
+    "total_volume_usd": 377615517.14666146,
+    "trade_count": 403681,
+    "unique_tokens_bought": 2913,
+    "wallet": "Dt79pCtKP7Vk2M7Vpb2ip4Dev7T1PQ3z4eTxd56m4xQJ"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-05 12:53:25.000 UTC",
+    "total_volume_usd": 377209628.0110591,
+    "trade_count": 403260,
+    "unique_tokens_bought": 2911,
+    "wallet": "2mebgfvTup2u1Tvu88uwhUSr6i3vYubZgwnyrXEEZUGu"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-02-05 12:54:09.000 UTC",
+    "total_volume_usd": 377038003.4012109,
+    "trade_count": 402293,
+    "unique_tokens_bought": 2927,
+    "wallet": "DZWzSpX3rbKNberTPEaJYvw5P8X2inx4tKPKG7Vp6uyy"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:21.000 UTC",
+    "last_trade": "2026-02-05 12:54:17.000 UTC",
+    "total_volume_usd": 376668679.8791624,
+    "trade_count": 402769,
+    "unique_tokens_bought": 2924,
+    "wallet": "HfQpPdqAcYqasv7zVHZeaJtM187qGfUH2fzXJ6k5991A"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:44.000 UTC",
+    "last_trade": "2026-02-05 12:54:14.000 UTC",
+    "total_volume_usd": 376229216.7423988,
+    "trade_count": 401639,
+    "unique_tokens_bought": 2896,
+    "wallet": "FCzqW83DtW322uPXYCfKG5Pnh7fT4CsUA8Vf5CwipWJT"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-02-05 12:54:20.000 UTC",
+    "total_volume_usd": 376174486.7677518,
+    "trade_count": 402241,
+    "unique_tokens_bought": 2930,
+    "wallet": "GNSJQtmb7PyKxseAD2YDdkz2iyxb9ZCnrWVPBozbPWQs"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-02-05 12:53:49.000 UTC",
+    "total_volume_usd": 376126995.98568624,
+    "trade_count": 402357,
+    "unique_tokens_bought": 2911,
+    "wallet": "3bTbk6rYtqRb4L6fSK56EshUSCLzSxYZFGovLtie7e7r"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:10.000 UTC",
+    "last_trade": "2026-02-05 12:54:23.000 UTC",
+    "total_volume_usd": 376115128.6716129,
+    "trade_count": 402327,
+    "unique_tokens_bought": 2921,
+    "wallet": "4n6mprzBqFhqkdEJACdVEEYH72e7x8D8gxLKoyUGefnH"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:43.000 UTC",
+    "last_trade": "2026-02-05 12:53:13.000 UTC",
+    "total_volume_usd": 376114882.8257751,
+    "trade_count": 401591,
+    "unique_tokens_bought": 2898,
+    "wallet": "8Fi8kuPARC4HE52qjWX2BRNAXwVpYgV5oG2YRhCwPLfv"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-02-05 12:53:55.000 UTC",
+    "total_volume_usd": 375935819.680669,
+    "trade_count": 401747,
+    "unique_tokens_bought": 2899,
+    "wallet": "AVRYkrTLKzUswx5VGnjJHfY5D3xZqjU5odfXQybAMBUw"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:28.000 UTC",
+    "last_trade": "2026-02-05 12:54:11.000 UTC",
+    "total_volume_usd": 375665929.105616,
+    "trade_count": 401372,
+    "unique_tokens_bought": 2919,
+    "wallet": "HrBHrv4GtkKkaRRW3d83ZNYAht7fcP7FrxwYGUupeLV8"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-02-05 12:54:19.000 UTC",
+    "total_volume_usd": 374831287.3665029,
+    "trade_count": 400834,
+    "unique_tokens_bought": 2934,
+    "wallet": "FpVvm1rEPAeYbG542MHrLYeGorqvUxD1fywjY26cMEvC"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-02-05 12:53:35.000 UTC",
+    "total_volume_usd": 374610301.84502476,
+    "trade_count": 400312,
+    "unique_tokens_bought": 2894,
+    "wallet": "3C5Umcac3GnKLzZb7a7zhyQXKwCR4Jv1wd4AbNARxSim"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:34.000 UTC",
+    "last_trade": "2026-02-05 12:54:07.000 UTC",
+    "total_volume_usd": 373403345.92975664,
+    "trade_count": 399188,
+    "unique_tokens_bought": 2915,
+    "wallet": "DZaYJNrbXj7K9pZUTFtE73MacRix9Ze7nfrVeWQ7g1eu"
+  },
+  {
+    "first_trade": "2026-02-04 00:46:42.000 UTC",
+    "last_trade": "2026-03-09 05:58:52.000 UTC",
+    "total_volume_usd": 372150506.1275033,
+    "trade_count": 1236638,
+    "unique_tokens_bought": 18,
+    "wallet": "CXdN22RZ9DbGnLLeeVarWKXMgKGYDh8U9BNV5VDw1pFc"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:49.000 UTC",
+    "last_trade": "2026-02-05 12:54:10.000 UTC",
+    "total_volume_usd": 370668839.18342906,
+    "trade_count": 396179,
+    "unique_tokens_bought": 2927,
+    "wallet": "4WCpu8GbFLqCqfSPfCo88qSL6t1hKoKTCcuAxjsGiH3b"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:14.000 UTC",
+    "last_trade": "2026-02-05 12:54:02.000 UTC",
+    "total_volume_usd": 370589850.0014476,
+    "trade_count": 396578,
+    "unique_tokens_bought": 2913,
+    "wallet": "2uGYyVbGZ7x9e5gqeHp8S61dbDhYVRj25gr3SQxuB4gS"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2025-12-01 14:27:06.000 UTC",
+    "total_volume_usd": 366956101.6014097,
+    "trade_count": 313500,
+    "unique_tokens_bought": 13,
+    "wallet": "Bwp1b6EyfEfHqbMK6DvDhp7hRKugY4CoWKt7M5dp9Jet"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-02-05 12:54:14.000 UTC",
+    "total_volume_usd": 360406993.9684494,
+    "trade_count": 385853,
+    "unique_tokens_bought": 2922,
+    "wallet": "FPeBUGjTFydegZGorTR6ZfoPwsCjoRhWVHX9pKSZAGNq"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:28.000 UTC",
+    "last_trade": "2026-02-05 12:54:22.000 UTC",
+    "total_volume_usd": 359340376.67543775,
+    "trade_count": 383456,
+    "unique_tokens_bought": 2921,
+    "wallet": "CxuJwxGhZyiJTAewdMpBzRg2HPhLCrT25Nwri7d6bYSf"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-02-25 05:18:24.000 UTC",
+    "total_volume_usd": 356425532.8569391,
+    "trade_count": 485474,
+    "unique_tokens_bought": 1382,
+    "wallet": "CqJviA1TaBWWnkX515NthiykyA42a5hyXrEgLXoSZM5R"
+  },
+  {
+    "first_trade": "2026-01-23 18:46:24.000 UTC",
+    "last_trade": "2026-01-25 20:37:15.000 UTC",
+    "total_volume_usd": 355832549.9200178,
+    "trade_count": 33810,
+    "unique_tokens_bought": 24,
+    "wallet": "14fQvjYWfYWfhPPgDSBSEhzqzikfTEoc6yGrG1SoqRmQ"
+  },
+  {
+    "first_trade": "2026-01-27 15:47:18.000 UTC",
+    "last_trade": "2026-02-17 13:03:32.000 UTC",
+    "total_volume_usd": 353615636.84258974,
+    "trade_count": 79385,
+    "unique_tokens_bought": 5,
+    "wallet": "ArP31JHwbkVGvzyGy7D76Dc5LtpzpcdS3LKUPpjhsz2v"
+  },
+  {
+    "first_trade": "2025-11-09 22:26:18.000 UTC",
+    "last_trade": "2026-03-09 05:59:43.000 UTC",
+    "total_volume_usd": 351099933.11775166,
+    "trade_count": 1451606,
+    "unique_tokens_bought": 10169,
+    "wallet": "54Pz1e35z9uoFdnxtzjp7xZQoFiofqhdayQWBMN7dsuy"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-02-25 05:18:38.000 UTC",
+    "total_volume_usd": 344667449.462433,
+    "trade_count": 468805,
+    "unique_tokens_bought": 1307,
+    "wallet": "42iyRsMf5Y1zZCyzdegUPBohdTiLa1bGBZDH6znHXv4g"
+  },
+  {
+    "first_trade": "2026-01-17 06:29:25.000 UTC",
+    "last_trade": "2026-03-08 23:49:09.000 UTC",
+    "total_volume_usd": 337988019.94840425,
+    "trade_count": 267672,
+    "unique_tokens_bought": 103,
+    "wallet": "ZZZZZQmQArjCfm1QGfonjep3S4Md5eUjgnXuLsWRtbr"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-03-09 05:57:21.000 UTC",
+    "total_volume_usd": 336126918.3816196,
+    "trade_count": 789549,
+    "unique_tokens_bought": 1220,
+    "wallet": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy"
+  },
+  {
+    "first_trade": "2025-11-10 00:19:32.000 UTC",
+    "last_trade": "2026-03-08 22:55:00.000 UTC",
+    "total_volume_usd": 335175143.3890131,
+    "trade_count": 7175,
+    "unique_tokens_bought": 12,
+    "wallet": "3cmf1r4gMfEkj87PjLSsjkhLsp1o6VXLRWSgaeeDrdan"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:07.000 UTC",
+    "last_trade": "2026-03-09 05:58:39.000 UTC",
+    "total_volume_usd": 334782045.3021198,
+    "trade_count": 791902,
+    "unique_tokens_bought": 1216,
+    "wallet": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k"
+  },
+  {
+    "first_trade": "2026-01-15 15:44:00.000 UTC",
+    "last_trade": "2026-03-09 05:53:30.000 UTC",
+    "total_volume_usd": 328271792.13312787,
+    "trade_count": 733137,
+    "unique_tokens_bought": 111,
+    "wallet": "abeF3SFbRvKPWrezZkZMh1KZotAxAoEKs4s1iwTnhvG"
+  },
+  {
+    "first_trade": "2026-01-06 16:14:50.000 UTC",
+    "last_trade": "2026-03-08 23:44:27.000 UTC",
+    "total_volume_usd": 324551933.79362434,
+    "trade_count": 113071,
+    "unique_tokens_bought": 24,
+    "wallet": "EXYq2HaS5nTarjzNHVYfcHbAbbLDJTPYkn1Jb5Q6bGz4"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-07 12:37:25.000 UTC",
+    "total_volume_usd": 320267634.4547877,
+    "trade_count": 840971,
+    "unique_tokens_bought": 1473,
+    "wallet": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2025-11-13 13:41:28.000 UTC",
+    "total_volume_usd": 308620352.1410879,
+    "trade_count": 152792,
+    "unique_tokens_bought": 13,
+    "wallet": "datou8M6D6bBwP8ZxfwYMucsALB92JfD1CkxqmkA2MU"
+  },
+  {
+    "first_trade": "2026-02-02 23:14:30.000 UTC",
+    "last_trade": "2026-02-27 17:16:23.000 UTC",
+    "total_volume_usd": 308194339.696119,
+    "trade_count": 62680,
+    "unique_tokens_bought": 5,
+    "wallet": "9wisX6VsgdUi4N1A1wfKSARdiMLw7yguZbLSV91xWJv5"
+  },
+  {
+    "first_trade": "2025-11-09 12:11:15.000 UTC",
+    "last_trade": "2026-03-02 21:37:27.000 UTC",
+    "total_volume_usd": 306230353.8674233,
+    "trade_count": 12990,
+    "unique_tokens_bought": 148,
+    "wallet": "J5e2u47g3u2D5Eq66dnvrd2EnCkF8khLAisbuVHDxzt8"
+  },
+  {
+    "first_trade": "2026-02-15 07:21:35.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 304512983.5491237,
+    "trade_count": 335942,
+    "unique_tokens_bought": 7,
+    "wallet": "9s1d2aURQEn7w69F47Dv68p186zZnE4auRpZtFKiTHXx"
+  },
+  {
+    "first_trade": "2026-02-22 15:54:42.000 UTC",
+    "last_trade": "2026-03-09 05:49:50.000 UTC",
+    "total_volume_usd": 298500431.4330585,
+    "trade_count": 355952,
+    "unique_tokens_bought": 252,
+    "wallet": "nika6vkuZHbTp2oc1rD6ebzTuYi6pSYtUMHHKAdBMzo"
+  },
+  {
+    "first_trade": "2026-01-22 18:47:23.000 UTC",
+    "last_trade": "2026-01-31 00:03:12.000 UTC",
+    "total_volume_usd": 293939545.37030816,
+    "trade_count": 87002,
+    "unique_tokens_bought": 45,
+    "wallet": "EFofshhmc2d44n92ZAzaXh8XYftQnGGp3Cupgmy1PqmZ"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:44.000 UTC",
+    "last_trade": "2026-02-05 12:53:23.000 UTC",
+    "total_volume_usd": 284958702.02258563,
+    "trade_count": 302720,
+    "unique_tokens_bought": 2854,
+    "wallet": "23TRS58UQibyMknLjL8ngUYk7jWFKGtnDAvxcxcyeyUy"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 278207095.88673794,
+    "trade_count": 1110942,
+    "unique_tokens_bought": 644,
+    "wallet": "HgXUiReMx6kzM1HQJKGyPvYnvTZZS1pJDSbk44r4dc3P"
+  },
+  {
+    "first_trade": "2026-01-05 19:41:45.000 UTC",
+    "last_trade": "2026-01-20 21:33:27.000 UTC",
+    "total_volume_usd": 277685955.78343064,
+    "trade_count": 20827,
+    "unique_tokens_bought": 13,
+    "wallet": "F7eGhuoAgn2MJuRs5hn8vxadBnoZidaXyNF51j4DDCSH"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:22.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 275630835.109621,
+    "trade_count": 1135411,
+    "unique_tokens_bought": 644,
+    "wallet": "FumSkmBHwb1Ufu97yXd1Cmkva16HnC7tKbweeQTAuJGN"
+  },
+  {
+    "first_trade": "2025-11-18 21:04:09.000 UTC",
+    "last_trade": "2026-03-09 03:19:30.000 UTC",
+    "total_volume_usd": 274436597.7787501,
+    "trade_count": 589828,
+    "unique_tokens_bought": 83,
+    "wallet": "5Zm6GraYjpaNCoAnTpWThxzynVZvPM8DdcVvyK9vecKT"
+  },
+  {
+    "first_trade": "2025-11-09 11:02:58.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 274358320.6178298,
+    "trade_count": 1135191,
+    "unique_tokens_bought": 646,
+    "wallet": "32nsYc4nPn8VTz9yjQTWUWXP2PLMv7RPWWZjoTNezTut"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:50.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 274208770.6895292,
+    "trade_count": 1132379,
+    "unique_tokens_bought": 644,
+    "wallet": "DtygiPhhrB8BTxcJxhxvvKLzVW5YJxJrT7tUaWwFAPiA"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:26.000 UTC",
+    "last_trade": "2026-03-09 05:59:54.000 UTC",
+    "total_volume_usd": 272856011.39092743,
+    "trade_count": 1116027,
+    "unique_tokens_bought": 643,
+    "wallet": "FxmS7gTU49SQoqR2vd8CJyuLP3Yo1YVb1c3tJbcw93y3"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:05.000 UTC",
+    "last_trade": "2026-03-09 05:56:07.000 UTC",
+    "total_volume_usd": 272175957.8422656,
+    "trade_count": 163243,
+    "unique_tokens_bought": 1321,
+    "wallet": "gasAx5Y917MYdmdnwiomwYDhmDKNGDJnN1MmEbxVdVw"
+  },
+  {
+    "first_trade": "2025-11-25 14:25:57.000 UTC",
+    "last_trade": "2026-02-20 12:39:07.000 UTC",
+    "total_volume_usd": 272070960.65222186,
+    "trade_count": 314352,
+    "unique_tokens_bought": 6,
+    "wallet": "DnFbZyh9izWi9jAztMyJvjpK7TCi2GuVq8CajrUwpxMJ"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:52.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 271961669.8308096,
+    "trade_count": 1135200,
+    "unique_tokens_bought": 644,
+    "wallet": "i6zEHEevGrruHUGsNjFz5L3Ko7R4gyGeWUNDjWUCHZc"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:58.000 UTC",
+    "total_volume_usd": 271098800.9901613,
+    "trade_count": 1126527,
+    "unique_tokens_bought": 644,
+    "wallet": "5bFk9BmHNn9BgZ4tZqUcccNMq21XjSuhyUP8b6c3VV3C"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:54.000 UTC",
+    "total_volume_usd": 270626283.3099693,
+    "trade_count": 1137377,
+    "unique_tokens_bought": 644,
+    "wallet": "9HRKXdT1Pd4cT9Lwnakieu2az7m7M4k1rSsnnkBCQLJw"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:24.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 270157190.5978421,
+    "trade_count": 1132544,
+    "unique_tokens_bought": 645,
+    "wallet": "5hV1mCM2pPGUmjq939eCyJxSWA4AJgJUPpASCaZ4fC2p"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:16.000 UTC",
+    "last_trade": "2026-03-05 23:59:59.000 UTC",
+    "total_volume_usd": 269961797.9142393,
+    "trade_count": 360613,
+    "unique_tokens_bought": 1914,
+    "wallet": "C7Y8XP1C6aXwhDuCu5853zVdsrSCxxJfjuHrbksfbAa6"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:51.000 UTC",
+    "last_trade": "2026-03-09 05:59:53.000 UTC",
+    "total_volume_usd": 269587604.70785654,
+    "trade_count": 1130227,
+    "unique_tokens_bought": 644,
+    "wallet": "BcHDFaqSZtXqanSozJWNaJQWpgA52SGmeqRmAQefBd6k"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:06.000 UTC",
+    "last_trade": "2026-03-08 23:09:02.000 UTC",
+    "total_volume_usd": 269343892.4015,
+    "trade_count": 119542,
+    "unique_tokens_bought": 1781,
+    "wallet": "7jN6hUdNBdkK12wVM2iydxx9hzsxUhUppmr99Aeu6cKb"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:22.000 UTC",
+    "last_trade": "2026-03-05 23:59:47.000 UTC",
+    "total_volume_usd": 269148369.24802023,
+    "trade_count": 358923,
+    "unique_tokens_bought": 1933,
+    "wallet": "GYcSrSwHZB62G1AymRCSCSjo4RFwgMfDBBtduco2ZBuD"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:01.000 UTC",
+    "last_trade": "2026-03-05 23:59:56.000 UTC",
+    "total_volume_usd": 269071310.70997036,
+    "trade_count": 359308,
+    "unique_tokens_bought": 1919,
+    "wallet": "32ApnxA1cjufpE5fDrzj9H7447VFUzyu9knrdmDFWfJw"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:40.000 UTC",
+    "last_trade": "2026-03-05 23:59:23.000 UTC",
+    "total_volume_usd": 268557379.106197,
+    "trade_count": 359227,
+    "unique_tokens_bought": 1929,
+    "wallet": "2NJvsyeU4Yr4Av6eyDsHxr12LpjJ88bGK64pwB2BAfWL"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:29.000 UTC",
+    "last_trade": "2026-03-05 23:59:21.000 UTC",
+    "total_volume_usd": 268523887.1864593,
+    "trade_count": 358381,
+    "unique_tokens_bought": 1932,
+    "wallet": "39dTWgnqRyFbQwz1RE88Pcg75aDLeeVhCVE9j3cbXd8J"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:02.000 UTC",
+    "last_trade": "2026-03-05 23:59:59.000 UTC",
+    "total_volume_usd": 268082130.29926604,
+    "trade_count": 358187,
+    "unique_tokens_bought": 1928,
+    "wallet": "2ko6PxAm4vqW3m7ieyWcGMTrcWD5gUQh5U9iHe7ZM7tp"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:23.000 UTC",
+    "last_trade": "2026-03-05 23:59:47.000 UTC",
+    "total_volume_usd": 267996596.60223678,
+    "trade_count": 357966,
+    "unique_tokens_bought": 1921,
+    "wallet": "BhTAs9wf1AUZ9eyiUgUFdCe2TN77HinTYN1ZLvVaJzeu"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:02.000 UTC",
+    "last_trade": "2026-03-05 23:59:57.000 UTC",
+    "total_volume_usd": 267953115.85696435,
+    "trade_count": 357587,
+    "unique_tokens_bought": 1921,
+    "wallet": "DrRjCef29vmEqC5CZovybMfHTrkqFLo9zWCtgDJk77qP"
+  },
+  {
+    "first_trade": "2025-11-19 01:42:35.000 UTC",
+    "last_trade": "2026-03-05 23:59:37.000 UTC",
+    "total_volume_usd": 267858435.84801012,
+    "trade_count": 358333,
+    "unique_tokens_bought": 1917,
+    "wallet": "9zuX2rLyghQia3SWG6GTfRN5oUtFkUREGzb2XetgY4vt"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:11.000 UTC",
+    "last_trade": "2026-03-05 23:59:56.000 UTC",
+    "total_volume_usd": 267754042.27847043,
+    "trade_count": 357758,
+    "unique_tokens_bought": 1929,
+    "wallet": "3HpfKk36DYj5TGbSxWdvo8UHKgGNmW8kf7e7osMJvyar"
+  },
+  {
+    "first_trade": "2025-11-19 01:42:20.000 UTC",
+    "last_trade": "2026-03-05 23:59:34.000 UTC",
+    "total_volume_usd": 267741374.83134893,
+    "trade_count": 358227,
+    "unique_tokens_bought": 1917,
+    "wallet": "H91zcA8xeGeaLqghpfJEX7Q3AvYacatpZSUecKz5Udi6"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:04.000 UTC",
+    "last_trade": "2026-03-05 23:59:55.000 UTC",
+    "total_volume_usd": 267461589.9399074,
+    "trade_count": 357933,
+    "unique_tokens_bought": 1920,
+    "wallet": "BZUFWz2ShzNSGhs75XgJDikjW6mUCLvAiG4ArDMbznz7"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:05.000 UTC",
+    "last_trade": "2026-03-05 23:59:50.000 UTC",
+    "total_volume_usd": 267344734.07871497,
+    "trade_count": 356798,
+    "unique_tokens_bought": 1930,
+    "wallet": "C82vrauLjDTZYMg1RJVSxcr7XK67pRn2f7kiFs2147sK"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:26.000 UTC",
+    "last_trade": "2026-03-09 05:59:51.000 UTC",
+    "total_volume_usd": 267328975.3802208,
+    "trade_count": 1130027,
+    "unique_tokens_bought": 645,
+    "wallet": "DxA3TxBpn3UQrZgaLpZUFQHcJfLXzZJPwq2UhJGjas3e"
+  },
+  {
+    "first_trade": "2025-11-09 13:49:30.000 UTC",
+    "last_trade": "2026-02-01 17:00:05.000 UTC",
+    "total_volume_usd": 267286169.47853976,
+    "trade_count": 145229,
+    "unique_tokens_bought": 251,
+    "wallet": "k1bWgJv1fdVMCqgDM2jkEfhEzKW7XgGpj8vGGKjgSnJ"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:25.000 UTC",
+    "last_trade": "2026-03-05 23:59:54.000 UTC",
+    "total_volume_usd": 266847490.88574237,
+    "trade_count": 356640,
+    "unique_tokens_bought": 1925,
+    "wallet": "2jSYA5kY59mWRShx5fmPB6rW8ABxGpt3z5dZV8niTd36"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:27.000 UTC",
+    "last_trade": "2026-03-09 05:59:55.000 UTC",
+    "total_volume_usd": 266795017.4539076,
+    "trade_count": 1124690,
+    "unique_tokens_bought": 643,
+    "wallet": "CcZUX1vsNfvZXrxyadypMUYrZwbjso6nk3vFCfgKY2K1"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:46.000 UTC",
+    "last_trade": "2026-03-05 23:59:20.000 UTC",
+    "total_volume_usd": 266618826.67358863,
+    "trade_count": 356728,
+    "unique_tokens_bought": 1937,
+    "wallet": "C7i7t3Sin6NcpVU1AoYxBCi2Qdm3anakZ3VJtQMwUn2S"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:45.000 UTC",
+    "last_trade": "2026-03-05 23:59:52.000 UTC",
+    "total_volume_usd": 266604930.96551558,
+    "trade_count": 356616,
+    "unique_tokens_bought": 1922,
+    "wallet": "8gxReUu8URY6Xy1bZcCbP3Hg6bT2yoGnABHgN7GtsuaR"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:03.000 UTC",
+    "last_trade": "2026-03-05 23:59:54.000 UTC",
+    "total_volume_usd": 266467428.04872546,
+    "trade_count": 354251,
+    "unique_tokens_bought": 1917,
+    "wallet": "7JqqsvR7MfV5uT6gGeRjecaV37fNuMv1AzfHKYR56dbz"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:30.000 UTC",
+    "last_trade": "2026-03-05 23:59:57.000 UTC",
+    "total_volume_usd": 265968702.13828135,
+    "trade_count": 355620,
+    "unique_tokens_bought": 1936,
+    "wallet": "HMUkL1zwwLLSc5C9PFjLGRYGEkpe9KuKGmzv285eDjpb"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:07.000 UTC",
+    "last_trade": "2026-03-05 23:59:52.000 UTC",
+    "total_volume_usd": 265960910.84438577,
+    "trade_count": 355827,
+    "unique_tokens_bought": 1909,
+    "wallet": "2VgwjDCUJLgeUTukhadMbSJjY38738dC8t7wXimK51Zt"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:24.000 UTC",
+    "last_trade": "2026-03-09 05:59:49.000 UTC",
+    "total_volume_usd": 265889505.89235342,
+    "trade_count": 1133116,
+    "unique_tokens_bought": 643,
+    "wallet": "49CduoU4M5Va46tXeqCZFYGQpAxTSGYi28KUxX3tskYY"
+  },
+  {
+    "first_trade": "2025-11-19 01:42:05.000 UTC",
+    "last_trade": "2026-03-05 23:59:58.000 UTC",
+    "total_volume_usd": 265800244.93243513,
+    "trade_count": 355264,
+    "unique_tokens_bought": 1935,
+    "wallet": "8V1p3FdHNZUzDz6wyUVfrhMpNkEzpZCimbTP1QXVzJeJ"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 265748111.9002308,
+    "trade_count": 1126405,
+    "unique_tokens_bought": 645,
+    "wallet": "ENSyuaaD3Sju5jHUwGg5dR144dc8GRHFPGp9aAVCPiJE"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 265371680.1064524,
+    "trade_count": 1121149,
+    "unique_tokens_bought": 644,
+    "wallet": "AYrVS8gbYdKWnSC3X6g5kdS979R7Q8fCm8SHNxLtS526"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:35.000 UTC",
+    "last_trade": "2026-03-05 23:59:41.000 UTC",
+    "total_volume_usd": 265355989.0397059,
+    "trade_count": 355426,
+    "unique_tokens_bought": 1938,
+    "wallet": "8q1hStQE9wfT9TRNCcCeFemAt6tSZH71T9p2XXu7pu4o"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:26.000 UTC",
+    "last_trade": "2026-03-09 05:59:54.000 UTC",
+    "total_volume_usd": 265260459.4161275,
+    "trade_count": 1109895,
+    "unique_tokens_bought": 643,
+    "wallet": "AgN5H3MeJyYKwu8asfSwB1m7mB4MZBhqpd1xC6xaQWZb"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:54.000 UTC",
+    "total_volume_usd": 262713485.85016134,
+    "trade_count": 1120771,
+    "unique_tokens_bought": 645,
+    "wallet": "FfNLMd6iLdhKWeHNvDhLAf5D4A15B6xtXbpqnK3GoCo4"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:23.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 262395131.15686378,
+    "trade_count": 1129051,
+    "unique_tokens_bought": 644,
+    "wallet": "6VozR9BAoxsQV1JoNDtZz6j7tMU3BkN65W7847LHSBPN"
+  },
+  {
+    "first_trade": "2026-01-15 15:55:48.000 UTC",
+    "last_trade": "2026-03-09 05:52:31.000 UTC",
+    "total_volume_usd": 261722930.523224,
+    "trade_count": 569808,
+    "unique_tokens_bought": 142,
+    "wallet": "eLLnsiBsWvERB34kgiJ4wPhdRzqM17gMG4cHouMqaHz"
+  },
+  {
+    "first_trade": "2025-11-19 01:44:18.000 UTC",
+    "last_trade": "2026-03-05 23:59:24.000 UTC",
+    "total_volume_usd": 258637538.36396855,
+    "trade_count": 347127,
+    "unique_tokens_bought": 1926,
+    "wallet": "3P4QWy9mBGxf3jeQDmGGCiFF4FADTnNgkXqP4AFpyp2P"
+  },
+  {
+    "first_trade": "2026-01-31 03:13:52.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 258305124.81669986,
+    "trade_count": 1113733,
+    "unique_tokens_bought": 643,
+    "wallet": "oyFFgogF9QLMGRAxkHVQ4eU1LsVwzn7d4sdxrSnsqnb"
+  },
+  {
+    "first_trade": "2026-01-31 03:23:41.000 UTC",
+    "last_trade": "2026-03-09 05:59:59.000 UTC",
+    "total_volume_usd": 256656882.9099519,
+    "trade_count": 1093670,
+    "unique_tokens_bought": 644,
+    "wallet": "Gm9z87GTcndujz5ftRnfwCJu3xMXkpPSVSYGuPZizi9d"
+  },
+  {
+    "first_trade": "2025-12-07 04:18:14.000 UTC",
+    "last_trade": "2026-01-05 17:35:21.000 UTC",
+    "total_volume_usd": 255984202.8107902,
+    "trade_count": 12011,
+    "unique_tokens_bought": 10,
+    "wallet": "5gayYBh2XYb3aVfnQvYjXbDQ1x1NYpyk9jKo2VQhWcg7"
+  },
+  {
+    "first_trade": "2025-11-09 09:39:02.000 UTC",
+    "last_trade": "2026-01-16 20:53:00.000 UTC",
+    "total_volume_usd": 254153141.69707283,
+    "trade_count": 721451,
+    "unique_tokens_bought": 18,
+    "wallet": "8jtt2EgUvMLnoCamfRwXyMCF37HTrtcr76VL16Btbwro"
+  },
+  {
+    "first_trade": "2025-11-11 19:29:46.000 UTC",
+    "last_trade": "2026-03-09 03:38:47.000 UTC",
+    "total_volume_usd": 252950963.58905774,
+    "trade_count": 317504,
+    "unique_tokens_bought": 29,
+    "wallet": "99mRw3EzdJZWEUjgp1nrU4WeHsukUBjbh7gYE7pm4F3c"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:24.000 UTC",
+    "last_trade": "2026-02-05 12:54:16.000 UTC",
+    "total_volume_usd": 249056513.98279023,
+    "trade_count": 258992,
+    "unique_tokens_bought": 2791,
+    "wallet": "8hByyeoMSc71Sap7ak6trQt5Mq5KrdTCzHgei3s91yHi"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-15 14:06:02.000 UTC",
+    "total_volume_usd": 247223879.49807867,
+    "trade_count": 294378,
+    "unique_tokens_bought": 456,
+    "wallet": "BDWsDyxXuaHqfH1s1VLj1ryCaTLvttst7Fssnmkpkx1p"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-01-15 14:05:57.000 UTC",
+    "total_volume_usd": 245614601.93944842,
+    "trade_count": 289422,
+    "unique_tokens_bought": 457,
+    "wallet": "Uanu1yrsur5prPYKjGeaddoi1C3S2GZnV847nLfvjSH"
+  },
+  {
+    "first_trade": "2025-11-09 09:47:36.000 UTC",
+    "last_trade": "2026-03-06 17:22:13.000 UTC",
+    "total_volume_usd": 245529706.3699033,
+    "trade_count": 408097,
+    "unique_tokens_bought": 18,
+    "wallet": "RV2PpDZSnjEcLxbRMmyTb9DgvWorXPEkKhAranx8m5J"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-15 14:06:05.000 UTC",
+    "total_volume_usd": 244957520.5563877,
+    "trade_count": 292185,
+    "unique_tokens_bought": 454,
+    "wallet": "Dc3DP9uSBJiJeYPeVosthmkhPRgpPtkAFFce4RhjQaXn"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-15 14:05:58.000 UTC",
+    "total_volume_usd": 244736537.5879924,
+    "trade_count": 287262,
+    "unique_tokens_bought": 446,
+    "wallet": "F1Tu9tv2zsZaP5kTTEVWNEG3xTkFFrjJPsrJQ96z8NLc"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:56.000 UTC",
+    "last_trade": "2026-03-05 23:59:40.000 UTC",
+    "total_volume_usd": 244725502.5578555,
+    "trade_count": 312037,
+    "unique_tokens_bought": 1911,
+    "wallet": "7SLqfmdsqUDzRRR16UfNX28dXrMLEaYyEK83A8nEYndc"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-01-15 14:06:06.000 UTC",
+    "total_volume_usd": 244457356.92089462,
+    "trade_count": 291609,
+    "unique_tokens_bought": 456,
+    "wallet": "G1Vvgj14sYuzb1EgQ4HuTXHGYAxpRRpWGHDpcpETsYTY"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-01-15 14:06:04.000 UTC",
+    "total_volume_usd": 244045149.79439604,
+    "trade_count": 291235,
+    "unique_tokens_bought": 453,
+    "wallet": "6x8caCysQeWELQeLwUiTxvowQQd3YMXHMB42KS5HJTNC"
+  },
+  {
+    "first_trade": "2025-11-09 11:16:29.000 UTC",
+    "last_trade": "2026-01-17 08:13:54.000 UTC",
+    "total_volume_usd": 243806354.34307367,
+    "trade_count": 773406,
+    "unique_tokens_bought": 148,
+    "wallet": "J1CMrMaFHJmG97R7xJYrJxRA3MNt7VyHe8CAEUnsQzre"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-01-15 14:06:03.000 UTC",
+    "total_volume_usd": 243425298.9958355,
+    "trade_count": 289174,
+    "unique_tokens_bought": 461,
+    "wallet": "DPcBCT3jZ4bGVG5Eixa4EwtHTwWZxDKChHQBQwWuJswU"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-01-11 12:36:06.000 UTC",
+    "total_volume_usd": 241031114.38073683,
+    "trade_count": 272279,
+    "unique_tokens_bought": 1123,
+    "wallet": "FCzTwM3CRdFbbMneAJM2NiBWAVU8fFn9thKN9EZPgDqe"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:13.000 UTC",
+    "last_trade": "2026-01-11 12:35:54.000 UTC",
+    "total_volume_usd": 240999578.8147817,
+    "trade_count": 272787,
+    "unique_tokens_bought": 1134,
+    "wallet": "DL3egvGttsaFigrTD396inn7xJTnZJrYBqzaHaDjqMXV"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-11 12:35:34.000 UTC",
+    "total_volume_usd": 240903063.58096662,
+    "trade_count": 273127,
+    "unique_tokens_bought": 1133,
+    "wallet": "6Aij4s3xMbwgAqs28XQHDDJ4G77VmLfDbdUdYp2H55bG"
+  },
+  {
+    "first_trade": "2025-11-14 06:51:57.000 UTC",
+    "last_trade": "2026-03-09 03:10:38.000 UTC",
+    "total_volume_usd": 240785953.9046026,
+    "trade_count": 366002,
+    "unique_tokens_bought": 144,
+    "wallet": "2SvvSFgzM9zEE1Y1vNXorfurtB2eRH3QHpMkpcVTXfrc"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:25.000 UTC",
+    "last_trade": "2026-01-11 12:36:07.000 UTC",
+    "total_volume_usd": 240736461.6048895,
+    "trade_count": 272480,
+    "unique_tokens_bought": 1128,
+    "wallet": "6iSTg7eKYHLGW97xCmG8JAwdcyqEm2ZT9TSbDNNJyHes"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:29.000 UTC",
+    "last_trade": "2026-01-11 12:36:01.000 UTC",
+    "total_volume_usd": 240596106.43645114,
+    "trade_count": 272295,
+    "unique_tokens_bought": 1125,
+    "wallet": "AnJgvsugHXphPhMTZZfcvzPSgWo2JMqfFrEqAJqAzABt"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:10.000 UTC",
+    "last_trade": "2026-01-11 12:36:02.000 UTC",
+    "total_volume_usd": 240402008.2914679,
+    "trade_count": 272066,
+    "unique_tokens_bought": 1131,
+    "wallet": "BHzRJ9JovMi9MFvVmVVXadMT5i8M8qY87dGAK1PAJzMK"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:20.000 UTC",
+    "last_trade": "2026-01-11 12:36:03.000 UTC",
+    "total_volume_usd": 240135465.06642976,
+    "trade_count": 272004,
+    "unique_tokens_bought": 1122,
+    "wallet": "Fo6MEwdh8JAAmreNnJAj9zfNgGVVaBrvE6XcbidLj6AC"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-01-11 12:36:06.000 UTC",
+    "total_volume_usd": 240024286.59453863,
+    "trade_count": 271971,
+    "unique_tokens_bought": 1128,
+    "wallet": "8EAw5eRGJystZ9ZoRB58B786gHKTMoUyL4gDdEXchggX"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-01-11 12:35:49.000 UTC",
+    "total_volume_usd": 239989251.78533944,
+    "trade_count": 271381,
+    "unique_tokens_bought": 1126,
+    "wallet": "4VvJQy4oHKMs5PRStWFLDuRdqfGwPHRuJ4kAijueK3mf"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-11 12:35:55.000 UTC",
+    "total_volume_usd": 239760240.72233638,
+    "trade_count": 271299,
+    "unique_tokens_bought": 1118,
+    "wallet": "2yqANe94HVwVbeKriDnqBSedHXVQRn9j5ZNenihjGifA"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:19.000 UTC",
+    "last_trade": "2026-01-11 12:36:10.000 UTC",
+    "total_volume_usd": 239443172.5389007,
+    "trade_count": 270960,
+    "unique_tokens_bought": 1123,
+    "wallet": "5T26S8QK7GXcXKRDQqUAvHQjGYSHmTF7zfrT1G6XpCN7"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-01-11 12:36:02.000 UTC",
+    "total_volume_usd": 239419267.31119853,
+    "trade_count": 271229,
+    "unique_tokens_bought": 1129,
+    "wallet": "AH7zey1o5NDje3VNMunNDqN2mrHwXd4ryPGHVx35uEZy"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:46.000 UTC",
+    "last_trade": "2026-01-11 12:35:58.000 UTC",
+    "total_volume_usd": 239410626.02609068,
+    "trade_count": 271076,
+    "unique_tokens_bought": 1124,
+    "wallet": "BXApKsQ8UDwEfVckvziDifdmX4LziMr94YDemmVvsTby"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-01-11 12:36:05.000 UTC",
+    "total_volume_usd": 239369447.817532,
+    "trade_count": 270890,
+    "unique_tokens_bought": 1123,
+    "wallet": "7aiWVRbLrhk71KXU5ZCuVfowmvZj8xyu7Q8yN2q7gGWe"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-01-11 12:36:07.000 UTC",
+    "total_volume_usd": 239349769.56465918,
+    "trade_count": 271019,
+    "unique_tokens_bought": 1128,
+    "wallet": "5KZd4dnmh31pPztuYBqePcAZZrECbmVW6TbjETXkwZsm"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:22.000 UTC",
+    "last_trade": "2026-01-11 12:16:12.000 UTC",
+    "total_volume_usd": 239253432.31445715,
+    "trade_count": 271018,
+    "unique_tokens_bought": 1125,
+    "wallet": "8ygZz3Qbg8PPheY5Kn5xpdFFbxv3wts1KemPSuXhSQFH"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:04.000 UTC",
+    "last_trade": "2026-01-11 12:36:10.000 UTC",
+    "total_volume_usd": 239109471.2735124,
+    "trade_count": 271020,
+    "unique_tokens_bought": 1128,
+    "wallet": "8vKJZrrKB5hWo1EVXTNwS34bWwD75xvra6z4RpqErpaT"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:13.000 UTC",
+    "last_trade": "2026-01-11 12:35:49.000 UTC",
+    "total_volume_usd": 238924839.7421127,
+    "trade_count": 270570,
+    "unique_tokens_bought": 1129,
+    "wallet": "F5Nr2x8tRMqSGYxnE8vqaX4eyn4MMMeXSmah9aQzEL9c"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:07.000 UTC",
+    "last_trade": "2026-01-11 12:36:05.000 UTC",
+    "total_volume_usd": 238849868.25739413,
+    "trade_count": 270203,
+    "unique_tokens_bought": 1123,
+    "wallet": "DZ58dTsb5aTXDd7GWhC1kUQM8R44wA6M2gyfQ8DN5QJN"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:26.000 UTC",
+    "last_trade": "2026-01-11 12:16:14.000 UTC",
+    "total_volume_usd": 238707863.9309777,
+    "trade_count": 270184,
+    "unique_tokens_bought": 1130,
+    "wallet": "22e851CFCGPhiyJnKcfF3x9cDH2cAr5ZQsZjjQUjHzjd"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-01-11 12:36:08.000 UTC",
+    "total_volume_usd": 238673743.22337553,
+    "trade_count": 270437,
+    "unique_tokens_bought": 1125,
+    "wallet": "3CKuB77bZiFftYiCw4UEfcB6tgVqrxXwT8s1c284cTYq"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2026-01-11 12:15:51.000 UTC",
+    "total_volume_usd": 238669520.31038496,
+    "trade_count": 269962,
+    "unique_tokens_bought": 1125,
+    "wallet": "3E5chhpHxawKxbyBL3pCWzQPypKRCnwxvpA1uqA64DDW"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-11 12:36:10.000 UTC",
+    "total_volume_usd": 238662821.0039614,
+    "trade_count": 270393,
+    "unique_tokens_bought": 1124,
+    "wallet": "G94qEVCupBWEBj742ksL7DaPDeAH3gW7xm9EP3pNDqWe"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:11.000 UTC",
+    "last_trade": "2026-01-11 12:36:10.000 UTC",
+    "total_volume_usd": 238541576.5679443,
+    "trade_count": 269988,
+    "unique_tokens_bought": 1122,
+    "wallet": "J8LNtKj5it3dcTQHN8e18XbARrAi8GgXHuEeHfMX7ko4"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:58.000 UTC",
+    "last_trade": "2026-01-11 12:36:04.000 UTC",
+    "total_volume_usd": 238409181.296398,
+    "trade_count": 269328,
+    "unique_tokens_bought": 1131,
+    "wallet": "2cSoBpvRJzQFt4vhgEsn7R47LeWBVJ4ctykQjqVbKL98"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-01-11 12:36:08.000 UTC",
+    "total_volume_usd": 237932068.93861985,
+    "trade_count": 269305,
+    "unique_tokens_bought": 1125,
+    "wallet": "28bE9YTzFikfaLbRDvYHwFBhuvAjW2d6d22oxbdTy4h1"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-11 12:36:04.000 UTC",
+    "total_volume_usd": 237797326.8811927,
+    "trade_count": 269284,
+    "unique_tokens_bought": 1128,
+    "wallet": "EsqCpGPnE3uDyHuz5sq7sMEqFRc3Xd23UGkkp1i2R1EC"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2026-01-11 12:35:52.000 UTC",
+    "total_volume_usd": 237652783.44485766,
+    "trade_count": 268798,
+    "unique_tokens_bought": 1127,
+    "wallet": "FzAojnwx5MHGFGsCcaT1p3wGG2vkLJT5thUnPmN8eLmb"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:14.000 UTC",
+    "last_trade": "2026-01-11 12:35:57.000 UTC",
+    "total_volume_usd": 237405217.5578956,
+    "trade_count": 268968,
+    "unique_tokens_bought": 1125,
+    "wallet": "Fec5n3wZPEo9FysnTm5DWGE2LghNkF2FZy32Q2qFrmgD"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-01-11 12:16:04.000 UTC",
+    "total_volume_usd": 236690323.42973766,
+    "trade_count": 267860,
+    "unique_tokens_bought": 1118,
+    "wallet": "Dzo9t9Uh4L13iFAx6e46WSkapz6nCnaXqE9X7cdtzs9U"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-01-11 12:15:50.000 UTC",
+    "total_volume_usd": 236331985.44712272,
+    "trade_count": 267478,
+    "unique_tokens_bought": 1115,
+    "wallet": "DGMfZsY5XsYQTfbbrwHAaYHsza1Um1W3XUqKgZUi2dbb"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:49.000 UTC",
+    "last_trade": "2026-01-11 12:16:02.000 UTC",
+    "total_volume_usd": 236050737.05692518,
+    "trade_count": 266960,
+    "unique_tokens_bought": 1111,
+    "wallet": "5CYkpLrGLotiFHSCgaoU83kMieG1z3XeVbqoj3RzHhZA"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-01-11 12:16:08.000 UTC",
+    "total_volume_usd": 235990184.78632578,
+    "trade_count": 267310,
+    "unique_tokens_bought": 1109,
+    "wallet": "uKSrHwiJhc8putUCjnGbQ5ri5GhT2zQ4UnmJpsmcpMk"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:29.000 UTC",
+    "last_trade": "2026-01-11 12:16:15.000 UTC",
+    "total_volume_usd": 235899677.89880034,
+    "trade_count": 267248,
+    "unique_tokens_bought": 1122,
+    "wallet": "5mmrNjs4bSDkBqQY2RcBVkd46DM2PQHgyiEHWNCA6Gn2"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-01-11 12:15:30.000 UTC",
+    "total_volume_usd": 235601155.9980192,
+    "trade_count": 266719,
+    "unique_tokens_bought": 1118,
+    "wallet": "Hah5gx8hrexaLaNdMgXK3mC5XgWkPpeM7xaJGzjiV8Wy"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2026-01-11 12:15:56.000 UTC",
+    "total_volume_usd": 235350347.31439933,
+    "trade_count": 266507,
+    "unique_tokens_bought": 1120,
+    "wallet": "GgntW3fygnNoYd5CR6ef9DHV5Q2LdEkobGXBqeVJqAP9"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-01-11 12:16:13.000 UTC",
+    "total_volume_usd": 235322539.1012727,
+    "trade_count": 266775,
+    "unique_tokens_bought": 1117,
+    "wallet": "62V6sm6jp85AfzCesiMmB3g29wBADDVSdFDcP8Ewxw6K"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-11 12:16:17.000 UTC",
+    "total_volume_usd": 235094820.15488064,
+    "trade_count": 266404,
+    "unique_tokens_bought": 1111,
+    "wallet": "2wgo6fisvUtskbLm93gNAEHubABGgt1s9qXPmhNWNeaQ"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-01-11 12:16:19.000 UTC",
+    "total_volume_usd": 234940879.0195245,
+    "trade_count": 266129,
+    "unique_tokens_bought": 1118,
+    "wallet": "ABintRqy4XgVCxeqWkVkmLNrgktTXgg5KiJCmupmFDfa"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-01-11 12:16:12.000 UTC",
+    "total_volume_usd": 234893638.30138066,
+    "trade_count": 266290,
+    "unique_tokens_bought": 1121,
+    "wallet": "F7FXA6o916WzrKLSnW2NSRnSVHvi21Q2Q17WwocGVsPG"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:21.000 UTC",
+    "last_trade": "2026-01-11 12:16:09.000 UTC",
+    "total_volume_usd": 234863912.14179674,
+    "trade_count": 266260,
+    "unique_tokens_bought": 1117,
+    "wallet": "CnjNUvaGFB4QxGVfuCpd4iQPrgzct8rpAHwT2ncJfPKa"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:23.000 UTC",
+    "last_trade": "2026-01-11 12:16:18.000 UTC",
+    "total_volume_usd": 234711869.40575385,
+    "trade_count": 265848,
+    "unique_tokens_bought": 1118,
+    "wallet": "9mg2FLATVfziDdDN2vSUQkjFSwd5ecwfBrwvFnGLAJ24"
+  },
+  {
+    "first_trade": "2026-01-15 13:07:05.000 UTC",
+    "last_trade": "2026-02-04 01:59:19.000 UTC",
+    "total_volume_usd": 234693851.2194094,
+    "trade_count": 744245,
+    "unique_tokens_bought": 26,
+    "wallet": "7RABxFvwYHewsrUVdNcwFLpma8qeXjiVa2yGLZM2negE"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2026-01-11 12:15:50.000 UTC",
+    "total_volume_usd": 234202211.50269786,
+    "trade_count": 265340,
+    "unique_tokens_bought": 1118,
+    "wallet": "Gy4NP7FZDbUmLELJdW8byyFsJXDz4sXxWjqkVDy43Xfq"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-01-11 12:16:13.000 UTC",
+    "total_volume_usd": 234136714.6735983,
+    "trade_count": 265466,
+    "unique_tokens_bought": 1117,
+    "wallet": "BXS3wk2pvnzKq6dExaT7iK7fKzjHAUWDv4NuBAsBgj7h"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:34.000 UTC",
+    "last_trade": "2026-01-11 12:15:56.000 UTC",
+    "total_volume_usd": 233915318.4092273,
+    "trade_count": 264738,
+    "unique_tokens_bought": 1110,
+    "wallet": "4Cub25hnqwTvMLZDtbdiPRKAFJatn4hghMVtRUetDnwJ"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-11 12:16:05.000 UTC",
+    "total_volume_usd": 233352228.95822904,
+    "trade_count": 264550,
+    "unique_tokens_bought": 1119,
+    "wallet": "pwsa8hZShgdKR7oe2dis3FdR97tUnRto55N6SecGhmr"
+  },
+  {
+    "first_trade": "2026-02-15 00:48:34.000 UTC",
+    "last_trade": "2026-03-09 05:59:33.000 UTC",
+    "total_volume_usd": 233141637.7863384,
+    "trade_count": 639918,
+    "unique_tokens_bought": 14,
+    "wallet": "C9ogdm4koipbH4kLVWApDXzDMUM9iXfM6VSFp5DB137N"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:14.000 UTC",
+    "last_trade": "2026-01-11 12:35:47.000 UTC",
+    "total_volume_usd": 232957137.4592141,
+    "trade_count": 264791,
+    "unique_tokens_bought": 1123,
+    "wallet": "GqW9wE2h5rdySdkw6XBgkJQ2Jw5RoVggdZhoPCgAjgCK"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-15 14:06:05.000 UTC",
+    "total_volume_usd": 232944534.5661812,
+    "trade_count": 280860,
+    "unique_tokens_bought": 458,
+    "wallet": "Abe1rwrPvmonyEBYXeBduuY6D6dbbSCGFwq25xFE5AcT"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-01-11 12:16:01.000 UTC",
+    "total_volume_usd": 229350747.11630023,
+    "trade_count": 261084,
+    "unique_tokens_bought": 1115,
+    "wallet": "ApscuNdSc2ETwsFSztv1JPEbwmq7iXLs3foBTUYanLUe"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:05.000 UTC",
+    "last_trade": "2026-01-15 14:06:03.000 UTC",
+    "total_volume_usd": 227627663.38686636,
+    "trade_count": 276560,
+    "unique_tokens_bought": 436,
+    "wallet": "7kWdHJVKdt4TFpb7xconqTEtdFnY8zbe4kM87YqqdpNc"
+  },
+  {
+    "first_trade": "2025-11-27 10:01:42.000 UTC",
+    "last_trade": "2026-03-06 12:36:05.000 UTC",
+    "total_volume_usd": 226896133.26585245,
+    "trade_count": 475912,
+    "unique_tokens_bought": 1400,
+    "wallet": "HydraXoSz7oE3774DoWQQaofKb31Kbn2cbcqG4ShKy85"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-01-15 14:05:58.000 UTC",
+    "total_volume_usd": 226830089.5051546,
+    "trade_count": 275273,
+    "unique_tokens_bought": 434,
+    "wallet": "4qHArU2ntXhG4XQcwh1vbYPwam4dnzHicYDJ6LTXU8ai"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-15 14:06:04.000 UTC",
+    "total_volume_usd": 225608632.6027314,
+    "trade_count": 262158,
+    "unique_tokens_bought": 442,
+    "wallet": "J6FxGHAmL5rPVpFrvETDXriJzFbEDyGQNBfMw42MAoLm"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-01-15 14:06:04.000 UTC",
+    "total_volume_usd": 224849620.5688028,
+    "trade_count": 272833,
+    "unique_tokens_bought": 430,
+    "wallet": "C5bj3JpKiX2ap9zrBFNAVJqRea3qR1dv6swkrcaNJXHX"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:28.000 UTC",
+    "last_trade": "2026-03-09 05:53:48.000 UTC",
+    "total_volume_usd": 223958315.10327563,
+    "trade_count": 579243,
+    "unique_tokens_bought": 9586,
+    "wallet": "7rtiKSUDLBm59b1SBmD9oajcP8xE64vAGSMbAN5CXy1q"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:21.000 UTC",
+    "last_trade": "2026-01-15 14:05:31.000 UTC",
+    "total_volume_usd": 223195108.12826684,
+    "trade_count": 271072,
+    "unique_tokens_bought": 432,
+    "wallet": "5MgDCLnPyXvxeZqVmN5c2sCpSuLCDanSSVBaputUEDno"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2026-01-15 14:05:53.000 UTC",
+    "total_volume_usd": 222470362.31352776,
+    "trade_count": 270335,
+    "unique_tokens_bought": 427,
+    "wallet": "9d7KMZSNzTmPNP8uYURKE6KrHduvYanyvhCvT14Ay4kM"
+  },
+  {
+    "first_trade": "2025-12-13 12:16:11.000 UTC",
+    "last_trade": "2025-12-17 12:30:34.000 UTC",
+    "total_volume_usd": 222263068.54482344,
+    "trade_count": 130903,
+    "unique_tokens_bought": 216,
+    "wallet": "7RuHE2WtM1tnJmEUBTZXf92VaYfMp6VsoKwz3ds3Whag"
+  },
+  {
+    "first_trade": "2025-11-09 10:04:13.000 UTC",
+    "last_trade": "2026-03-08 22:30:45.000 UTC",
+    "total_volume_usd": 220173961.95181912,
+    "trade_count": 10578,
+    "unique_tokens_bought": 8,
+    "wallet": "HdHZe1MvhGSDQ32BBc6AimGpCtGjhb7295akaPVckQ3s"
+  },
+  {
+    "first_trade": "2025-12-27 07:28:55.000 UTC",
+    "last_trade": "2026-01-02 02:08:01.000 UTC",
+    "total_volume_usd": 220010828.65829283,
+    "trade_count": 85992,
+    "unique_tokens_bought": 303,
+    "wallet": "DMnGRmYRok7y82JsyQRtZBNTebqLxRjg5qfmVNQki33a"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2026-01-15 14:06:01.000 UTC",
+    "total_volume_usd": 219695665.00819215,
+    "trade_count": 266740,
+    "unique_tokens_bought": 421,
+    "wallet": "DsgnPVzT5fkXsEVAMF6EQuFsDKvtD4WFiJxuKfr9b6J2"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:10.000 UTC",
+    "last_trade": "2026-01-15 14:05:44.000 UTC",
+    "total_volume_usd": 218501828.64527732,
+    "trade_count": 265496,
+    "unique_tokens_bought": 420,
+    "wallet": "HVaJ8SumKTPyBMmAWfPqLk75fnb7Kp5UQmdoq3G2NMw9"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2026-01-15 14:06:06.000 UTC",
+    "total_volume_usd": 218191999.00524396,
+    "trade_count": 264937,
+    "unique_tokens_bought": 421,
+    "wallet": "4MbM6CsSTLHHJfiAkpeWkRRoTLfMwY7QbTVd9vecCPR8"
+  },
+  {
+    "first_trade": "2025-11-09 12:43:45.000 UTC",
+    "last_trade": "2026-01-15 14:06:03.000 UTC",
+    "total_volume_usd": 216169812.195451,
+    "trade_count": 262819,
+    "unique_tokens_bought": 421,
+    "wallet": "iJg8xirbUuUajdT2GZ6FhAz4fHEKz5BjwVLPjXHoVg6"
+  },
+  {
+    "first_trade": "2025-12-08 07:24:49.000 UTC",
+    "last_trade": "2026-01-07 12:16:36.000 UTC",
+    "total_volume_usd": 216131003.5276272,
+    "trade_count": 418953,
+    "unique_tokens_bought": 114,
+    "wallet": "PZnEAXQs8JHjLuGPywZYAzSUqgfs5LjLmV6uh6eByWY"
+  },
+  {
+    "first_trade": "2025-12-05 08:07:20.000 UTC",
+    "last_trade": "2025-12-18 10:12:45.000 UTC",
+    "total_volume_usd": 213220971.77013075,
+    "trade_count": 580761,
+    "unique_tokens_bought": 17,
+    "wallet": "24VH8V3rGHHFotBcjT9CoZajmsaV9tR4tbGsK4KLpXdi"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:37.000 UTC",
+    "last_trade": "2026-01-21 01:21:16.000 UTC",
+    "total_volume_usd": 211643423.80186227,
+    "trade_count": 17010,
+    "unique_tokens_bought": 125,
+    "wallet": "EjXXDjYRYFwqj7LSXV4fm8cWcnC58aisLL8Exj78AxBp"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:31.000 UTC",
+    "last_trade": "2026-01-21 01:21:10.000 UTC",
+    "total_volume_usd": 211533142.4046593,
+    "trade_count": 17001,
+    "unique_tokens_bought": 125,
+    "wallet": "NcUxuwDKH9AAj1cS8jxN4Wei8g1h5jr66WERGriuLgD"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:34.000 UTC",
+    "last_trade": "2026-01-21 01:21:13.000 UTC",
+    "total_volume_usd": 211468365.98558939,
+    "trade_count": 16996,
+    "unique_tokens_bought": 125,
+    "wallet": "2RsyiubPsUH2JWGHRuxfwpfMRRK2HN9axk7wzL2oXqy3"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:27.000 UTC",
+    "last_trade": "2026-01-21 01:21:07.000 UTC",
+    "total_volume_usd": 211412954.36835688,
+    "trade_count": 16991,
+    "unique_tokens_bought": 125,
+    "wallet": "DL9FVcwxVVedQGqy4h2WLcP1fwZvScUn73giWsFRs4Uc"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:37.000 UTC",
+    "last_trade": "2026-01-21 01:21:10.000 UTC",
+    "total_volume_usd": 211168615.94166145,
+    "trade_count": 16970,
+    "unique_tokens_bought": 125,
+    "wallet": "82AhRA1uvDAZmQFvtKLfcWTxTaW3Qs5y55vmw9yK4mNH"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:27.000 UTC",
+    "last_trade": "2026-01-21 01:21:13.000 UTC",
+    "total_volume_usd": 211102571.27022105,
+    "trade_count": 16965,
+    "unique_tokens_bought": 125,
+    "wallet": "J6i36vEiB1YJbA8QSCJHbc7hcoMRe9SWcqPwT79y4uwY"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:31.000 UTC",
+    "last_trade": "2026-01-21 01:21:16.000 UTC",
+    "total_volume_usd": 210933663.99572313,
+    "trade_count": 16953,
+    "unique_tokens_bought": 125,
+    "wallet": "F8Qr1x3dmz2nYWzgfKNEtoRfeNqXdAjuLC6zcfa18Rzr"
+  },
+  {
+    "first_trade": "2026-01-20 04:03:34.000 UTC",
+    "last_trade": "2026-01-21 01:21:07.000 UTC",
+    "total_volume_usd": 210922624.94817603,
+    "trade_count": 16950,
+    "unique_tokens_bought": 125,
+    "wallet": "ESHoJqe3f3Bod12axcd9dUtC4MPJ9Gag9zmD7UUmsyCJ"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:54.000 UTC",
+    "last_trade": "2026-03-05 23:54:01.000 UTC",
+    "total_volume_usd": 209248272.98027787,
+    "trade_count": 308048,
+    "unique_tokens_bought": 431,
+    "wallet": "2f3zjQNGHqsMH3wgrqT8iw5ySshDtNMYy8JHGrKyDXjf"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-02-28 12:44:26.000 UTC",
+    "total_volume_usd": 208674176.05285162,
+    "trade_count": 492717,
+    "unique_tokens_bought": 17,
+    "wallet": "datouWbnKthiYdWN3K2kypTs5YoykXSekSQVmDPoeo6"
+  },
+  {
+    "first_trade": "2025-11-10 08:25:26.000 UTC",
+    "last_trade": "2026-03-09 05:49:41.000 UTC",
+    "total_volume_usd": 208566837.8195237,
+    "trade_count": 245295,
+    "unique_tokens_bought": 174,
+    "wallet": "2n78p72RVYbyAiPtzZCNBYjMsEXKRiqfd5zArK8r2tgG"
+  },
+  {
+    "first_trade": "2025-11-11 14:14:12.000 UTC",
+    "last_trade": "2026-03-09 05:59:00.000 UTC",
+    "total_volume_usd": 207388059.818697,
+    "trade_count": 1273082,
+    "unique_tokens_bought": 335,
+    "wallet": "TAPNDP5dFr9Vp47DFuddRxNVYmjUqgh8boiUrWFgMqi"
+  },
+  {
+    "first_trade": "2025-11-19 01:43:09.000 UTC",
+    "last_trade": "2026-03-05 23:58:58.000 UTC",
+    "total_volume_usd": 207069646.51714525,
+    "trade_count": 286217,
+    "unique_tokens_bought": 1900,
+    "wallet": "358vYwYEU1SFBZZMoRpnqdYPWsvRXbq3yTXvc2Kdof5E"
+  },
+  {
+    "first_trade": "2026-01-07 04:46:44.000 UTC",
+    "last_trade": "2026-02-06 01:04:05.000 UTC",
+    "total_volume_usd": 206125593.77502087,
+    "trade_count": 202082,
+    "unique_tokens_bought": 48,
+    "wallet": "k3bS5WfZ5P2NTgkVSwdbVrveYc25iXiEHYfZfVruBGq"
+  },
+  {
+    "first_trade": "2026-02-23 18:45:13.000 UTC",
+    "last_trade": "2026-03-09 05:59:29.000 UTC",
+    "total_volume_usd": 203807542.73448256,
+    "trade_count": 223915,
+    "unique_tokens_bought": 217,
+    "wallet": "aYaJanTNVMvvmRa8Furzejn8VaxUvPFdXRsUhL2GmYf"
+  },
+  {
+    "first_trade": "2026-01-20 00:48:09.000 UTC",
+    "last_trade": "2026-01-21 22:41:12.000 UTC",
+    "total_volume_usd": 202862559.0531703,
+    "trade_count": 3795,
+    "unique_tokens_bought": 6,
+    "wallet": "CaBsd2LuZijmTPGKZGHS8ekYAHxdEAtZx2bc6gT2xBUv"
+  },
+  {
+    "first_trade": "2025-11-11 06:09:27.000 UTC",
+    "last_trade": "2026-03-09 04:26:10.000 UTC",
+    "total_volume_usd": 201956350.65277112,
+    "trade_count": 302988,
+    "unique_tokens_bought": 130,
+    "wallet": "6w56SRhxWCtryzYAv92AVBdaE4oUzZzjXTEsFQ6eTKVN"
+  },
+  {
+    "first_trade": "2026-01-07 11:33:03.000 UTC",
+    "last_trade": "2026-02-06 08:09:40.000 UTC",
+    "total_volume_usd": 200638746.92026,
+    "trade_count": 185616,
+    "unique_tokens_bought": 11,
+    "wallet": "2EZWAWuv9e4pgcxPZRMmEffDH8q45S573gu5pDRp72HT"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:04.000 UTC",
+    "last_trade": "2026-03-05 23:54:01.000 UTC",
+    "total_volume_usd": 199202192.77679256,
+    "trade_count": 296521,
+    "unique_tokens_bought": 469,
+    "wallet": "4ZYUJBvPuBNrSnmvQksvnBVfGpMYvfTdGZfEtBZaaiVV"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:13.000 UTC",
+    "last_trade": "2026-03-09 05:58:31.000 UTC",
+    "total_volume_usd": 198248521.4097931,
+    "trade_count": 389450,
+    "unique_tokens_bought": 70,
+    "wallet": "EcMXEHFS6ThGEiqsaM42wwRi8sXPXM285R3JJbWHZfVk"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:13.000 UTC",
+    "last_trade": "2026-03-09 05:49:51.000 UTC",
+    "total_volume_usd": 197532159.55885297,
+    "trade_count": 392593,
+    "unique_tokens_bought": 69,
+    "wallet": "tdDmurGTJ288UndUeueSpYcjwpSQY2kGxzrTC2FyvT8"
+  },
+  {
+    "first_trade": "2025-11-09 09:42:24.000 UTC",
+    "last_trade": "2026-03-09 05:56:53.000 UTC",
+    "total_volume_usd": 196755743.929044,
+    "trade_count": 390678,
+    "unique_tokens_bought": 71,
+    "wallet": "7rqskAg1eYcHXwL4FFdmgNuJ6rg4jCDfE29ugeeTrKez"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:55.000 UTC",
+    "last_trade": "2026-03-09 05:41:51.000 UTC",
+    "total_volume_usd": 195611389.8368061,
+    "trade_count": 389845,
+    "unique_tokens_bought": 67,
+    "wallet": "FG8LEP14GKw6ADNcqNHhVLNLuyMiJJFjzLrbiUEVQ75j"
+  },
+  {
+    "first_trade": "2025-12-23 16:28:33.000 UTC",
+    "last_trade": "2025-12-27 07:25:15.000 UTC",
+    "total_volume_usd": 194957361.79050612,
+    "trade_count": 80493,
+    "unique_tokens_bought": 220,
+    "wallet": "9rATY5z75Lvy1NSBYHRzLeuMUHKCzsxMAu4tajCxGLQu"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2026-01-15 14:06:00.000 UTC",
+    "total_volume_usd": 193970313.86551735,
+    "trade_count": 221436,
+    "unique_tokens_bought": 358,
+    "wallet": "dh8GUCotkRTArn4ckgTyYvTnzPAMsz6bVZqm5viM5yZ"
+  },
+  {
+    "first_trade": "2026-02-04 01:42:01.000 UTC",
+    "last_trade": "2026-02-15 00:41:11.000 UTC",
+    "total_volume_usd": 190797477.76609123,
+    "trade_count": 419241,
+    "unique_tokens_bought": 22,
+    "wallet": "BDX4R1eU2YeT78Pr16oHTi6gEAuVpqHktHRAkVmBRHRU"
+  },
+  {
+    "first_trade": "2025-11-09 12:43:14.000 UTC",
+    "last_trade": "2026-01-15 14:05:54.000 UTC",
+    "total_volume_usd": 188158368.62285653,
+    "trade_count": 231769,
+    "unique_tokens_bought": 416,
+    "wallet": "CVL8Ka5XpiE2MNRugGBCEEvxLk8gFhi6TXBrhVSRqt36"
+  },
+  {
+    "first_trade": "2025-12-19 05:05:31.000 UTC",
+    "last_trade": "2025-12-22 16:47:24.000 UTC",
+    "total_volume_usd": 185115869.7291524,
+    "trade_count": 72775,
+    "unique_tokens_bought": 192,
+    "wallet": "HUA8bprgTPbgiimzkQoCMrcovMf1mFzYz5pjfFDr99UN"
+  },
+  {
+    "first_trade": "2025-11-25 16:14:12.000 UTC",
+    "last_trade": "2025-11-29 08:25:54.000 UTC",
+    "total_volume_usd": 184154778.02594575,
+    "trade_count": 65646,
+    "unique_tokens_bought": 224,
+    "wallet": "GXKuNRmqfP6kp5invUx3jUAA6zss3giUm3h4yC8F1nyz"
+  },
+  {
+    "first_trade": "2026-01-16 21:01:30.000 UTC",
+    "last_trade": "2026-02-11 12:55:50.000 UTC",
+    "total_volume_usd": 183817469.11335778,
+    "trade_count": 773431,
+    "unique_tokens_bought": 10,
+    "wallet": "3Bri2pu3VJNxB3qi96WmGi2eWy7TyCfwa6Axq2ycJaEj"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:16.000 UTC",
+    "last_trade": "2026-01-11 12:15:43.000 UTC",
+    "total_volume_usd": 183148332.67379162,
+    "trade_count": 220196,
+    "unique_tokens_bought": 1105,
+    "wallet": "GB4RcaGPnU44o8BKQD18aKxKMwwqg6R5VQMwQ2PrFy1T"
+  },
+  {
+    "first_trade": "2025-11-09 09:45:17.000 UTC",
+    "last_trade": "2026-03-09 03:48:51.000 UTC",
+    "total_volume_usd": 182692612.76432025,
+    "trade_count": 100155,
+    "unique_tokens_bought": 1359,
+    "wallet": "FzZ77TM8Ekcb6gyWPmcT9upWkAZKZc5xrYfuFu7pifPn"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2026-03-05 13:00:42.000 UTC",
+    "total_volume_usd": 182071535.40048584,
+    "trade_count": 529624,
+    "unique_tokens_bought": 32,
+    "wallet": "3333JG5dZ1nRDyKwCmrC3HwoevuaFP5L7p3AAjfagggg"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:54.000 UTC",
+    "last_trade": "2026-03-09 05:41:02.000 UTC",
+    "total_volume_usd": 181180501.89463794,
+    "trade_count": 148950,
+    "unique_tokens_bought": 1809,
+    "wallet": "2snHHreXbpJ7UwZxPe37gnUNf7Wx7wv6UKDSR2JckKuS"
+  },
+  {
+    "first_trade": "2025-11-09 12:11:31.000 UTC",
+    "last_trade": "2026-02-23 02:40:32.000 UTC",
+    "total_volume_usd": 181145141.93205872,
+    "trade_count": 1530343,
+    "unique_tokens_bought": 62,
+    "wallet": "FbgR9632h4rvPciZzCHRGNrEaQM9bC2cGgAikJ8HUfS1"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:57.000 UTC",
+    "last_trade": "2026-01-15 14:06:05.000 UTC",
+    "total_volume_usd": 180793580.4678122,
+    "trade_count": 201803,
+    "unique_tokens_bought": 351,
+    "wallet": "Db2Ud3SmJ9Yw6WNXzJG2yMPYRR1eXosPxPAmRteDBtGc"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2025-12-25 10:19:47.000 UTC",
+    "total_volume_usd": 180390546.17383355,
+    "trade_count": 797463,
+    "unique_tokens_bought": 32,
+    "wallet": "7JKtM3J8dq2drbJZuTSCdMxFzc1cStvmjzyijTLb8Z5N"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:22.000 UTC",
+    "last_trade": "2026-03-05 23:53:56.000 UTC",
+    "total_volume_usd": 178223178.2010982,
+    "trade_count": 271892,
+    "unique_tokens_bought": 429,
+    "wallet": "JCajxG8ydFvCz2gGogAqgEpdUfzCy9eGPxzZp2iN71qo"
+  },
+  {
+    "first_trade": "2025-11-29 21:32:59.000 UTC",
+    "last_trade": "2026-02-22 23:43:58.000 UTC",
+    "total_volume_usd": 177630760.37794152,
+    "trade_count": 1076032,
+    "unique_tokens_bought": 48,
+    "wallet": "7JJ4RrYC4wBb2ZangbVW4XbQenhEbkdoo7vhoWoShYjp"
+  },
+  {
+    "first_trade": "2026-01-10 05:57:50.000 UTC",
+    "last_trade": "2026-03-09 05:00:54.000 UTC",
+    "total_volume_usd": 176172547.11465874,
+    "trade_count": 122672,
+    "unique_tokens_bought": 194,
+    "wallet": "691hAoXKv5fD4PKgxAWb4Cyg12zc3ns9pnGbWLqH1dxc"
+  },
+  {
+    "first_trade": "2026-01-12 08:24:00.000 UTC",
+    "last_trade": "2026-01-16 17:16:30.000 UTC",
+    "total_volume_usd": 173909574.83347037,
+    "trade_count": 55322,
+    "unique_tokens_bought": 397,
+    "wallet": "2mTH9v5FiW5itkXFyjwz5iBJt8SBtwu8boTSSqiQGsZK"
+  },
+  {
+    "first_trade": "2026-01-22 00:46:40.000 UTC",
+    "last_trade": "2026-02-03 06:26:02.000 UTC",
+    "total_volume_usd": 173830694.15340692,
+    "trade_count": 459585,
+    "unique_tokens_bought": 23,
+    "wallet": "3sxeRsQAjyQRfFfpyASf8zmViSSR1zoVgfmgZNZupQGi"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:45.000 UTC",
+    "last_trade": "2026-03-05 23:54:01.000 UTC",
+    "total_volume_usd": 172498206.2394158,
+    "trade_count": 265477,
+    "unique_tokens_bought": 436,
+    "wallet": "DTvsvKYX72mF7ZnHDzQvFcZ16god3cfABbQWh7dnN7N5"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:15.000 UTC",
+    "last_trade": "2026-03-05 23:53:59.000 UTC",
+    "total_volume_usd": 172327195.5138328,
+    "trade_count": 266066,
+    "unique_tokens_bought": 438,
+    "wallet": "tN6XVzEHNc2WiY37czkSMb2ZMv9A9xGg7pULRfAYUnh"
+  },
+  {
+    "first_trade": "2025-11-29 15:02:01.000 UTC",
+    "last_trade": "2025-12-15 15:20:03.000 UTC",
+    "total_volume_usd": 171937114.38538742,
+    "trade_count": 7815,
+    "unique_tokens_bought": 7,
+    "wallet": "Dgw1KkwvySvkef6tWzuwvizH25EwmT1SSjF1vhenbwG3"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:15.000 UTC",
+    "last_trade": "2026-03-05 23:54:03.000 UTC",
+    "total_volume_usd": 170548067.97663248,
+    "trade_count": 261986,
+    "unique_tokens_bought": 437,
+    "wallet": "CKjNa8pmxhhr7TWRnJYxksNf8Duhqmiee2jKniEGFq8X"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:17.000 UTC",
+    "last_trade": "2026-03-05 23:54:03.000 UTC",
+    "total_volume_usd": 169946892.85611504,
+    "trade_count": 262609,
+    "unique_tokens_bought": 440,
+    "wallet": "7ykAAqKs7VmZAEXm5PGRHrSTSNDsd3FzZMSEK3z416kC"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:21.000 UTC",
+    "last_trade": "2026-03-06 10:05:21.000 UTC",
+    "total_volume_usd": 169945185.18900862,
+    "trade_count": 503975,
+    "unique_tokens_bought": 16,
+    "wallet": "RV3vubs5N8kHQJmXqZNmjZU6qCYB7zHu1mmAX3efZDn"
+  },
+  {
+    "first_trade": "2025-11-12 11:49:11.000 UTC",
+    "last_trade": "2026-03-08 23:57:20.000 UTC",
+    "total_volume_usd": 169370904.04287988,
+    "trade_count": 78926,
+    "unique_tokens_bought": 5,
+    "wallet": "GQqudRyjbkeeMKGDTuVHsryS4gajB4SQPp8paxZY8HTC"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:02.000 UTC",
+    "last_trade": "2026-03-05 23:53:59.000 UTC",
+    "total_volume_usd": 169356250.3687854,
+    "trade_count": 261348,
+    "unique_tokens_bought": 442,
+    "wallet": "WoZwHfwsYVyZKKhp2saLQXEJdh9tkk6Jf6agRaLg2Ts"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:20.000 UTC",
+    "last_trade": "2026-03-05 23:54:03.000 UTC",
+    "total_volume_usd": 169279700.93466356,
+    "trade_count": 261146,
+    "unique_tokens_bought": 433,
+    "wallet": "DwaiX44MXBQ9P2rDpu1Px98nJQxiGXb2Rk2hi1BCeDrf"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:08.000 UTC",
+    "last_trade": "2026-03-05 23:54:01.000 UTC",
+    "total_volume_usd": 169134982.06380403,
+    "trade_count": 259689,
+    "unique_tokens_bought": 467,
+    "wallet": "NnwXzsU9p7M2w6rYkBnA6byUyN3XbhyvJxcBmwtvPgB"
+  },
+  {
+    "first_trade": "2026-02-06 15:11:00.000 UTC",
+    "last_trade": "2026-03-05 23:15:48.000 UTC",
+    "total_volume_usd": 168242029.56350476,
+    "trade_count": 22317,
+    "unique_tokens_bought": 2430,
+    "wallet": "F2LsTgsepmoAuorgQDz9c28eQKnQem8quKX1tzQ2nDE6"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2026-01-10 11:43:28.000 UTC",
+    "total_volume_usd": 168060256.3629616,
+    "trade_count": 179798,
+    "unique_tokens_bought": 305,
+    "wallet": "6uP9TmWCQNxJgt4b2gPLzXvkYc4GWezaZ1bCPf4wQhgu"
+  },
+  {
+    "first_trade": "2025-11-12 00:35:32.000 UTC",
+    "last_trade": "2026-03-08 21:08:09.000 UTC",
+    "total_volume_usd": 166968166.28070462,
+    "trade_count": 17669,
+    "unique_tokens_bought": 10,
+    "wallet": "APiYQMXVMHGF7iryRF8f2UsLttDpdgqr5247iJpMvRDD"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2025-12-26 22:05:29.000 UTC",
+    "total_volume_usd": 165825824.22959384,
+    "trade_count": 156421,
+    "unique_tokens_bought": 39,
+    "wallet": "AXGMRFUVYCwQWnRBMmp9x4ztTSUu3zRjuHQfFNFQNLi2"
+  },
+  {
+    "first_trade": "2026-01-21 09:51:58.000 UTC",
+    "last_trade": "2026-03-09 00:25:34.000 UTC",
+    "total_volume_usd": 165601117.66149625,
+    "trade_count": 248553,
+    "unique_tokens_bought": 39,
+    "wallet": "8StkTM9BXnsWwWcbihCL8pUn9xBePvjQfXHqTkNjuyGD"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:31.000 UTC",
+    "last_trade": "2026-03-05 23:53:59.000 UTC",
+    "total_volume_usd": 164841049.54354197,
+    "trade_count": 254306,
+    "unique_tokens_bought": 435,
+    "wallet": "55uQbYqQ5ak73WRvszJqNeQ5zkEN4xREFgJ8p8KUTp2p"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2025-12-15 16:05:36.000 UTC",
+    "total_volume_usd": 164477101.07352254,
+    "trade_count": 1185859,
+    "unique_tokens_bought": 97,
+    "wallet": "HUYjpFHuchjUEQPtfLgUxyRnY3V5JBpeikmPzJKQtHVX"
+  },
+  {
+    "first_trade": "2026-01-07 12:08:47.000 UTC",
+    "last_trade": "2026-01-12 08:16:32.000 UTC",
+    "total_volume_usd": 163800783.50418374,
+    "trade_count": 48891,
+    "unique_tokens_bought": 320,
+    "wallet": "C2bK8HFrL71aLnpyExVoJmqjDPA9tbLMXcBNAkRQnLfQ"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2026-03-09 05:13:02.000 UTC",
+    "total_volume_usd": 162958417.80538186,
+    "trade_count": 623897,
+    "unique_tokens_bought": 23784,
+    "wallet": "HV1KXxWFaSeriyFvXyx48FqG9BoFbfinB8njCJonqP7K"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:04.000 UTC",
+    "last_trade": "2026-03-05 23:54:00.000 UTC",
+    "total_volume_usd": 162844607.44919395,
+    "trade_count": 252274,
+    "unique_tokens_bought": 439,
+    "wallet": "Cbh8Gc3w8borm3rZUqoFtx8f9mz9xbwqk7CkQGbfSqY"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2025-12-20 05:38:33.000 UTC",
+    "total_volume_usd": 162113370.5348558,
+    "trade_count": 187865,
+    "unique_tokens_bought": 888,
+    "wallet": "GHYnTYVdVG3e79bib28agMed37wrLNnbPtdSmsDTUaPg"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:09.000 UTC",
+    "last_trade": "2025-12-20 05:38:25.000 UTC",
+    "total_volume_usd": 161786873.7307389,
+    "trade_count": 187412,
+    "unique_tokens_bought": 882,
+    "wallet": "Ag2pqk5ZSza567NLDzSnZJa6jxNSEk9UbQMJ4AjHuCmY"
+  },
+  {
+    "first_trade": "2026-02-06 06:10:07.000 UTC",
+    "last_trade": "2026-03-05 23:53:58.000 UTC",
+    "total_volume_usd": 161786118.28443968,
+    "trade_count": 250065,
+    "unique_tokens_bought": 437,
+    "wallet": "C6R34aNnDXjAPaedhDjkkvdihDieoVvKPaMtNNbN4ggB"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2025-12-20 05:38:09.000 UTC",
+    "total_volume_usd": 161743389.95837143,
+    "trade_count": 187482,
+    "unique_tokens_bought": 882,
+    "wallet": "88CyUuqLvjNKBq1DY5mEfWrnXh11QW9ofPzik1VnbUyo"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:22.000 UTC",
+    "last_trade": "2025-12-20 05:38:18.000 UTC",
+    "total_volume_usd": 161623222.4608142,
+    "trade_count": 187476,
+    "unique_tokens_bought": 879,
+    "wallet": "HJ3mbyMfireWWPXKUB4PPrBbKdkWDhirTiD8KFMqe8Hn"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:19.000 UTC",
+    "last_trade": "2025-12-20 05:38:40.000 UTC",
+    "total_volume_usd": 161425456.8001555,
+    "trade_count": 187117,
+    "unique_tokens_bought": 884,
+    "wallet": "DXxxL4tPzd28hBWz5Twt82W4SWBkCbHhaMEhrY8FfX9P"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2025-12-20 05:38:41.000 UTC",
+    "total_volume_usd": 161289588.17157635,
+    "trade_count": 187065,
+    "unique_tokens_bought": 885,
+    "wallet": "GdcXThkUbc1xiCSy1bpZaLQod3AtqZe8kRjoHDUvpcga"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2025-12-20 05:38:20.000 UTC",
+    "total_volume_usd": 161219471.4276465,
+    "trade_count": 186908,
+    "unique_tokens_bought": 887,
+    "wallet": "CtDEfYuS7WZ2tsL253F3dTsFwV9AY4bC4b7ja6SxD9rR"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2025-12-20 05:38:22.000 UTC",
+    "total_volume_usd": 161175241.99929583,
+    "trade_count": 187121,
+    "unique_tokens_bought": 889,
+    "wallet": "96HQnSFoV4pSHdrCSQb2yKA1noQghU3d7wGZbReDN3qv"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2025-12-20 05:37:44.000 UTC",
+    "total_volume_usd": 161004548.80794293,
+    "trade_count": 187035,
+    "unique_tokens_bought": 880,
+    "wallet": "x6c8NdotmYJM4nCTPD4f7EharbUUZ2pYDF4sZ6P5yzo"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2025-12-20 05:37:45.000 UTC",
+    "total_volume_usd": 160963958.58883986,
+    "trade_count": 186578,
+    "unique_tokens_bought": 885,
+    "wallet": "3MmytPHXkokndwVZPuf1a1AAvfKetxfxNsfm666WPo1a"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2025-12-20 05:37:39.000 UTC",
+    "total_volume_usd": 160939168.4630784,
+    "trade_count": 186415,
+    "unique_tokens_bought": 878,
+    "wallet": "3VGRKYvb8MxUjfnRDKaiC93A5rY4zVmAtb2DQk5koZJc"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:07.000 UTC",
+    "last_trade": "2025-12-20 05:38:16.000 UTC",
+    "total_volume_usd": 160912878.12595165,
+    "trade_count": 186550,
+    "unique_tokens_bought": 885,
+    "wallet": "AKhZThAEkCcd2pTSHRAhviRwA8F1Rn8EZk2jpuCB77R8"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2025-12-20 05:38:31.000 UTC",
+    "total_volume_usd": 160857507.70188215,
+    "trade_count": 186803,
+    "unique_tokens_bought": 881,
+    "wallet": "CJJibd4KfBRGE2L7HoCDyYAsfwKiJJGQkYoTNpokFDVX"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:12.000 UTC",
+    "last_trade": "2025-12-20 05:38:44.000 UTC",
+    "total_volume_usd": 160711088.05781874,
+    "trade_count": 186386,
+    "unique_tokens_bought": 885,
+    "wallet": "HK7RWmgPp7zZxAgWQJXXEc7L2XMkt5iAKuovryNQvyBJ"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:18.000 UTC",
+    "last_trade": "2025-12-20 05:38:08.000 UTC",
+    "total_volume_usd": 160661805.417785,
+    "trade_count": 186544,
+    "unique_tokens_bought": 879,
+    "wallet": "BWBub9GUPaSvSP2h2Zxt4sbCv2vmhUWyFsEykpydPESx"
+  },
+  {
+    "first_trade": "2025-11-09 09:35:19.000 UTC",
+    "last_trade": "2025-12-20 05:38:26.000 UTC",
+    "total_volume_usd": 160500898.67760593,
+    "trade_count": 186437,
+    "unique_tokens_bought": 887,
+    "wallet": "6Z623gc3gYeNS7zfXR6gEGywmf5thexqjoBN8Pjxmb32"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2025-12-20 05:38:46.000 UTC",
+    "total_volume_usd": 160445621.67434123,
+    "trade_count": 186214,
+    "unique_tokens_bought": 887,
+    "wallet": "CQuSG3bvBbEc3xig9gkeoYNsBu9AzUZFUV65SfXAh5Cj"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2025-12-20 05:38:37.000 UTC",
+    "total_volume_usd": 160438623.1124131,
+    "trade_count": 185844,
+    "unique_tokens_bought": 887,
+    "wallet": "4fPWP1FSfQPQznm998Z29zapqnmuAZUgJvaQLMqcxWpG"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2025-12-20 05:38:33.000 UTC",
+    "total_volume_usd": 160367921.40150973,
+    "trade_count": 186273,
+    "unique_tokens_bought": 888,
+    "wallet": "RURPDxLq32NGXFuhLtytbkRzvrvV8jVArEiA8uhMYh7"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2025-12-20 05:36:53.000 UTC",
+    "total_volume_usd": 160243185.5217632,
+    "trade_count": 185590,
+    "unique_tokens_bought": 880,
+    "wallet": "BvJ4buq9Gyn1LLApPfEHbhAwGzJKxv3EtkMXqeieAKs6"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:03.000 UTC",
+    "last_trade": "2025-12-20 05:38:17.000 UTC",
+    "total_volume_usd": 160172216.98514035,
+    "trade_count": 186146,
+    "unique_tokens_bought": 882,
+    "wallet": "BvTzPd2g5WknhgXv3b7HH6xoDBkodfjq4k9HhpwdqEca"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:39.000 UTC",
+    "last_trade": "2025-12-20 05:38:31.000 UTC",
+    "total_volume_usd": 160137167.40205505,
+    "trade_count": 186298,
+    "unique_tokens_bought": 883,
+    "wallet": "BfsiiqUpE5Mb7uZm6JEqG5zPVDJrxcW3CPoS63AsrP7d"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2025-12-20 05:37:42.000 UTC",
+    "total_volume_usd": 160129359.44000205,
+    "trade_count": 185932,
+    "unique_tokens_bought": 886,
+    "wallet": "GnpSwExyhdS9JWkCwxDoEvT6qkXXkbRALB7h7QrM9ovQ"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:08.000 UTC",
+    "last_trade": "2025-12-20 05:38:35.000 UTC",
+    "total_volume_usd": 160113589.91706714,
+    "trade_count": 185910,
+    "unique_tokens_bought": 883,
+    "wallet": "DYBLYYiuabYcjDvs4zye4EtriXmJRWJBsqhbRuzdsjKD"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:00.000 UTC",
+    "last_trade": "2025-12-20 05:38:47.000 UTC",
+    "total_volume_usd": 160082259.7027318,
+    "trade_count": 185653,
+    "unique_tokens_bought": 883,
+    "wallet": "EWg5J3zsyPPyshGgqA3MRgSX1U1YLjFHeaQ9MuNBvfpX"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2025-12-20 05:38:37.000 UTC",
+    "total_volume_usd": 160078865.49287474,
+    "trade_count": 185988,
+    "unique_tokens_bought": 883,
+    "wallet": "5gjA9psQ8p25FBmNgxs6o6V6MF25Paiup6p74T6LKe6g"
+  },
+  {
+    "first_trade": "2025-11-09 12:43:15.000 UTC",
+    "last_trade": "2026-01-15 14:05:41.000 UTC",
+    "total_volume_usd": 159886054.16228202,
+    "trade_count": 198731,
+    "unique_tokens_bought": 317,
+    "wallet": "2W2xDHaofM8WMgeD9krBQiaxCKNp27cVggcP7bUtRRyr"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:19.000 UTC",
+    "last_trade": "2025-12-20 05:38:23.000 UTC",
+    "total_volume_usd": 159883931.4677591,
+    "trade_count": 185678,
+    "unique_tokens_bought": 883,
+    "wallet": "FoXZUaMQyQK6w1EHqwMd7bYJnsmcY3NFz6v7HNMsykvM"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:02.000 UTC",
+    "last_trade": "2025-12-20 05:38:39.000 UTC",
+    "total_volume_usd": 159849722.88379794,
+    "trade_count": 185902,
+    "unique_tokens_bought": 881,
+    "wallet": "GAj4atCYq44NhSegKJ8vxzoLCV3GGsB7aHbZV6zj9TSy"
+  },
+  {
+    "first_trade": "2025-11-09 12:43:41.000 UTC",
+    "last_trade": "2026-01-15 14:06:00.000 UTC",
+    "total_volume_usd": 159819038.54812533,
+    "trade_count": 198709,
+    "unique_tokens_bought": 313,
+    "wallet": "3QkYJZrsyfiyygn9DJ7JKNSz8WYyRtfYquhaZzEvW4kq"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:58.000 UTC",
+    "last_trade": "2025-12-20 05:38:41.000 UTC",
+    "total_volume_usd": 159797074.91402477,
+    "trade_count": 185291,
+    "unique_tokens_bought": 881,
+    "wallet": "4m9pHZwYWyvzfzUZF5x6okNwED3dsgWwsVGkbcMaG9rK"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:04.000 UTC",
+    "last_trade": "2025-12-20 05:38:46.000 UTC",
+    "total_volume_usd": 159771545.48910713,
+    "trade_count": 185403,
+    "unique_tokens_bought": 879,
+    "wallet": "889rpUVTq7w4Pz1rsj679KbxmfnP65iSjXuFCNcCP1xA"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:06.000 UTC",
+    "last_trade": "2025-12-20 05:38:15.000 UTC",
+    "total_volume_usd": 159727142.9097066,
+    "trade_count": 185319,
+    "unique_tokens_bought": 887,
+    "wallet": "BoVD5sPQiiBB3m1YAxdx7XZYGDBCnUzcN2WchibTML18"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:18.000 UTC",
+    "last_trade": "2025-12-20 05:37:12.000 UTC",
+    "total_volume_usd": 159723701.31507516,
+    "trade_count": 185797,
+    "unique_tokens_bought": 882,
+    "wallet": "6U3QAGN5m51wzqmVHV3J9TGmE3K1R3Wkf8wKFW4kQhox"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:13.000 UTC",
+    "last_trade": "2025-12-20 05:37:53.000 UTC",
+    "total_volume_usd": 159660052.86387974,
+    "trade_count": 185444,
+    "unique_tokens_bought": 882,
+    "wallet": "G1uMv34653JzpBrMsVm6D86AhLFvSdd9CGuM2r2BE11c"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:15.000 UTC",
+    "last_trade": "2025-12-20 05:38:28.000 UTC",
+    "total_volume_usd": 159611167.29884037,
+    "trade_count": 185409,
+    "unique_tokens_bought": 890,
+    "wallet": "C8VCzzQyX2wK8a7gzc3hgDaWWb7SwyumZoVBV8AXWwX9"
+  },
+  {
+    "first_trade": "2025-11-09 09:33:59.000 UTC",
+    "last_trade": "2025-12-20 05:37:40.000 UTC",
+    "total_volume_usd": 159346826.20673856,
+    "trade_count": 184997,
+    "unique_tokens_bought": 889,
+    "wallet": "HAMkqFCYbCjyvyxW79kmTUhB5NeB3KVUk1dEc8uVvaHP"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2025-12-20 05:38:06.000 UTC",
+    "total_volume_usd": 159331092.13163322,
+    "trade_count": 184937,
+    "unique_tokens_bought": 886,
+    "wallet": "EcJHzyD6NWXVF9cBmF94dzwSAtnDhbfFdcYvzxfPWuzh"
+  },
+  {
+    "first_trade": "2025-11-09 12:43:17.000 UTC",
+    "last_trade": "2026-01-15 14:05:50.000 UTC",
+    "total_volume_usd": 159313604.11183172,
+    "trade_count": 197815,
+    "unique_tokens_bought": 313,
+    "wallet": "G2M2V2EHfBjUE1VPaggqBzeZe4dvUanWoQizUAyzQRuy"
+  },
+  {
+    "first_trade": "2025-11-09 09:34:01.000 UTC",
+    "last_trade": "2025-12-20 05:38:44.000 UTC",
+    "total_volume_usd": 159255718.15223578,
+    "trade_count": 184898,
+    "unique_tokens_bought": 886,
+    "wallet": "ADC3EdozqLaE3n9ZbcZcc4NSNXDHyVRUHUX93HAN8SEg"
+  }
+]

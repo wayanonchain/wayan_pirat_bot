@@ -1,0 +1,28 @@
+# Виртуальное окружение
+venv/
+.venv/
+
+# Данные (база, кошельки)
+data/bot.db
+data/wallet_database_pre_*.json
+
+# Переменные окружения (СЕКРЕТЫ!)
+.env
+
+# Python кеш
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log

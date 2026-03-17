@@ -1,0 +1,345 @@
+[
+  {
+    "address": "GH5f4hYyNb5yXfwiKHWJgi4ibeXzZZEFvDQ7WRGA4nmj",
+    "label": "\ud83e\udd13 180D Smart Trader [GH5f4hYy]",
+    "labels_seen": [
+      "30D Smart Trader",
+      "90D Smart Trader",
+      "180D Smart Trader",
+      "Smart Trader"
+    ],
+    "total_trades_seen": 52,
+    "total_volume_usd": 156530.51482982177,
+    "first_trade_seen": "2026-03-08T18:44:51",
+    "last_trade_seen": "2026-03-09T01:17:46",
+    "tokens_traded": [
+      "KILROY",
+      "\ud83c\udf31 DUST",
+      "BUTTCOIN",
+      "MAXXING"
+    ],
+    "unique_tokens_count": 4
+  },
+  {
+    "address": "69SzLy86mUfdeFqYurR4YsvcTuvYsVAqwdeTGWiGvRgt",
+    "label": "\ud83e\udd13 30D Smart Trader [69SzLy86]",
+    "labels_seen": [
+      "90D Smart Trader",
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 12,
+    "total_volume_usd": 30737.998788688332,
+    "first_trade_seen": "2026-03-09T02:26:30",
+    "last_trade_seen": "2026-03-09T02:29:53",
+    "tokens_traded": [
+      "PENGUIN",
+      "WOJAK"
+    ],
+    "unique_tokens_count": 2
+  },
+  {
+    "address": "6gMGbBHdRXiNR9YYXFVdTXz3WZyQu8CR54uzpTWxPPKt",
+    "label": "\ud83e\udd13 30D Smart Trader [6gMGbBHd]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 8,
+    "total_volume_usd": 11117.72557897329,
+    "first_trade_seen": "2026-03-08T11:17:23",
+    "last_trade_seen": "2026-03-08T23:14:00",
+    "tokens_traded": [
+      "DOOM",
+      "MONITOR",
+      "\ud83c\udf31 OI",
+      "\u6211\u7684\u5200\u76fe",
+      "OIL"
+    ],
+    "unique_tokens_count": 5
+  },
+  {
+    "address": "GQcSE2FvUo6wre3ECGWfhE8W858LzBL5fsMgpyYF6eM7",
+    "label": "\ud83e\udd13 30D Smart Trader [GQcSE2Fv]",
+    "labels_seen": [
+      "90D Smart Trader",
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 12,
+    "total_volume_usd": 10999.149111403533,
+    "first_trade_seen": "2026-03-08T13:00:13",
+    "last_trade_seen": "2026-03-09T01:46:55",
+    "tokens_traded": [
+      "\u6211\u7684\u5200\u76fe"
+    ],
+    "unique_tokens_count": 1
+  },
+  {
+    "address": "Gdaqp3ND6r3HVAWXpawkQU18EuQqwNxpaeeio8ASVAYd",
+    "label": "\u200b\u200b\ud83e\udd13 huigendeshen: 90D Smart Trader [Gdaqp3ND]",
+    "labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_trades_seen": 4,
+    "total_volume_usd": 7898.641496945305,
+    "first_trade_seen": "2026-03-08T13:44:48",
+    "last_trade_seen": "2026-03-09T02:02:18",
+    "tokens_traded": [
+      "\ud83c\udf31 MEMEWAR",
+      "NEET"
+    ],
+    "unique_tokens_count": 2
+  },
+  {
+    "address": "E1zGzPY1WdJoHSzf928NWTkZjcAhnUaN1xzF6BhCTsvS",
+    "label": "\ud83e\udd13 shadowdahedgehog.sol [E1zGzPY1]",
+    "labels_seen": [
+      "90D Smart Trader",
+      "180D Smart Trader"
+    ],
+    "total_trades_seen": 22,
+    "total_volume_usd": 5757.612374477948,
+    "first_trade_seen": "2026-03-08T14:20:30",
+    "last_trade_seen": "2026-03-08T22:24:58",
+    "tokens_traded": [
+      "\ud83c\udf31 CABBIT",
+      "\ud83c\udf31 \u5c0f\u5317",
+      "\ud83c\udf31 HUMANSLOP",
+      "\ud83c\udf31 NORI",
+      "$SNIBBU",
+      "\ud83c\udf31 PUSSY"
+    ],
+    "unique_tokens_count": 6
+  },
+  {
+    "address": "EvGpkcSBfhp5K9SNP48wVtfNXdKYRBiK3kvMkB66kU3Q",
+    "label": "\ud83e\udd13 Smart Trader [EvGpkcSB]",
+    "labels_seen": [
+      "180D Smart Trader",
+      "Smart Trader"
+    ],
+    "total_trades_seen": 26,
+    "total_volume_usd": 5725.449409851053,
+    "first_trade_seen": "2026-03-08T10:41:15",
+    "last_trade_seen": "2026-03-09T01:03:21",
+    "tokens_traded": [
+      "\ud83c\udf31 42ER",
+      "FITGIRL",
+      "\ud83c\udf31 METHOD",
+      "FOMO",
+      "GASINU",
+      "\ud83c\udf31 KATANA",
+      "GAS"
+    ],
+    "unique_tokens_count": 7
+  },
+  {
+    "address": "6r6SdfhfdvNi8571brBMiD61bn8PbUmxWS8crzpykbSb",
+    "label": "\ud83e\udd13 30D Smart Trader [6r6Sdfhf]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 3,
+    "total_volume_usd": 4685.207749958739,
+    "first_trade_seen": "2026-03-08T17:44:42",
+    "last_trade_seen": "2026-03-08T19:09:10",
+    "tokens_traded": [
+      "TRIPLET",
+      "\ud83c\udf31 WBE"
+    ],
+    "unique_tokens_count": 2
+  },
+  {
+    "address": "CoNcGfS9M4p56mJ2nqP35YS2y2X3mhvpu8AMgHbUniRC",
+    "label": "\ud83e\udd13 Smart Trader [CoNcGfS9]",
+    "labels_seen": [
+      "Smart Trader"
+    ],
+    "total_trades_seen": 25,
+    "total_volume_usd": 4322.282109048087,
+    "first_trade_seen": "2026-03-08T14:10:23",
+    "last_trade_seen": "2026-03-09T02:10:59",
+    "tokens_traded": [
+      "WHITEWHALE"
+    ],
+    "unique_tokens_count": 1
+  },
+  {
+    "address": "9Eev8bB2L4Heet6aAcpw5Mesz1aDahyKYkXHLyQHLBoR",
+    "label": "\ud83e\udd13 90D Smart Trader [9Eev8bB2]",
+    "labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_trades_seen": 5,
+    "total_volume_usd": 4037.3293937327126,
+    "first_trade_seen": "2026-03-09T00:22:08",
+    "last_trade_seen": "2026-03-09T05:49:13",
+    "tokens_traded": [
+      "SHAPE",
+      "BP",
+      "OILINU"
+    ],
+    "unique_tokens_count": 3
+  },
+  {
+    "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
+    "label": "\ud83e\udd13 90D Smart Trader [EVCwZrtP]",
+    "labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_trades_seen": 5,
+    "total_volume_usd": 2314.5832576486655,
+    "first_trade_seen": "2026-03-08T17:01:31",
+    "last_trade_seen": "2026-03-08T22:25:00",
+    "tokens_traded": [
+      "NNN",
+      "\u26a0\ufe0f LARP",
+      "Q4"
+    ],
+    "unique_tokens_count": 3
+  },
+  {
+    "address": "GC4sRy4H9692nkdqXan6tK8frQaSQUzYvV4zr5rELK7m",
+    "label": "\ud83e\udd13 30D Smart Trader [GC4sRy4H]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 5,
+    "total_volume_usd": 2128.7561224980245,
+    "first_trade_seen": "2026-03-08T12:39:47",
+    "last_trade_seen": "2026-03-08T23:13:28",
+    "tokens_traded": [
+      "OILINU",
+      "\u26a0\ufe0f PETE",
+      "\ud83c\udf31 CSEED",
+      "\ud83c\udf31 RENTAI",
+      "\ud83c\udf31 MESSENGER"
+    ],
+    "unique_tokens_count": 5
+  },
+  {
+    "address": "5fkAwNVpT8A1UHEnY62VEFpqgagdoP8FYrv5ideiQp5c",
+    "label": "\ud83e\udd13 \ud83d\udc64 logjam [5fkAwNVp]",
+    "labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_trades_seen": 3,
+    "total_volume_usd": 2057.5487840474857,
+    "first_trade_seen": "2026-03-08T18:09:26",
+    "last_trade_seen": "2026-03-09T01:24:34",
+    "tokens_traded": [
+      "\ud83c\udf31 NMF",
+      "\u6211\u7684\u5200\u76fe",
+      "\u26a0\ufe0f THEDOW"
+    ],
+    "unique_tokens_count": 3
+  },
+  {
+    "address": "CQYBoADiryLPQr2zhLPKFpTHWUgmNqX3zrvbN6BCkb6L",
+    "label": "\ud83e\udd13 30D Smart Trader [CQYBoADi]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 2,
+    "total_volume_usd": 1701.6406761441763,
+    "first_trade_seen": "2026-03-09T00:20:10",
+    "last_trade_seen": "2026-03-09T00:20:28",
+    "tokens_traded": [
+      "DEXTER",
+      "AISLOP"
+    ],
+    "unique_tokens_count": 2
+  },
+  {
+    "address": "JAozJbJ8iDiwnL1e3fiTrXPiydHMXVgHJsXRHPfRodED",
+    "label": "\ud83e\udd13 30D Smart Trader [JAozJbJ8]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 5,
+    "total_volume_usd": 1689.0598781939325,
+    "first_trade_seen": "2026-03-08T17:30:24",
+    "last_trade_seen": "2026-03-09T01:25:44",
+    "tokens_traded": [
+      "SINGULARITY",
+      "\ud83c\udf31 RESEARCH",
+      "\ud83c\udf31 EXCESSION"
+    ],
+    "unique_tokens_count": 3
+  },
+  {
+    "address": "3rAsGLrCeDfij8FyqB7zayFQCHMtKhw6mtBA71joGsQY",
+    "label": "\ud83e\udd13 Smart Trader [3rAsGLrC]",
+    "labels_seen": [
+      "Smart Trader"
+    ],
+    "total_trades_seen": 1,
+    "total_volume_usd": 999.9036878523835,
+    "first_trade_seen": "2026-03-09T07:41:26",
+    "last_trade_seen": "2026-03-09T07:41:26",
+    "tokens_traded": [
+      "FREYA"
+    ],
+    "unique_tokens_count": 1
+  },
+  {
+    "address": "7Z5VhcNSpMpaTVqRg8QTkySw6syfcTehTx8CqRPvf9bg",
+    "label": "\ud83e\udd13 Smart Trader [7Z5VhcNS]",
+    "labels_seen": [
+      "Smart Trader"
+    ],
+    "total_trades_seen": 1,
+    "total_volume_usd": 863.7329893880617,
+    "first_trade_seen": "2026-03-08T23:17:17",
+    "last_trade_seen": "2026-03-08T23:17:17",
+    "tokens_traded": [
+      "BALDI",
+      "MAXXING"
+    ],
+    "unique_tokens_count": 2
+  },
+  {
+    "address": "4daxRFKDKpnAj7eUKivevh3hKD6k1MbNeAwKo29u9cz5",
+    "label": "\ud83e\udd13 30D Smart Trader [4daxRFKD]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 1,
+    "total_volume_usd": 731.6570845311116,
+    "first_trade_seen": "2026-03-08T13:00:32",
+    "last_trade_seen": "2026-03-08T13:00:32",
+    "tokens_traded": [
+      "CRM"
+    ],
+    "unique_tokens_count": 1
+  },
+  {
+    "address": "F9wsCFEh6351hrPq7oi3Badr4JpFnTr3qeqczBFDhUf2",
+    "label": "\ud83e\udd13 customrpcbundledaislopwormholeliquidityblockchainprotocoldefi.sol [F9wsCFEh]",
+    "labels_seen": [
+      "Smart Trader"
+    ],
+    "total_trades_seen": 2,
+    "total_volume_usd": 630.9333594426739,
+    "first_trade_seen": "2026-03-09T03:05:44",
+    "last_trade_seen": "2026-03-09T03:07:02",
+    "tokens_traded": [
+      "\ud83c\udf31 T-CASH"
+    ],
+    "unique_tokens_count": 1
+  },
+  {
+    "address": "HonuLDWACiMpJMkDUwNQvodPTntRgGMB8CZkmPsGtHRW",
+    "label": "\ud83e\udd13 banananinja.sol [HonuLDWA]",
+    "labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_trades_seen": 2,
+    "total_volume_usd": 283.43293940050216,
+    "first_trade_seen": "2026-03-08T13:39:18",
+    "last_trade_seen": "2026-03-08T18:44:48",
+    "tokens_traded": [
+      "\ud83c\udf31 \u6251\u8857\u4ed4",
+      "\ud83c\udf31 TITTIE"
+    ],
+    "unique_tokens_count": 2
+  }
+]

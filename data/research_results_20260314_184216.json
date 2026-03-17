@@ -1,0 +1,36 @@
+{
+  "timestamp": "20260314_184216",
+  "total_candidates": 2,
+  "active": 0,
+  "rejected": 2,
+  "wallets": [
+    {
+      "address": "GLg7c5WceZdzTVenMXtUuttuQSjsoUvQRLzNupcLtYsH",
+      "realized_pnl_usd": 0,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 0,
+      "roi": 0,
+      "win_rate": 0,
+      "traded_token_count": 0,
+      "top5_tokens": [],
+      "source": "dune+solanatracker",
+      "first_discovered": "2026-03-14T18:41:44.049174",
+      "validated": false,
+      "status": "REJECTED"
+    },
+    {
+      "address": "7gAKiGycmoSKtKWwVeSwqWxfmf9qVUtiyXKi6amTRTM6",
+      "realized_pnl_usd": 0,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 0,
+      "roi": 0,
+      "win_rate": 0,
+      "traded_token_count": 0,
+      "top5_tokens": [],
+      "source": "dune+solanatracker",
+      "first_discovered": "2026-03-14T18:42:14.859822",
+      "validated": false,
+      "status": "REJECTED"
+    }
+  ]
+}

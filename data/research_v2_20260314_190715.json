@@ -1,0 +1,3659 @@
+{
+  "timestamp": "20260314_190715",
+  "criteria": {
+    "min_pnl_usd": 5000,
+    "min_win_rate": 0.15,
+    "min_tokens_traded": 5
+  },
+  "total_candidates_validated": 79,
+  "active": 57,
+  "rejected": 22,
+  "active_wallets": [
+    {
+      "address": "8W5EuhHKqtQeioaBS8pHfBnyiE7CwoPSY9UDWFRuWc64",
+      "realized_pnl_usd": 1115961.4761366472,
+      "unrealized_pnl_usd": -21432.161210988055,
+      "total_invested_usd": 355399.80748302286,
+      "roi": 3.1400171092944547,
+      "win_rate": 0.6381,
+      "traded_token_count": 409,
+      "top5_tokens": [
+        {
+          "realized_pnl": 53388.76187656512,
+          "realized_roi": 27.161132364266148,
+          "token_address": "2Jk4chEKGUbb6j3Y4bBLCpgaijJo5nTAxiFGWHV4pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 41059.20478267458,
+          "realized_roi": 45.89648078244652,
+          "token_address": "DtacBwDbXavgnVBa7jdNxMymxWwcVJnwm4JqUSsDpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 31339.731121104167,
+          "realized_roi": 12.464316818700718,
+          "token_address": "FsQYB5UVwyt3QbvBpExP2htbtZEuGYBf9HEhcHHHpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 29933.555846965493,
+          "realized_roi": 15.985743790601513,
+          "token_address": "EDohP45yvfyEv1mJySP5uUXYemUzAppr6tgQz449pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 29048.52187940107,
+          "realized_roi": 15.920339693350574,
+          "token_address": "9MJZ9oevem5iUVtq5CbAemy6e5QRQH8mryxvhtYxpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:58:59.446244",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "AbcX4XBm7DJ3i9p29i6sU8WLmiW4FWY5tiwB9D6UBbcE",
+      "realized_pnl_usd": 3853586.967235328,
+      "unrealized_pnl_usd": -1021074.694753761,
+      "total_invested_usd": 17386696.87775306,
+      "roi": 0.22163996958882623,
+      "win_rate": 0.4557,
+      "traded_token_count": 1999,
+      "top5_tokens": [
+        {
+          "realized_pnl": 932329.0171108616,
+          "realized_roi": 4.051488124395252,
+          "token_address": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 492467.13505521347,
+          "realized_roi": 1.33681117939675,
+          "token_address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 446070.38277486025,
+          "realized_roi": 1.408429658149952,
+          "token_address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 289611.3553491835,
+          "realized_roi": 2.024076826031111,
+          "token_address": "CBdCxKo9QavR9hfShgpEBG3zekorAeD7W1jfq2o3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 283377.67781425524,
+          "realized_roi": 1.0759677361444213,
+          "token_address": "ECY31gWwxy4s2VnMkYhmqDkrV75KrwR2yTtsnrnSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:15.011891",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "FbvUU5qvD9JsU9jp3KDweCpZiVZHLoQBQ1PPCAAbd6FB",
+      "realized_pnl_usd": 56607.195953984774,
+      "unrealized_pnl_usd": -41389.02236259713,
+      "total_invested_usd": 2621382.1774032163,
+      "roi": 0.021594407882203875,
+      "win_rate": 0.3699,
+      "traded_token_count": 857,
+      "top5_tokens": [
+        {
+          "realized_pnl": 78224.8595674509,
+          "realized_roi": 5.985068024842139,
+          "token_address": "4YK1njyeCkBuXG6phNtidJWKCbBhB659iwGkUJx98P5Z",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 68035.27148897265,
+          "realized_roi": 11.750379222747853,
+          "token_address": "DDti34vnkrCehR8fih6dTGpPuc3w8tL4XQ4QLQhc3xPa",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 49401.09461877391,
+          "realized_roi": 2.3696842053565934,
+          "token_address": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 36734.49934321989,
+          "realized_roi": 0.5520240148887703,
+          "token_address": "6QSVGUEyBZWRshnXKhS96NQ97vGWiTu61SyHLAbYpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 36344.17493603991,
+          "realized_roi": 7.687652524976077,
+          "token_address": "CckLtcfEtsYzg8sUrVBBrFKt16iExpvEurc1dhKmmoon",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:20.928413",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "EDozia8CitSkQCnpXu3ekLJCoiLvPUWWLgiRTKiES2j2",
+      "realized_pnl_usd": 230541.39534561354,
+      "unrealized_pnl_usd": -14667.477467538627,
+      "total_invested_usd": 1288149.4413033638,
+      "roi": 0.17897100130893914,
+      "win_rate": 0.4236,
+      "traded_token_count": 5009,
+      "top5_tokens": [
+        {
+          "realized_pnl": 17567.04341718791,
+          "realized_roi": 3.334925801328188,
+          "token_address": "FeR8VBqNRSUD5NtXAj2n3j1dAHkZHfyDktKuLXD4pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 14434.901182297064,
+          "realized_roi": 2.554070408474208,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 13928.301973239611,
+          "realized_roi": 4.452530308808756,
+          "token_address": "C9FVTtx4WxgHmz55FEvQgykq8rqiLS8xRBVgqQVtpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 10007.092177644208,
+          "realized_roi": 8.439985255275888,
+          "token_address": "9psiRdn9cXYVps4F1kFuoNjd2EtmqNJXrCPmRppJpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 9934.539028870337,
+          "realized_roi": 42.33211080566941,
+          "token_address": "6WS5WACF6gdd8apWTM6GFwnggeHGsVFwNmKcJirpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:27.593793",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "DdvhMhDJsobQdCWuWunG2QNos2S3XrYGosRkkVWhjLeW",
+      "realized_pnl_usd": 427935.7080529582,
+      "unrealized_pnl_usd": -182712.01863872464,
+      "total_invested_usd": 5018214.955963535,
+      "roi": 0.08527648014448024,
+      "win_rate": 0.4815,
+      "traded_token_count": 3130,
+      "top5_tokens": [
+        {
+          "realized_pnl": 177017.01444215947,
+          "realized_roi": 0.42306218659606093,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 44724.16985823924,
+          "realized_roi": 2.2419392138938834,
+          "token_address": "9DHe3pycTuymFk4H4bbPoAJ4hQrr2kaLDF6J6aAKpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 39529.217109592144,
+          "realized_roi": 4.084367566920848,
+          "token_address": "TNh4HphGRorrjLFztWq1ekJakVeWPmLnzymGCE2pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 23518.388360735033,
+          "realized_roi": 0.5915642633936264,
+          "token_address": "3an8rhdepsLCya22af7qDBKPbdomw8K4iCHXaA2Gpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 17279.30065621536,
+          "realized_roi": 17.702364480789914,
+          "token_address": "5QzeWLUqYtXAk4et5JWNgETiwBu8cBgmtu8MCuXpFFS1",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:34.266159",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "45yBcpnzFTqLYQJtjxsa1DdZkgrTYponCg6yLQ6LQPu6",
+      "realized_pnl_usd": 3156216.231760589,
+      "unrealized_pnl_usd": -488149.3840981765,
+      "total_invested_usd": 7619462.7403622195,
+      "roi": 0.41423081118847316,
+      "win_rate": 0.2434,
+      "traded_token_count": 1023,
+      "top5_tokens": [
+        {
+          "realized_pnl": 1612161.849055308,
+          "realized_roi": 2.8664274277585253,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 691146.9122313025,
+          "realized_roi": 64.28399784316227,
+          "token_address": "AxriehR6Xw3adzHopnvMn7GcpRFcD41ddpiTWMg6pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 495573.1511271968,
+          "realized_roi": 19.036660483169996,
+          "token_address": "5z3iCe53hUANTiG8Js8RjHNE2Arjik7L2CXLyr2rpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 323663.3900009077,
+          "realized_roi": 25.224102454976613,
+          "token_address": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 319558.6081807555,
+          "realized_roi": 91.96831487319723,
+          "token_address": "M5MFPbS4X6eYek21xhFU38DTavMLuGY9eyC5p8Tpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:44.725369",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "Hq9iEGnpQ4KpJ91MjedVeHZcVMCWCsiJDE9i7j7SUUKF",
+      "realized_pnl_usd": 320718.90631717845,
+      "unrealized_pnl_usd": -44505.41445992919,
+      "total_invested_usd": 3209587.366617906,
+      "roi": 0.09992527689163207,
+      "win_rate": 0.5295000000000001,
+      "traded_token_count": 8718,
+      "top5_tokens": [
+        {
+          "realized_pnl": 11737.472574613115,
+          "realized_roi": 0.3198170584466769,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 8821.345660865994,
+          "realized_roi": 1.4215862868397466,
+          "token_address": "FfYhzJ7j3rrs4m4i1wKy5Bz5aYW8mKEGq2rxChU3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 8548.864807425352,
+          "realized_roi": 2.6584053578482387,
+          "token_address": "9t1ErAxCN8gZszZLCyTBYkXuJxx7veNUXbEu3YkjNofL",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 7418.045463216523,
+          "realized_roi": 0.6132930567186948,
+          "token_address": "FThrNpdic79XRV6i9aCWQ2UTp7oRQuCXAgUWtZR2cs42",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5132.289304651739,
+          "realized_roi": 0.28642294624640635,
+          "token_address": "BTLFeLGQk5Bh2RwDbAenHiTAVB9kboi6XToJQGGbpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:52.204220",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+      "realized_pnl_usd": 4156939.0405277186,
+      "unrealized_pnl_usd": -253769.39266300705,
+      "total_invested_usd": 8040707.872060283,
+      "roi": 0.516986701503257,
+      "win_rate": 0.7223,
+      "traded_token_count": 14026,
+      "top5_tokens": [
+        {
+          "realized_pnl": 64003.53466903896,
+          "realized_roi": 24.212292811477614,
+          "token_address": "7E2iF4WFs5biCtkAVFCBPEdnpg7t2D19VzxjxEPvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 29153.068268444356,
+          "realized_roi": 16.655606459627624,
+          "token_address": "6FoRs85c2z87PnaQRTpRWArcSq6M6Tvk9ts3SMrApump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 25857.18893184051,
+          "realized_roi": 53.15692635342226,
+          "token_address": "2yyddFFf8YRDKTgKkrFPdRpnt8gohrWTPa7kqZYU1VW7",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 19804.988715294065,
+          "realized_roi": 31.508424526231977,
+          "token_address": "AJqDoH24K7S3riUjMMzKL5tWPbuLB6vp5bZ9bznRpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 19770.568446220303,
+          "realized_roi": 35.84249823208937,
+          "token_address": "YFM2tC44gGkNf234tdaCXtCmUbhpSB4zGeSbupppump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:00.027208",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
+      "realized_pnl_usd": 3637875.32231206,
+      "unrealized_pnl_usd": -742078.9761703108,
+      "total_invested_usd": 55352963.75987384,
+      "roi": 0.06572141896671499,
+      "win_rate": 0.8482999999999999,
+      "traded_token_count": 9390,
+      "top5_tokens": [
+        {
+          "realized_pnl": 114056.19960261755,
+          "realized_roi": 1.171493031402888,
+          "token_address": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 33715.51934973787,
+          "realized_roi": 10.173763860388842,
+          "token_address": "9EQSeWY7pDB7MYoSFr8QJ19onGS1ehDmLbSGT2b3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 30923.538772932832,
+          "realized_roi": 13.618612203277607,
+          "token_address": "fmGLjVuQfBLbWPo5zxc8sSss3ixMW3u3bRP95uGpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 30367.69460248571,
+          "realized_roi": 8.678724672384437,
+          "token_address": "BhePPrRHVS3YSSHphcXgxN3cBAAiSnVZ9n9NNM5Xpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 26574.97053643001,
+          "realized_roi": 2.1239505049458733,
+          "token_address": "28Wy2jnze3sRUhLE5bqBzfU5rrqLQg36VCxVJptmpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:08.833633",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "21Re7ghAGLCH1WPwygPJonkBSQL2AkUWeAhLcsbmPVk5",
+      "realized_pnl_usd": 327965.84128931904,
+      "unrealized_pnl_usd": -12299.029453882255,
+      "total_invested_usd": 72910.17081051476,
+      "roi": 4.4982179803372695,
+      "win_rate": 0.5938,
+      "traded_token_count": 32,
+      "top5_tokens": [
+        {
+          "realized_pnl": 317744.17977187235,
+          "realized_roi": 88.72882876878006,
+          "token_address": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 6044.161407400127,
+          "realized_roi": 1.2442534928300752,
+          "token_address": "DcAhHeCMvEqVYjNQiWUg8qKdFJuBQTNvRHK1W3gqxjWE",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4651.40713274651,
+          "realized_roi": 15.050559222241874,
+          "token_address": "FgWto1nfArQTpg3o74sYkti753caPfHNXHG8CkedDpMg",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1808.765190465842,
+          "realized_roi": 3.038336272640125,
+          "token_address": "8Pa281ygrppnAd3NGdJecGUva4WKPQ6QYgjW8hVRpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1696.149546849256,
+          "realized_roi": 0.13652848304182677,
+          "token_address": "BGzw16kv9jP28qVXFVzUdXSU8r9dEV4SYK7P3HfdVVN2",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:22.686536",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "32mRYcNZJfG8gFrn9gvqusUtaWekXVAVQpkc97j5M9iT",
+      "realized_pnl_usd": 205779.63555669307,
+      "unrealized_pnl_usd": -131135.39770880382,
+      "total_invested_usd": 1760950.345684503,
+      "roi": 0.11685714822169163,
+      "win_rate": 0.45399999999999996,
+      "traded_token_count": 2892,
+      "top5_tokens": [
+        {
+          "realized_pnl": 10426.128373951753,
+          "realized_roi": 4.291115724269084,
+          "token_address": "Fh7aoHJgToiFr93RLb274bG9gTymEMdGGHrHdUhEbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 9290.687039544273,
+          "realized_roi": 0.7287652298228583,
+          "token_address": "3Y7uP2UhEE68dpyAmWfXc7biSQmQqQonCiyDp6KYpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 9264.631745712417,
+          "realized_roi": 4.0526342559942155,
+          "token_address": "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 8778.7798705575,
+          "realized_roi": 1.5375399004489376,
+          "token_address": "AJwnwxyrfG9UB6h2DbXLPT6RzWb8jgPgrjd9C8DgtosH",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 8700.833120276246,
+          "realized_roi": 4.6827958892465995,
+          "token_address": "oBeMrKMEqaLN8hYeuTiHDx91MXTP5zrsuKnhS2Spump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:28.826291",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "AJ6MGExeK7FXmeKkKPmALjcdXVStXYokYNv9uVfDRtvo",
+      "realized_pnl_usd": 4771698.575111805,
+      "unrealized_pnl_usd": -162794.47371165297,
+      "total_invested_usd": 12745634.64080068,
+      "roi": 0.37437904895193574,
+      "win_rate": 0.5992999999999999,
+      "traded_token_count": 8912,
+      "top5_tokens": [
+        {
+          "realized_pnl": 232563.43253442904,
+          "realized_roi": 98.87026454594196,
+          "token_address": "3KrLtmeSAhGoRM9ghSa7C6fkiUyjXq3ZrjxCM3xvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 231916.11216159642,
+          "realized_roi": 16.986942462648592,
+          "token_address": "y1V1FNdjYNkLfqkDCHXNetraue5XFuXvHwtCbjppump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 98209.15766642493,
+          "realized_roi": 9.695058870666157,
+          "token_address": "4WD28rCz2TraGBZPb5R7b64PFxDDK8UndxfxozizwZ3W",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 79292.09579551175,
+          "realized_roi": 16.89545238710152,
+          "token_address": "DoARf4TUod9Xgv9nwANyspKEZpSr3k3nHpNmL3qWpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 75500.34861590623,
+          "realized_roi": 51.36936102421037,
+          "token_address": "TXRKyVQEQ8c1bYMTp4VmxbTSesGFTFgDfuBoqgdvGFM",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:35.635257",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "CWvdyvKHEu8Z6QqGraJT3sLPyp9bJfFhoXcxUYRKC8ou",
+      "realized_pnl_usd": 22293072.329602495,
+      "unrealized_pnl_usd": 555030.0445207891,
+      "total_invested_usd": 6174477.994599397,
+      "roi": 3.610519358737933,
+      "win_rate": 0.6049,
+      "traded_token_count": 1301,
+      "top5_tokens": [
+        {
+          "realized_pnl": 18109289.750266634,
+          "realized_roi": 54.71054900016536,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 720079.8063823571,
+          "realized_roi": 1712.6223046405655,
+          "token_address": "61V8vBaqAGMpgDQi4JcAwo1dmBGHsyhzodcPqnEVpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 393659.5960990014,
+          "realized_roi": 531.940362944773,
+          "token_address": "3QTcwugiAGA7HnzcNf7qaHt7XakdscMxJ1TE5Wnspump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 246669.87799765868,
+          "realized_roi": 0.5593481945212685,
+          "token_address": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 156618.6697792783,
+          "realized_roi": 3.8568658345304927,
+          "token_address": "PRVT6TB7uss3FrUd2D9xs2zqDBsa3GbMJMwCQsgmeta",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:41.357030",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "m7Kaas3Kd8FHLnCioSjCoSuVDReZ6FDNBVM6HTNYuF7",
+      "realized_pnl_usd": 1082081.747430776,
+      "unrealized_pnl_usd": 50157278.99205935,
+      "total_invested_usd": 9664660.495633142,
+      "roi": 0.11196272729080357,
+      "win_rate": 0.41659999999999997,
+      "traded_token_count": 3329,
+      "top5_tokens": [
+        {
+          "realized_pnl": 173430.4469548291,
+          "realized_roi": 78.58264486897292,
+          "token_address": "eL5fUxj2J4CiQsmW85k5FG9DvuQjjUoBHoQBi2Kpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 167216.20242582526,
+          "realized_roi": 7.740795123283111,
+          "token_address": "5z3iCe53hUANTiG8Js8RjHNE2Arjik7L2CXLyr2rpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 160212.92142222435,
+          "realized_roi": 2.3301112489348514,
+          "token_address": "98mb39tPFKQJ4Bif8iVg9mYb9wsfPZgpgN1sxoVTpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 100659.22442176376,
+          "realized_roi": 0.7129727993931518,
+          "token_address": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 87604.21633827429,
+          "realized_roi": 6.90679604738372,
+          "token_address": "BP8RUdhLKBL2vgVXc3n7oTSZKWaQVbD8S6QcPaMVBAPo",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:47.338859",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "GfwnW3NVWHVn1fe7BTARgP8sbJwY1F6rX8GpqDyRHPuH",
+      "realized_pnl_usd": 28019.944076276228,
+      "unrealized_pnl_usd": -2.119141126812,
+      "total_invested_usd": 21218.814713723434,
+      "roi": 1.3205235284963448,
+      "win_rate": 0.6118,
+      "traded_token_count": 85,
+      "top5_tokens": [
+        {
+          "realized_pnl": 5424.714749368274,
+          "realized_roi": 26.756132206389754,
+          "token_address": "8VdU7FPHBFS3h1W7FtS3Lb3RFGSRsdzwUhXZqJ5Vpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5165.853255405042,
+          "realized_roi": 15.828440913051054,
+          "token_address": "Y4dtyktShgX9NRPMkZFmY5RL49HTRAT47zFFPkkpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4322.954264651162,
+          "realized_roi": 6.406608232078594,
+          "token_address": "Ghb8QKm1Wa9QUvX4x1fcMZ1TzCVuBtmJPX7jW6vgMJfT",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3066.741736648216,
+          "realized_roi": 14.241564381029884,
+          "token_address": "DcGU7nq8vS6ECee3ztJcgD58RWrYUn5AS1CPNDwepump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2515.908419362177,
+          "realized_roi": 11.303406327437171,
+          "token_address": "H5PZg2mu2SmToaYEU4WUaAW3ayxRsjyoMVtUtYaSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:52.288191",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "6LChaYRYtEYjLEHhzo4HdEmgNwu2aia8CM8VhR9wn6n7",
+      "realized_pnl_usd": 2883365.9187863213,
+      "unrealized_pnl_usd": -246768.84056041692,
+      "total_invested_usd": 19973554.387682654,
+      "roi": 0.14435917928380557,
+      "win_rate": 0.6167,
+      "traded_token_count": 25945,
+      "top5_tokens": [
+        {
+          "realized_pnl": 23032.076301034398,
+          "realized_roi": 3.323389502394595,
+          "token_address": "JDwsW7GKrQUbua4nmDydAAaasUqoNdKEWVGD78q2pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 20323.29622974667,
+          "realized_roi": 5.21393718652664,
+          "token_address": "3f7CApvHxzCoP7u1iFJYRiwmtre3GT8jrDs3DANApump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 19004.15272002108,
+          "realized_roi": 6.524353827624605,
+          "token_address": "99xFBK9wYo9Cw245uXFPviTUjXBo1qpBU1FkwLvhpvYN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 18099.342458138653,
+          "realized_roi": 2.9312824774543778,
+          "token_address": "GTgYH9orcrhA7UK6xoHuK3CdGCXjYxD4qhxSJmXcpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 17019.70779888967,
+          "realized_roi": 34.40586143548288,
+          "token_address": "G46yFYDNPDeHsmnJhaZfsYnAm2VEcn6tmPTMHhFgpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:00.624500",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "6MpGk4MM21Jr5FZm1Quu561tn8rXaGwrE8Yq14hnAaqA",
+      "realized_pnl_usd": 166721.72388294095,
+      "unrealized_pnl_usd": -107031.16726792134,
+      "total_invested_usd": 241264.11496567802,
+      "roi": 0.6910340723760705,
+      "win_rate": 0.8,
+      "traded_token_count": 5,
+      "top5_tokens": [
+        {
+          "realized_pnl": 62528.509386305246,
+          "realized_roi": 0.9815716949030477,
+          "token_address": "GrX64PN2axWvSohRZbT8ypPouKL2DcpfKqZoUtNfpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 54864.83251440062,
+          "realized_roi": 0.4731601506935064,
+          "token_address": "Dd5gfqgXvi8ygyfwL8EqrHW1KM9wdQBPZraJJ2Vgpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 45968.73738912043,
+          "realized_roi": 0.7558613837306937,
+          "token_address": "AhxFGZhS2xBcRMMfgHfbVVnwku2D4ixvX41Hw6uSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3487.532237106511,
+          "realized_roi": 62.39883876188946,
+          "token_address": "BtNkBDAYiHguCLbxUWVsqSYu327apzfah8eHhKVqpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -127.88764399185,
+          "realized_roi": -0.17390584974493983,
+          "token_address": "BXocCqgYrqygsxfyCt6yG8iKQTzVKUmFzS18N9Fpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:05.203271",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "6LWkgTVgNJxK9B4vcDRL4bgySNHBiM7MiUKSFAkrZ543",
+      "realized_pnl_usd": 37406.25869814494,
+      "unrealized_pnl_usd": 5876674.134342392,
+      "total_invested_usd": 235100.65105196048,
+      "roi": 0.15910742284536525,
+      "win_rate": 0.3824,
+      "traded_token_count": 68,
+      "top5_tokens": [
+        {
+          "realized_pnl": 45640.399576808384,
+          "realized_roi": 6.311715848482522,
+          "token_address": "38PgzpJYu2HkiYvV8qePFakB8tuobPdGm2FFEn7Dpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 14847.290749782327,
+          "realized_roi": 3.6434793638652887,
+          "token_address": "6H7NbbGdn2Jo5qpJeHvVECnVMPgD32AfsjcDLK3zjfmt",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 12333.368854482806,
+          "realized_roi": 2.349549851508412,
+          "token_address": "2fdtCHuvyLcD2q86XZGFmYbDux9ZbbUgMmFhzChqmoon",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 10066.216213099018,
+          "realized_roi": 1.0649513278975982,
+          "token_address": "GdZ9rwHyKcriLdbSzhtEFLe5MLs7Vk6AY1aE5ei7nsmP",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5932.70599485185,
+          "realized_roi": 1.6062106795915374,
+          "token_address": "4z7secBe41i5Svtotp4k2FsjMVV6xykEVnrD4kdFpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:10.114168",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "DpYuj2At1Z1tH4baoz5A1XV4AanjJa8bgbB51BWSZUyn",
+      "realized_pnl_usd": 29098.398232882228,
+      "unrealized_pnl_usd": 4218.074104128829,
+      "total_invested_usd": 39076.17542953486,
+      "roi": 0.7446582965969809,
+      "win_rate": 0.3478,
+      "traded_token_count": 23,
+      "top5_tokens": [
+        {
+          "realized_pnl": 12169.911807384062,
+          "realized_roi": 5.929632134628735,
+          "token_address": "EPuZ1X6pPzac3ELPsT59LStmgaSr4kBJvaAbL15Fpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 8465.91775545835,
+          "realized_roi": 2.0406917998556655,
+          "token_address": "4daoTLufDmV3ods48Zh8rymaZKBLtgEvuH9qALYLbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 6210.698424759186,
+          "realized_roi": 2.2276560770627203,
+          "token_address": "9oxGicd5KXNcthYM6yD23X9zcznQVnHjrAEN38fFpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3538.167095159328,
+          "realized_roi": 1.7603330508065853,
+          "token_address": "d4VnSVqaUBf3dTxUqdeD4L2ix3rvsEcis4kNv3npump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2037.597384687582,
+          "realized_roi": 6.79199128229194,
+          "token_address": "Cd7t8iZvgWq4J2Tvq64ocJ5uU7ruRswKQoaWuzXxpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:24.358630",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "4632BMWY69AkVHxN1XLKVuLrednYiLccuMeoXnQBMA7Z",
+      "realized_pnl_usd": 339632.755500781,
+      "unrealized_pnl_usd": -37591.848476157844,
+      "total_invested_usd": 6029807.7741023395,
+      "roi": 0.05632563561304279,
+      "win_rate": 0.45880000000000004,
+      "traded_token_count": 11467,
+      "top5_tokens": [
+        {
+          "realized_pnl": 44410.46733312639,
+          "realized_roi": 3.7731209059966084,
+          "token_address": "9gyfbPVwwZx4y1hotNSLcqXCQNpNqqz6ZRvo8yTLpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 12368.574248914494,
+          "realized_roi": 8.83588139179176,
+          "token_address": "4c2FMApnN56u3S9dqxAqy75hwqSMxNBMY5oyv3m5pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 12028.354110418768,
+          "realized_roi": 11.329699028418283,
+          "token_address": "28iy9Dp6QDtW2Pwimtgeozbiykix58BjjrfgAkDTpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 10303.02097587272,
+          "realized_roi": 4.035340097112245,
+          "token_address": "7YUM3SgPrXAtByhnmfPRzHyxm6xrpbdQnsJ1iEkNpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 10234.541683539843,
+          "realized_roi": 1.6873704348713248,
+          "token_address": "C3DwDjT17gDvvCYC2nsdGHxDHVmQRdhKfpAdqQ29pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:36.506180",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "FZVdsFTRTWwZEy6XC5GCtHNWdcAwiQtAeJ2NSpH6cQNz",
+      "realized_pnl_usd": 4491910.054914157,
+      "unrealized_pnl_usd": 1561277.005834633,
+      "total_invested_usd": 8436501.675133126,
+      "roi": 0.5324375230261867,
+      "win_rate": 0.5013000000000001,
+      "traded_token_count": 5109,
+      "top5_tokens": [
+        {
+          "realized_pnl": 729217.5504157624,
+          "realized_roi": 2.581715634747173,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 313909.3820636191,
+          "realized_roi": 18.059497183119184,
+          "token_address": "6sSKobm4TSRqJuXMuczGdV2BZityP76PGBJJ2ALHpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 261671.11526921493,
+          "realized_roi": 262.0481557587922,
+          "token_address": "Bo9jh3wsmcC2AjakLWzNmKJ3SgtZmXEcSaW7L2FAvUsU",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 142969.0960320608,
+          "realized_roi": 113.71680924205526,
+          "token_address": "3MadWqcN9cSrULn8ikDnan9mF3znoQmBPXtVy6BfSTDB",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 114498.44323526387,
+          "realized_roi": 23.543573586481692,
+          "token_address": "E3pNvJfG4jiYBSxjDorL7i9GV8XhmzQFMkk6EXrqpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:47.438005",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "BeTvN1ucBnCj4Ef688i51KHn2oq35CWDvD2J5aLFp17t",
+      "realized_pnl_usd": 266556.6602596219,
+      "unrealized_pnl_usd": -35996.30092240867,
+      "total_invested_usd": 2020228.9589618184,
+      "roi": 0.13194378739952503,
+      "win_rate": 0.3477,
+      "traded_token_count": 1907,
+      "top5_tokens": [
+        {
+          "realized_pnl": 321675.9702984257,
+          "realized_roi": 1.316825791221313,
+          "token_address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 78989.59959144548,
+          "realized_roi": 1.3719579775376682,
+          "token_address": "DtR4D9FtVoTX2569gaL837ZgrB6wNjj6tkmnX9Rdk9B2",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 22566.04708271612,
+          "realized_roi": 0.4354581431628952,
+          "token_address": "6UxB5HCuuNm2HoHCp4TFVkPPE38L5zktESYKZ7Q5RC3f",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 21001.003257007145,
+          "realized_roi": 1.0774794266471726,
+          "token_address": "eL5fUxj2J4CiQsmW85k5FG9DvuQjjUoBHoQBi2Kpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 17766.95853166692,
+          "realized_roi": 1.0278971102943846,
+          "token_address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:53.713032",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "As7HjL7dzzvbRbaD3WCun47robib2kmAKRXMvjHkSMB5",
+      "realized_pnl_usd": 1201742.8394296768,
+      "unrealized_pnl_usd": 45126746803.95421,
+      "total_invested_usd": 17069789.184220873,
+      "roi": 0.0704017387947916,
+      "win_rate": 0.4183,
+      "traded_token_count": 22534,
+      "top5_tokens": [
+        {
+          "realized_pnl": 62717.843844694544,
+          "realized_roi": 2.6162514256037905,
+          "token_address": "R6jVVLcdfpZ7tPLHQXZ4uZRFhBcE2L6aQoPgiJuV7j9",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 60927.40179639133,
+          "realized_roi": 16.875857663517127,
+          "token_address": "FWGC5ziwYMCT29y913WZSHmkSh7mF4MiddQwEBx5A6XA",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 56694.946145704336,
+          "realized_roi": 25.763770374993406,
+          "token_address": "7MRpYMgL7oiEi8F4bxkSm2uwsa7sXDLxxibcJ41Lpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 54083.24242833372,
+          "realized_roi": 1.0864394400184152,
+          "token_address": "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 51783.62141077629,
+          "realized_roi": 11.757295481738465,
+          "token_address": "BBSAW49Sru7jiSajWVKTSWs39psrjjHbMMtWGWTJBAGS",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:01.902960",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "86AEJExyjeNNgcp7GrAvCXTDicf5aGWgoERbXFiG1EdD",
+      "realized_pnl_usd": 4212963.970075089,
+      "unrealized_pnl_usd": 14115656.105802802,
+      "total_invested_usd": 28322470.9636825,
+      "roi": 0.14874987339477944,
+      "win_rate": 0.467,
+      "traded_token_count": 28889,
+      "top5_tokens": [
+        {
+          "realized_pnl": 179062.8442089533,
+          "realized_roi": 28.5700900355764,
+          "token_address": "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 85544.9651963258,
+          "realized_roi": 4.93255672976849,
+          "token_address": "2kGfWRgNp1QaxUMFCX9CMN78E1iCbgjBAZuQNUjWpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 73450.48734405369,
+          "realized_roi": 9.01885248308443,
+          "token_address": "96DHNZtvy9kqr7cf1r9RotnnWf3WKRf1UZ8CfZ1Ppump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 63361.492826242975,
+          "realized_roi": 3.069864990955219,
+          "token_address": "H2c31USxu35MDkBrGph8pUDUnmzo2e4Rf4hnvL2Upump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 52418.03738299208,
+          "realized_roi": 0.6422408513035165,
+          "token_address": "ErgAfNEtv1SpjG5q1T7dmooSqr7kt7wAfNqZq8azbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:10.908932",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "BCnqsPEtA1TkgednYEebRpkmwFRJDCjMQcKZMMtEdArc",
+      "realized_pnl_usd": 2999659.869628629,
+      "unrealized_pnl_usd": -96326.47228792704,
+      "total_invested_usd": 10265849.79292051,
+      "roi": 0.29219791153551083,
+      "win_rate": 0.5409,
+      "traded_token_count": 19196,
+      "top5_tokens": [
+        {
+          "realized_pnl": 52539.822982208825,
+          "realized_roi": 74.29389360120419,
+          "token_address": "4z7secBe41i5Svtotp4k2FsjMVV6xykEVnrD4kdFpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 51002.711721460684,
+          "realized_roi": 43.03277593840161,
+          "token_address": "GXHk8q62Rk5GHuuXZ9bLBqzopHNy9WTgM7Mmpeq2pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 32109.849866205455,
+          "realized_roi": 73.3804701498651,
+          "token_address": "26dRTrJjKH9pKCNHzZyj8u3B8NqrNn6SoSfWRbPpdDRS",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 27084.298381709054,
+          "realized_roi": 10.097950857804094,
+          "token_address": "9m2Aqn939b8SkomdAMtoQhiopT6tihuEND32zuwFpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 25376.848605663785,
+          "realized_roi": 2.164690492889557,
+          "token_address": "Ac2tVv4aU28dre8xYUfj5yZycEZjKj7yStWN3TaNpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:19.330372",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "DfMxre4cKmvogbLrPigxmibVTTQDuzjdXojWzjCXXhzj",
+      "realized_pnl_usd": 11828166.728650706,
+      "unrealized_pnl_usd": -715840.3462745852,
+      "total_invested_usd": 17344070.780992348,
+      "roi": 0.6819717745624856,
+      "win_rate": 0.7696999999999999,
+      "traded_token_count": 28238,
+      "top5_tokens": [
+        {
+          "realized_pnl": 251513.8517826014,
+          "realized_roi": 88.20014539118823,
+          "token_address": "Hjw6bEcHtbHGpQr8onG3izfJY5DJiWdt7uk2BfdSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 209881.3999998194,
+          "realized_roi": 136.11287080841842,
+          "token_address": "RufNMBEbKJr6CM1t3nwakZ3BaE9csF2AR15s32VWcRE",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 169803.1033721559,
+          "realized_roi": 25.235288675917737,
+          "token_address": "9XS6ayT8aCaoH7tDmTgNyEXRLeVpgyHKtZk5xTXpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 117785.36357640786,
+          "realized_roi": 36.65676804667853,
+          "token_address": "FLqmVrv6cp7icjobpRMQJMEyjF3kF84QmC4HXpySpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 103089.17686620951,
+          "realized_roi": 11.117125135802512,
+          "token_address": "BjCmA9ZYwJ1BwusMGaSxe4pgaa9gfXTtdyX27NYEpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:28.292013",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "5YtK7cDVPCUMHzFVAEYiTSERALrupccNU5qRNWGAm9YL",
+      "realized_pnl_usd": 20431.43617616454,
+      "unrealized_pnl_usd": -5599.313577818692,
+      "total_invested_usd": 393975.8127782767,
+      "roi": 0.051859620599762624,
+      "win_rate": 0.6394,
+      "traded_token_count": 355,
+      "top5_tokens": [
+        {
+          "realized_pnl": 5951.609100182161,
+          "realized_roi": 0.9486274746165011,
+          "token_address": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3399.524330272146,
+          "realized_roi": 0.42709941665659634,
+          "token_address": "CEK3J5DavCqqn3bV1smLZz7LxJR5eaRN5KxCxDZBq7SG",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3129.506435704291,
+          "realized_roi": 0.9093465965472539,
+          "token_address": "GkeUTuaFB4oZADaqiCo3yauHNx9SxUNn8euHptEEbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2188.234329828416,
+          "realized_roi": 0.6118293421279989,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1834.588406506272,
+          "realized_roi": 0.2719076973980678,
+          "token_address": "27T4BetBEXjxfqeUb7WWcCz8rKPUJuxNu2CGzApPpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:33.434195",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "9FNz4MjPUmnJqTf6yEDbL1D4SsHVh7uA8zRHhR5K138r",
+      "realized_pnl_usd": 5439917.102862201,
+      "unrealized_pnl_usd": -870731.5455321816,
+      "total_invested_usd": 17976641.09071036,
+      "roi": 0.3026103194368909,
+      "win_rate": 0.4828,
+      "traded_token_count": 21084,
+      "top5_tokens": [
+        {
+          "realized_pnl": 684649.3182524125,
+          "realized_roi": 4188.453284769922,
+          "token_address": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 382231.5100852638,
+          "realized_roi": 468.9293953263052,
+          "token_address": "DqrcZRHM9JuCUhnLyaWF7rLLjxE5h3MbiG7iferUpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 259090.99144507232,
+          "realized_roi": 129.82658180272276,
+          "token_address": "8wR5u3XET9rbwE5XRfSmAGdpPXs2Je7dsKDgS62Kpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 174672.25625484905,
+          "realized_roi": 0.42717046807826375,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 133879.84201659798,
+          "realized_roi": 78.0450860323818,
+          "token_address": "SsKFgDPEqyzAM8nWPiiX7MGY7iNDTEX6DxRdxmkpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:46.332546",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "J6V6bPW6WUD9nnyNTqAXYLELy8DTqEwCtdVESjXi7prg",
+      "realized_pnl_usd": 15137.706704485981,
+      "unrealized_pnl_usd": -970.697327021292,
+      "total_invested_usd": 244166.26274150852,
+      "roi": 0.06199753616457576,
+      "win_rate": 0.4657,
+      "traded_token_count": 1093,
+      "top5_tokens": [
+        {
+          "realized_pnl": 2280.417008225769,
+          "realized_roi": 3.539919161583053,
+          "token_address": "784nJgMjNrK4U9iWyyhJjtJFqGduj56bi6nj3JeJpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1543.836241318821,
+          "realized_roi": 1.7277331024699347,
+          "token_address": "9Nuzd5BZMfeiP2TSXXGqYcrtqYEyFkGoEbm39CB3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1282.262170865702,
+          "realized_roi": 1.6590330738089143,
+          "token_address": "HdbBevMJytBpfMmUbmRhdFU1LmRnGwtHWfbgufQipump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 632.413481873561,
+          "realized_roi": 0.9217132202803522,
+          "token_address": "DiHYyY2oiD9buQDRGDRFJrgd6Y9Wvn2PNZipquZMG8eF",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 602.113973495579,
+          "realized_roi": 0.29211628281153357,
+          "token_address": "AxriehR6Xw3adzHopnvMn7GcpRFcD41ddpiTWMg6pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:56.510516",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "EWkGyhD7XEgzJsutnTmN6qCobBBhMuDukaGXUmMhjM7f",
+      "realized_pnl_usd": 398620.9600120278,
+      "unrealized_pnl_usd": -102978.89015737211,
+      "total_invested_usd": 2212977.155734085,
+      "roi": 0.18012881831118494,
+      "win_rate": 0.41759999999999997,
+      "traded_token_count": 1293,
+      "top5_tokens": [
+        {
+          "realized_pnl": 76467.99820058815,
+          "realized_roi": 0.7993220874423481,
+          "token_address": "6NcdiK8B5KK2DzKvzvCfqi8EHaEqu48fyEzC8Mm9pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 47710.01798727995,
+          "realized_roi": 1.0025782221333448,
+          "token_address": "FasH397CeZLNYWkd3wWK9vrmjd1z93n3b59DssRXpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 31066.47441932327,
+          "realized_roi": 16.480135516191126,
+          "token_address": "HLQR9Rc7rzfiydRs5qaJGoKniu64zCNN75v5ju4HF2ap",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 28613.96564405405,
+          "realized_roi": 15.634476170544298,
+          "token_address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 27722.702692337716,
+          "realized_roi": 1.9889859533698004,
+          "token_address": "2HHgCLfKA5Rd1Fn9xAxfYzS3XoR5NnuxKDYz2EmWpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:02.266199",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "EHg5YkU2SZBTvuT87rUsvxArGp3HLeye1fXaSDfuMyaf",
+      "realized_pnl_usd": 3429326.2165609016,
+      "unrealized_pnl_usd": -101459.95815063776,
+      "total_invested_usd": 11172340.0387999,
+      "roi": 0.3069478913684469,
+      "win_rate": 0.5412,
+      "traded_token_count": 19076,
+      "top5_tokens": [
+        {
+          "realized_pnl": 57567.57433416212,
+          "realized_roi": 28.824826961372807,
+          "token_address": "39GNquFYvLsdGJnfGy3odKyzJ9bwfbzCkeJLnnKRfweG",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 37973.543449587174,
+          "realized_roi": 28.655872632399706,
+          "token_address": "2wvWZyfEkwjJyKhCVFRNpjKctbKDn2m2yZrg1cVypump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 35825.3439896241,
+          "realized_roi": 8.137758652797192,
+          "token_address": "GQES2mRcYXemGnpaZ6augr9ArWcHt4EmCnnfg9Ydpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 32939.09410057044,
+          "realized_roi": 12.197367726392839,
+          "token_address": "8LFpoJWGS65GMDL7jPKPPgvns3g6vEDg15BmcUSsezuR",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 28261.84573562247,
+          "realized_roi": 58.20880029838588,
+          "token_address": "DRF1iHZMMc5wn9pmVv73ob6RWzDumxqMtdhExRJvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:10.289350",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "5afSYA7JRyTvpbiypNjTMj6SsYAopXjvZwSPpx6ZzdiU",
+      "realized_pnl_usd": 341681.208404042,
+      "unrealized_pnl_usd": -37584.784319219165,
+      "total_invested_usd": 800056.1972981244,
+      "roi": 0.4270715101738304,
+      "win_rate": 0.3833,
+      "traded_token_count": 287,
+      "top5_tokens": [
+        {
+          "realized_pnl": 222374.41962753233,
+          "realized_roi": 26.5003066255869,
+          "token_address": "DgG9sM56ZcVidBV8bNArQPm93a2rmjzHkrrUntGSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 65628.11105218461,
+          "realized_roi": 7.3909568745081025,
+          "token_address": "J7tYmq2JnQPvxyhcXpCDrvJnc9R5ts8rv7tgVHDPsw7U",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 37287.71273738961,
+          "realized_roi": 1.985784485422823,
+          "token_address": "CBdCxKo9QavR9hfShgpEBG3zekorAeD7W1jfq2o3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 29500.202724991497,
+          "realized_roi": 1.4433174588797144,
+          "token_address": "B5W3mv394wrCkP2Na7dRRNLvSvktoAWeBGiwGnCypump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 27452.38239555485,
+          "realized_roi": 11.291398178270041,
+          "token_address": "EQs4DEeaSyrhRPM6JPsf2ptLf4EHkcGXB7ybeufxpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:15.621541",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "6QAnRu4wkGh8V8dPvkJ6V4DtoP19iaDDBuXsehYezCrF",
+      "realized_pnl_usd": 47489.19496834267,
+      "unrealized_pnl_usd": 8184533.6864660205,
+      "total_invested_usd": 240245.15473450127,
+      "roi": 0.1976697304086059,
+      "win_rate": 0.3284,
+      "traded_token_count": 67,
+      "top5_tokens": [
+        {
+          "realized_pnl": 55863.17297571739,
+          "realized_roi": 6.438603134107889,
+          "token_address": "38PgzpJYu2HkiYvV8qePFakB8tuobPdGm2FFEn7Dpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 15143.881692168274,
+          "realized_roi": 3.7162618664985314,
+          "token_address": "6H7NbbGdn2Jo5qpJeHvVECnVMPgD32AfsjcDLK3zjfmt",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 12396.820997934203,
+          "realized_roi": 2.361637706496219,
+          "token_address": "2fdtCHuvyLcD2q86XZGFmYbDux9ZbbUgMmFhzChqmoon",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 9698.144236852879,
+          "realized_roi": 1.0260113000294162,
+          "token_address": "GdZ9rwHyKcriLdbSzhtEFLe5MLs7Vk6AY1aE5ei7nsmP",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5901.697627445236,
+          "realized_roi": 1.597815527206029,
+          "token_address": "4z7secBe41i5Svtotp4k2FsjMVV6xykEVnrD4kdFpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:25.037894",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "F5jWYuiDLTiaLYa54D88YbpXgEsA6NKHzWy4SN4bMYjt",
+      "realized_pnl_usd": 3492728.083976491,
+      "unrealized_pnl_usd": 6032365.489791367,
+      "total_invested_usd": 24150340.397902966,
+      "roi": 0.14462438319419188,
+      "win_rate": 0.38880000000000003,
+      "traded_token_count": 14047,
+      "top5_tokens": [
+        {
+          "realized_pnl": 169259.01070896038,
+          "realized_roi": 1.6669728242676742,
+          "token_address": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 155766.0029466378,
+          "realized_roi": 8.046828547187603,
+          "token_address": "6GPRkx6UsHUTNH1iWtSuebM91pjyrr4AWxoCn5KVpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 108495.91619217957,
+          "realized_roi": 0.4097722780097469,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 92234.00867870194,
+          "realized_roi": 8.066489402354701,
+          "token_address": "8TbsZ3yH1mBHytVpmMn4qED2UeF3FgWUVt1pd5RBpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 87708.13644424143,
+          "realized_roi": 19.228418079973135,
+          "token_address": "BoAQaykj3LtkM2Brevc7cQcRAzpqcsP47nJ2rkyopump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:32.225478",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
+      "realized_pnl_usd": 8039086.410807525,
+      "unrealized_pnl_usd": -1692935.172892685,
+      "total_invested_usd": 38144613.11357722,
+      "roi": 0.21075286271408236,
+      "win_rate": 0.5347,
+      "traded_token_count": 36645,
+      "top5_tokens": [
+        {
+          "realized_pnl": 188456.04290043376,
+          "realized_roi": 4.227401192652873,
+          "token_address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 143882.4388088655,
+          "realized_roi": 6.6185179427408265,
+          "token_address": "2LsescRjhcxoUwEQLpcsd3Gh6AHUyqEHANDakkoSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 119179.54935674416,
+          "realized_roi": 19.143724920233574,
+          "token_address": "ErgAfNEtv1SpjG5q1T7dmooSqr7kt7wAfNqZq8azbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 98084.07993734081,
+          "realized_roi": 73.00930097658153,
+          "token_address": "Da5rk4XmxEMr68FA4PxkpCSWY7BjaHRh7ERsoWipump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 94812.2279491315,
+          "realized_roi": 29.697093018872742,
+          "token_address": "61V8vBaqAGMpgDQi4JcAwo1dmBGHsyhzodcPqnEVpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:57.190304",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "73LnJ7G9ffBDjEBGgJDdgvLUhD5APLonKrNiHsKDCw5B",
+      "realized_pnl_usd": 9163906.524298707,
+      "unrealized_pnl_usd": -534489.0681931537,
+      "total_invested_usd": 25664497.673251834,
+      "roi": 0.3570654933897091,
+      "win_rate": 0.5939,
+      "traded_token_count": 31891,
+      "top5_tokens": [
+        {
+          "realized_pnl": 193577.48185576897,
+          "realized_roi": 31.07072879821039,
+          "token_address": "RufNMBEbKJr6CM1t3nwakZ3BaE9csF2AR15s32VWcRE",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 193318.0968615165,
+          "realized_roi": 33.516020807898485,
+          "token_address": "38PgzpJYu2HkiYvV8qePFakB8tuobPdGm2FFEn7Dpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 165472.02332792638,
+          "realized_roi": 38.95645586707037,
+          "token_address": "5tFRno9GXBP5gt2Kjx2MeEaFL8zGBMw4cujTLGerpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 157889.76663250203,
+          "realized_roi": 37.20643198646733,
+          "token_address": "Eg62MR4n7xX5vfvCqkP8LypbYsGK7EkfDi69pkycYhat",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 138217.0716888218,
+          "realized_roi": 36.351143076020094,
+          "token_address": "Hjw6bEcHtbHGpQr8onG3izfJY5DJiWdt7uk2BfdSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:04:06.663008",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+      "realized_pnl_usd": 32106562.036952365,
+      "unrealized_pnl_usd": -1108202.1047737745,
+      "total_invested_usd": 113155244.1582518,
+      "roi": 0.283739054922193,
+      "win_rate": 0.6631,
+      "traded_token_count": 96136,
+      "top5_tokens": [
+        {
+          "realized_pnl": 130757.86891675816,
+          "realized_roi": 1.9961120954676153,
+          "token_address": "4wZNTEJpZkPjRe9aDFr2ZjcSnrWpTmxA6XA96mgUpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 104078.43143728147,
+          "realized_roi": 4.918409975219696,
+          "token_address": "3QTcwugiAGA7HnzcNf7qaHt7XakdscMxJ1TE5Wnspump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 87184.11413319086,
+          "realized_roi": 121.35832466222095,
+          "token_address": "CNZqiwzmVZzDEBpyjTBNLL8GU6mce2nXzRb3VXiNpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 69835.0433476115,
+          "realized_roi": 4.454245827629159,
+          "token_address": "Ai3eTHWvH8QuZknyNkLBX2Jvu1Qoo5RDpsCLYwXNetMy",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 64046.00534331066,
+          "realized_roi": 42.27853265110848,
+          "token_address": "4teUpwtvA2LMgxvok6P4ddPCytcKokLwqLVMsLNcpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:04:23.328447",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "3jN1M8gWLk2ryTGnscrcwRK1Gy4Ttzq5QizWT8uizZsT",
+      "realized_pnl_usd": 312687.21688731364,
+      "unrealized_pnl_usd": -94005.19026940248,
+      "total_invested_usd": 2401953.0734175653,
+      "roi": 0.13018040208521378,
+      "win_rate": 0.5553,
+      "traded_token_count": 1030,
+      "top5_tokens": [
+        {
+          "realized_pnl": 99167.35201441111,
+          "realized_roi": 46.36102425809353,
+          "token_address": "5tFRno9GXBP5gt2Kjx2MeEaFL8zGBMw4cujTLGerpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 93938.7438031061,
+          "realized_roi": 7.5063898848941495,
+          "token_address": "3LP15DWcq1YmVw9gvnmjB1SJGmiScMm4CUX2dYf7HRV5",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 66859.55184506759,
+          "realized_roi": 149.2626033391052,
+          "token_address": "ESVRQ6phc55VCw7sWB6JgW3PeTB6N68kvwjfsMPcpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 55215.35022969045,
+          "realized_roi": 84.44470043614373,
+          "token_address": "9MnKTgwFyXJgnZumHGT9NdHuzm98ACjkNwpLniLhpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 44820.22815133177,
+          "realized_roi": 8.329652170468528,
+          "token_address": "FqnqT1GKi8S4Gyk5wnSKvJjXW48HqGtKJt9WS4o2pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:04:29.114033",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "AkPwBH11gdenuhXqZ3RLParKMDuy5tu5KfZPGokT8wUz",
+      "realized_pnl_usd": 260101.37196497715,
+      "unrealized_pnl_usd": -148976.96117872326,
+      "total_invested_usd": 196642.68382005868,
+      "roi": 1.322710649143639,
+      "win_rate": 1.0,
+      "traded_token_count": 5,
+      "top5_tokens": [
+        {
+          "realized_pnl": 85140.8812758769,
+          "realized_roi": 1.7635733578487276,
+          "token_address": "8zZ6TeXbENLZwSCY8AjrtzzzjZdnhd8dAomkYXirpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 75015.30928249085,
+          "realized_roi": 0.9534414600920756,
+          "token_address": "C5wYSk5h62NH1XZduFcSkJWBMLEBRtj7uZvXgHUvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 53176.61283830928,
+          "realized_roi": 0.8574641696888439,
+          "token_address": "6wtiuwivjAgGfchMno5rgeuzXySJib5Jwp747MsGPmGF",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 25073.608053411986,
+          "realized_roi": 3.595425841043841,
+          "token_address": "VieL7BcF1QWD6CB412mXkiro9BRkJf8Z9ZheeFYpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 21694.960514888135,
+          "realized_roi": 31.132807183149843,
+          "token_address": "DagbqJGiTzbobG3rZJ3kYSBMthaR5hAWXqQsdGAnpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:04:44.650431",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "BTf4A2exGK9BCVDNzy65b9dUzXgMqB4weVkvTMFQsadd",
+      "realized_pnl_usd": 3233408.1005405863,
+      "unrealized_pnl_usd": -461546.03067744925,
+      "total_invested_usd": 32367591.686456528,
+      "roi": 0.0998964684139145,
+      "win_rate": 0.4617,
+      "traded_token_count": 58697,
+      "top5_tokens": [
+        {
+          "realized_pnl": 86316.20299586932,
+          "realized_roi": 7.859524382063333,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 28257.43363662235,
+          "realized_roi": 2.4221796243670037,
+          "token_address": "7gNWNfMRR9hCphDvRsbDWyYHny6pmTtp3B7TaygrEePi",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 25244.560518878658,
+          "realized_roi": 2.063263145996521,
+          "token_address": "9PVkVZx93ZJLZhBV4rw2kxRYcmvkVL6YstXzkR3xpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 20478.565021205446,
+          "realized_roi": 1.4811158078184699,
+          "token_address": "DTPUUPRxnHAdM3DoiDiUf7M3mym8GXdp6A97AJEZpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 20292.007239562838,
+          "realized_roi": 3.8628637941469632,
+          "token_address": "2SAJiAL5FSTJ42bRivHJEYnhY7oS27ZQrJDgetDEpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:04:56.994047",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "8zkeKGYQCuAM2ybL8hxgVWxsg7ZURgZFjtcdMUx3oxz4",
+      "realized_pnl_usd": 222908.2096276884,
+      "unrealized_pnl_usd": -583295.5515548302,
+      "total_invested_usd": 1059392.846420504,
+      "roi": 0.21041128452099214,
+      "win_rate": 0.40409999999999996,
+      "traded_token_count": 146,
+      "top5_tokens": [
+        {
+          "realized_pnl": 86407.03995710664,
+          "realized_roi": 484.0465449477777,
+          "token_address": "5g1FVnBc1Y2p69u7omfJ7RUAAJCST1p3y85fztXgpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 49446.52311003305,
+          "realized_roi": 1.4548441093934337,
+          "token_address": "7jy2rwrkLHb4j3JcJ91BtGWsmP6F1nqdTaujLVampump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 39940.59050881812,
+          "realized_roi": 1.1922550901921394,
+          "token_address": "Cd2fAAv6FbJauWUgos77n7m1756KNjga963Royz3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 37894.38127480132,
+          "realized_roi": 1.2043848228254832,
+          "token_address": "gkjdmYkV6P3XL4CgunkQQSsZa2iUqyyCtALZxrZpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 35459.69946747059,
+          "realized_roi": 0.8854250162949115,
+          "token_address": "9EqSRJm2LQ7NHSYjuuAr2mcuTKa24zdWfuShRPxNpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:06.532116",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "GjnTd2u8sxg7SmXwbTAnn48ymA3n44ivCZymcmrwaryC",
+      "realized_pnl_usd": 13247.251690502782,
+      "unrealized_pnl_usd": -8.3e-11,
+      "total_invested_usd": 16457.830876070424,
+      "roi": 0.8049208787145941,
+      "win_rate": 0.375,
+      "traded_token_count": 16,
+      "top5_tokens": [
+        {
+          "realized_pnl": 6654.091721124551,
+          "realized_roi": 5.653563307293474,
+          "token_address": "CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5787.029680571651,
+          "realized_roi": 1.4702564040115633,
+          "token_address": "3qVpCnqdaJtARzE2dYuCy5pm8X2NgF5hx9q9GosPpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3308.801600999999,
+          "realized_roi": 3.3121137147147137,
+          "token_address": "wuZ6vfM35my4BcNEBXWjr4twBvPtU7CGT5Boyxjpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2440.508345,
+          "realized_roi": 1.6275480782743927,
+          "token_address": "C29ebrgYjYoJPMGPnPSGY1q3mMGk4iDSqnQeQQA7moon",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 116.53168199403,
+          "realized_roi": 0.06327603326264893,
+          "token_address": "4HuSTfcJruukNbhrF9sc5iKrMeGxNBs6XpQ1L2hUpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:11.080448",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "HrCPnDvDgbpbFxKxer6Pw3qEcfAQQNNjb6aJNFWgTEng",
+      "realized_pnl_usd": 19835.805350842184,
+      "unrealized_pnl_usd": -4884.1735073104755,
+      "total_invested_usd": 592487.781060048,
+      "roi": 0.03347884291445302,
+      "win_rate": 0.5166,
+      "traded_token_count": 1115,
+      "top5_tokens": [
+        {
+          "realized_pnl": 13105.004195411337,
+          "realized_roi": 8.657778058733571,
+          "token_address": "4tDsPjxZ51knno8HqXsSAi5m6inmapjSiA5w2fLDpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4026.64809518676,
+          "realized_roi": 5.191308257520791,
+          "token_address": "EwH5uYAc2z3JnBSpXupKzJPmHyZFws8Q9ZXteT3ypump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3776.550321062472,
+          "realized_roi": 14.402500320896525,
+          "token_address": "9CG5JDF5RiEX3ov5NqwVZW8Cz5QyHufMrfmQsEkbpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2274.45973202674,
+          "realized_roi": 1.679044068660543,
+          "token_address": "HQdGM6WDryZziCwQZSq8F6Z7AqEgq4yN4vTtx2Hfpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2268.607159080194,
+          "realized_roi": 0.6162186109977515,
+          "token_address": "5GGrzHUs6DrFjaVF1K69JLt95Ahf2myzYRfFSKaPpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:21.080322",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "3wi8waD5A64D7PLutUYJdhMcrYvDBTqeh3CRFgv1hFtY",
+      "realized_pnl_usd": 350390.7705215181,
+      "unrealized_pnl_usd": -90139.273950487,
+      "total_invested_usd": 1610638.1003698518,
+      "roi": 0.21754779701353,
+      "win_rate": 0.4075,
+      "traded_token_count": 1882,
+      "top5_tokens": [
+        {
+          "realized_pnl": 58704.84614149892,
+          "realized_roi": 29.817926161746236,
+          "token_address": "8tSeXYSXzFvaDX1nbWrEFFaFuPHuWqpzksKYxQPvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 24961.297025083455,
+          "realized_roi": 17.59993975829044,
+          "token_address": "6b7NtVRo6jDSUZ75qfhHgpy99XVkSu1kfoTFu2E3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 21864.58367532777,
+          "realized_roi": 36.57088783965864,
+          "token_address": "CS7LmjtuugEUWtFgfyto79nrksKigv7Fdcp9qPuigdLs",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 19886.482377407185,
+          "realized_roi": 4.621664727370631,
+          "token_address": "7eMJmn1bYWSQEwxAX7CyngBzGNGu1cT582asKxxRpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 19594.23491210188,
+          "realized_roi": 15.876104609462658,
+          "token_address": "AwbAp4D42K28FdNTPUVMTUmm78DuAeFwQXR9FqX3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:27.368921",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "2byqB8Pypvq6s8W126yJc9SxToTiWTfNFuDU3ZTq9CLT",
+      "realized_pnl_usd": 304743.97757233103,
+      "unrealized_pnl_usd": -30403.79839432977,
+      "total_invested_usd": 1866330.1329903374,
+      "roi": 0.16328514027904237,
+      "win_rate": 0.6859000000000001,
+      "traded_token_count": 2292,
+      "top5_tokens": [
+        {
+          "realized_pnl": 13334.935922698283,
+          "realized_roi": 11.538993543350411,
+          "token_address": "HDLzz9mtPYZCZPaR9gMQoW5FkJbQSEPZgTqqffpspump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 8905.226574937215,
+          "realized_roi": 4.311829865791304,
+          "token_address": "4cvrucyY7uw2bXYZt1q4guY5XbNi66tfEZPVuR21pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 7251.068095173573,
+          "realized_roi": 7.230835470119437,
+          "token_address": "AD3bJmvTpuxhj6ktcJpQJP76YMdBwieSfP6TXTLtpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 6938.184240496478,
+          "realized_roi": 1.6200854361571781,
+          "token_address": "BWi8nNi1ahNzqu6YvEzLT9oRc9GXoeQN7Fib4Q3wpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5478.236088564173,
+          "realized_roi": 0.5571659307498696,
+          "token_address": "5SKLS8gvhJgAtmtmRr7SQg7NjoehutwK3vAzYPAYpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:33.547397",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "9mUJoYd4URwqYX9n2qAxxNvTwq22Qj7UZFnavtqnnX34",
+      "realized_pnl_usd": 8488.194694777425,
+      "unrealized_pnl_usd": -0.189249026025,
+      "total_invested_usd": 38087.09161175795,
+      "roi": 0.22286276886936193,
+      "win_rate": 0.3908,
+      "traded_token_count": 87,
+      "top5_tokens": [
+        {
+          "realized_pnl": 11376.269725594955,
+          "realized_roi": 1.7146652029056095,
+          "token_address": "CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3357.29565091464,
+          "realized_roi": 1.611278724039679,
+          "token_address": "3qVpCnqdaJtARzE2dYuCy5pm8X2NgF5hx9q9GosPpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 345.118824377712,
+          "realized_roi": 0.6580025790963969,
+          "token_address": "KAnwbYnFDuWLdD79pahEYT8kYjPwvosNdERrgVrpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 329.93680210916,
+          "realized_roi": 0.35871911408971435,
+          "token_address": "2ahJERK1c6Fb975w8biEy35pJ717PKfC5QvdFQhRpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 286.82011003694,
+          "realized_roi": 0.6951863505526108,
+          "token_address": "2LsescRjhcxoUwEQLpcsd3Gh6AHUyqEHANDakkoSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:47.503885",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "466NcTA4TQPBQB24zd1yvVbc2oACTaV5h3BvFq848UYj",
+      "realized_pnl_usd": 45896.37919581899,
+      "unrealized_pnl_usd": -73.04769758368099,
+      "total_invested_usd": 3218.4227990820245,
+      "roi": 14.260518912838238,
+      "win_rate": 1.0,
+      "traded_token_count": 5,
+      "top5_tokens": [
+        {
+          "realized_pnl": 45302.85485437184,
+          "realized_roi": 65.10282877304876,
+          "token_address": "BjX2pRWxVhNg3EHztXa77L3eEMBTHc7zsCJGn4fEpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 380.803471531847,
+          "realized_roi": 0.5465562044270703,
+          "token_address": "uFRWQSJwsQmUkDyCQCvJ4s5qpxtPwsbgVzERT4Vpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 101.730189017796,
+          "realized_roi": 0.1457224123121429,
+          "token_address": "6yHuA1vuA6GswbzEkEQCfi9VRAKjsykLYcExdvqDpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 87.920666038263,
+          "realized_roi": 0.15584865679154059,
+          "token_address": "DDN4QnAsGAxgmCCdQ7M8kAV1tx6wTGGLm7gtK2Svpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 23.07001485924,
+          "realized_roi": 0.04093524359251426,
+          "token_address": "6MQHfs1mkwYzdLGBxvESvZHpCsFuDx1BFPqtfLPipump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:52.037705",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "2T5NgDDidkvhJQg8AHDi74uCFwgp25pYFMRZXBaCUNBH",
+      "realized_pnl_usd": 244507.38513393773,
+      "unrealized_pnl_usd": -1912.200493144338,
+      "total_invested_usd": 802562.5467800554,
+      "roi": 0.3046583548097538,
+      "win_rate": 0.8067,
+      "traded_token_count": 3259,
+      "top5_tokens": [
+        {
+          "realized_pnl": 16741.819089883462,
+          "realized_roi": 76.53283387475805,
+          "token_address": "7F1u9MsGCsDnE1x8ES8w7nL6cvZoQCipeH67cDZYpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 14365.820519525349,
+          "realized_roi": 27.832306582307215,
+          "token_address": "9dYAZDK7TjT7ae67scTGMCb56Q5iQwpo9Mbfztf1pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5908.294093865174,
+          "realized_roi": 4.788926382568271,
+          "token_address": "4PEBYdgiYFWme47MiX6yZq1rPYSxVagjoDecWeNfpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4208.79003172436,
+          "realized_roi": 2.3756308518674314,
+          "token_address": "9DdtnmX9ziRM8LMXmy12dHyZeTFMbSjVfQV63eaCbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 3867.664377768184,
+          "realized_roi": 13.088600407553608,
+          "token_address": "BnBk3gHJKtmwV2SC78LQ2GSfNE161etqhyBj7fz1pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:58.428265",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
+      "realized_pnl_usd": 3782260.9669835884,
+      "unrealized_pnl_usd": -1048266.9938993738,
+      "total_invested_usd": 32463047.157304704,
+      "roi": 0.11650973331788785,
+      "win_rate": 0.4935,
+      "traded_token_count": 61557,
+      "top5_tokens": [
+        {
+          "realized_pnl": 25099.13874491961,
+          "realized_roi": 2.112952880853998,
+          "token_address": "986j8mhmidrcbx3wf1XJxsQFvWBMXg7gnDi3mejsr8H8",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 22922.944659886307,
+          "realized_roi": 3.9212922970604103,
+          "token_address": "FfixAeHevSKBZWoXPTbLk4U4X9piqvzGKvQaFo3cpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 17679.19605329307,
+          "realized_roi": 24.93210146451352,
+          "token_address": "FZa1DS93nNXd6oMBbH486hkPL3kzN6kREutaZs2Ebonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 17392.305374083804,
+          "realized_roi": 3.852393453726125,
+          "token_address": "Ge8baxy8SCtTNumMTeHXULrguEpTDaoVYuPL2AGipump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 16989.26176385903,
+          "realized_roi": 3.0270475604059346,
+          "token_address": "9GtvcnDUvGsuibktxiMjLQ2yyBq5akUahuBs8yANbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:10.103131",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "DNfuF1L62WWyW3pNakVkyGGFzVVhj4Yr52jSmdTyeBHm",
+      "realized_pnl_usd": 15700891.03276436,
+      "unrealized_pnl_usd": -9530963.416872464,
+      "total_invested_usd": 17459531.689049285,
+      "roi": 0.8992733202925509,
+      "win_rate": 0.2469,
+      "traded_token_count": 2564,
+      "top5_tokens": [
+        {
+          "realized_pnl": 1685520.210985661,
+          "realized_roi": 2.5548791169775202,
+          "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1165423.2934564932,
+          "realized_roi": 39.74942214001312,
+          "token_address": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 846322.28308983,
+          "realized_roi": 19.101289368153665,
+          "token_address": "Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 785090.5786432727,
+          "realized_roi": 21.38942611554652,
+          "token_address": "7XJiwLDrjzxDYdZipnJXzpr1iDTmK55XixSFAa7JgNEL",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 490553.71215303894,
+          "realized_roi": 29.888983259540623,
+          "token_address": "FQ1tyso61AH1tzodyJfSwmzsD3GToybbRNoZxUBz21p8",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:16.338422",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "8EkFQQax4ANYeNYJerpuCay7CjdHnKfzzrGBGyiEcqwm",
+      "realized_pnl_usd": 24552.34812308246,
+      "unrealized_pnl_usd": -13105.534804857325,
+      "total_invested_usd": 131370.2538923323,
+      "roi": 0.18689427321351557,
+      "win_rate": 0.451,
+      "traded_token_count": 357,
+      "top5_tokens": [
+        {
+          "realized_pnl": 10691.478067656095,
+          "realized_roi": 43.74020980291606,
+          "token_address": "D6HgPY934ZTk1h7TajA9H7U4gjrf8fUAwgvB6y5gTYJ1",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 6323.822652238578,
+          "realized_roi": 21.646243238151715,
+          "token_address": "FmwtNLxSrC6CZRfdSsJdqM8GmPDPaWnrJFDETw5Sbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 6139.589967526984,
+          "realized_roi": 34.58785960365357,
+          "token_address": "J8uazAUgmCd2nwnFfALzqCerb3F7R3kuyawgHe3sR135",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4098.232109659414,
+          "realized_roi": 6.765333378285399,
+          "token_address": "Edkbb4DEwA2FiCEPu4cBnjCpHoJTLv9f47jyVFrVJeME",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4087.658254302915,
+          "realized_roi": 6.139500564093223,
+          "token_address": "23o1Xns2zuCTAsSoUPto5wLZGkarBNiZkzAtEHpTM5YU",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:21.573231",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "6pxPr596kgBbxxhzMfocLc3WkSAgpGfmjVwfZqJZGjVN",
+      "realized_pnl_usd": 30186.689770740057,
+      "unrealized_pnl_usd": -5127.11893631612,
+      "total_invested_usd": 43451.67041601988,
+      "roi": 0.6947187411145129,
+      "win_rate": 0.375,
+      "traded_token_count": 8,
+      "top5_tokens": [
+        {
+          "realized_pnl": 17468.632078832954,
+          "realized_roi": 3.7090931704393384,
+          "token_address": "32CdQdBUxbCsLy5AUHWmyidfwhgGUr9N573NBUrDpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 15568.047164364221,
+          "realized_roi": 5.076083758407679,
+          "token_address": "C4yDhKwkikpVGCQWD9BT2SJyHAtRFFnKPDM9Nyshpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1247.185222390213,
+          "realized_roi": 0.6496014070491125,
+          "token_address": "8dXhKvPNRgrVEnHo58xiw1gj1fDdZPB88VDYFTZppump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "8G5ayEsJF4Q7FEWEGeF4jtnUWZBEKCqhySTFQf9Ppump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -19.525797364328,
+          "realized_roi": -0.012691956800641996,
+          "token_address": "GFGcvYtqJ6sveVcP2A35wiBytAhizFurnZ1YQuqBAGS",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:26.124351",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "5J8tBVjBe7S4Fetv6mcMT53XhWFV35kgjANKTjmuwjDs",
+      "realized_pnl_usd": 256270.08397600087,
+      "unrealized_pnl_usd": -8987.525534918348,
+      "total_invested_usd": 2002743.0693622665,
+      "roi": 0.12795954103968263,
+      "win_rate": 0.7315,
+      "traded_token_count": 6320,
+      "top5_tokens": [
+        {
+          "realized_pnl": 38097.05203513707,
+          "realized_roi": 172.29922193803048,
+          "token_address": "LiGHtkg3uTa9836RaNkKLLriqTNRcMdRAhqjGWNv777",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4607.583274419316,
+          "realized_roi": 10.029086753668423,
+          "token_address": "hcxhJLja2Gc4AFHRwUFSytL1vXXFtZagjK6nrjgpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4375.06996662341,
+          "realized_roi": 11.694629391105442,
+          "token_address": "uuUHtKq8a3mJDNdVzV33MDHKuSJLEUrM9gtLnhmpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1983.273000473009,
+          "realized_roi": 2.265708742877401,
+          "token_address": "7ZzHcqUVhpALY2E22X19UB4q5uLVtGmyDxeXCpwfbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1540.917429937499,
+          "realized_roi": 3.3067931341105177,
+          "token_address": "HhTpTa7VYGpqcNRCfU7w2eJMKkwmDbgLjGfKAH2Epump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:32.992038",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "CMKKHHZSEBgMQrkemY7jUVXYqUdXahX1q46Ux1F6u8Ay",
+      "realized_pnl_usd": 14616.048460791962,
+      "unrealized_pnl_usd": -0.294045474727,
+      "total_invested_usd": 1141.156533110664,
+      "roi": 12.808101287340715,
+      "win_rate": 0.2857,
+      "traded_token_count": 7,
+      "top5_tokens": [
+        {
+          "realized_pnl": 14964.226152525822,
+          "realized_roi": 21.733712901055643,
+          "token_address": "FDBeFBbnuA28dB49gi1JGWQpV3A1czps8h8B785npump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "7qk4nyj4NXQSeBmFdt5mRpp5yH9Z9sCYk549NjWhpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "Bkd3kks2tsWqT6BNBiPt9Ax9UzA2NdHxHodZGNEYpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "6hPDikepyybBGSsbxXtnMAu3xNaWMTn3EZkqMmeATfN3",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "8nWyHCbeQN3Y5RokxrwJQ6TcvYsqvu28ptamyg9Vpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:37.598916",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "6Xtpd4vbKMZh7AfTcP1cV7hxTMqxw2UThk6LZKHwQGET",
+      "realized_pnl_usd": 5039.587764054741,
+      "unrealized_pnl_usd": -4067.265515342566,
+      "total_invested_usd": 28527.29253168794,
+      "roi": 0.17665846692099496,
+      "win_rate": 0.4286,
+      "traded_token_count": 28,
+      "top5_tokens": [
+        {
+          "realized_pnl": 4836.752216481495,
+          "realized_roi": 18.143535447143726,
+          "token_address": "6pjLsfSPYyxbH6hsuX8KsHTJDm2ErbfUd8PCpoyMpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1297.655059303262,
+          "realized_roi": 0.4732761616802388,
+          "token_address": "BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 949.920919644056,
+          "realized_roi": 0.649620314337216,
+          "token_address": "2LYTMGch89RabgQsCnzgMRiFLuzXi8rrnYqQRnZMe7mx",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 123.450953458126,
+          "realized_roi": 0.31027177571808473,
+          "token_address": "99bKemEdBVpB6wBE2AEFFrf3LBmsBUa6PZExX6FSpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 90.069987688834,
+          "realized_roi": 0.33032681802513825,
+          "token_address": "4PWuhgRz2VowWLrHUuSui3Gi9URT8mq5fjimQLTApump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:42.470537",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "7tiRXPM4wwBMRMYzmywRAE6jveS3gDbNyxgRrEoU6RLA",
+      "realized_pnl_usd": 348136.96029353066,
+      "unrealized_pnl_usd": -71751.83944982814,
+      "total_invested_usd": 4242201.542893856,
+      "roi": 0.08206516281073387,
+      "win_rate": 0.4597,
+      "traded_token_count": 10776,
+      "top5_tokens": [
+        {
+          "realized_pnl": 4982.999641832412,
+          "realized_roi": 10.681221239878528,
+          "token_address": "7acSGdwprRp41CK5nmGHq8tZXQVkPVgTMkANpkP1pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4954.958364462459,
+          "realized_roi": 4.3178465020216805,
+          "token_address": "986j8mhmidrcbx3wf1XJxsQFvWBMXg7gnDi3mejsr8H8",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4737.262574525036,
+          "realized_roi": 11.06446123306951,
+          "token_address": "eCowDBW1DtLcij2n6ryvjynaP4MijDiNKeDfHxepump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4192.407189376675,
+          "realized_roi": 10.23145861453204,
+          "token_address": "3BfkJer24rHzRDmeuJoFKFcpTgzz66LD8h2pxdFKpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 4186.056690442942,
+          "realized_roi": 5.464210532941573,
+          "token_address": "DyvWffDBndCMrEoGtc94Sut653ogsSc3b5KW9VUFKgx8",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:53.974814",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    },
+    {
+      "address": "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
+      "realized_pnl_usd": 9709340.50279016,
+      "unrealized_pnl_usd": -531408.36549844,
+      "total_invested_usd": 48170434.73431665,
+      "roi": 0.2015622353491699,
+      "win_rate": 0.5957,
+      "traded_token_count": 72358,
+      "top5_tokens": [
+        {
+          "realized_pnl": 88872.07620974725,
+          "realized_roi": 28.936545028893253,
+          "token_address": "38PgzpJYu2HkiYvV8qePFakB8tuobPdGm2FFEn7Dpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 46038.36685623883,
+          "realized_roi": 4.899688261018093,
+          "token_address": "CMx7yon2cLzHcXqgHsKJhuU3MmME6noWLQk2rAycBAGS",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 39565.84866380435,
+          "realized_roi": 13.001146619730159,
+          "token_address": "EcbRfg1r9DYK9JqTkCABFe8KVKXdXe2KAgrVhURQpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 37717.393014189474,
+          "realized_roi": 55.9179922948877,
+          "token_address": "CuscPSGwbY8ct4475NdixErBZXgnvhkpkURpvaMVpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 35884.26436090221,
+          "realized_roi": 5.36355023766879,
+          "token_address": "E2BLSv4tXo7qA4Pr3nkJqxyn6743peC7x8E9D5s8pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:07:11.790571",
+      "validated": true,
+      "status": "ACTIVE",
+      "labels_seen": []
+    }
+  ],
+  "rejected_wallets": [
+    {
+      "address": "AQXPaNNWWGScNgdnjRvrEw5ht3ko1G4rft4zwAZHxJJk",
+      "realized_pnl_usd": 1409315.0331768054,
+      "unrealized_pnl_usd": -986858.7996856265,
+      "total_invested_usd": 2450000,
+      "roi": 0.5752306257864511,
+      "win_rate": 0.5,
+      "traded_token_count": 4,
+      "top5_tokens": [
+        {
+          "realized_pnl": 614260.183223,
+          "realized_roi": 0.5118834860191667,
+          "token_address": "CCAGrGiB4924TFQ5MGNAW9oQK7eZ9LmrwjRFoV5Lis2u",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 584340.4120648053,
+          "realized_roi": 0.5843404120648052,
+          "token_address": "DrZ26cKJDksVRWib3DVVsjo9eeXccc7hKhDJviiYEEZY",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 211479.661912,
+          "realized_roi": 1.0573983095600001,
+          "token_address": "boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -765.224022999995,
+          "realized_roi": -0.0153044804599999,
+          "token_address": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:58:53.904113",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "7wFPXwJVEG8tCoB6vCqTb2ShCsSHzxQKYVoViyBkYYoh",
+      "realized_pnl_usd": 3778.8867859342226,
+      "unrealized_pnl_usd": -1183.5375787239261,
+      "total_invested_usd": 7365.201469844131,
+      "roi": 0.5130731048439595,
+      "win_rate": 0.15789999999999998,
+      "traded_token_count": 19,
+      "top5_tokens": [
+        {
+          "realized_pnl": 7702.981903209264,
+          "realized_roi": 11.41748736135456,
+          "token_address": "CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 204.581287227653,
+          "realized_roi": 2.3819543295931176,
+          "token_address": "7Tx8qTXSakpfaSFjdztPGQ9n2uyT1eUkYz7gYxxopump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 168.300191800259,
+          "realized_roi": 1.1359878371876824,
+          "token_address": "JB699bKuBEUJiiXSgtaFQUkAwFmUuz5WAWbKoLLQbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "AffEYUREUD86nR3hRUE7wzpsFhPu9oZQKDtNY5FsjyCp",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "2gV7aGN7aVdCcuZ8hmFKfML2N5z6ZbqjqfVdmzoPsakD",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:04.070981",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "GydYwrsts1ZBYuowespL5EBn7TveC9YvhVt68kpeZv51",
+      "realized_pnl_usd": -368.774206693355,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 3533.0553018939536,
+      "roi": -0.10437827183052226,
+      "win_rate": 0.0,
+      "traded_token_count": 2,
+      "top5_tokens": [
+        {
+          "realized_pnl": -116.421753942764,
+          "realized_roi": -0.13093216397065816,
+          "token_address": "BjX2pRWxVhNg3EHztXa77L3eEMBTHc7zsCJGn4fEpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -252.352452750591,
+          "realized_roi": -0.09544780062964413,
+          "token_address": "BKzBdMEPfjyu9qNNjnhSbbkf2n14hcymQkmuwkfdpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:08.787494",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "DH7dc6yVaEb4vK82zVpk6iLCxCK9tcEREMpdrR1YTqv6",
+      "realized_pnl_usd": -532.9567956140822,
+      "unrealized_pnl_usd": 3.5361803e-05,
+      "total_invested_usd": 10746.916540769691,
+      "roi": -0.049591600864512905,
+      "win_rate": 0.2857,
+      "traded_token_count": 28,
+      "top5_tokens": [
+        {
+          "realized_pnl": 738.754356298015,
+          "realized_roi": 0.1641389067099878,
+          "token_address": "BjX2pRWxVhNg3EHztXa77L3eEMBTHc7zsCJGn4fEpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 116.499046243744,
+          "realized_roi": 0.10483205431184058,
+          "token_address": "G2ZVJ8s2YRRQJh35XJWUVB1XkwZRfAbtUvcZnggvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 105.471771887043,
+          "realized_roi": 0.28377610857751784,
+          "token_address": "ENzixGkyyehWArDFF8w4tWkiqjJ6dHRhgMT3855Npump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 22.302547062551,
+          "realized_roi": 0.21549800917921397,
+          "token_address": "Cg8j4HpaVRiiypZMSNdMhKp5GpmM3nNJHH89USTFpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 12.395945604747,
+          "realized_roi": 0.2228738827850876,
+          "token_address": "Gnnrvg81G2DaAfsxfvdzrYhUeiXkYbxCgydEEhBWpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T18:59:39.025286",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "Ejdi1ee7V93n4Ljxvz4Y68SqjHyEqSu9oNfUL1D7YcnB",
+      "realized_pnl_usd": 14596.582134347871,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 403.060287298872,
+      "roi": 36.21438924724529,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 14596.582134347871,
+          "realized_roi": 36.21438924724529,
+          "token_address": "8mckXsp2XdrYn7ZBAkDQckoCWuKdQubEM9ZDtf1Ppump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:13.291171",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "CuoxUA9Qb3NuqSuG1z8WRPdEZnLDo1KBDeKJ1T6awJPQ",
+      "realized_pnl_usd": 1055.757654604146,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 1336.953593014299,
+      "roi": 0.7896741219146074,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 1055.757654604146,
+          "realized_roi": 0.7896741219146074,
+          "token_address": "C29ebrgYjYoJPMGPnPSGY1q3mMGk4iDSqnQeQQA7moon",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:00:17.800284",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "HdzG2xqZrGKZn87WGLMe7T8jk4V7iKWRquG8keEWwekR",
+      "realized_pnl_usd": 15719.539843311388,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 513.154432406709,
+      "roi": 30.63315612336484,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 15719.539843311388,
+          "realized_roi": 30.63315612336484,
+          "token_address": "4CVksetZC4dbEXphuJ4NkXNr19wnzETkHqoanwbXpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:14.838827",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "9t8THJT1rPWZ1M8UNEB8R5dQot2C7UR5oz9b2cBcB8U6",
+      "realized_pnl_usd": 16348.872872033946,
+      "unrealized_pnl_usd": -1957.539262526883,
+      "total_invested_usd": 3875.876892918503,
+      "roi": 4.218109430127792,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 16348.872872033946,
+          "realized_roi": 4.218109430127792,
+          "token_address": "AuShbGbk3axZPaCRqxFhNRhZ4gwinbNijAn8LPNvpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:19.471549",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "B5dwzfJNxA7VdhsWFKiUbRudPT4XWTXC2M2ChbujwC9F",
+      "realized_pnl_usd": 14097.216273515369,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 2938.526187361721,
+      "roi": 4.797376431132705,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 14097.216273515369,
+          "realized_roi": 4.797376431132705,
+          "token_address": "28xtGQ8ptnvBzLAYXfGAQERYP9FxiXmE92Np6dBWpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:28.944365",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "4uCfCUyGAdE7Gx35NrS1Nq2zLLE4gXxLVPDJd2t5Jy3d",
+      "realized_pnl_usd": 263538.7381492767,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 5641.915459718443,
+      "roi": 46.71086265486659,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 263538.7381492767,
+          "realized_roi": 46.71086265486659,
+          "token_address": "5UBqf593VT99mYweJLM1K62e9EnkZ11hmSwywih4pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:01:40.991625",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "4gV7vJsGDCGymJXg2W9Kb15Yqc8fdVb3pphAfiBwY5Gq",
+      "realized_pnl_usd": 12179.532371478956,
+      "unrealized_pnl_usd": -1202.055151954254,
+      "total_invested_usd": 9613.109622285398,
+      "roi": 1.2669711310941467,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 12179.532371478956,
+          "realized_roi": 1.2669711310941467,
+          "token_address": "2tbHkvuJnaG1X2U4VXvKTFsvaoW2cZ2W4iM9ZmdYmoon",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:38.086849",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "HHbiXzHm4xNAUnoRVHQdmvqyEAzBYTeTbpAC4Y8rcJQM",
+      "realized_pnl_usd": 14243.657479423626,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 673.142607652647,
+      "roi": 21.15994043088949,
+      "win_rate": 0.5,
+      "traded_token_count": 2,
+      "top5_tokens": [
+        {
+          "realized_pnl": 14243.657479574376,
+          "realized_roi": 38.01779588404713,
+          "token_address": "BM9rH994ggbYNoGmm3GzDG4zDTjuupqFxiPu1aXDpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -1.5075e-07,
+          "realized_roi": -5.050505506890393e-10,
+          "token_address": "CVf8spX5SWizivwCPRp6VZPRc8Vkoc5UhcQVMPnBpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:02:50.866288",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "5CyNizQyZfBLEDRsTJQfQtgCtWapMswymk99TSUaJFzL",
+      "realized_pnl_usd": 13306.418462861584,
+      "unrealized_pnl_usd": -3093.858349677347,
+      "total_invested_usd": 12715.891747083071,
+      "roi": 1.0464400552886097,
+      "win_rate": 1.0,
+      "traded_token_count": 3,
+      "top5_tokens": [
+        {
+          "realized_pnl": 5943.976182063999,
+          "realized_roi": 1.9098061171541498,
+          "token_address": "G51YEXUJnx1GcwSqLDmzTZbXEaNvU4xQBkdLLYu7pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 5913.788417213729,
+          "realized_roi": 1.3324415388049857,
+          "token_address": "7bYnUqseTw85z3nGiCyJmSSVVsp9ZvCtboA4iYWHpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 1448.653863583855,
+          "realized_roi": 0.2804622502379249,
+          "token_address": "EjVDW9zST8jdspAC9DsRXqPj84t9MVSzimdAB66Epump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:20.097214",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "BwoCKgZtwoZ18rXm5z3uD9Ct2TiCgc9yKmr3Q63pm4MR",
+      "realized_pnl_usd": -34195.060532507865,
+      "unrealized_pnl_usd": -1937.598885614333,
+      "total_invested_usd": 142658.67069794796,
+      "roi": -0.23969843799336435,
+      "win_rate": 0.1875,
+      "traded_token_count": 16,
+      "top5_tokens": [
+        {
+          "realized_pnl": 5094.596291771492,
+          "realized_roi": 0.07130567875251982,
+          "token_address": "wuZ6vfM35my4BcNEBXWjr4twBvPtU7CGT5Boyxjpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 2255.566619539397,
+          "realized_roi": 1.4025270585704923,
+          "token_address": "EQyvQcosFomiACPS8swsQXVMQ5AvKgsfa3YpCydwdBLV",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 410.753380352692,
+          "realized_roi": 0.6961416337840921,
+          "token_address": "BgMa2Y5VmDBEwFgSwUShS21Mhc3G6RCdtu56dfLmpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "5ZGvmynmA7tFRFZiWMWp5vQmVQaTHaLCLKPiNjD744Ax",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -42.656282963906,
+          "realized_roi": -0.05402290142400043,
+          "token_address": "273z43bTz2DHpKF9Q1D3fCUqFZYcBvigb1i6FoqWawAD",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:36.806379",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "A3AkErE8wDT6Gpwh4P6kewhnRMmHFZfYXzGRuv8Kkdsi",
+      "realized_pnl_usd": 14708.777270283144,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 223.812164569609,
+      "roi": 65.71929322326218,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 14708.777270283144,
+          "realized_roi": 65.71929322326218,
+          "token_address": "Cf1ZjYZi5UPbAyC7LhLkJYvebxrwam4AWVacymaBbonk",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:41.408430",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "4tDFEQTbxyDn3Wy9PcKcWLXzTfxL4im4u22UdKFZxFo9",
+      "realized_pnl_usd": 330694.59684637666,
+      "unrealized_pnl_usd": -31929.75856625465,
+      "total_invested_usd": 156864.27421834297,
+      "roi": 2.108157504277075,
+      "win_rate": 0.5,
+      "traded_token_count": 2,
+      "top5_tokens": [
+        {
+          "realized_pnl": 331379.44847905054,
+          "realized_roi": 2.177044117207633,
+          "token_address": "boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -684.851632673866,
+          "realized_roi": -0.14731278268532938,
+          "token_address": "CETES7CKqqKQizuSN6iWQwmTeFRjbJR6Vw2XRKfEDR8f",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:03:46.070164",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "HnKsSJYTe86Q261AajDKeyAKdKUwc3bzQBCZbcU6wR1v",
+      "realized_pnl_usd": 15900.400556030167,
+      "unrealized_pnl_usd": -8000.332437389947,
+      "total_invested_usd": 11611.48305691624,
+      "roi": 1.3693686222587462,
+      "win_rate": 0.5,
+      "traded_token_count": 2,
+      "top5_tokens": [
+        {
+          "realized_pnl": 15900.400556030167,
+          "realized_roi": 1.3693793061600363,
+          "token_address": "3dC5FK7atJkDDoSuF4USgvW8TEp5QdvLZDxR4tD4pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "BQX1cjcRHXmrqNtoFWwmE5bZj7RPneTmqXB979b2pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:01.509411",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "8v3MAS8ZjPngGYm7QtSLWr2SxrSQjRkwBVNrRyMmMDZL",
+      "realized_pnl_usd": 1793.103553895272,
+      "unrealized_pnl_usd": -5469.842474242191,
+      "total_invested_usd": 95243.82695445097,
+      "roi": 0.018826454282993045,
+      "win_rate": 0.0,
+      "traded_token_count": 5,
+      "top5_tokens": [
+        {
+          "realized_pnl": 974.376565797626,
+          "realized_roi": 0.07707521676483425,
+          "token_address": "5UUH9RTDiSpq6HKS6bp4NdU9PNJpXRXuiw6ShBTBhgH2",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 857.840239075997,
+          "realized_roi": 0.010429422168782933,
+          "token_address": "2tbHkvuJnaG1X2U4VXvKTFsvaoW2cZ2W4iM9ZmdYmoon",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "23XM8sWwNuT2zdtYJF4gPpyxG8fwWyHnN1DQf7ESpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 0,
+          "realized_roi": 0.0,
+          "token_address": "53qGk8HBb3d7X5REXqcU1UkkUd4bXNnDmCZ7B6oHpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -39.113250978351,
+          "realized_roi": -0.16230437269743114,
+          "token_address": "5DeYmD6qcvw47ZqyNAwCAmJMFXoGciyFrc2NQ1Topump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:15.542026",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "Aecb9LyvRJdXTc5PWEo8dLQWiYzniSPERV4CjRowspdr",
+      "realized_pnl_usd": 104364.31124544897,
+      "unrealized_pnl_usd": 124330.29842634563,
+      "total_invested_usd": 4455.669500259296,
+      "roi": 23.422812495265983,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 104364.31124544897,
+          "realized_roi": 23.422812495265983,
+          "token_address": "ETCNJjASexdEaYdKgfd5iAFRhHeHDttErL7suS7tpump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:38.082783",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "6NV7V1juc3pypwFpRcneAS5UPuqgHdnbWmUyoBU6xQpw",
+      "realized_pnl_usd": 14640.363841709497,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 5446.413144344517,
+      "roi": 2.6880744177315776,
+      "win_rate": 1.0,
+      "traded_token_count": 1,
+      "top5_tokens": [
+        {
+          "realized_pnl": 14640.363841709497,
+          "realized_roi": 2.6880744177315776,
+          "token_address": "3SQSwa5PXDWoBjCGi5uXCgNZ7FDCD8gG8Ai5UkLppump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:05:42.586804",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "DEUtAc8zP59YBLKEiYBuB9Mrg4eb3FtBEP4qR5ScQDaU",
+      "realized_pnl_usd": 289778.42341127305,
+      "unrealized_pnl_usd": -425.081156750492,
+      "total_invested_usd": 252098.91406199895,
+      "roi": 1.1494631957835706,
+      "win_rate": 0.07139999999999999,
+      "traded_token_count": 14,
+      "top5_tokens": [
+        {
+          "realized_pnl": 389617.30798816064,
+          "realized_roi": 13.335173513570744,
+          "token_address": "38PgzpJYu2HkiYvV8qePFakB8tuobPdGm2FFEn7Dpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -744.845476076923,
+          "realized_roi": -0.4881005521488819,
+          "token_address": "83mCRQJzvKMeQd9wJbZDUCTPgRbZMDoPdMSx5Sf1pump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -1203.552200521616,
+          "realized_roi": -0.8021063204111053,
+          "token_address": "RzHkTJNJw9cLXbVSRHf9MhfBbJ8eKLaNPHwCzzoboop",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -1536.673401503351,
+          "realized_roi": -0.6102021035378229,
+          "token_address": "EUa87kgF6R2tGFPKhoMmHPNzoLHL9tBefRBKuFJPUo5i",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": -1656.981487450721,
+          "realized_roi": -0.5829864462262289,
+          "token_address": "37YxGCyFuVtK3ZXj9ZxertikAztNHXa21G8SQyE3pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:47.153767",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    },
+    {
+      "address": "HxXCtospL88YN3hJZ9NaohPka7LcBvhiLEJqxXBrscXN",
+      "realized_pnl_usd": 1118.0433453476912,
+      "unrealized_pnl_usd": 0,
+      "total_invested_usd": 13758.859290772234,
+      "roi": 0.08125988657341227,
+      "win_rate": 0.3714,
+      "traded_token_count": 35,
+      "top5_tokens": [
+        {
+          "realized_pnl": 810.71522837908,
+          "realized_roi": 0.20774381316984059,
+          "token_address": "BKzBdMEPfjyu9qNNjnhSbbkf2n14hcymQkmuwkfdpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 464.449395832639,
+          "realized_roi": 0.3773175975630682,
+          "token_address": "4kPDqXsrk8cGxTTaGSQX15g6WReqTL9iYMiJbh3Hpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 411.262129745702,
+          "realized_roi": 0.8373063761362385,
+          "token_address": "GfNB1iVdHLvqfi8UvvebXeFUquPmhwBPWqvv1uTZpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 368.543035942627,
+          "realized_roi": 0.8213455537222638,
+          "token_address": "HDzLpFCmiw1hQqsw3TNQwi2kVbgpf19NTnfdSecUpump",
+          "token_symbol": "",
+          "chain": "solana"
+        },
+        {
+          "realized_pnl": 352.626989078891,
+          "realized_roi": 0.7446054433966708,
+          "token_address": "6mfNEcatoDcxrXxJAtMGQfTPPVGK8pNnjVs9HdK8pump",
+          "token_symbol": "",
+          "chain": "solana"
+        }
+      ],
+      "source": "research_v2",
+      "first_discovered": "2026-03-14T19:06:58.661992",
+      "validated": false,
+      "status": "REJECTED",
+      "labels_seen": []
+    }
+  ]
+}

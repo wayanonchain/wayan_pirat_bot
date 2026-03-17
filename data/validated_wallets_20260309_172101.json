@@ -1,0 +1,927 @@
+[
+  {
+    "address": "GH5f4hYyNb5yXfwiKHWJgi4ibeXzZZEFvDQ7WRGA4nmj",
+    "realized_pnl_usd": 191791.32095459668,
+    "win_rate": 0.3684210526315789,
+    "traded_times": 132,
+    "traded_token_count": 19,
+    "top5_tokens": [
+      {
+        "realized_pnl": 132291.6927346943,
+        "realized_roi": 6.12740493453484,
+        "token_address": "Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump",
+        "token_symbol": "BUTTCOIN",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 23082.93321241952,
+        "realized_roi": 0.6088899075865181,
+        "token_address": "5UUH9RTDiSpq6HKS6bp4NdU9PNJpXRXuiw6ShBTBhgH2",
+        "token_symbol": "TROLL",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 22671.892177591522,
+        "realized_roi": 0.8087709493287849,
+        "token_address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+        "token_symbol": "WOJAK",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 14379.176023167174,
+        "realized_roi": 0.6689910947921708,
+        "token_address": "32CdQdBUxbCsLy5AUHWmyidfwhgGUr9N573NBUrDpump",
+        "token_symbol": "MAXXING",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 8916.928184238375,
+        "realized_roi": 2.299570960099487,
+        "token_address": "AXQyzYRdk6ebp3VdwSNNNFR5Ssm5rMVTP84EEg98pump",
+        "token_symbol": "DCA",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:32.994449",
+    "nansen_label": "\ud83e\udd13 180D Smart Trader [GH5f4hYy]",
+    "nansen_labels_seen": [
+      "30D Smart Trader",
+      "90D Smart Trader",
+      "180D Smart Trader",
+      "Smart Trader"
+    ],
+    "total_volume_usd_24h": 156530.51482982177
+  },
+  {
+    "address": "69SzLy86mUfdeFqYurR4YsvcTuvYsVAqwdeTGWiGvRgt",
+    "realized_pnl_usd": 95939.39087300074,
+    "win_rate": 0.8,
+    "traded_times": 139,
+    "traded_token_count": 10,
+    "top5_tokens": [
+      {
+        "realized_pnl": 34449.70928136308,
+        "realized_roi": 1.6364878337748292,
+        "token_address": "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump",
+        "token_symbol": "PUNCH",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 20910.62869243126,
+        "realized_roi": 0.25680945963167157,
+        "token_address": "8Jx8AAHj86wbQgUTjGuj6GTTL5Ps3cqxKRTvpaJApump",
+        "token_symbol": "PENGUIN",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 15421.427405734852,
+        "realized_roi": 0.46557435460296565,
+        "token_address": "4TyZGqRLG3VcHTGMcLBoPUmqYitMVojXinAmkL8xpump",
+        "token_symbol": "TESTICLE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 11148.579042361587,
+        "realized_roi": 1.0683486973001597,
+        "token_address": "Ce2gx9KGXJ6C9Mp5b5x1sn9Mg87JwEbrQby4Zqo3pump",
+        "token_symbol": "NEET",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 8686.531242934429,
+        "realized_roi": 0.18329338874460946,
+        "token_address": "H8xQ6poBjB9DTPMDTKWzWPrnxu4bDEhybxiouF8Ppump",
+        "token_symbol": "TOKABU",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:34.881229",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [69SzLy86]",
+    "nansen_labels_seen": [
+      "90D Smart Trader",
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 30737.998788688332
+  },
+  {
+    "address": "6gMGbBHdRXiNR9YYXFVdTXz3WZyQu8CR54uzpTWxPPKt",
+    "realized_pnl_usd": 19655.10708135109,
+    "win_rate": 0.36363636363636365,
+    "traded_times": 232,
+    "traded_token_count": 33,
+    "top5_tokens": [
+      {
+        "realized_pnl": 24175.78292986668,
+        "realized_roi": 0.9882717798671682,
+        "token_address": "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump",
+        "token_symbol": "PUNCH",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 4098.5649702191995,
+        "realized_roi": 0.7893779009001308,
+        "token_address": "AVF9F4C4j8b1Kh4BmNHqybDaHgnZpJ7W7yLvL7hUpump",
+        "token_symbol": "LOBSTAR",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 2222.7124158440356,
+        "realized_roi": 2.336456156414352,
+        "token_address": "3wppuwUMAGgxnX75Aqr4W91xYWaN6RjxjCUFiPZUpump",
+        "token_symbol": "BANGERS",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -3726.9167905503105,
+        "realized_roi": -0.37561127787393045,
+        "token_address": "CSrwNk6B1DwWCHRMsaoDVUfD5bBMQCJPY72ZG3Nnpump",
+        "token_symbol": "FRANKLIN",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -4455.244220492802,
+        "realized_roi": -0.4032485714308735,
+        "token_address": "38PgzpJYu2HkiYvV8qePFakB8tuobPdGm2FFEn7Dpump",
+        "token_symbol": "GORK",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:36.318621",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [6gMGbBHd]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 11117.72557897329
+  },
+  {
+    "address": "GQcSE2FvUo6wre3ECGWfhE8W858LzBL5fsMgpyYF6eM7",
+    "realized_pnl_usd": 96108.07693941696,
+    "win_rate": 0.5909090909090909,
+    "traded_times": 243,
+    "traded_token_count": 22,
+    "top5_tokens": [
+      {
+        "realized_pnl": 72698.79795339097,
+        "realized_roi": 3.158823230803202,
+        "token_address": "4fSWEw2wbYEUCcMtitzmeGUfqinoafXxkhqZrA9Gpump",
+        "token_symbol": "PIGEON",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 9937.219628706767,
+        "realized_roi": 1.6017486005115362,
+        "token_address": "FWGWrsrvgcz1w6LjSSnuHB5y6KyWXhUKjLWhvDSJ48hE",
+        "token_symbol": "FROG",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 5850.256880124778,
+        "realized_roi": 0.39433189160628024,
+        "token_address": "AVF9F4C4j8b1Kh4BmNHqybDaHgnZpJ7W7yLvL7hUpump",
+        "token_symbol": "LOBSTAR",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 5140.637543053936,
+        "realized_roi": 1.2853417729701029,
+        "token_address": "4nswj3o1Lo9iWYvvRJxUD8vbCy9ay7QQoXYcncHNbonk",
+        "token_symbol": "SPSC",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -6433.996741974115,
+        "realized_roi": -0.1849904908730171,
+        "token_address": "61Wj56QgGyyB966T7YsMzEAKRLcMvJpDbPzjkrCZc4Bi",
+        "token_symbol": "COPPERINU",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:37.780576",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [GQcSE2Fv]",
+    "nansen_labels_seen": [
+      "90D Smart Trader",
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 10999.149111403533
+  },
+  {
+    "address": "Gdaqp3ND6r3HVAWXpawkQU18EuQqwNxpaeeio8ASVAYd",
+    "realized_pnl_usd": 121191.48324790681,
+    "win_rate": 0.4444444444444444,
+    "traded_times": 195,
+    "traded_token_count": 27,
+    "top5_tokens": [
+      {
+        "realized_pnl": 93767.84866470048,
+        "realized_roi": 0.8840206275233754,
+        "token_address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+        "token_symbol": "USELESS",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 32171.2404924742,
+        "realized_roi": 3.5026297119120873,
+        "token_address": "Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump",
+        "token_symbol": "BUTTCOIN",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 28995.56748948506,
+        "realized_roi": 1.5032649675254217,
+        "token_address": "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump",
+        "token_symbol": "PSYOPANIME",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -5728.91541696746,
+        "realized_roi": -0.8161858732419194,
+        "token_address": "BEamfAJycLnX3ij9mR22T71XWdruM1uQik8TyL3Mpump",
+        "token_symbol": "BABY",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -17576.7546468789,
+        "realized_roi": -0.27955454380306677,
+        "token_address": "AGdGTQa8iRnSx4fQJehWo4Xwbh1bzTazs55R6Jwupump",
+        "token_symbol": "114514",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:39.233234",
+    "nansen_label": "\u200b\u200b\ud83e\udd13 huigendeshen: 90D Smart Trader [Gdaqp3ND]",
+    "nansen_labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_volume_usd_24h": 7898.641496945305
+  },
+  {
+    "address": "E1zGzPY1WdJoHSzf928NWTkZjcAhnUaN1xzF6BhCTsvS",
+    "realized_pnl_usd": 197769.54528287245,
+    "win_rate": 0.6369047619047619,
+    "traded_times": 1654,
+    "traded_token_count": 168,
+    "top5_tokens": [
+      {
+        "realized_pnl": 27882.62476402234,
+        "realized_roi": 18.136130118286925,
+        "token_address": "GdCN7rQA5egc8SU2Bc2kKB2kMwELneQZJVSt8gGBpump",
+        "token_symbol": "CAGE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 27465.40356026536,
+        "realized_roi": 3.5648651998194847,
+        "token_address": "F7pB3ZdfBnyFw2LRHydWEn9BmhEa5XihXLjhySFRpump",
+        "token_symbol": "NOTHING",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 24987.016789850935,
+        "realized_roi": 2.2775975776706123,
+        "token_address": "9RaBDMwL2hcmah5yzXjBLiiYxHiBbd2jSEH3q6KCpump",
+        "token_symbol": "GM",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 24291.295219338794,
+        "realized_roi": 9.943949529553674,
+        "token_address": "2QKrBtNECja4cJygxA7igwqxahs93GNmuQ2We2stpump",
+        "token_symbol": "MACMINI",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 17315.529311048464,
+        "realized_roi": 2.56330442809357,
+        "token_address": "CxWPdDBqxVo3fnTMRTvNuSrd4gkp78udSrFvkVDBAGS",
+        "token_symbol": "RALPH",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:40.670843",
+    "nansen_label": "\ud83e\udd13 shadowdahedgehog.sol [E1zGzPY1]",
+    "nansen_labels_seen": [
+      "90D Smart Trader",
+      "180D Smart Trader"
+    ],
+    "total_volume_usd_24h": 5757.612374477948
+  },
+  {
+    "address": "EvGpkcSBfhp5K9SNP48wVtfNXdKYRBiK3kvMkB66kU3Q",
+    "realized_pnl_usd": 137914.9278456599,
+    "win_rate": 0.6214285714285714,
+    "traded_times": 2311,
+    "traded_token_count": 140,
+    "top5_tokens": [
+      {
+        "realized_pnl": 71262.62751171061,
+        "realized_roi": 3.283383064660759,
+        "token_address": "Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump",
+        "token_symbol": "BUTTCOIN",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 9304.620331825257,
+        "realized_roi": 1.1621202778172026,
+        "token_address": "AGBegePeNtnBy1xLGBDcBDjxaVHaDhvebSNMduLapump",
+        "token_symbol": "SOLANUM",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 8297.98998213517,
+        "realized_roi": 5.354163546940587,
+        "token_address": "85wiEiRVoBKcLWvn7sUJQ5dNndddC1rYsZAn21p3pump",
+        "token_symbol": "KABOSU",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 6250.541805324527,
+        "realized_roi": 2.0423788963850513,
+        "token_address": "2NGBAfNMXBU85gjqYutA39b6BCBG5i5MZ4Jvjtdcpump",
+        "token_symbol": "SHT",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 6133.745253021977,
+        "realized_roi": 2.9292222150811424,
+        "token_address": "Huh3G975pLP3WTXKDnsaCTu7enAoFsHMFJCbFLeNpump",
+        "token_symbol": "FOMO",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:42.063294",
+    "nansen_label": "\ud83e\udd13 Smart Trader [EvGpkcSB]",
+    "nansen_labels_seen": [
+      "180D Smart Trader",
+      "Smart Trader"
+    ],
+    "total_volume_usd_24h": 5725.449409851053
+  },
+  {
+    "address": "6r6SdfhfdvNi8571brBMiD61bn8PbUmxWS8crzpykbSb",
+    "realized_pnl_usd": 24152.118606040913,
+    "win_rate": 0.8333333333333334,
+    "traded_times": 140,
+    "traded_token_count": 12,
+    "top5_tokens": [
+      {
+        "realized_pnl": 15461.838316012505,
+        "realized_roi": 1.9811730591653103,
+        "token_address": "4fSWEw2wbYEUCcMtitzmeGUfqinoafXxkhqZrA9Gpump",
+        "token_symbol": "PIGEON",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 4068.674808847256,
+        "realized_roi": 0.2960422123707521,
+        "token_address": "5Jr9hGmJgxBRjjF8XGcGgQzXUdsbpZNNMpigEv8Wpump",
+        "token_symbol": "MUSHU",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 1626.6903972114271,
+        "realized_roi": 0.2020050854220799,
+        "token_address": "AVF9F4C4j8b1Kh4BmNHqybDaHgnZpJ7W7yLvL7hUpump",
+        "token_symbol": "LOBSTAR",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 1532.5090213280114,
+        "realized_roi": 0.38879605453871,
+        "token_address": "J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump",
+        "token_symbol": "TRIPLET",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 510.01346813857776,
+        "realized_roi": 0.23722147325804477,
+        "token_address": "AhU5zEZLieEpP3bhvsjmWqWJScX7pDsFs6XPc9FGbonk",
+        "token_symbol": "\u26a0\ufe0f LINHMAI",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:43.346393",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [6r6Sdfhf]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 4685.207749958739
+  },
+  {
+    "address": "CoNcGfS9M4p56mJ2nqP35YS2y2X3mhvpu8AMgHbUniRC",
+    "realized_pnl_usd": 213682.44679693165,
+    "win_rate": 0.3548387096774194,
+    "traded_times": 879,
+    "traded_token_count": 31,
+    "top5_tokens": [
+      {
+        "realized_pnl": 197012.10668224914,
+        "realized_roi": 17.19689455937537,
+        "token_address": "a3W4qutoEJA4232T2gwZUfgYJTetr96pU4SJMwppump",
+        "token_symbol": "WHITEWHALE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 16793.015877703485,
+        "realized_roi": 0.755814590492044,
+        "token_address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+        "token_symbol": "WOJAK",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 3932.7820575950263,
+        "realized_roi": 0.8370700084197314,
+        "token_address": "A9E2AopuG56LWYiXsvGLLTcLjUjQ539PY6k5Fhfepump",
+        "token_symbol": "KABUTO",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -666.2417238790551,
+        "realized_roi": -0.4471242287919267,
+        "token_address": "5UUH9RTDiSpq6HKS6bp4NdU9PNJpXRXuiw6ShBTBhgH2",
+        "token_symbol": "TROLL",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -1071.2163040667235,
+        "realized_roi": -0.468436637285098,
+        "token_address": "BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups",
+        "token_symbol": "URANUS",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:44.915907",
+    "nansen_label": "\ud83e\udd13 Smart Trader [CoNcGfS9]",
+    "nansen_labels_seen": [
+      "Smart Trader"
+    ],
+    "total_volume_usd_24h": 4322.282109048087
+  },
+  {
+    "address": "9Eev8bB2L4Heet6aAcpw5Mesz1aDahyKYkXHLyQHLBoR",
+    "realized_pnl_usd": 69211.9675414095,
+    "win_rate": 0.3870967741935484,
+    "traded_times": 414,
+    "traded_token_count": 31,
+    "top5_tokens": [
+      {
+        "realized_pnl": 31738.045887573215,
+        "realized_roi": 7.96810891181327,
+        "token_address": "4TyZGqRLG3VcHTGMcLBoPUmqYitMVojXinAmkL8xpump",
+        "token_symbol": "TESTICLE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 24752.592905324964,
+        "realized_roi": 1.010628115566809,
+        "token_address": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
+        "token_symbol": "LMAO!",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 9676.34973716198,
+        "realized_roi": 1.2969708957183497,
+        "token_address": "3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump",
+        "token_symbol": "BP",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 4238.921406991218,
+        "realized_roi": 0.713309078372549,
+        "token_address": "2KiHzSXdnenDoDNsVsjU6VcvgyyDK27iSoZv6TNDpump",
+        "token_symbol": "POOP",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -2603.0156509891767,
+        "realized_roi": -0.8716295428124962,
+        "token_address": "BhGfhndVH5Aa39vvdsTtNFy8uWQ8auzyU811xaXepump",
+        "token_symbol": "BEARISTA",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:46.184442",
+    "nansen_label": "\ud83e\udd13 90D Smart Trader [9Eev8bB2]",
+    "nansen_labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_volume_usd_24h": 4037.3293937327126
+  },
+  {
+    "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
+    "realized_pnl_usd": 73093.41118273299,
+    "win_rate": 0.45652173913043476,
+    "traded_times": 337,
+    "traded_token_count": 46,
+    "top5_tokens": [
+      {
+        "realized_pnl": 46611.36880228633,
+        "realized_roi": 1.705690260700224,
+        "token_address": "9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump",
+        "token_symbol": "67",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 11377.547811021876,
+        "realized_roi": 0.6694395618295513,
+        "token_address": "2wzVMXhLypmP92mXNCq4fuFcd9TCC972AbMfuiH3pump",
+        "token_symbol": "AISLOP",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 8024.119975665639,
+        "realized_roi": 1.205138218112418,
+        "token_address": "4az7oyuUFco8GedLkWYzopurgadkSz8n64xCEXNYpump",
+        "token_symbol": "AGARTHA",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 4301.38815943671,
+        "realized_roi": 0.8833317960328553,
+        "token_address": "BzyKa1FGjs2EUpu3GGDibY4xdygn5evAiRboKmETpump",
+        "token_symbol": "TRENCH",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -4386.192532265677,
+        "realized_roi": -0.5061444829275227,
+        "token_address": "EwEJ5R1im54MowvsGwYUkyfWRMV1qcRL21PumVd4pump",
+        "token_symbol": "2016",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:47.578325",
+    "nansen_label": "\ud83e\udd13 90D Smart Trader [EVCwZrtP]",
+    "nansen_labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_volume_usd_24h": 2314.5832576486655
+  },
+  {
+    "address": "GC4sRy4H9692nkdqXan6tK8frQaSQUzYvV4zr5rELK7m",
+    "realized_pnl_usd": 36780.3446760308,
+    "win_rate": 0.3953488372093023,
+    "traded_times": 263,
+    "traded_token_count": 43,
+    "top5_tokens": [
+      {
+        "realized_pnl": 27544.2595591188,
+        "realized_roi": 5.716482580191456,
+        "token_address": "HaUXAdAWWUkb2WTmh8z1TdaEmZkYjnQnmC6tHUdTAHvi",
+        "token_symbol": "KIMCHI",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 13730.3299771578,
+        "realized_roi": 13.067428696328543,
+        "token_address": "EtL967sgMgeDDSUrNhtQrbhe4T92idzqf4VuA6H7uGfQ",
+        "token_symbol": "MAYA",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 7584.631477975703,
+        "realized_roi": 21.72935602148558,
+        "token_address": "84yCF7hyUuRNAra9BjFHVDpnRdGXmfsV2emyZwLjpump",
+        "token_symbol": "HOUSE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 5597.965711896427,
+        "realized_roi": 2.035674317239243,
+        "token_address": "v8ic5ww8fy6ejkq4Cr5CVpYnstaXjMsRGJZSWn5SS1t",
+        "token_symbol": "POMBON",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -6468.770371222997,
+        "realized_roi": -0.9049107343554069,
+        "token_address": "7BWxr1bynyis5LqUtVYGtSMKfU25okMoPqWBm9NYrGiT",
+        "token_symbol": "\u26a0\ufe0f IMAGINE",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:48.993642",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [GC4sRy4H]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 2128.7561224980245
+  },
+  {
+    "address": "5fkAwNVpT8A1UHEnY62VEFpqgagdoP8FYrv5ideiQp5c",
+    "realized_pnl_usd": 615457.6974078219,
+    "win_rate": 0.41025641025641024,
+    "traded_times": 646,
+    "traded_token_count": 78,
+    "top5_tokens": [
+      {
+        "realized_pnl": 561037.1374771703,
+        "realized_roi": 56.91964919221235,
+        "token_address": "8Jx8AAHj86wbQgUTjGuj6GTTL5Ps3cqxKRTvpaJApump",
+        "token_symbol": "PENGUIN",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 26180.670278928712,
+        "realized_roi": 1.6085341766702217,
+        "token_address": "6iA73gWCKkLWKbVr8rgibV57MMRxzsaqS9cWpgKBpump",
+        "token_symbol": "\u6211\u7684\u5200\u76fe",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 19935.91190878988,
+        "realized_roi": 1.5155400683816866,
+        "token_address": "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump",
+        "token_symbol": "PUNCH",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 14911.75993273707,
+        "realized_roi": 0.6687559026122489,
+        "token_address": "GB8KtQfMChhYrCYtd5PoAB42kAdkHnuyAincSSmFpump",
+        "token_symbol": "PIGEON",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -6323.168248126777,
+        "realized_roi": -0.8568941384240305,
+        "token_address": "8MdkXe5G77xaMheVQxLqAYV8e2m2Dfc5ZbuXup2epump",
+        "token_symbol": "SINCLAIR",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:50.382397",
+    "nansen_label": "\ud83e\udd13 \ud83d\udc64 logjam [5fkAwNVp]",
+    "nansen_labels_seen": [
+      "90D Smart Trader"
+    ],
+    "total_volume_usd_24h": 2057.5487840474857
+  },
+  {
+    "address": "CQYBoADiryLPQr2zhLPKFpTHWUgmNqX3zrvbN6BCkb6L",
+    "realized_pnl_usd": 10676.499367151613,
+    "win_rate": 0.3,
+    "traded_times": 139,
+    "traded_token_count": 40,
+    "top5_tokens": [
+      {
+        "realized_pnl": 17900.754198218787,
+        "realized_roi": 18.782028873471557,
+        "token_address": "EfPoo4wWgxKVToit7yX5VtXXBrhao4G8L7vrbKy6pump",
+        "token_symbol": "DEXTER",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 4281.83575577193,
+        "realized_roi": 6.996695759510004,
+        "token_address": "8MdkXe5G77xaMheVQxLqAYV8e2m2Dfc5ZbuXup2epump",
+        "token_symbol": "SINCLAIR",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 3266.7894305790096,
+        "realized_roi": 4.721176911177606,
+        "token_address": "3qq54YqAKG3TcrwNHXFSpMCWoL8gmMuPceJ4FG9npump",
+        "token_symbol": "CLANKER",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -4002.2279560805086,
+        "realized_roi": -0.9881754000063482,
+        "token_address": "5fRe5m7d51EsGvPnr4zSetvRskN8RYSs6oaYPcmpory",
+        "token_symbol": "\u26a0\ufe0f AIJ",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -4699.428575730637,
+        "realized_roi": -0.7135062214416289,
+        "token_address": "8Y5MwnUM19uqhnsrFnKijrmn33CmHBTUoedXtTGDpump",
+        "token_symbol": "BASEDD",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:52.162440",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [CQYBoADi]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 1701.6406761441763
+  },
+  {
+    "address": "JAozJbJ8iDiwnL1e3fiTrXPiydHMXVgHJsXRHPfRodED",
+    "realized_pnl_usd": 43863.49743669266,
+    "win_rate": 0.5689655172413793,
+    "traded_times": 272,
+    "traded_token_count": 58,
+    "top5_tokens": [
+      {
+        "realized_pnl": 20406.16221248795,
+        "realized_roi": 16.224965941113677,
+        "token_address": "7MDApufGNAKDDTcM3hrUpUfZ8jcaXdaoSZy1sQdRpump",
+        "token_symbol": "DALE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 10742.765780713205,
+        "realized_roi": 5.390823601051228,
+        "token_address": "CmgJ1PobhUqB7MEa8qDkiG2TUpMTskWj8d9JeZWSpump",
+        "token_symbol": "FISH",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 8042.7966220712415,
+        "realized_roi": 2.6592826419765583,
+        "token_address": "AMCHpR1F5gKt6msk9j9aDBjKUSmgyAxhymbZhjkypump",
+        "token_symbol": "FROGE",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 7667.357190181991,
+        "realized_roi": 0.939098285129307,
+        "token_address": "8opvqaWysX1oYbXuTL8PHaoaTiXD69VFYAX4smPebonk",
+        "token_symbol": "WAR",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 6537.210470885581,
+        "realized_roi": 5.169310189481739,
+        "token_address": "132STreShuLRNgkyF1QECv37yP9Cdp8JBAgnKBgKafed",
+        "token_symbol": "FED",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:53.721652",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [JAozJbJ8]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 1689.0598781939325
+  },
+  {
+    "address": "7Z5VhcNSpMpaTVqRg8QTkySw6syfcTehTx8CqRPvf9bg",
+    "realized_pnl_usd": 165437.77203694198,
+    "win_rate": 0.2571428571428571,
+    "traded_times": 264,
+    "traded_token_count": 35,
+    "top5_tokens": [
+      {
+        "realized_pnl": 232910.11423531157,
+        "realized_roi": 8.519672362886077,
+        "token_address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+        "token_symbol": "WOJAK",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 11236.300629763708,
+        "realized_roi": 0.43125028678938077,
+        "token_address": "HdvZF538TerjMWc1cmtWVKUaGkS8d77sGH5QaDCCpump",
+        "token_symbol": "TST",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 9273.532408533127,
+        "realized_roi": 0.5255125906192225,
+        "token_address": "32CdQdBUxbCsLy5AUHWmyidfwhgGUr9N573NBUrDpump",
+        "token_symbol": "MAXXING",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -13207.574565978959,
+        "realized_roi": -0.5579710379997704,
+        "token_address": "7VENy6wCjBChAMGpjPQCPYJDeYJGFr5NZUxk7uQ7bonk",
+        "token_symbol": "CAPY",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -63720.89714262674,
+        "realized_roi": -0.393069004461306,
+        "token_address": "5UUH9RTDiSpq6HKS6bp4NdU9PNJpXRXuiw6ShBTBhgH2",
+        "token_symbol": "TROLL",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:56.986336",
+    "nansen_label": "\ud83e\udd13 Smart Trader [7Z5VhcNS]",
+    "nansen_labels_seen": [
+      "Smart Trader"
+    ],
+    "total_volume_usd_24h": 863.7329893880617
+  },
+  {
+    "address": "4daxRFKDKpnAj7eUKivevh3hKD6k1MbNeAwKo29u9cz5",
+    "realized_pnl_usd": 34050.923699813764,
+    "win_rate": 0.33,
+    "traded_times": 2449,
+    "traded_token_count": 100,
+    "top5_tokens": [
+      {
+        "realized_pnl": 36056.311450968955,
+        "realized_roi": 53.740424074450345,
+        "token_address": "49jdQxUkKtuvorvnwWqDzUoYKEjfgroTzHkQqXG9YFMj",
+        "token_symbol": "SOSANA",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 6173.121592690938,
+        "realized_roi": 0.5080176582139196,
+        "token_address": "HMaJxXp3Ja81jSwigF6zGaMt79hNZuczrw6i7LjTbonk",
+        "token_symbol": "\ud83c\udf92",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 3391.7644344328896,
+        "realized_roi": 1.4806468877465415,
+        "token_address": "CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump",
+        "token_symbol": "KILROY",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 1947.719435280768,
+        "realized_roi": 0.8642691395015935,
+        "token_address": "FWoGYRhR6YagBSqncPSdn43GHNikSPw1ggrGzyM3H5rE",
+        "token_symbol": "COW",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": -18493.124596685797,
+        "realized_roi": -0.07199384116924964,
+        "token_address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+        "token_symbol": "USELESS",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:20:58.613296",
+    "nansen_label": "\ud83e\udd13 30D Smart Trader [4daxRFKD]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 731.6570845311116
+  },
+  {
+    "address": "HonuLDWACiMpJMkDUwNQvodPTntRgGMB8CZkmPsGtHRW",
+    "realized_pnl_usd": 23627.82002034985,
+    "win_rate": 0.6610169491525424,
+    "traded_times": 944,
+    "traded_token_count": 59,
+    "top5_tokens": [
+      {
+        "realized_pnl": 11939.534702167519,
+        "realized_roi": 1.3699859269188768,
+        "token_address": "Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump",
+        "token_symbol": "HODL",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 6514.018646411355,
+        "realized_roi": 0.6164135224219072,
+        "token_address": "3B1ijcocM5EDga6XxQ7JLW7weocQPWWjuhBYG8Vepump",
+        "token_symbol": "BP",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 2133.375620410563,
+        "realized_roi": 4.251676986061175,
+        "token_address": "AVF9F4C4j8b1Kh4BmNHqybDaHgnZpJ7W7yLvL7hUpump",
+        "token_symbol": "LOBSTAR",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 1012.2435637498534,
+        "realized_roi": 0.6325915312691025,
+        "token_address": "BKQucpTXB2d67jSNXMznSTj2iNLVtyga9JW86QoWpump",
+        "token_symbol": "\u26a0\ufe0f CTO",
+        "chain": "solana"
+      },
+      {
+        "realized_pnl": 663.3332772019913,
+        "realized_roi": 0.6083064077367772,
+        "token_address": "6QaQZFFZkCCqE7UyAFRDBMhvKoui11nv3ugeBvn2pump",
+        "token_symbol": "COINBASE",
+        "chain": "solana"
+      }
+    ],
+    "pnl_period": "2025-11-09T00:00:00Z to 2026-03-09T00:00:00Z",
+    "validated_at": "2026-03-09T17:21:01.389045",
+    "nansen_label": "\ud83e\udd13 banananinja.sol [HonuLDWA]",
+    "nansen_labels_seen": [
+      "30D Smart Trader"
+    ],
+    "total_volume_usd_24h": 283.43293940050216
+  }
+]
