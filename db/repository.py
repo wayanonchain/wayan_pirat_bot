@@ -365,12 +365,11 @@ async def get_referral_stats(user_id: int) -> dict:
         )
         total_count = total.scalar() or 0
 
-        # Paid referrals (those who subscribed)
-        now = datetime.utcnow()
+        # Paid referrals (those who bought course)
         paid = await session.execute(
             select(func.count()).select_from(Subscriber).where(
                 Subscriber.referred_by == user_id,
-                Subscriber.tier != "free",
+                Subscriber.course_purchased == True,
             )
         )
         paid_count = paid.scalar() or 0

@@ -10,7 +10,7 @@ from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, C
 from aiogram import F
 
 from config.settings import (
-    TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID,
+    TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ADMIN_IDS,
     PAYMENT_WALLET, PREMIUM_PRICE_SOL,
     COURSE_PRICE_USDT, COMMUNITY_PRICE_USDT,
     FREE_SIGNAL_DELAY_MINUTES,
@@ -19,6 +19,10 @@ from bot.formatters import format_signal_message, format_signal_message_free, fo
 from db import repository as repo
 
 logger = logging.getLogger(__name__)
+
+
+def check_admin(user_id: int) -> bool:
+    return str(user_id) in ADMIN_IDS
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
 dp = Dispatcher()
@@ -224,23 +228,33 @@ def premium_keyboard() -> InlineKeyboardMarkup:
 # ============================================================
 
 WELCOME_TEXT = (
-    "🏴‍☠️ <b>Wayan Pirate</b>\n"
-    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    "On-chain, AI, Образование — до того как это стало трендом 💦\n\n"
-    "Добро пожаловать в экосистему <b>Wayan</b> — "
-    "здесь собраны все продукты в одном месте.\n\n"
+    "🏴‍☠️ <b>Wayan Pirate</b>\n\n"
+    "Пока большинство догоняет тренды — ты можешь зайти в них раньше 💦\n\n"
+    "Я собрал экосистему Wayan Onchain для тех, кто хочет не просто "
+    "смотреть на рынок, а разбираться, адаптироваться и зарабатывать "
+    "на новых возможностях быстрее других.\n\n"
+    "Что у тебя есть прямо сейчас:\n\n"
 
-    "🎓 <b>Курс Onchain Trading — {course} USDT</b>\n"
-    "7 модулей от нуля до продвинутых стратегий. "
-    "Модули 1-2 доступны бесплатно.\n"
-    "И бесплатный, и платный курс имеют свои чаты, "
-    "где можно задать любой вопрос напрямую автору курса — "
-    "по крипте, on-chain, AI, рынку.\n\n"
+    "🎓 <b>Onchain BASE — Бесплатно</b>\n"
+    "Старт для тех, кто хочет зайти в on-chain "
+    "без путаницы и с нормальной базой.\n\n"
 
-    "👥 <b>Wayan Premium — {community} USDT</b>\n"
-    "Закрытый ресерч-спейс: On-chain, AI, новые нарративы.\n\n"
+    "🎓 <b>Onchain Premium — {course} USDT</b>\n"
+    "7 модулей от нуля до продвинутого уровня.\n"
+    "Система обучения, которая дает понимание рынка, "
+    "логику on-chain анализа и доступ к закрытому чату "
+    "с возможностью задавать вопросы напрямую.\n\n"
+    "2 первых модуля — бесплатно.\n\n"
 
-    "Выбирай раздел, который тебя интересует 👇"
+    "👥 <b>Закрытый чат Wayan Premium — {community} USDT / мес</b>\n\n"
+    "Закрытое пространство с on-chain, AI, ресерчем, "
+    "новыми нарративами и живым обсуждением рынка.\n\n"
+
+    "Это уже не просто обучение.\n"
+    "Это доступ к среде, информации и людям, "
+    "которые смотрят глубже среднего рынка.\n\n"
+
+    "Если тебе нужен рост, понимание и доступ к сильной среде — заходи 👇"
 ).format(
     course=f"{COURSE_PRICE_USDT:.0f}",
     community=f"{COMMUNITY_PRICE_USDT:.0f}",
@@ -266,19 +280,22 @@ async def cmd_start(message: Message, command: CommandObject):
     # Handle referral deep link: /start ref_XXXXXXXX
     referred_by = None
     args = (command.args or "").strip()
+    logger.info(f"[START] user={user.id} args='{args}' is_new={is_new}")
     if args.startswith("ref_"):
         ref_code = args[4:]
         referrer = await repo.get_subscriber_by_referral_code(ref_code)
+        logger.info(f"[REF] code={ref_code} referrer={referrer.user_id if referrer else None}")
         if referrer and referrer.user_id != user.id:
             success = await repo.set_referred_by(user.id, referrer.user_id)
+            logger.info(f"[REF] set_referred_by success={success}")
             if success:
                 referred_by = referrer.user_id
-                from config.settings import REFERRAL_COURSE_DISCOUNT, COURSE_PRICE_USDT
+                from config.settings import REFERRAL_COURSE_DISCOUNT
                 discount_pct = int(REFERRAL_COURSE_DISCOUNT * 100)
                 discounted = COURSE_PRICE_USDT * (1 - REFERRAL_COURSE_DISCOUNT)
                 await message.answer(
                     f"🎁 <b>Реферальный бонус активирован!</b>\n\n"
-                    f"Скидка {discount_pct}% на покупку Курса "
+                    f"Скидка {discount_pct}% на покупку курса "
                     f"(<s>{COURSE_PRICE_USDT:.0f}</s> → <b>{discounted:.0f} USDT</b>).\n"
                     f"Приглашён от: {referrer.first_name or referrer.username or 'друга'}",
                     parse_mode="HTML",
@@ -289,6 +306,25 @@ async def cmd_start(message: Message, command: CommandObject):
                     referrer.user_id,
                     referrer.first_name or referrer.username or str(referrer.user_id),
                 )
+
+                # Notify referrer that someone used their link
+                new_name = user.first_name or user.username or "Кто-то"
+                try:
+                    await bot.send_message(
+                        chat_id=referrer.user_id,
+                        text=(
+                            f"🔗 <b>По твоей ссылке пришёл новый юзер!</b>\n\n"
+                            f"Кто: {new_name}\n"
+                            f"Ему активирована скидка 20% на курс.\n\n"
+                            f"Когда он купит курс — ты получишь скидку на комьюнити!"
+                        ),
+                        parse_mode="HTML",
+                    )
+                    logger.info(f"[REF] Notification sent to referrer {referrer.user_id}")
+                except Exception as e:
+                    logger.error(f"[REF] Failed to notify referrer {referrer.user_id}: {e}")
+            else:
+                logger.info(f"[REF] set_referred_by returned False (already referred or self-ref)")
 
     if is_new:
         from bot.activity_log import log_new_user
@@ -349,7 +385,7 @@ async def cmd_analyze(message: Message, command: CommandObject):
     """Analyze a token's Accumulation Score. Premium only."""
     user_id = message.from_user.id
     tier = await repo.get_user_tier(user_id)
-    is_admin = str(user_id) == str(TELEGRAM_CHAT_ID)
+    is_admin = check_admin(user_id)
 
     if tier not in ("premium", "premium_plus") and not is_admin:
         await message.answer(
@@ -386,7 +422,7 @@ async def cmd_filter(message: Message, command: CommandObject):
     """Manage signal filters. Premium only."""
     user_id = message.from_user.id
     tier = await repo.get_user_tier(user_id)
-    is_admin = str(user_id) == str(TELEGRAM_CHAT_ID)
+    is_admin = check_admin(user_id)
 
     if tier not in ("premium", "premium_plus") and not is_admin:
         await message.answer(
@@ -466,7 +502,7 @@ async def cmd_filter(message: Message, command: CommandObject):
 async def cmd_stats(message: Message):
     """Admin stats."""
     user_id = message.from_user.id
-    if str(user_id) != str(TELEGRAM_CHAT_ID):
+    if not check_admin(user_id):
         return
 
     await message.answer("⏳ Генерирую статистику...")
@@ -480,7 +516,7 @@ async def cmd_stats(message: Message):
 async def cmd_weekly_report(message: Message):
     """Trigger weekly report. Admin only."""
     user_id = message.from_user.id
-    if str(user_id) != str(TELEGRAM_CHAT_ID):
+    if not check_admin(user_id):
         return
 
     await message.answer("⏳ Генерирую недельный отчёт...")
@@ -593,23 +629,32 @@ async def cmd_referral(message: Message):
 
     stats = await repo.get_referral_stats(user_id)
     sub = await repo.get_subscriber(user_id)
-    credits = (sub.referral_credits or 0) if sub else 0
+    paid = stats.get("paid_referrals", 0)
     link = f"https://t.me/wayan_pirat_bot?start=ref_{ref_code}"
+
+    # Calculate current referral tier bonus
+    if paid >= 3:
+        your_bonus = "🎁 Комьюнити <b>бесплатно</b>"
+    elif paid >= 2:
+        your_bonus = "🎁 Скидка <b>50%</b> на комьюнити"
+    elif paid >= 1:
+        your_bonus = "🎁 Скидка <b>20%</b> на комьюнити"
+    else:
+        your_bonus = "Пока нет бонусов — приглашай друзей!"
 
     text = (
         "🤝 <b>Реферальная программа</b>\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        "Вход в курс — 400$.\n"
+        "Приводи друзей и получай бонусы:\n\n"
+        "— 1 друг → другу <b>-20%</b> на курс, тебе <b>-20%</b> на комьюнити\n"
+        "— 2 друга → друзьям <b>-20%</b>, тебе <b>-50%</b> на комьюнити\n"
+        "— 3 друга → друзьям <b>-20%</b>, тебе <b>бесплатный</b> вход в комьюнити\n\n"
         f"🔗 Твоя ссылка:\n<code>{link}</code>\n\n"
-        "<b>Как это работает:</b>\n"
-        "1. Друг переходит по твоей ссылке\n"
-        "2. Друг получает <b>скидку 20%</b> на Курс\n"
-        "3. Когда друг покупает — ты тоже получаешь <b>скидку 20%</b>\n\n"
-        "🎓 <b>Бонус за курс:</b>\n"
-        "Купил курс → скидка <b>30%</b> на комьюнити Wayan Premium\n\n"
         f"<b>Статистика:</b>\n"
         f"👥 Приглашено: <b>{stats['total_referrals']}</b>\n"
-        f"💰 Купили: <b>{stats['paid_referrals']}</b>\n"
-        f"🎁 Твои скидки: <b>{credits}</b> (неиспользованных)\n"
+        f"💰 Купили курс: <b>{paid}</b>\n"
+        f"{your_bonus}\n"
     )
     await message.answer(text, parse_mode="HTML", reply_markup=back_keyboard())
 
@@ -721,7 +766,7 @@ async def cb_signals(callback: CallbackQuery):
 async def cb_wallets(callback: CallbackQuery):
     user_id = callback.from_user.id
     tier = await repo.get_user_tier(user_id)
-    is_admin = str(user_id) == str(TELEGRAM_CHAT_ID)
+    is_admin = check_admin(user_id)
 
     wallets = await repo.get_active_wallets()
     wallets.sort(key=lambda w: w.realized_pnl_usd, reverse=True)
@@ -837,24 +882,31 @@ async def cb_referral(callback: CallbackQuery):
         ref_code = await repo.get_referral_code(user_id)
 
     stats = await repo.get_referral_stats(user_id)
-    sub = await repo.get_subscriber(user_id)
-    credits = (sub.referral_credits or 0) if sub else 0
+    paid = stats.get("paid_referrals", 0)
     link = f"https://t.me/wayan_pirat_bot?start=ref_{ref_code}"
+
+    if paid >= 3:
+        your_bonus = "🎁 Комьюнити <b>бесплатно</b>"
+    elif paid >= 2:
+        your_bonus = "🎁 Скидка <b>50%</b> на комьюнити"
+    elif paid >= 1:
+        your_bonus = "🎁 Скидка <b>20%</b> на комьюнити"
+    else:
+        your_bonus = "Пока нет бонусов — приглашай друзей!"
 
     text = (
         "🤝 <b>Реферальная программа</b>\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        "Вход в курс — 400$.\n"
+        "Приводи друзей и получай бонусы:\n\n"
+        "— 1 друг → другу <b>-20%</b> на курс, тебе <b>-20%</b> на комьюнити\n"
+        "— 2 друга → друзьям <b>-20%</b>, тебе <b>-50%</b> на комьюнити\n"
+        "— 3 друга → друзьям <b>-20%</b>, тебе <b>бесплатный</b> вход в комьюнити\n\n"
         f"🔗 Твоя ссылка:\n<code>{link}</code>\n\n"
-        "<b>Как это работает:</b>\n"
-        "1. Друг переходит по твоей ссылке\n"
-        "2. Друг получает <b>скидку 20%</b> на Курс\n"
-        "3. Когда друг покупает — ты тоже получаешь <b>скидку 20%</b>\n\n"
-        "🎓 <b>Бонус за курс:</b>\n"
-        "Купил курс → скидка <b>30%</b> на комьюнити Wayan Premium\n\n"
         f"<b>Статистика:</b>\n"
         f"👥 Приглашено: <b>{stats['total_referrals']}</b>\n"
-        f"💰 Купили: <b>{stats['paid_referrals']}</b>\n"
-        f"🎁 Твои скидки: <b>{credits}</b> (неиспользованных)\n"
+        f"💰 Купили курс: <b>{paid}</b>\n"
+        f"{your_bonus}\n"
     )
     await callback.message.edit_text(text, parse_mode="HTML", reply_markup=back_keyboard())
     await callback.answer()
@@ -928,7 +980,7 @@ async def _send_signals(message: Message):
 async def _send_wallets(message: Message):
     user_id = message.from_user.id
     tier = await repo.get_user_tier(user_id)
-    is_admin = str(user_id) == str(TELEGRAM_CHAT_ID)
+    is_admin = check_admin(user_id)
 
     wallets = await repo.get_active_wallets()
     wallets.sort(key=lambda w: w.realized_pnl_usd, reverse=True)
@@ -1023,6 +1075,42 @@ async def _send_my_plan_cb(callback: CallbackQuery):
         )
     await callback.message.edit_text(text, parse_mode="HTML", reply_markup=back_keyboard())
     await callback.answer()
+
+
+# ============================================================
+#  Admin: reset user for testing
+# ============================================================
+
+@router.message(Command("reset_user"))
+async def cmd_reset_user(message: Message, command: CommandObject):
+    """Admin only: reset user's referral and course status for testing."""
+    if not check_admin(message.from_user.id):
+        return
+    args = (command.args or "").strip()
+    if not args:
+        await message.answer("Usage: /reset_user USER_ID")
+        return
+    try:
+        target_id = int(args)
+    except ValueError:
+        await message.answer("Invalid user ID")
+        return
+
+    async with repo.async_session() as session:
+        sub = await session.get(repo.Subscriber, target_id)
+        if not sub:
+            await message.answer(f"User {target_id} not found")
+            return
+        sub.referred_by = None
+        sub.course_purchased = False
+        sub.referral_credits = 0
+        await session.commit()
+    await message.answer(
+        f"✅ User {target_id} reset:\n"
+        f"- referred_by = None\n"
+        f"- course_purchased = False\n"
+        f"- referral_credits = 0"
+    )
 
 
 # ============================================================

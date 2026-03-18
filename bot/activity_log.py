@@ -150,8 +150,7 @@ async def log_course_granted(user_id: int, username: str, first_name: str):
     name, uid = _user_line(user_id, username, first_name)
     text = (
         f"✅ <b>Курс выдан юзеру</b>\n"
-        f"Админ выполнил /grant_course — юзеру отправлена ссылка на полный курс. "
-        f"Теперь у него скидка 30% на комьюнити.\n\n"
+        f"Админ выполнил /grant_course — юзеру отправлена ссылка на полный курс.\n\n"
         f"   Кто: {name} (ID: {uid})"
     )
     await _send_log(text)
@@ -176,15 +175,23 @@ async def log_community_granted(user_id: int, username: str, first_name: str):
 # ────────────────────────────────────────
 
 async def log_referral_credit_earned(referrer_id: int, referrer_name: str,
-                                      buyer_id: int, buyer_name: str, product: str):
+                                      buyer_id: int, buyer_name: str,
+                                      product: str, paid_referrals: int = 0):
+    if paid_referrals >= 3:
+        bonus = "комьюнити БЕСПЛАТНО"
+    elif paid_referrals >= 2:
+        bonus = "скидка 50% на комьюнити"
+    elif paid_referrals >= 1:
+        bonus = "скидка 20% на комьюнити"
+    else:
+        bonus = "—"
     text = (
-        f"🎁 <b>Реферер получил скидку за друга</b>\n"
-        f"Друг реферера купил продукт — рефереру начислен кредит на скидку 20% "
-        f"на его следующую покупку.\n\n"
+        f"🎁 <b>Друг реферера купил курс</b>\n"
+        f"Друг реферера оплатил курс — реферер получает бонус на комьюнити.\n\n"
         f"   Реферер: {referrer_name} (ID: <code>{referrer_id}</code>)\n"
-        f"   Друг купил: {buyer_name} (ID: <code>{buyer_id}</code>)\n"
-        f"   Продукт друга: {product}\n"
-        f"   Бонус реферера: скидка 20% на следующую покупку"
+        f"   Друг: {buyer_name} (ID: <code>{buyer_id}</code>)\n"
+        f"   Всего оплативших друзей: {paid_referrals}\n"
+        f"   Бонус реферера: {bonus}"
     )
     await _send_log(text)
 

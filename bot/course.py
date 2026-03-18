@@ -17,9 +17,9 @@ from config.settings import (
     COURSE_PAYMENT_WALLET, PAYMENT_WALLET,
     COMMUNITY_PAYMENT_WALLET, COMMUNITY_PRICE_USDT,
     COMMUNITY_CHANNEL_ID,
-    TELEGRAM_CHAT_ID,
+    TELEGRAM_CHAT_ID, ADMIN_IDS,
     REFERRAL_COURSE_DISCOUNT,
-    COURSE_OWNER_COMMUNITY_DISCOUNT,
+    REFERRAL_COMMUNITY_TIERS,
 )
 from db import repository as repo
 
@@ -39,32 +39,37 @@ TX_PATTERN = re.compile(r'^[1-9A-HJ-NP-Za-km-z]{80,100}$')
 # ──────────────────────────────────────
 
 async def get_discount_info(user_id: int) -> dict:
-    """Calculate discounts for a user."""
+    """Calculate discounts for a user.
+
+    Course discount: 20% if referred by someone.
+    Community discount (for course owners based on referral count):
+      1 paid referral → 20%, 2 → 50%, 3+ → 100% (free).
+    """
     sub = await repo.get_subscriber(user_id)
     has_course = bool(sub and sub.course_purchased)
     has_referrer = bool(sub and sub.referred_by)
-    referral_credits = (sub.referral_credits or 0) if sub else 0
 
-    # Course discount: 20% if referred OR has referral credit
+    # Course discount: 20% if referred
     course_discount_pct = 0
     course_discount_reason = ""
     if has_referrer and not has_course:
         course_discount_pct = int(REFERRAL_COURSE_DISCOUNT * 100)
         course_discount_reason = "referral"
-    elif referral_credits > 0 and not has_course:
-        course_discount_pct = int(REFERRAL_COURSE_DISCOUNT * 100)
-        course_discount_reason = "referral_credit"
 
     course_price = COURSE_PRICE_USDT
     if course_discount_pct:
         course_price = COURSE_PRICE_USDT * (1 - course_discount_pct / 100)
 
-    # Community discount: 30% if owns course
+    # Community discount: based on how many friends bought course (no course ownership needed)
     community_discount_pct = 0
     community_discount_reason = ""
-    if has_course:
-        community_discount_pct = int(COURSE_OWNER_COMMUNITY_DISCOUNT * 100)
-        community_discount_reason = "course_owner"
+    stats = await repo.get_referral_stats(user_id)
+    paid_refs = stats.get("paid_referrals", 0)
+    for threshold in sorted(REFERRAL_COMMUNITY_TIERS.keys(), reverse=True):
+        if paid_refs >= threshold:
+            community_discount_pct = int(REFERRAL_COMMUNITY_TIERS[threshold] * 100)
+            community_discount_reason = f"referral_{paid_refs}"
+            break
 
     community_price = COMMUNITY_PRICE_USDT
     if community_discount_pct:
@@ -78,7 +83,6 @@ async def get_discount_info(user_id: int) -> dict:
         "community_discount_pct": community_discount_pct,
         "community_discount_reason": community_discount_reason,
         "has_course": has_course,
-        "referral_credits": referral_credits,
     }
 
 
@@ -119,11 +123,15 @@ def _back_kb() -> InlineKeyboardMarkup:
 def _price_text(original: float, discounted: float, discount_pct: int, reason: str) -> str:
     """Format price with optional strikethrough discount."""
     if discount_pct:
-        reason_text = {
-            "referral": "реферальная скидка",
-            "referral_credit": "скидка за реферала",
-            "course_owner": "скидка для владельцев курса",
-        }.get(reason, "скидка")
+        if reason == "referral":
+            reason_text = "реферальная скидка"
+        elif reason.startswith("referral_"):
+            reason_text = "скидка за рефералов"
+        else:
+            reason_text = "скидка"
+
+        if discount_pct >= 100:
+            return f"🎁 <b>{reason_text} — БЕСПЛАТНО!</b>"
         return (
             f"🎁 <b>{reason_text} {discount_pct}%!</b>\n"
             f"💰 Цена: <s>{original:.0f}</s> → <b>{discounted:.0f} USDT</b>"
@@ -138,11 +146,11 @@ def _price_text(original: float, discounted: float, discount_pct: int, reason: s
 def _course_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(
-            text="📖 Бесплатные модули (1-2)",
+            text="📖 Onchain BASE (бесплатно)",
             callback_data="course_free",
         )],
         [InlineKeyboardButton(
-            text="🎓 Купить полный курс",
+            text="🎓 Onchain Premium — полный курс",
             callback_data="course_buy",
         )],
         [InlineKeyboardButton(text="« Назад", callback_data="back_menu")],
@@ -150,10 +158,12 @@ def _course_keyboard() -> InlineKeyboardMarkup:
 
 
 COURSE_TEXT = (
-    "🎓 <b>Курс — Onchain Trading на Solana</b>\n"
+    "🎓 <b>Onchain Premium — полный курс</b>\n"
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    "Полное обучение DEX-трейдингу на Solana.\n"
-    "7 модулей — от основ до продвинутых стратегий.\n\n"
+    "7 модулей от нуля до продвинутого уровня.\n"
+    "Система обучения, которая дает понимание рынка, "
+    "логику on-chain анализа и доступ к закрытому чату "
+    "с возможностью задавать вопросы напрямую.\n\n"
     "📌 <b>Модуль 1.</b> Среда и безопасность\n"
     "📌 <b>Модуль 2.</b> Инструменты трейдера\n"
     "📌 <b>Модуль 3.</b> Оценка токена\n"
@@ -161,7 +171,7 @@ COURSE_TEXT = (
     "📌 <b>Модуль 5.</b> Риск-менеджмент\n"
     "📌 <b>Модуль 6.</b> Система трейдера\n"
     "📌 <b>Модуль 7.</b> Продвинутые стратегии\n\n"
-    "Модули 1-2 доступны бесплатно.\n"
+    "2 первых модуля — бесплатно.\n"
     "Полный курс — все 7 модулей + приложения.\n"
     "Доступ навсегда после покупки.\n\n"
     f"💰 <b>Цена: {COURSE_PRICE_USDT:.0f} USDT</b>"
@@ -183,19 +193,19 @@ def _community_keyboard() -> InlineKeyboardMarkup:
 
 
 COMMUNITY_TEXT = (
-    "👥 <b>Wayan Premium</b>\n"
+    "👥 <b>Закрытый чат Wayan Premium</b>\n"
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    "Мой закрытый ресерч-спейс по On-chain, крипте и AI.\n\n"
-    "Я — Wayan, трейдер, аналитик и networker, "
-    "который работал рядом с проектами, "
-    "привлекавшими шестизначные суммы.\n\n"
-    "<b>Внутри канала:</b>\n\n"
+    "Закрытое пространство с on-chain, AI, ресерчем, "
+    "новыми нарративами и живым обсуждением рынка.\n\n"
+    "<b>Внутри:</b>\n\n"
     "🍑 мой личный взгляд на рынок\n"
     "🍑 идеи, за которыми я сам слежу\n"
     "🍑 AI + crypto как новая зона роста\n"
     "🍑 закрытый чат и сильное комьюнити\n\n"
-    "Быть раньше рынка и видеть новые возможности в 2026.\n\n"
-    f"💰 <b>Доступ: {COMMUNITY_PRICE_USDT:.0f} USDT</b>"
+    "Это уже не просто обучение.\n"
+    "Это доступ к среде, информации и людям, "
+    "которые смотрят глубже среднего рынка.\n\n"
+    f"💰 <b>Доступ: {COMMUNITY_PRICE_USDT:.0f} USDT / мес</b>"
 )
 
 
@@ -223,10 +233,10 @@ async def cmd_course(message: Message):
 async def cmd_community(message: Message):
     info = await get_discount_info(message.from_user.id)
     text = COMMUNITY_TEXT
-    if info["has_course"]:
-        text += (
-            f"\n\n🎁 <b>У тебя есть курс → скидка {info['community_discount_pct']}%!</b>\n"
-            f"Цена для тебя: <b>{info['community_price']:.0f} USDT</b>"
+    if info["community_discount_pct"]:
+        text += "\n\n" + _price_text(
+            COMMUNITY_PRICE_USDT, info["community_price"],
+            info["community_discount_pct"], info["community_discount_reason"],
         )
     await message.answer(text, parse_mode="HTML", reply_markup=_community_keyboard())
 
@@ -241,10 +251,12 @@ async def cb_course_info(callback: CallbackQuery):
     info = await get_discount_info(user.id)
 
     text = (
-        "🎓 <b>Курс — Onchain Trading на Solana</b>\n"
+        "🎓 <b>Onchain Premium — полный курс</b>\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        "Полное обучение DEX-трейдингу на Solana.\n"
-        "7 модулей — от основ до продвинутых стратегий.\n\n"
+        "7 модулей от нуля до продвинутого уровня.\n"
+        "Система обучения, которая дает понимание рынка, "
+        "логику on-chain анализа и доступ к закрытому чату "
+        "с возможностью задавать вопросы напрямую.\n\n"
         "📌 <b>Модуль 1.</b> Среда и безопасность\n"
         "📌 <b>Модуль 2.</b> Инструменты трейдера\n"
         "📌 <b>Модуль 3.</b> Оценка токена\n"
@@ -252,7 +264,7 @@ async def cb_course_info(callback: CallbackQuery):
         "📌 <b>Модуль 5.</b> Риск-менеджмент\n"
         "📌 <b>Модуль 6.</b> Система трейдера\n"
         "📌 <b>Модуль 7.</b> Продвинутые стратегии\n\n"
-        "Модули 1-2 доступны бесплатно.\n"
+        "2 первых модуля — бесплатно.\n"
         "Полный курс — все 7 модулей + приложения.\n"
         "Доступ навсегда после покупки.\n\n"
     )
@@ -384,11 +396,10 @@ async def cb_community_info(callback: CallbackQuery):
     info = await get_discount_info(user.id)
 
     text = COMMUNITY_TEXT
-    if info["has_course"]:
-        discount_price = info["community_price"]
-        text += (
-            f"\n\n🎁 <b>У тебя есть курс → скидка {info['community_discount_pct']}%!</b>\n"
-            f"Цена для тебя: <b>{discount_price:.0f} USDT</b>"
+    if info["community_discount_pct"]:
+        text += "\n\n" + _price_text(
+            COMMUNITY_PRICE_USDT, info["community_price"],
+            info["community_discount_pct"], info["community_discount_reason"],
         )
 
     await callback.message.edit_text(
@@ -432,6 +443,181 @@ async def cb_community_buy(callback: CallbackQuery):
 
     await callback.message.edit_text(text, parse_mode="HTML", reply_markup=_back_kb())
     await callback.answer()
+
+
+# ──────────────────────────────────────
+#  Admin commands: /grant_course, /grant_community
+# ──────────────────────────────────────
+
+@course_router.message(Command("grant_course"))
+async def cmd_grant_course(message: Message, command: CommandObject):
+    """Admin: confirm course payment and grant access."""
+    if str(message.from_user.id) not in ADMIN_IDS:
+        return
+
+    args = (command.args or "").strip()
+    if not args:
+        await message.answer("Использование: <code>/grant_course USER_ID</code>", parse_mode="HTML")
+        return
+
+    try:
+        target_user_id = int(args)
+    except ValueError:
+        await message.answer("❌ Неверный user ID", parse_mode="HTML")
+        return
+
+    # Mark course as purchased
+    await repo.mark_course_purchased(target_user_id)
+
+    # Generate invite
+    bot = message.bot
+    invite_link = None
+    try:
+        invite_link = await _generate_invite(bot, COURSE_PAID_CHANNEL_ID, target_user_id)
+        await _record_access(target_user_id, invite_link, is_test=False)
+    except Exception as e:
+        logger.error(f"[GRANT] Failed to create invite: {e}")
+        await message.answer(
+            f"⚠️ Курс отмечен как купленный, но ссылку создать не удалось:\n<code>{e}</code>",
+            parse_mode="HTML",
+        )
+
+    # Send invite to user (if invite was created)
+    if invite_link:
+        expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
+        try:
+            await bot.send_message(
+                chat_id=target_user_id,
+                text=(
+                    "🎉 <b>Оплата подтверждена!</b>\n\n"
+                    "Добро пожаловать в полный курс Onchain Trading!\n\n"
+                    f"🔗 Ссылка:\n{invite_link}\n\n"
+                    f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>."
+                ),
+                parse_mode="HTML",
+            )
+        except Exception as e:
+            logger.error(f"[GRANT] Failed to send invite to user: {e}")
+            await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
+
+    # Give referral bonus to referrer (community discount tiers)
+    sub = await repo.get_subscriber(target_user_id)
+    logger.info(f"[GRANT] sub={target_user_id} referred_by={sub.referred_by if sub else 'NO SUB'}")
+    referrer_info = ""
+    if sub and sub.referred_by:
+        referrer = await repo.get_subscriber(sub.referred_by)
+        referrer_name = (referrer.first_name or referrer.username or str(sub.referred_by)) if referrer else str(sub.referred_by)
+        buyer_name = sub.first_name or sub.username or str(target_user_id)
+
+        # Count paid referrals for the referrer
+        stats = await repo.get_referral_stats(sub.referred_by)
+        paid = stats.get("paid_referrals", 0)
+        logger.info(f"[GRANT] referrer={sub.referred_by} paid_referrals={paid} stats={stats}")
+
+        if paid >= 3:
+            bonus_text = "комьюнити БЕСПЛАТНО"
+        elif paid >= 2:
+            bonus_text = "скидку 50% на комьюнити"
+        elif paid >= 1:
+            bonus_text = "скидку 20% на комьюнити"
+        else:
+            bonus_text = "бонус"
+
+        referrer_info = f"\n🤝 Реферер {referrer_name} ({sub.referred_by}) получил {bonus_text} ({paid} друзей купили)"
+
+        # Log referral credit
+        from bot.activity_log import log_referral_credit_earned
+        await log_referral_credit_earned(
+            sub.referred_by, referrer_name,
+            target_user_id, buyer_name, "Курс",
+            paid_referrals=paid,
+        )
+
+        # Notify referrer
+        try:
+            await bot.send_message(
+                chat_id=sub.referred_by,
+                text=(
+                    f"🎁 <b>Реферальный бонус!</b>\n\n"
+                    f"Твой друг {buyer_name} купил курс.\n"
+                    f"У тебя уже <b>{paid}</b> друзей купили курс → тебе <b>{bonus_text}</b>!"
+                ),
+                parse_mode="HTML",
+            )
+            logger.info(f"[GRANT] Notification sent to referrer {sub.referred_by}")
+        except Exception as e:
+            logger.error(f"[GRANT] Failed to notify referrer: {e}")
+    else:
+        logger.info(f"[GRANT] No referrer for user {target_user_id}")
+
+    # Log
+    from bot.activity_log import log_course_granted
+    target_sub = await repo.get_subscriber(target_user_id)
+    t_name = (target_sub.first_name or target_sub.username or str(target_user_id)) if target_sub else str(target_user_id)
+    t_uname = (target_sub.username or "") if target_sub else ""
+    await log_course_granted(target_user_id, t_uname, t_name)
+
+    await message.answer(
+        f"✅ Курс выдан юзеру <code>{target_user_id}</code>.\n"
+        f"Ссылка отправлена.{referrer_info}",
+        parse_mode="HTML",
+    )
+
+
+@course_router.message(Command("grant_community"))
+async def cmd_grant_community(message: Message, command: CommandObject):
+    """Admin: confirm community payment and grant access."""
+    if str(message.from_user.id) not in ADMIN_IDS:
+        return
+
+    args = (command.args or "").strip()
+    if not args:
+        await message.answer("Использование: <code>/grant_community USER_ID</code>", parse_mode="HTML")
+        return
+
+    try:
+        target_user_id = int(args)
+    except ValueError:
+        await message.answer("❌ Неверный user ID", parse_mode="HTML")
+        return
+
+    if not COMMUNITY_CHANNEL_ID:
+        await message.answer("❌ COMMUNITY_CHANNEL_ID не настроен в .env", parse_mode="HTML")
+        return
+
+    bot = message.bot
+    try:
+        invite_link = await _generate_invite(bot, COMMUNITY_CHANNEL_ID, target_user_id)
+    except Exception as e:
+        await message.answer(f"❌ Не удалось создать ссылку:\n<code>{e}</code>", parse_mode="HTML")
+        return
+
+    expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
+    try:
+        await bot.send_message(
+            chat_id=target_user_id,
+            text=(
+                "🎉 <b>Оплата подтверждена!</b>\n\n"
+                "Добро пожаловать в Wayan Premium!\n\n"
+                f"🔗 Ссылка:\n{invite_link}\n\n"
+                f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>."
+            ),
+            parse_mode="HTML",
+        )
+    except Exception as e:
+        await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
+        return
+
+    from bot.activity_log import log_community_granted
+    target_sub = await repo.get_subscriber(target_user_id)
+    t_name = (target_sub.first_name or target_sub.username or str(target_user_id)) if target_sub else str(target_user_id)
+    t_uname = (target_sub.username or "") if target_sub else ""
+    await log_community_granted(target_user_id, t_uname, t_name)
+
+    await message.answer(
+        f"✅ Комьюнити выдано юзеру <code>{target_user_id}</code>. Ссылка отправлена.",
+        parse_mode="HTML",
+    )
 
 
 # ──────────────────────────────────────
@@ -585,159 +771,3 @@ async def _process_payment_request(message: Message, user_id: int,
     )
 
     logger.info(f"Payment request: {name} ({user_id}) -> {product_name} {expected_price:.0f} USDT, TX: {tx_sig[:20]}...")
-
-
-# ──────────────────────────────────────
-#  Admin commands: /grant_course, /grant_community
-# ──────────────────────────────────────
-
-@course_router.message(Command("grant_course"))
-async def cmd_grant_course(message: Message, command: CommandObject):
-    """Admin: confirm course payment and grant access."""
-    if str(message.from_user.id) != str(TELEGRAM_CHAT_ID):
-        return
-
-    args = (command.args or "").strip()
-    if not args:
-        await message.answer("Использование: <code>/grant_course USER_ID</code>", parse_mode="HTML")
-        return
-
-    try:
-        target_user_id = int(args)
-    except ValueError:
-        await message.answer("❌ Неверный user ID", parse_mode="HTML")
-        return
-
-    # Mark course as purchased
-    await repo.mark_course_purchased(target_user_id)
-
-    # Generate invite
-    bot = message.bot
-    try:
-        invite_link = await _generate_invite(bot, COURSE_PAID_CHANNEL_ID, target_user_id)
-        await _record_access(target_user_id, invite_link, is_test=False)
-    except Exception as e:
-        await message.answer(
-            f"✅ Курс отмечен как купленный, но ссылку создать не удалось:\n<code>{e}</code>",
-            parse_mode="HTML",
-        )
-        return
-
-    # Send invite to user
-    expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
-    try:
-        await bot.send_message(
-            chat_id=target_user_id,
-            text=(
-                "🎉 <b>Оплата подтверждена!</b>\n\n"
-                "Добро пожаловать в полный курс Onchain Trading!\n\n"
-                f"🔗 Ссылка:\n{invite_link}\n\n"
-                f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>.\n\n"
-                f"🎁 Теперь у тебя скидка <b>30%</b> на Wayan Premium комьюнити!\n"
-                f"Используй /community чтобы узнать больше."
-            ),
-            parse_mode="HTML",
-        )
-    except Exception as e:
-        await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
-        return
-
-    # Give referral credit to referrer
-    sub = await repo.get_subscriber(target_user_id)
-    referrer_info = ""
-    if sub and sub.referred_by:
-        await repo.add_referral_credit(sub.referred_by)
-        referrer = await repo.get_subscriber(sub.referred_by)
-        referrer_name = (referrer.first_name or referrer.username or str(sub.referred_by)) if referrer else str(sub.referred_by)
-        buyer_name = sub.first_name or sub.username or str(target_user_id)
-        referrer_info = f"\n🤝 Реферер {referrer_name} ({sub.referred_by}) получил кредит на скидку 20%"
-
-        # Log referral credit
-        from bot.activity_log import log_referral_credit_earned
-        await log_referral_credit_earned(
-            sub.referred_by, referrer_name,
-            target_user_id, buyer_name, "Курс",
-        )
-
-        # Notify referrer
-        try:
-            await bot.send_message(
-                chat_id=sub.referred_by,
-                text=(
-                    f"🎁 <b>Реферальный бонус!</b>\n\n"
-                    f"Твой друг {buyer_name} купил курс.\n"
-                    f"Тебе начислена <b>скидка 20%</b> на следующую покупку!"
-                ),
-                parse_mode="HTML",
-            )
-        except Exception:
-            pass
-
-    # Log
-    from bot.activity_log import log_course_granted
-    target_sub = await repo.get_subscriber(target_user_id)
-    t_name = (target_sub.first_name or target_sub.username or str(target_user_id)) if target_sub else str(target_user_id)
-    t_uname = (target_sub.username or "") if target_sub else ""
-    await log_course_granted(target_user_id, t_uname, t_name)
-
-    await message.answer(
-        f"✅ Курс выдан юзеру <code>{target_user_id}</code>.\n"
-        f"Ссылка отправлена.{referrer_info}",
-        parse_mode="HTML",
-    )
-
-
-@course_router.message(Command("grant_community"))
-async def cmd_grant_community(message: Message, command: CommandObject):
-    """Admin: confirm community payment and grant access."""
-    if str(message.from_user.id) != str(TELEGRAM_CHAT_ID):
-        return
-
-    args = (command.args or "").strip()
-    if not args:
-        await message.answer("Использование: <code>/grant_community USER_ID</code>", parse_mode="HTML")
-        return
-
-    try:
-        target_user_id = int(args)
-    except ValueError:
-        await message.answer("❌ Неверный user ID", parse_mode="HTML")
-        return
-
-    if not COMMUNITY_CHANNEL_ID:
-        await message.answer("❌ COMMUNITY_CHANNEL_ID не настроен в .env", parse_mode="HTML")
-        return
-
-    bot = message.bot
-    try:
-        invite_link = await _generate_invite(bot, COMMUNITY_CHANNEL_ID, target_user_id)
-    except Exception as e:
-        await message.answer(f"❌ Не удалось создать ссылку:\n<code>{e}</code>", parse_mode="HTML")
-        return
-
-    expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
-    try:
-        await bot.send_message(
-            chat_id=target_user_id,
-            text=(
-                "🎉 <b>Оплата подтверждена!</b>\n\n"
-                "Добро пожаловать в Wayan Premium!\n\n"
-                f"🔗 Ссылка:\n{invite_link}\n\n"
-                f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>."
-            ),
-            parse_mode="HTML",
-        )
-    except Exception as e:
-        await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
-        return
-
-    from bot.activity_log import log_community_granted
-    target_sub = await repo.get_subscriber(target_user_id)
-    t_name = (target_sub.first_name or target_sub.username or str(target_user_id)) if target_sub else str(target_user_id)
-    t_uname = (target_sub.username or "") if target_sub else ""
-    await log_community_granted(target_user_id, t_uname, t_name)
-
-    await message.answer(
-        f"✅ Комьюнити выдано юзеру <code>{target_user_id}</code>. Ссылка отправлена.",
-        parse_mode="HTML",
-    )

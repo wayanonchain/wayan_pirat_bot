@@ -20,6 +20,7 @@ DUNE_API_KEY = os.getenv("DUNE_API_KEY", "")
 # === Telegram ===
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+ADMIN_IDS = {TELEGRAM_CHAT_ID, "422304752"}  # main admin + Viktor
 
 # === Database ===
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -77,5 +78,7 @@ COMMUNITY_CHANNEL_ID = int(os.getenv("COMMUNITY_CHANNEL_ID", "0"))
 USDT_MINT = "Es9vMFrzaCERmKfrNwnEUBLRKdPJg4kkjnBLTmM1JXWd"
 
 # === Discounts ===
-REFERRAL_COURSE_DISCOUNT = 0.20         # 20% off course for both referrer and friend
-COURSE_OWNER_COMMUNITY_DISCOUNT = 0.30  # 30% off community for course owners
+REFERRAL_COURSE_DISCOUNT = 0.20         # 20% off course for referred friend
+# Referral community discounts (based on how many friends bought course):
+# 1 friend → 20%, 2 friends → 50%, 3+ friends → 100% (free)
+REFERRAL_COMMUNITY_TIERS = {1: 0.20, 2: 0.50, 3: 1.00}
