@@ -472,13 +472,15 @@ async def cmd_grant_course(message: Message, command: CommandObject):
     # Generate invite
     bot = message.bot
     invite_link = None
+    invite_sent = False
     try:
         invite_link = await _generate_invite(bot, COURSE_PAID_CHANNEL_ID, target_user_id)
         await _record_access(target_user_id, invite_link, is_test=False)
     except Exception as e:
         logger.error(f"[GRANT] Failed to create invite: {e}")
         await message.answer(
-            f"⚠️ Курс отмечен как купленный, но ссылку создать не удалось:\n<code>{e}</code>",
+            f"⚠️ Курс отмечен как купленный, но ссылку создать не удалось:\n<code>{e}</code>\n\n"
+            f"Убедись, что бот добавлен как админ в канал курса с правом «Invite Users».",
             parse_mode="HTML",
         )
 
@@ -496,6 +498,7 @@ async def cmd_grant_course(message: Message, command: CommandObject):
                 ),
                 parse_mode="HTML",
             )
+            invite_sent = True
         except Exception as e:
             logger.error(f"[GRANT] Failed to send invite to user: {e}")
             await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
@@ -557,11 +560,21 @@ async def cmd_grant_course(message: Message, command: CommandObject):
     t_uname = (target_sub.username or "") if target_sub else ""
     await log_course_granted(target_user_id, t_uname, t_name)
 
-    await message.answer(
-        f"✅ Курс выдан юзеру <code>{target_user_id}</code>.\n"
-        f"Ссылка отправлена.{referrer_info}",
-        parse_mode="HTML",
-    )
+    if invite_sent:
+        await message.answer(
+            f"✅ Курс выдан юзеру <code>{target_user_id}</code>.\n"
+            f"Ссылка отправлена.{referrer_info}",
+            parse_mode="HTML",
+        )
+    elif not invite_link:
+        # invite creation failed — warning already sent above
+        pass
+    else:
+        await message.answer(
+            f"⚠️ Курс выдан юзеру <code>{target_user_id}</code>, "
+            f"но ссылку отправить не удалось.{referrer_info}",
+            parse_mode="HTML",
+        )
 
 
 @course_router.message(Command("grant_community"))
