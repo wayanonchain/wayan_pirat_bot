@@ -8,7 +8,7 @@ import asyncio
 import re
 from aiogram import Bot
 
-BOT_TOKEN = "7966877952:AAFygc7-hugvtTy4N5h9WtcWKb00to93CPE"
+BOT_TOKEN = "8788584502:AAG9J5Hr1T8ZGv1nT5swgOe8IrWHbszwL2M"
 CHANNEL_ID = -1003883299541
 
 # ── Markdown → Telegram HTML converter (simplified) ──
@@ -247,7 +247,7 @@ async def main():
         "",
         "💎 <b>Хочешь полный курс?</b>",
         "Модули 3-7 (ещё 28 уроков) + приложения",
-        "→ @wayan_pirat_bot → Курс → Полный курс",
+        "→ @Wayan_pirate_bot → Курс → Полный курс",
         "",
         "⬇️ <b>Листай вниз, чтобы начать обучение</b>",
     ])

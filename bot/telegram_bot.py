@@ -630,7 +630,7 @@ async def cmd_referral(message: Message):
     stats = await repo.get_referral_stats(user_id)
     sub = await repo.get_subscriber(user_id)
     paid = stats.get("paid_referrals", 0)
-    link = f"https://t.me/wayan_pirat_bot?start=ref_{ref_code}"
+    link = f"https://t.me/Wayan_pirate_bot?start=ref_{ref_code}"
 
     # Calculate current referral tier bonus
     if paid >= 3:
@@ -883,7 +883,7 @@ async def cb_referral(callback: CallbackQuery):
 
     stats = await repo.get_referral_stats(user_id)
     paid = stats.get("paid_referrals", 0)
-    link = f"https://t.me/wayan_pirat_bot?start=ref_{ref_code}"
+    link = f"https://t.me/Wayan_pirate_bot?start=ref_{ref_code}"
 
     if paid >= 3:
         your_bonus = "🎁 Комьюнити <b>бесплатно</b>"
