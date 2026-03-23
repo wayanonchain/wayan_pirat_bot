@@ -110,6 +110,7 @@ class Subscriber(Base):
     referral_code = Column(String(20), unique=True, nullable=True)
     referred_by = Column(Integer, nullable=True)
     course_purchased = Column(Boolean, default=False)
+    meteora_purchased = Column(Boolean, default=False)
     referral_credits = Column(Integer, default=0)  # 20%-off credits earned from referrals
     created_at = Column(DateTime, default=datetime.utcnow)
 

@@ -123,6 +123,7 @@ async def log_payment(user_id: int, username: str, first_name: str,
         "premium": "Premium (бот)",
         "premium_plus": "Premium+ (бот)",
         "course": "Курс Onchain Trading",
+        "meteora": "Курс Meteora",
         "community": "Wayan Premium комьюнити",
     }
     tier_name = tier_names.get(tier, tier)
@@ -146,12 +147,18 @@ async def log_payment(user_id: int, username: str, first_name: str,
 #  Курс выдан (/grant_course)
 # ────────────────────────────────────────
 
-async def log_course_granted(user_id: int, username: str, first_name: str):
+async def log_course_granted(user_id: int, username: str, first_name: str,
+                             course_name: str = "Onchain"):
     name, uid = _user_line(user_id, username, first_name)
+    if course_name == "Meteora":
+        cmd = "/grant_meteora"
+    else:
+        cmd = "/grant_course"
     text = (
-        f"✅ <b>Курс выдан юзеру</b>\n"
-        f"Админ выполнил /grant_course — юзеру отправлена ссылка на полный курс.\n\n"
-        f"   Кто: {name} (ID: {uid})"
+        f"✅ <b>Курс [{course_name}] выдан юзеру</b>\n"
+        f"Админ выполнил {cmd} — юзеру отправлена ссылка на полный курс {course_name}.\n\n"
+        f"   Кто: {name} (ID: {uid})\n"
+        f"   Курс: {course_name}"
     )
     await _send_log(text)
 
@@ -200,18 +207,27 @@ async def log_referral_credit_earned(referrer_id: int, referrer_name: str,
 #  Бесплатный курс (модули 1-2)
 # ────────────────────────────────────────
 
-async def log_course_access(user_id: int, username: str, first_name: str, is_test: bool):
+async def log_course_access(user_id: int, username: str, first_name: str, is_test: bool,
+                            course_name: str = "Onchain"):
     name, uid = _user_line(user_id, username, first_name)
     if is_test:
-        desc = "Юзер нажал «Бесплатные модули» и получил ссылку на модули 1-2."
-        mode = "Бесплатный (модули 1-2)"
+        if course_name == "Meteora":
+            desc = "Юзер нажал «Бесплатная часть Meteora» и получил ссылку."
+            mode = "Бесплатный"
+        else:
+            desc = "Юзер нажал «Бесплатные модули» и получил ссылку на модули 1-2."
+            mode = "Бесплатный (модули 1-2)"
     else:
-        desc = "Юзер получил доступ к полному курсу (7 модулей)."
+        if course_name == "Meteora":
+            desc = "Юзер получил доступ к полному курсу Meteora."
+        else:
+            desc = "Юзер получил доступ к полному курсу Onchain (7 модулей)."
         mode = "Полный (оплачен)"
     text = (
-        f"📚 <b>Доступ к курсу</b>\n"
+        f"📚 <b>Доступ к курсу [{course_name}]</b>\n"
         f"{desc}\n\n"
         f"   Кто: {name} (ID: {uid})\n"
+        f"   Курс: {course_name}\n"
         f"   Тип: {mode}"
     )
     await _send_log(text)

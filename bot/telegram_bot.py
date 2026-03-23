@@ -13,6 +13,7 @@ from config.settings import (
     TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ADMIN_IDS,
     PAYMENT_WALLET, PREMIUM_PRICE_SOL,
     COURSE_PRICE_USDT, COMMUNITY_PRICE_USDT,
+    METEORA_PRICE_USDT,
     FREE_SIGNAL_DELAY_MINUTES,
 )
 from bot.formatters import format_signal_message, format_signal_message_free, format_stats_message, format_usd, format_mcap
@@ -56,6 +57,7 @@ async def setup_bot_profile():
         await bot.set_my_commands([
             {"command": "start", "description": "Главное меню"},
             {"command": "course", "description": "Курс Onchain Trading"},
+            {"command": "meteora", "description": "Курс Meteora"},
             {"command": "community", "description": "Wayan Premium комьюнити"},
             {"command": "referral", "description": "Реферальная программа"},
             {"command": "help", "description": "Все команды"},
@@ -182,7 +184,7 @@ async def send_message(text: str, parse_mode: str = "HTML"):
 def main_menu_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="🎓 Курс", callback_data="course_info"),
+            InlineKeyboardButton(text="🎓 Курсы", callback_data="courses_menu"),
             InlineKeyboardButton(text="👥 Комьюнити", callback_data="community_info"),
         ],
         [
@@ -243,6 +245,11 @@ WELCOME_TEXT = (
     "с возможностью задавать вопросы напрямую.\n\n"
     "2 первых модуля — бесплатно.\n\n"
 
+    "🌊 <b>Бонусный модуль: Meteora — {meteora} USDT</b>\n"
+    "Как дополнение к Premium для тех, кто хочет зайти глубже "
+    "в Solana и научиться работать с ликвидностью.\n\n"
+    "Бесплатная часть тоже доступна сразу.\n\n"
+
     "👥 <b>Закрытый чат Wayan Premium — {community} USDT / мес</b>\n\n"
     "Закрытое пространство с on-chain, AI, ресерчем, "
     "новыми нарративами и живым обсуждением рынка.\n\n"
@@ -254,6 +261,7 @@ WELCOME_TEXT = (
     "Если тебе нужен рост, понимание и доступ к сильной среде — заходи 👇"
 ).format(
     course=f"{COURSE_PRICE_USDT:.0f}",
+    meteora=f"{METEORA_PRICE_USDT:.0f}",
     community=f"{COMMUNITY_PRICE_USDT:.0f}",
 )
 
@@ -339,11 +347,11 @@ async def cmd_help(message: Message):
     await message.answer(
         "📖 <b>Команды</b>\n"
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        "<b>Продукты:</b>\n"
+        "<b>Курсы:</b>\n"
         "/course — Курс Onchain Trading\n"
-        "/buy_course — Купить полный курс\n"
-        "/community — Wayan Premium комьюнити\n"
-        "/buy_community — Вступить в комьюнити\n\n"
+        "/meteora — Курс Meteora\n\n"
+        "<b>Продукты:</b>\n"
+        "/community — Wayan Premium комьюнити\n\n"
         "<b>Другое:</b>\n"
         "/referral — Реферальная ссылка\n"
         "/start — Главное меню",
@@ -651,7 +659,8 @@ async def cmd_referral(message: Message):
         f"<b>Статистика:</b>\n"
         f"👥 Приглашено: <b>{stats['total_referrals']}</b>\n"
         f"💰 Купили курс: <b>{paid}</b>\n"
-        f"{your_bonus}\n"
+        f"{your_bonus}\n\n"
+        "<i>*Рефералка только для курса Wayan Premium</i>"
     )
     await message.answer(text, parse_mode="HTML", reply_markup=back_keyboard())
 
@@ -903,7 +912,8 @@ async def cb_referral(callback: CallbackQuery):
         f"<b>Статистика:</b>\n"
         f"👥 Приглашено: <b>{stats['total_referrals']}</b>\n"
         f"💰 Купили курс: <b>{paid}</b>\n"
-        f"{your_bonus}\n"
+        f"{your_bonus}\n\n"
+        "<i>*Рефералка только для курса Wayan Premium</i>"
     )
     await callback.message.edit_text(text, parse_mode="HTML", reply_markup=back_keyboard())
     await callback.answer()

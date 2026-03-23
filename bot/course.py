@@ -17,6 +17,8 @@ from config.settings import (
     COURSE_PAYMENT_WALLET, PAYMENT_WALLET,
     COMMUNITY_PAYMENT_WALLET, COMMUNITY_PRICE_USDT,
     COMMUNITY_CHANNEL_ID,
+    METEORA_FREE_CHANNEL_ID, METEORA_PAID_CHANNEL_ID,
+    METEORA_PRICE_USDT, METEORA_PAYMENT_WALLET,
     TELEGRAM_CHAT_ID, ADMIN_IDS,
     REFERRAL_COURSE_DISCOUNT,
     REFERRAL_COMMUNITY_TIERS,
@@ -140,7 +142,25 @@ def _price_text(original: float, discounted: float, discount_pct: int, reason: s
 
 
 # ──────────────────────────────────────
-#  Course info
+#  Courses menu (выбор курса)
+# ──────────────────────────────────────
+
+def _courses_menu_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="🏴‍☠️ Бесплатно Onchain", callback_data="course_free"),
+            InlineKeyboardButton(text="🏴‍☠️ Купить Onchain", callback_data="course_buy"),
+        ],
+        [
+            InlineKeyboardButton(text="🌊 Бесплатно Meteora", callback_data="meteora_free"),
+            InlineKeyboardButton(text="🌊 Купить Meteora", callback_data="meteora_buy"),
+        ],
+        [InlineKeyboardButton(text="« Назад", callback_data="back_menu")],
+    ])
+
+
+# ──────────────────────────────────────
+#  Course info (Onchain)
 # ──────────────────────────────────────
 
 def _course_keyboard() -> InlineKeyboardMarkup:
@@ -153,7 +173,7 @@ def _course_keyboard() -> InlineKeyboardMarkup:
             text="🎓 Onchain Premium — полный курс",
             callback_data="course_buy",
         )],
-        [InlineKeyboardButton(text="« Назад", callback_data="back_menu")],
+        [InlineKeyboardButton(text="« Назад к курсам", callback_data="courses_menu")],
     ])
 
 
@@ -175,6 +195,43 @@ COURSE_TEXT = (
     "Полный курс — все 7 модулей + приложения.\n"
     "Доступ навсегда после покупки.\n\n"
     f"💰 <b>Цена: {COURSE_PRICE_USDT:.0f} USDT</b>"
+)
+
+
+# ──────────────────────────────────────
+#  Meteora course info
+# ──────────────────────────────────────
+
+def _meteora_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(
+            text="📖 Meteora BASE (бесплатно)",
+            callback_data="meteora_free",
+        )],
+        [InlineKeyboardButton(
+            text="🌊 Meteora Premium — полный курс",
+            callback_data="meteora_buy",
+        )],
+        [InlineKeyboardButton(text="« Назад к курсам", callback_data="courses_menu")],
+    ])
+
+
+METEORA_TEXT = (
+    "🌊 <b>Бонусный модуль: Meteora</b>\n"
+    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    "Как дополнение к Premium для тех, кто хочет зайти глубже "
+    "в Solana и научиться работать с ликвидностью.\n\n"
+    "Это не отдельная теория \"где-то рядом\", а практичное усиление "
+    "основного обучения для тех, кто хочет понимать, как из рынка "
+    "выжимают больше.\n\n"
+    "<b>Внутри:</b>\n\n"
+    "— как работать с ликвидностью на Solana\n"
+    "— как смотреть на возможности в Meteora\n"
+    "— как использовать этот инструмент осознанно, "
+    "а не тыкаться вслепую\n\n"
+    "Бесплатная часть тоже доступна сразу.\n"
+    "Доступ навсегда после покупки.\n\n"
+    f"💰 <b>Цена: {METEORA_PRICE_USDT:.0f} USDT</b>"
 )
 
 
@@ -210,6 +267,39 @@ COMMUNITY_TEXT = (
 
 
 # ──────────────────────────────────────
+#  Courses menu callback
+# ──────────────────────────────────────
+
+@course_router.callback_query(F.data == "courses_menu")
+async def cb_courses_menu(callback: CallbackQuery):
+    text = (
+        "Не обязательно тратить месяцы, чтобы собрать картину рынка по кускам.\n"
+        "Здесь ты можешь зайти бесплатно, посмотреть материал "
+        "и решить, насколько глубоко хочешь пойти дальше.\n\n"
+
+        f"🏴‍☠️ <b>Onchain Trading</b> — {COURSE_PRICE_USDT:.0f} USDT\n"
+        "Флагманский курс Wayan Onchain.\n"
+        "7 модулей: среда и безопасность, инструменты, "
+        "оценка токена, поиск монет, риск-менеджмент, "
+        "система трейдера, продвинутые стратегии.\n\n"
+        "2 первых модуля открыты бесплатно.\n"
+        "Дальше — полный доступ для тех, кто хочет выйти "
+        "на другой уровень понимания рынка.\n\n"
+
+        f"🌊 <b>Meteora</b> — {METEORA_PRICE_USDT:.0f} USDT\n"
+        "Практический доп-модуль: работа с ликвидностью, "
+        "возможности в Meteora, осознанное использование инструмента.\n\n"
+        "Бесплатная часть уже доступна.\n\n"
+
+        "Выбирай, с чего начать 👇"
+    )
+    await callback.message.edit_text(
+        text, parse_mode="HTML", reply_markup=_courses_menu_keyboard(),
+    )
+    await callback.answer()
+
+
+# ──────────────────────────────────────
 #  /course, /community commands
 # ──────────────────────────────────────
 
@@ -227,6 +317,16 @@ async def cmd_course(message: Message):
                         info["course_discount_pct"], info["course_discount_reason"]),
         )
     await message.answer(text, parse_mode="HTML", reply_markup=_course_keyboard())
+
+
+@course_router.message(Command("meteora"))
+async def cmd_meteora(message: Message):
+    sub = await repo.get_subscriber(message.from_user.id)
+    has_meteora = bool(sub and sub.meteora_purchased)
+    text = METEORA_TEXT
+    if has_meteora:
+        text += "\n\n✅ <b>Ты уже купил этот курс!</b>"
+    await message.answer(text, parse_mode="HTML", reply_markup=_meteora_keyboard())
 
 
 @course_router.message(Command("community"))
@@ -446,7 +546,124 @@ async def cb_community_buy(callback: CallbackQuery):
 
 
 # ──────────────────────────────────────
-#  Admin commands: /grant_course, /grant_community
+#  Meteora callbacks
+# ──────────────────────────────────────
+
+@course_router.callback_query(F.data == "meteora_info")
+async def cb_meteora_info(callback: CallbackQuery):
+    user = callback.from_user
+    sub = await repo.get_subscriber(user.id)
+    has_meteora = bool(sub and sub.meteora_purchased)
+
+    text = METEORA_TEXT
+    if has_meteora:
+        text += "\n\n✅ <b>Ты уже купил этот курс!</b>"
+
+    await callback.message.edit_text(
+        text, parse_mode="HTML", reply_markup=_meteora_keyboard(),
+    )
+    await callback.answer()
+
+
+@course_router.callback_query(F.data == "meteora_free")
+async def cb_meteora_free(callback: CallbackQuery):
+    user = callback.from_user
+    bot = callback.bot
+
+    if await _is_member(bot, METEORA_FREE_CHANNEL_ID, user.id):
+        await callback.message.edit_text(
+            "✅ Ты уже в бесплатной части курса Meteora.\n\n"
+            "Открой группу и начинай обучение.\n"
+            "Для полного курса нажми кнопку ниже.",
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(
+                    text="🌊 Купить полный курс Meteora",
+                    callback_data="meteora_buy",
+                )],
+                [InlineKeyboardButton(text="« Назад", callback_data="meteora_info")],
+            ]),
+        )
+        await callback.answer()
+        return
+
+    try:
+        invite_link = await _generate_invite(bot, METEORA_FREE_CHANNEL_ID, user.id)
+
+        from bot.activity_log import log_course_access
+        await log_course_access(
+            user.id, user.username or "", user.first_name or "",
+            is_test=True, course_name="Meteora",
+        )
+
+        expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
+        await callback.message.edit_text(
+            "🌊 <b>Добро пожаловать в курс Meteora!</b>\n\n"
+            "Доступна бесплатная часть курса.\n\n"
+            f"🔗 Ссылка:\n{invite_link}\n\n"
+            f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>.",
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(
+                    text="🌊 Купить полный курс Meteora",
+                    callback_data="meteora_buy",
+                )],
+                [InlineKeyboardButton(text="« Назад", callback_data="meteora_info")],
+            ]),
+        )
+    except Exception as e:
+        logger.error(f"Failed to generate Meteora free invite for {user.id}: {e}")
+        await callback.message.edit_text(
+            "❌ Не удалось сгенерировать ссылку.\n"
+            f"Ошибка: <code>{e}</code>",
+            parse_mode="HTML",
+            reply_markup=_back_kb(),
+        )
+    await callback.answer()
+
+
+@course_router.callback_query(F.data == "meteora_buy")
+async def cb_meteora_buy(callback: CallbackQuery):
+    """Show payment instructions for Meteora course."""
+    user = callback.from_user
+    sub = await repo.get_subscriber(user.id)
+    has_meteora = bool(sub and sub.meteora_purchased)
+
+    if has_meteora:
+        await callback.message.edit_text(
+            "✅ Ты уже купил курс Meteora!", parse_mode="HTML", reply_markup=_back_kb(),
+        )
+        await callback.answer()
+        return
+
+    price = METEORA_PRICE_USDT
+    wallet = METEORA_PAYMENT_WALLET or COURSE_PAYMENT_WALLET or PAYMENT_WALLET
+
+    text = (
+        f"🌊 <b>Купить полный курс Meteora</b>\n\n"
+        f"💰 Цена: <b>{price:.0f} USDT</b>\n\n"
+        f"Отправь <b>{price:.0f} USDT</b> (SPL USDT на Solana) на кошелёк:\n"
+        f"<code>{wallet}</code>\n\n"
+        f"После оплаты <b>скопируй TX hash и отправь его сюда в чат</b>.\n\n"
+        f"Мы проверим транзакцию и откроем тебе доступ."
+    )
+
+    _pending_payments[user.id] = {
+        "product": "meteora",
+        "expected_price": price,
+        "discount_pct": 0,
+        "discount_reason": "",
+    }
+
+    from bot.activity_log import log_product_view
+    await log_product_view(user.id, user.username or "", user.first_name or "", "Курс Meteora (покупка)", "")
+
+    await callback.message.edit_text(text, parse_mode="HTML", reply_markup=_back_kb())
+    await callback.answer()
+
+
+# ──────────────────────────────────────
+#  Admin commands: /grant_course, /grant_community, /grant_meteora
 # ──────────────────────────────────────
 
 @course_router.message(Command("grant_course"))
@@ -633,6 +850,85 @@ async def cmd_grant_community(message: Message, command: CommandObject):
     )
 
 
+@course_router.message(Command("grant_meteora"))
+async def cmd_grant_meteora(message: Message, command: CommandObject):
+    """Admin: confirm Meteora course payment and grant access."""
+    if str(message.from_user.id) not in ADMIN_IDS:
+        return
+
+    args = (command.args or "").strip()
+    if not args:
+        await message.answer("Использование: <code>/grant_meteora USER_ID</code>", parse_mode="HTML")
+        return
+
+    try:
+        target_user_id = int(args)
+    except ValueError:
+        await message.answer("❌ Неверный user ID", parse_mode="HTML")
+        return
+
+    if not METEORA_PAID_CHANNEL_ID:
+        await message.answer("❌ METEORA_PAID_CHANNEL_ID не настроен в .env", parse_mode="HTML")
+        return
+
+    # Mark meteora as purchased
+    await repo.mark_meteora_purchased(target_user_id)
+
+    # Generate invite
+    bot = message.bot
+    invite_link = None
+    invite_sent = False
+    try:
+        invite_link = await _generate_invite(bot, METEORA_PAID_CHANNEL_ID, target_user_id)
+        await _record_access(target_user_id, invite_link, is_test=False)
+    except Exception as e:
+        logger.error(f"[GRANT_METEORA] Failed to create invite: {e}")
+        await message.answer(
+            f"⚠️ Курс Meteora отмечен как купленный, но ссылку создать не удалось:\n<code>{e}</code>\n\n"
+            f"Убедись, что бот добавлен как админ в канал курса с правом «Invite Users».",
+            parse_mode="HTML",
+        )
+
+    # Send invite to user
+    if invite_link:
+        expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
+        try:
+            await bot.send_message(
+                chat_id=target_user_id,
+                text=(
+                    "🎉 <b>Оплата подтверждена!</b>\n\n"
+                    "Добро пожаловать в полный курс Meteora!\n\n"
+                    f"🔗 Ссылка:\n{invite_link}\n\n"
+                    f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>."
+                ),
+                parse_mode="HTML",
+            )
+            invite_sent = True
+        except Exception as e:
+            logger.error(f"[GRANT_METEORA] Failed to send invite to user: {e}")
+            await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
+
+    # Log
+    from bot.activity_log import log_course_granted
+    target_sub = await repo.get_subscriber(target_user_id)
+    t_name = (target_sub.first_name or target_sub.username or str(target_user_id)) if target_sub else str(target_user_id)
+    t_uname = (target_sub.username or "") if target_sub else ""
+    await log_course_granted(target_user_id, t_uname, t_name, course_name="Meteora")
+
+    if invite_sent:
+        await message.answer(
+            f"✅ Курс Meteora выдан юзеру <code>{target_user_id}</code>. Ссылка отправлена.",
+            parse_mode="HTML",
+        )
+    elif not invite_link:
+        pass
+    else:
+        await message.answer(
+            f"⚠️ Курс Meteora выдан юзеру <code>{target_user_id}</code>, но ссылку отправить не удалось.",
+            parse_mode="HTML",
+        )
+
+
 # ──────────────────────────────────────
 #  TX hash detection
 # ──────────────────────────────────────
@@ -654,8 +950,12 @@ async def handle_possible_tx(message: Message):
             parse_mode="HTML",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                 [InlineKeyboardButton(
-                    text="🎓 Курс",
+                    text="🎓 Курс Onchain",
                     callback_data=f"tx_product:course:{tx_sig}",
+                )],
+                [InlineKeyboardButton(
+                    text="🌊 Курс Meteora",
+                    callback_data=f"tx_product:meteora:{tx_sig}",
                 )],
                 [InlineKeyboardButton(
                     text="👥 Комьюнити",
@@ -690,6 +990,13 @@ async def cb_tx_product(callback: CallbackQuery):
             "discount_pct": info["course_discount_pct"],
             "discount_reason": info["course_discount_reason"],
         }
+    elif product == "meteora":
+        pending = {
+            "product": "meteora",
+            "expected_price": METEORA_PRICE_USDT,
+            "discount_pct": 0,
+            "discount_reason": "",
+        }
     else:
         pending = {
             "product": "community",
@@ -723,7 +1030,7 @@ async def _process_payment_request(message: Message, user_id: int,
     discount_pct = pending.get("discount_pct", 0)
     discount_reason = pending.get("discount_reason", "")
 
-    product_names = {"course": "Курс", "community": "Комьюнити"}
+    product_names = {"course": "Курс Onchain", "community": "Комьюнити", "meteora": "Курс Meteora"}
     product_name = product_names.get(product, product)
 
     discount_line = ""
@@ -733,7 +1040,8 @@ async def _process_payment_request(message: Message, user_id: int,
             "referral_credit": "за реферала",
             "course_owner": "владелец курса",
         }.get(discount_reason, "")
-        original = COURSE_PRICE_USDT if product == "course" else COMMUNITY_PRICE_USDT
+        original_prices = {"course": COURSE_PRICE_USDT, "community": COMMUNITY_PRICE_USDT, "meteora": METEORA_PRICE_USDT}
+        original = original_prices.get(product, expected_price)
         discount_line = f"\n🎁 Скидка: {discount_pct}% ({reason_text}) — {original:.0f} → {expected_price:.0f} USDT"
 
     # Log to activity chat
@@ -752,7 +1060,12 @@ async def _process_payment_request(message: Message, user_id: int,
     await _send_log(log_text)
 
     # Notify admin
-    grant_cmd = f"/grant_course {user_id}" if product == "course" else f"/grant_community {user_id}"
+    grant_cmds = {
+        "course": f"/grant_course {user_id}",
+        "meteora": f"/grant_meteora {user_id}",
+        "community": f"/grant_community {user_id}",
+    }
+    grant_cmd = grant_cmds.get(product, f"/grant_course {user_id}")
     admin_text = (
         f"💳 <b>Новая заявка на оплату!</b>\n\n"
         f"👤 {name}{handle} (ID: <code>{user_id}</code>)\n"
