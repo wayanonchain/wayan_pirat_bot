@@ -14,9 +14,18 @@ async_session = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit
 
 
 async def init_db():
-    """Create all tables."""
+    """Create all tables and run lightweight migrations."""
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+        # Add meteora_purchased column if missing (SQLite doesn't auto-add)
+        try:
+            await conn.execute(
+                __import__('sqlalchemy').text(
+                    "ALTER TABLE subscribers ADD COLUMN meteora_purchased BOOLEAN DEFAULT 0"
+                )
+            )
+        except Exception:
+            pass  # Column already exists
 
 
 async def get_session() -> AsyncSession:
@@ -401,6 +410,21 @@ async def has_course_purchased(user_id: int) -> bool:
     """Check if user has purchased the course."""
     sub = await get_subscriber(user_id)
     return bool(sub and sub.course_purchased)
+
+
+async def mark_meteora_purchased(user_id: int):
+    """Mark user as having purchased the Meteora course."""
+    async with async_session() as session:
+        sub = await session.get(Subscriber, user_id)
+        if sub:
+            sub.meteora_purchased = True
+            await session.commit()
+
+
+async def has_meteora_purchased(user_id: int) -> bool:
+    """Check if user has purchased the Meteora course."""
+    sub = await get_subscriber(user_id)
+    return bool(sub and sub.meteora_purchased)
 
 
 async def add_referral_credit(user_id: int):
