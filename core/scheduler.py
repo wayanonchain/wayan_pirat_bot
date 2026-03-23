@@ -27,6 +27,17 @@ async def _run_daily_stats():
         logger.error(f"Daily stats job error: {e}", exc_info=True)
 
 
+async def _run_nansen_signal():
+    """Wrapper to run Nansen Smart Money signal posting."""
+    try:
+        from core.nansen_signals import send_nansen_signal_to_community
+        credits = await send_nansen_signal_to_community(top_n=20)
+        if credits:
+            logger.info(f"Nansen signal posted. Credits remaining: {credits.get('remaining')}")
+    except Exception as e:
+        logger.error(f"Nansen signal job error: {e}", exc_info=True)
+
+
 async def _run_weekly_report():
     """Wrapper to run weekly report."""
     try:
@@ -56,8 +67,21 @@ def start_scheduler():
         replace_existing=True,
     )
 
+    # Nansen Smart Money signal at 09:00 and 19:00 MSK
+    scheduler.add_job(
+        _run_nansen_signal,
+        CronTrigger(hour="9,19", minute=0, timezone=MSK),
+        id="nansen_smart_money_signal",
+        name="Nansen Smart Money Signal to Community",
+        replace_existing=True,
+    )
+
     scheduler.start()
-    logger.info("Scheduler started: daily stats @ 21:00 MSK, weekly report @ Sun 20:00 MSK")
+    logger.info(
+        "Scheduler started: daily stats @ 21:00 MSK, "
+        "weekly report @ Sun 20:00 MSK, "
+        "nansen signal @ 09:00 & 19:00 MSK"
+    )
 
 
 def stop_scheduler():

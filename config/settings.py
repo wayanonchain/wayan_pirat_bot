@@ -11,7 +11,7 @@ if not ENV_PATH.exists():
 load_dotenv(ENV_PATH)
 
 # === API Keys ===
-NANSEN_API_KEY = os.getenv("NANSEN_API_KEY", "6yjpT19TBFEllBOLO4THBWf16n4GJaFp")
+NANSEN_API_KEY = os.getenv("NANSEN_API_KEY", "aqPHceAQXybQ9KhIiaEBYqJWNP8yk7nZ")
 HELIUS_API_KEY = os.getenv("HELIUS_API_KEY", "")
 BIRDEYE_API_KEY = os.getenv("BIRDEYE_API_KEY", "")
 SOLANATRACKER_API_KEY = os.getenv("SOLANATRACKER_API_KEY", "")
@@ -73,6 +73,7 @@ COURSE_TEST_MODE = os.getenv("COURSE_TEST_MODE", "false").lower() == "true"
 COMMUNITY_PAYMENT_WALLET = os.getenv("COMMUNITY_PAYMENT_WALLET", "")
 COMMUNITY_PRICE_USDT = float(os.getenv("COMMUNITY_PRICE_USDT", "200"))
 COMMUNITY_CHANNEL_ID = int(os.getenv("COMMUNITY_CHANNEL_ID", "0"))
+COMMUNITY_CHAT_ID = int(os.getenv("COMMUNITY_CHAT_ID", "-1003310009262"))
 
 # USDT on Solana (SPL token mint)
 USDT_MINT = "Es9vMFrzaCERmKfrNwnEUBLRKdPJg4kkjnBLTmM1JXWd"
