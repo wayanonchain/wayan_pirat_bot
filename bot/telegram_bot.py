@@ -2,7 +2,7 @@
 
 import asyncio
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from aiogram import Bot, Dispatcher, Router
 from aiogram.filters import Command, CommandObject
@@ -32,6 +32,51 @@ dp.include_router(router)
 
 from bot.course import course_router
 dp.include_router(course_router)
+
+
+# ============================================================
+#  Delayed Meteora reminder for new users (24h after /start)
+# ============================================================
+
+METEORA_REMINDER_TEXT = (
+    "Ребята, спасибо всем, кто уже пользуется нашим ботом "
+    "и изучает материалы внутри ❤️\n\n"
+    "Напоминаю, что у нас появился <b>новый курс по Meteora</b>.\n"
+    "Там собрали полезные вещи по стратегиям и в целом постарались "
+    "сделать материал таким, чтобы он реально расширял понимание рынка, "
+    "а не был просто теорией ради теории.\n\n"
+    "Плюс внутри есть <b>бесплатный модуль</b>, чтобы вы могли сначала "
+    "ознакомиться, посмотреть подачу и понять, хотите ли идти в тему глубже.\n\n"
+    "Нажмите /meteora чтобы узнать подробнее 👇"
+)
+
+
+async def _send_meteora_reminder(user_id: int):
+    """Send Meteora course reminder to a user (called by scheduler)."""
+    try:
+        await bot.send_message(
+            chat_id=user_id,
+            text=METEORA_REMINDER_TEXT,
+            parse_mode="HTML",
+        )
+        logger.info(f"[REMINDER] Meteora reminder sent to {user_id}")
+    except Exception as e:
+        logger.warning(f"[REMINDER] Failed to send Meteora reminder to {user_id}: {e}")
+
+
+def schedule_meteora_reminder(user_id: int):
+    """Schedule a one-shot Meteora reminder 24h from now."""
+    from core.scheduler import scheduler
+    run_time = datetime.utcnow() + timedelta(hours=24)
+    scheduler.add_job(
+        _send_meteora_reminder,
+        "date",
+        run_date=run_time,
+        args=[user_id],
+        id=f"meteora_reminder_{user_id}",
+        replace_existing=True,
+    )
+    logger.info(f"[REMINDER] Scheduled Meteora reminder for {user_id} at {run_time}")
 
 
 # ============================================================
@@ -334,6 +379,7 @@ async def cmd_start(message: Message, command: CommandObject):
     if is_new:
         from bot.activity_log import log_new_user
         await log_new_user(user.id, user.username or "", user.first_name or "", referred_by)
+        schedule_meteora_reminder(user.id)
 
     await message.answer(
         WELCOME_TEXT,
