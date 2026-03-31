@@ -105,6 +105,7 @@ async def setup_bot_profile():
             {"command": "meteora", "description": "Курс Meteora"},
             {"command": "community", "description": "Wayan Premium комьюнити"},
             {"command": "referral", "description": "Реферальная программа"},
+            {"command": "promo", "description": "Активировать промокод"},
             {"command": "help", "description": "Все команды"},
         ])
         logger.info("Bot profile updated (description, commands)")
@@ -234,6 +235,7 @@ def main_menu_keyboard() -> InlineKeyboardMarkup:
         ],
         [
             InlineKeyboardButton(text="🤝 Рефералка", callback_data="referral"),
+            InlineKeyboardButton(text="🏷 Промокод", callback_data="promo_enter"),
         ],
     ])
 
@@ -400,6 +402,7 @@ async def cmd_help(message: Message):
         "/community — Wayan Premium комьюнити\n\n"
         "<b>Другое:</b>\n"
         "/referral — Реферальная ссылка\n"
+        "/promo — Активировать промокод\n"
         "/start — Главное меню",
         parse_mode="HTML",
         reply_markup=back_keyboard(),
@@ -664,6 +667,78 @@ async def cmd_subscribe(message: Message, command: CommandObject):
         )
 
 
+@router.message(Command("promo"))
+async def cmd_promo(message: Message, command: CommandObject):
+    """Apply a promo code: /promo KATE"""
+    user_id = message.from_user.id
+    code = (command.args or "").strip().upper()
+
+    if not code:
+        await message.answer(
+            "Введи промокод после команды:\n"
+            "<code>/promo КОД</code>",
+            parse_mode="HTML",
+        )
+        return
+
+    from config.settings import PROMO_CODES
+    promo = PROMO_CODES.get(code)
+    if not promo:
+        await message.answer("❌ Промокод не найден.")
+        return
+
+    sub = await repo.get_subscriber(user_id)
+    if sub and sub.course_purchased:
+        await message.answer("✅ Ты уже купил курс, промокод не нужен.")
+        return
+
+    if sub and sub.promo_code:
+        await message.answer(f"У тебя уже активирован промокод: <b>{sub.promo_code}</b>", parse_mode="HTML")
+        return
+
+    ok = await repo.set_promo_code(user_id, code)
+    if not ok:
+        await message.answer("❌ Не удалось применить промокод.")
+        return
+
+    discount_pct = int(promo["discount"] * 100)
+    label = promo.get("label", code)
+    from config.settings import COURSE_PRICE_USDT
+    new_price = COURSE_PRICE_USDT * (1 - promo["discount"])
+
+    # Check if also has referral for combined discount
+    has_referral = bool(sub and sub.referred_by)
+    if has_referral:
+        from config.settings import REFERRAL_COURSE_DISCOUNT
+        total_pct = discount_pct + int(REFERRAL_COURSE_DISCOUNT * 100)
+        combined_price = COURSE_PRICE_USDT * (1 - total_pct / 100)
+        await message.answer(
+            f"✅ <b>{label}</b> активирован!\n\n"
+            f"🎁 Скидка по промокоду: {discount_pct}%\n"
+            f"🤝 Реферальная скидка: {int(REFERRAL_COURSE_DISCOUNT * 100)}%\n"
+            f"💰 Итого: <b>{total_pct}%</b> — цена курса: "
+            f"<s>{COURSE_PRICE_USDT:.0f}</s> → <b>{combined_price:.0f} USDT</b>",
+            parse_mode="HTML",
+        )
+    else:
+        await message.answer(
+            f"✅ <b>{label}</b> активирован!\n\n"
+            f"🎁 Скидка {discount_pct}% на курс Wayan Onchain\n"
+            f"💰 Цена: <s>{COURSE_PRICE_USDT:.0f}</s> → <b>{new_price:.0f} USDT</b>",
+            parse_mode="HTML",
+        )
+
+    # Log
+    from bot.activity_log import _send_log
+    username = message.from_user.username or ""
+    name = message.from_user.first_name or ""
+    await _send_log(
+        f"🏷 <b>Промокод активирован</b>\n"
+        f"   User: {name} (@{username}) [<code>{user_id}</code>]\n"
+        f"   Код: {code} (скидка {discount_pct}%)"
+    )
+
+
 @router.message(Command("referral"))
 async def cmd_referral(message: Message):
     """Show referral link and stats."""
@@ -919,6 +994,41 @@ async def cb_premium(callback: CallbackQuery):
 @router.callback_query(F.data == "my_plan")
 async def cb_my_plan(callback: CallbackQuery):
     await _send_my_plan_cb(callback)
+
+
+@router.callback_query(F.data == "promo_enter")
+async def cb_promo_enter(callback: CallbackQuery):
+    """Prompt user to enter promo code."""
+    user_id = callback.from_user.id
+    sub = await repo.get_subscriber(user_id)
+
+    if sub and sub.course_purchased:
+        await callback.message.edit_text(
+            "✅ Ты уже купил курс, промокод не нужен.",
+            parse_mode="HTML",
+            reply_markup=back_keyboard(),
+        )
+        await callback.answer()
+        return
+
+    if sub and sub.promo_code:
+        await callback.message.edit_text(
+            f"У тебя уже активирован промокод: <b>{sub.promo_code}</b> 🎉\n\n"
+            f"Скидка применена к курсу Wayan Onchain.",
+            parse_mode="HTML",
+            reply_markup=back_keyboard(),
+        )
+        await callback.answer()
+        return
+
+    await callback.message.edit_text(
+        "🏷 <b>Введи промокод</b>\n\n"
+        "Отправь промокод в чат командой:\n"
+        "<code>/promo КОД</code>",
+        parse_mode="HTML",
+        reply_markup=back_keyboard(),
+    )
+    await callback.answer()
 
 
 @router.callback_query(F.data == "referral")

@@ -112,6 +112,7 @@ class Subscriber(Base):
     course_purchased = Column(Boolean, default=False)
     meteora_purchased = Column(Boolean, default=False)
     referral_credits = Column(Integer, default=0)  # 20%-off credits earned from referrals
+    promo_code = Column(String(30), nullable=True)  # Applied promo code (e.g. "KATE")
     created_at = Column(DateTime, default=datetime.utcnow)
 
     def __repr__(self):

@@ -22,6 +22,7 @@ from config.settings import (
     TELEGRAM_CHAT_ID, ADMIN_IDS,
     REFERRAL_COURSE_DISCOUNT,
     REFERRAL_COMMUNITY_TIERS,
+    PROMO_CODES,
 )
 from db import repository as repo
 
@@ -43,7 +44,7 @@ TX_PATTERN = re.compile(r'^[1-9A-HJ-NP-Za-km-z]{80,100}$')
 async def get_discount_info(user_id: int) -> dict:
     """Calculate discounts for a user.
 
-    Course discount: 20% if referred by someone.
+    Course discount: referral 20% + promo code (stacks).
     Community discount (for course owners based on referral count):
       1 paid referral → 20%, 2 → 50%, 3+ → 100% (free).
     """
@@ -51,12 +52,24 @@ async def get_discount_info(user_id: int) -> dict:
     has_course = bool(sub and sub.course_purchased)
     has_referrer = bool(sub and sub.referred_by)
 
-    # Course discount: 20% if referred
+    # Course discount: referral + promo (stacking)
     course_discount_pct = 0
     course_discount_reason = ""
+
     if has_referrer and not has_course:
-        course_discount_pct = int(REFERRAL_COURSE_DISCOUNT * 100)
+        course_discount_pct += int(REFERRAL_COURSE_DISCOUNT * 100)
         course_discount_reason = "referral"
+
+    # Promo code discount (stacks with referral)
+    if sub and sub.promo_code and not has_course:
+        promo = PROMO_CODES.get(sub.promo_code)
+        if promo and promo["product"] == "course":
+            promo_pct = int(promo["discount"] * 100)
+            course_discount_pct += promo_pct
+            if course_discount_reason:
+                course_discount_reason = f"referral+promo"
+            else:
+                course_discount_reason = "promo"
 
     course_price = COURSE_PRICE_USDT
     if course_discount_pct:
@@ -125,12 +138,15 @@ def _back_kb() -> InlineKeyboardMarkup:
 def _price_text(original: float, discounted: float, discount_pct: int, reason: str) -> str:
     """Format price with optional strikethrough discount."""
     if discount_pct:
-        if reason == "referral":
-            reason_text = "реферальная скидка"
-        elif reason.startswith("referral_"):
+        reason_map = {
+            "referral": "реферальная скидка",
+            "promo": "скидка по промокоду",
+            "referral+promo": "реферальная + промокод",
+        }
+        if reason.startswith("referral_"):
             reason_text = "скидка за рефералов"
         else:
-            reason_text = "скидка"
+            reason_text = reason_map.get(reason, "скидка")
 
         if discount_pct >= 100:
             return f"🎁 <b>{reason_text} — БЕСПЛАТНО!</b>"
@@ -1039,6 +1055,8 @@ async def _process_payment_request(message: Message, user_id: int,
             "referral": "реферальная",
             "referral_credit": "за реферала",
             "course_owner": "владелец курса",
+            "promo": "промокод",
+            "referral+promo": "реферальная + промокод",
         }.get(discount_reason, "")
         original_prices = {"course": COURSE_PRICE_USDT, "community": COMMUNITY_PRICE_USDT, "meteora": METEORA_PRICE_USDT}
         original = original_prices.get(product, expected_price)

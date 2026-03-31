@@ -26,6 +26,14 @@ async def init_db():
             )
         except Exception:
             pass  # Column already exists
+        try:
+            await conn.execute(
+                __import__('sqlalchemy').text(
+                    "ALTER TABLE subscribers ADD COLUMN promo_code VARCHAR(30)"
+                )
+            )
+        except Exception:
+            pass  # Column already exists
 
 
 async def get_session() -> AsyncSession:
@@ -359,6 +367,19 @@ async def set_referred_by(user_id: int, referrer_id: int) -> bool:
         if sub.user_id == referrer_id:
             return False  # Can't refer yourself
         sub.referred_by = referrer_id
+        await session.commit()
+        return True
+
+
+async def set_promo_code(user_id: int, code: str) -> bool:
+    """Apply a promo code to user. Returns False if already has one."""
+    async with async_session() as session:
+        sub = await session.get(Subscriber, user_id)
+        if not sub:
+            return False
+        if sub.promo_code:
+            return False  # Already has a promo code
+        sub.promo_code = code.upper()
         await session.commit()
         return True
 
