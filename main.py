@@ -150,21 +150,22 @@ async def main():
 
     await send_message(
         f"<b>Wayne Pirate Bot Started</b>\n\n"
-        f"Monitoring {active} Smart Money wallets\n"
-        f"Waiting for signals...\n\n"
+        f"Smart Money wallets: {active}\n"
+        f"⚠️ Signal monitoring: <b>DISABLED</b>\n\n"
         f"Use /status for details",
     )
 
-    logger.info(f"Startup notification sent. Monitoring {active} wallets.")
+    logger.info(f"Startup notification sent. {active} wallets in DB (signals DISABLED).")
 
-    # Start webhook server in background thread
-    from config.settings import HELIUS_WEBHOOK_URL
-    webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
-    webhook_thread.start()
-    logger.info("Webhook server started on background thread")
-
-    # Register Helius webhook if URL is configured
-    await setup_helius_webhook()
+    # --- SIGNALS DISABLED (saving API calls) ---
+    # To re-enable: uncomment the webhook server + setup_helius_webhook lines below
+    #
+    # from config.settings import HELIUS_WEBHOOK_URL
+    # webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
+    # webhook_thread.start()
+    # logger.info("Webhook server started on background thread")
+    # await setup_helius_webhook()
+    logger.info("Wallet signal monitoring is DISABLED (webhook server not started)")
 
     # Start scheduler
     from core.scheduler import start_scheduler
