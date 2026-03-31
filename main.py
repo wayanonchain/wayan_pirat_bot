@@ -143,12 +143,11 @@ async def main():
 
     await init_database()
 
-    # Score all wallets on startup
-    from core.wallet_scoring import score_all_wallets
-    from db.repository import async_session as get_async_session
-    async with get_async_session() as session:
-        scored, tier_counts = await score_all_wallets(session)
-    logger.info(f"Wallet scoring complete: {scored} wallets scored, tiers: {tier_counts}")
+    # Wallet scoring disabled (wallet_scoring module needs update)
+    # from core.wallet_scoring import score_all_wallets
+    # from db.repository import async_session as get_async_session
+    # async with get_async_session() as session:
+    #     scored, tier_counts = await score_all_wallets(session)
 
     from bot.telegram_bot import send_message
     from db.repository import wallet_count
@@ -157,14 +156,12 @@ async def main():
 
     await send_message(
         f"<b>Wayne Pirate Bot Started</b>\n\n"
-        f"Monitoring {active} Smart Money wallets\n"
-        f"Tiers: S={tier_counts['S']} A={tier_counts['A']} "
-        f"B={tier_counts['B']} C={tier_counts['C']}\n"
-        f"Waiting for signals...\n\n"
+        f"Smart Money wallets: {active}\n"
+        f"⚠️ Signal monitoring: <b>DISABLED</b>\n\n"
         f"Use /status for details",
     )
 
-    logger.info(f"Startup notification sent. Monitoring {active} wallets.")
+    logger.info(f"Startup notification sent. {active} wallets in DB (signals DISABLED).")
 
     # --- SIGNALS DISABLED (saving API calls) ---
     # To re-enable: uncomment the webhook server + setup_helius_webhook lines below
