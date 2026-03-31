@@ -143,6 +143,13 @@ async def main():
 
     await init_database()
 
+    # Score all wallets on startup
+    from core.wallet_scoring import score_all_wallets
+    from db.repository import async_session as get_async_session
+    async with get_async_session() as session:
+        scored, tier_counts = await score_all_wallets(session)
+    logger.info(f"Wallet scoring complete: {scored} wallets scored, tiers: {tier_counts}")
+
     from bot.telegram_bot import send_message
     from db.repository import wallet_count
     counts = await wallet_count()
@@ -151,20 +158,23 @@ async def main():
     await send_message(
         f"<b>Wayne Pirate Bot Started</b>\n\n"
         f"Monitoring {active} Smart Money wallets\n"
+        f"Tiers: S={tier_counts['S']} A={tier_counts['A']} "
+        f"B={tier_counts['B']} C={tier_counts['C']}\n"
         f"Waiting for signals...\n\n"
         f"Use /status for details",
     )
 
     logger.info(f"Startup notification sent. Monitoring {active} wallets.")
 
-    # Start webhook server in background thread
-    from config.settings import HELIUS_WEBHOOK_URL
-    webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
-    webhook_thread.start()
-    logger.info("Webhook server started on background thread")
-
-    # Register Helius webhook if URL is configured
-    await setup_helius_webhook()
+    # --- SIGNALS DISABLED (saving API calls) ---
+    # To re-enable: uncomment the webhook server + setup_helius_webhook lines below
+    #
+    # from config.settings import HELIUS_WEBHOOK_URL
+    # webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
+    # webhook_thread.start()
+    # logger.info("Webhook server started on background thread")
+    # await setup_helius_webhook()
+    logger.info("Wallet signal monitoring is DISABLED (webhook server not started)")
 
     # Start scheduler
     from core.scheduler import start_scheduler
