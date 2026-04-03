@@ -103,6 +103,7 @@ async def setup_bot_profile():
             {"command": "start", "description": "Главное меню"},
             {"command": "course", "description": "Курс Onchain Trading"},
             {"command": "meteora", "description": "Курс Meteora"},
+            {"command": "psychology", "description": "Психология трейдинга (бесплатно)"},
             {"command": "community", "description": "Wayan Premium комьюнити"},
             {"command": "referral", "description": "Реферальная программа"},
             {"command": "promo", "description": "Активировать промокод"},
@@ -297,6 +298,11 @@ WELCOME_TEXT = (
     "в Solana и научиться работать с ликвидностью.\n\n"
     "Бесплатная часть тоже доступна сразу.\n\n"
 
+    "🧠 <b>Психология трейдинга — БЕСПЛАТНО</b>\n"
+    "Страх входа, revenge trading, потеря доверия к системе — "
+    "всё, что ломает трейдера после убытков.\n"
+    "Реальные решения, без воды.\n\n"
+
     "👥 <b>Закрытый чат Wayan Premium — {community} USDT / мес</b>\n\n"
     "Закрытое пространство с on-chain, AI, ресерчем, "
     "новыми нарративами и живым обсуждением рынка.\n\n"
@@ -397,7 +403,8 @@ async def cmd_help(message: Message):
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
         "<b>Курсы:</b>\n"
         "/course — Курс Onchain Trading\n"
-        "/meteora — Курс Meteora\n\n"
+        "/meteora — Курс Meteora\n"
+        "/psychology — Психология трейдинга (бесплатно)\n\n"
         "<b>Продукты:</b>\n"
         "/community — Wayan Premium комьюнити\n\n"
         "<b>Другое:</b>\n"
