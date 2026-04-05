@@ -1248,6 +1248,61 @@ async def _send_my_plan_cb(callback: CallbackQuery):
 
 
 # ============================================================
+#  Admin: analytics commands
+# ============================================================
+
+@router.message(Command("analytics"))
+async def cmd_analytics(message: Message):
+    """Full analytics overview. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    await message.answer("⏳ Генерирую аналитику...")
+    from core.analytics import get_overview_analytics
+    text = await get_overview_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ac"))
+async def cmd_analytics_courses(message: Message):
+    """Course analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_course_analytics
+    text = await get_course_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ap"))
+async def cmd_analytics_payments(message: Message):
+    """Payment analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_payment_analytics
+    text = await get_payment_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ar"))
+async def cmd_analytics_referrals(message: Message):
+    """Referral analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_referral_analytics
+    text = await get_referral_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ag"))
+async def cmd_analytics_growth(message: Message):
+    """Growth analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_growth_analytics
+    text = await get_growth_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+# ============================================================
 #  Admin: reset user for testing
 # ============================================================
 
