@@ -96,4 +96,6 @@ REFERRAL_COMMUNITY_TIERS = {1: 0.20, 2: 0.50, 3: 1.00}
 # Promo codes: {code: {"discount": 0.10, "product": "course"}}
 PROMO_CODES = {
     "KATE": {"discount": 0.10, "product": "course", "label": "промокод KATE"},
+    "ANNA": {"discount": 0.10, "product": "course", "label": "промокод ANNA"},
+    "CRYPTOENOT": {"discount": 0.10, "product": "course", "label": "промокод CRYPTOENOT"},
 }

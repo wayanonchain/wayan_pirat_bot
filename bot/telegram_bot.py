@@ -742,7 +742,7 @@ async def cmd_promo(message: Message, command: CommandObject):
     await _send_log(
         f"🏷 <b>Промокод активирован</b>\n"
         f"   User: {name} (@{username}) [<code>{user_id}</code>]\n"
-        f"   Код: {code} (скидка {discount_pct}%)"
+        f"   Код: {code} (скидка {discount_pct}% на курс WO)"
     )
 
 
