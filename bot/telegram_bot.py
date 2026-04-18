@@ -27,6 +27,15 @@ def check_admin(user_id: int) -> bool:
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
 dp = Dispatcher()
+
+# IMPORTANT: include acc_router FIRST so its commands (/scan etc.) are
+# matched before any of the older routers get a chance to swallow the
+# update. Debugging showed the older routers were eating messages even
+# when no Command() filter matched — bug is in their middleware chain,
+# not in ours.
+from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
+dp.include_router(acc_router)
+
 router = Router()
 dp.include_router(router)
 
@@ -103,6 +112,7 @@ async def setup_bot_profile():
             {"command": "start", "description": "Главное меню"},
             {"command": "course", "description": "Курс Onchain Trading"},
             {"command": "meteora", "description": "Курс Meteora"},
+            {"command": "psychology", "description": "Психология трейдинга (бесплатно)"},
             {"command": "community", "description": "Wayan Premium комьюнити"},
             {"command": "referral", "description": "Реферальная программа"},
             {"command": "promo", "description": "Активировать промокод"},
@@ -297,6 +307,11 @@ WELCOME_TEXT = (
     "в Solana и научиться работать с ликвидностью.\n\n"
     "Бесплатная часть тоже доступна сразу.\n\n"
 
+    "🧠 <b>Психология трейдинга — БЕСПЛАТНО</b>\n"
+    "Страх входа, revenge trading, потеря доверия к системе — "
+    "всё, что ломает трейдера после убытков.\n"
+    "Реальные решения, без воды.\n\n"
+
     "👥 <b>Закрытый чат Wayan Premium — {community} USDT / мес</b>\n\n"
     "Закрытое пространство с on-chain, AI, ресерчем, "
     "новыми нарративами и живым обсуждением рынка.\n\n"
@@ -397,7 +412,8 @@ async def cmd_help(message: Message):
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
         "<b>Курсы:</b>\n"
         "/course — Курс Onchain Trading\n"
-        "/meteora — Курс Meteora\n\n"
+        "/meteora — Курс Meteora\n"
+        "/psychology — Психология трейдинга (бесплатно)\n\n"
         "<b>Продукты:</b>\n"
         "/community — Wayan Premium комьюнити\n\n"
         "<b>Другое:</b>\n"
@@ -735,7 +751,7 @@ async def cmd_promo(message: Message, command: CommandObject):
     await _send_log(
         f"🏷 <b>Промокод активирован</b>\n"
         f"   User: {name} (@{username}) [<code>{user_id}</code>]\n"
-        f"   Код: {code} (скидка {discount_pct}%)"
+        f"   Код: {code} (скидка {discount_pct}% на курс WO)"
     )
 
 
@@ -1238,6 +1254,61 @@ async def _send_my_plan_cb(callback: CallbackQuery):
         )
     await callback.message.edit_text(text, parse_mode="HTML", reply_markup=back_keyboard())
     await callback.answer()
+
+
+# ============================================================
+#  Admin: analytics commands
+# ============================================================
+
+@router.message(Command("analytics"))
+async def cmd_analytics(message: Message):
+    """Full analytics overview. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    await message.answer("⏳ Генерирую аналитику...")
+    from core.analytics import get_overview_analytics
+    text = await get_overview_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ac"))
+async def cmd_analytics_courses(message: Message):
+    """Course analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_course_analytics
+    text = await get_course_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ap"))
+async def cmd_analytics_payments(message: Message):
+    """Payment analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_payment_analytics
+    text = await get_payment_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ar"))
+async def cmd_analytics_referrals(message: Message):
+    """Referral analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_referral_analytics
+    text = await get_referral_analytics()
+    await message.answer(text, parse_mode="HTML")
+
+
+@router.message(Command("ag"))
+async def cmd_analytics_growth(message: Message):
+    """Growth analytics. Admin only."""
+    if not check_admin(message.from_user.id):
+        return
+    from core.analytics import get_growth_analytics
+    text = await get_growth_analytics()
+    await message.answer(text, parse_mode="HTML")
 
 
 # ============================================================

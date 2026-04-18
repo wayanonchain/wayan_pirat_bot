@@ -19,6 +19,7 @@ from config.settings import (
     COMMUNITY_CHANNEL_ID,
     METEORA_FREE_CHANNEL_ID, METEORA_PAID_CHANNEL_ID,
     METEORA_PRICE_USDT, METEORA_PAYMENT_WALLET,
+    PSYCHOLOGY_CHANNEL_ID,
     TELEGRAM_CHAT_ID, ADMIN_IDS,
     REFERRAL_COURSE_DISCOUNT,
     REFERRAL_COMMUNITY_TIERS,
@@ -171,6 +172,7 @@ def _courses_menu_keyboard() -> InlineKeyboardMarkup:
             InlineKeyboardButton(text="🌊 Бесплатно Meteora", callback_data="meteora_free"),
             InlineKeyboardButton(text="🌊 Купить Meteora", callback_data="meteora_buy"),
         ],
+        [InlineKeyboardButton(text="🧠 Психология трейдинга (бесплатно)", callback_data="psychology_free")],
         [InlineKeyboardButton(text="« Назад", callback_data="back_menu")],
     ])
 
@@ -252,6 +254,33 @@ METEORA_TEXT = (
 
 
 # ──────────────────────────────────────
+#  Psychology course info (FREE)
+# ──────────────────────────────────────
+
+PSYCHOLOGY_TEXT = (
+    "🧠 <b>Психология трейдинга — бесплатный курс</b>\n"
+    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    "Большинство трейдеров ломаются не на отсутствии сетапов.\n"
+    "Они ломаются после потерь.\n\n"
+    "Этот курс — про реальную боль трейдера, "
+    "которая начинается после убытков:\n\n"
+    "🍑 страх входа\n"
+    "🍑 ступор перед сетапом\n"
+    "🍑 revenge trading\n"
+    "🍑 желание отбить loss любой ценой\n"
+    "🍑 ранние выходы\n"
+    "🍑 пропуск сильных движений\n"
+    "🍑 потеря доверия к себе и своей системе\n\n"
+    "Все ключевые боли, реальные примеры, понятное объяснение "
+    "что происходит в голове после потерь, и конкретные решения.\n\n"
+    "Без воды 💦\n"
+    "Без инфоцыганства ⭐️\n"
+    "Без бесполезной философии 🧠\n\n"
+    "⭐️⭐️⭐️ <b>БЕСПЛАТНО</b> ⭐️⭐️⭐️"
+)
+
+
+# ──────────────────────────────────────
 #  Community info
 # ──────────────────────────────────────
 
@@ -306,6 +335,11 @@ async def cb_courses_menu(callback: CallbackQuery):
         "Практический доп-модуль: работа с ликвидностью, "
         "возможности в Meteora, осознанное использование инструмента.\n\n"
         "Бесплатная часть уже доступна.\n\n"
+
+        "🧠 <b>Психология трейдинга</b> — БЕСПЛАТНО\n"
+        "Страх входа, revenge trading, потеря доверия к системе — "
+        "всё, что ломает трейдера после убытков.\n"
+        "Реальные решения, без воды.\n\n"
 
         "Выбирай, с чего начать 👇"
     )
@@ -676,6 +710,70 @@ async def cb_meteora_buy(callback: CallbackQuery):
 
     await callback.message.edit_text(text, parse_mode="HTML", reply_markup=_back_kb())
     await callback.answer()
+
+
+# ──────────────────────────────────────
+#  Psychology course callback (FREE)
+# ──────────────────────────────────────
+
+@course_router.callback_query(F.data == "psychology_free")
+async def cb_psychology_free(callback: CallbackQuery):
+    user = callback.from_user
+    bot = callback.bot
+
+    if await _is_member(bot, PSYCHOLOGY_CHANNEL_ID, user.id):
+        await callback.message.edit_text(
+            "✅ Ты уже в курсе по психологии трейдинга.\n\n"
+            "Открой группу и изучай материал 🧠",
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="« Назад к курсам", callback_data="courses_menu")],
+            ]),
+        )
+        await callback.answer()
+        return
+
+    try:
+        invite_link = await _generate_invite(bot, PSYCHOLOGY_CHANNEL_ID, user.id)
+
+        from bot.activity_log import log_course_access
+        await log_course_access(
+            user.id, user.username or "", user.first_name or "",
+            is_test=True, course_name="Psychology",
+        )
+
+        expire_min = COURSE_INVITE_EXPIRE_SECONDS // 60
+        await callback.message.edit_text(
+            "🧠 <b>Добро пожаловать в курс по психологии трейдинга!</b>\n\n"
+            "Страх входа, revenge trading, потеря доверия к системе — "
+            "всё, что ломает трейдера после убытков.\n"
+            "Реальные решения, без воды.\n\n"
+            f"🔗 Ссылка:\n{invite_link}\n\n"
+            f"⏳ Ссылка одноразовая, действует <b>{expire_min} мин</b>.",
+            parse_mode="HTML",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="« Назад к курсам", callback_data="courses_menu")],
+            ]),
+        )
+    except Exception as e:
+        logger.error(f"Failed to generate Psychology invite for {user.id}: {e}")
+        await callback.message.edit_text(
+            "❌ Не удалось сгенерировать ссылку.\n"
+            f"Ошибка: <code>{e}</code>",
+            parse_mode="HTML",
+            reply_markup=_back_kb(),
+        )
+    await callback.answer()
+
+
+@course_router.message(Command("psychology"))
+async def cmd_psychology(message: Message):
+    await message.answer(PSYCHOLOGY_TEXT, parse_mode="HTML", reply_markup=InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="🧠 Получить доступ (бесплатно)", callback_data="psychology_free")],
+            [InlineKeyboardButton(text="« Назад", callback_data="back_menu")],
+        ],
+    ))
 
 
 # ──────────────────────────────────────

@@ -69,6 +69,9 @@ COURSE_PRICE_USDT = float(os.getenv("COURSE_PRICE_USDT", "400"))
 COURSE_INVITE_EXPIRE_SECONDS = int(os.getenv("COURSE_INVITE_EXPIRE_SECONDS", "3600"))
 COURSE_TEST_MODE = os.getenv("COURSE_TEST_MODE", "false").lower() == "true"
 
+# === Course (Psychology) ===
+PSYCHOLOGY_CHANNEL_ID = int(os.getenv("PSYCHOLOGY_CHANNEL_ID", "-1003795418411"))
+
 # === Course (Meteora) ===
 METEORA_PAYMENT_WALLET = os.getenv("METEORA_PAYMENT_WALLET", "")
 METEORA_FREE_CHANNEL_ID = int(os.getenv("METEORA_FREE_CHANNEL_ID", "0"))
@@ -93,4 +96,6 @@ REFERRAL_COMMUNITY_TIERS = {1: 0.20, 2: 0.50, 3: 1.00}
 # Promo codes: {code: {"discount": 0.10, "product": "course"}}
 PROMO_CODES = {
     "KATE": {"discount": 0.10, "product": "course", "label": "промокод KATE"},
+    "ANNA": {"discount": 0.10, "product": "course", "label": "промокод ANNA"},
+    "CRYPTOENOT": {"discount": 0.10, "product": "course", "label": "промокод CRYPTOENOT"},
 }

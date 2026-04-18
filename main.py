@@ -143,12 +143,6 @@ async def main():
 
     await init_database()
 
-    # Wallet scoring disabled (wallet_scoring module needs update)
-    # from core.wallet_scoring import score_all_wallets
-    # from db.repository import async_session as get_async_session
-    # async with get_async_session() as session:
-    #     scored, tier_counts = await score_all_wallets(session)
-
     from bot.telegram_bot import send_message
     from db.repository import wallet_count
     counts = await wallet_count()
@@ -161,17 +155,15 @@ async def main():
         f"Use /status for details",
     )
 
-    logger.info(f"Startup notification sent. {active} wallets in DB (signals DISABLED).")
+    logger.info(f"Startup notification sent. {active} wallets in DB.")
 
-    # --- SIGNALS DISABLED (saving API calls) ---
-    # To re-enable: uncomment the webhook server + setup_helius_webhook lines below
-    #
-    # from config.settings import HELIUS_WEBHOOK_URL
-    # webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
-    # webhook_thread.start()
-    # logger.info("Webhook server started on background thread")
-    # await setup_helius_webhook()
-    logger.info("Wallet signal monitoring is DISABLED (webhook server not started)")
+    # Helius webhook server — feeds `token_buys` with real SM trades which
+    # in turn powers the accumulation-module discovery job.
+    from config.settings import HELIUS_WEBHOOK_URL
+    webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
+    webhook_thread.start()
+    logger.info("Webhook server started on background thread")
+    await setup_helius_webhook()
 
     # Start scheduler
     from core.scheduler import start_scheduler
