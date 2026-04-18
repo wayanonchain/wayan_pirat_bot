@@ -37,10 +37,20 @@ from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
 dp.include_router(acc_router)
 
 
-# ── DIAGNOSTIC: raw message logger at the dispatcher level.
-# Registered via a sentinel router so it sits LAST and only fires when
-# every other router skipped the update. Helps locate where /scan gets
-# silently swallowed.
+# ── DIAGNOSTIC: raw update + message catch-all.
+from aiogram.types import Update
+
+
+@dp.update.outer_middleware()
+async def _diag_raw_update(handler, event: Update, data):
+    keys = [k for k, v in event.model_dump(exclude_none=True).items() if k != "update_id"]
+    txt = None
+    if event.message:
+        txt = event.message.text
+    logger.info("[raw-update] id=%s kind=%s text=%r", event.update_id, keys, txt)
+    return await handler(event, data)
+
+
 _diag_router = Router(name="_diag")
 
 
