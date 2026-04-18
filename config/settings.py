@@ -64,6 +64,14 @@ LOG_CHAT_ID = os.getenv("LOG_CHAT_ID", "-1003833809842")
 _thread_raw = os.getenv("LOG_CHAT_ERRORS_THREAD_ID", "60")
 LOG_CHAT_ERRORS_THREAD_ID: int | None = int(_thread_raw) if _thread_raw.strip() else None
 
+# Forum topic inside the log chat for Smart Money token signals. When set,
+# every signal is mirrored there in addition to TELEGRAM_CHAT_ID + premium
+# subscribers. Empty string disables the mirror.
+_signals_thread_raw = os.getenv("LOG_CHAT_SIGNALS_THREAD_ID", "60")
+LOG_CHAT_SIGNALS_THREAD_ID: int | None = (
+    int(_signals_thread_raw) if _signals_thread_raw.strip() else None
+)
+
 # === Subscription / Payment ===
 PAYMENT_WALLET = os.getenv("PAYMENT_WALLET", "")
 PREMIUM_PRICE_SOL = float(os.getenv("PREMIUM_PRICE_SOL", "0.15"))

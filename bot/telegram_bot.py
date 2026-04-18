@@ -15,6 +15,7 @@ from config.settings import (
     COURSE_PRICE_USDT, COMMUNITY_PRICE_USDT,
     METEORA_PRICE_USDT,
     FREE_SIGNAL_DELAY_MINUTES,
+    LOG_CHAT_ID, LOG_CHAT_SIGNALS_THREAD_ID,
 )
 from bot.formatters import format_signal_message, format_signal_message_free, format_stats_message, format_usd, format_mcap
 from db import repository as repo
@@ -175,6 +176,21 @@ async def send_signal(signal: dict):
         await log_signal_admin(signal_id, token_symbol)
     except Exception as e:
         logger.error(f"Failed to send Telegram message: {e}")
+
+    # Mirror into the team log chat's "Signals" topic so every admin sees
+    # every signal in one place. Independent of the admin-DM path above —
+    # a failure here shouldn't block subscriber delivery.
+    if LOG_CHAT_ID and LOG_CHAT_SIGNALS_THREAD_ID is not None:
+        try:
+            await bot.send_message(
+                chat_id=LOG_CHAT_ID,
+                text=text_full,
+                parse_mode="HTML",
+                disable_web_page_preview=True,
+                message_thread_id=LOG_CHAT_SIGNALS_THREAD_ID,
+            )
+        except Exception as e:
+            logger.warning(f"Failed to mirror signal to log chat thread: {e}")
 
     subscribers = await repo.get_active_subscriber_ids()
     for user_id, tier in subscribers.items():
