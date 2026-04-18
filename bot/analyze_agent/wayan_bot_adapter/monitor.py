@@ -179,13 +179,20 @@ async def run_monitor_once(
     alerter=None,
     cfg: AgentConfig = BALANCED,
     batch_size: int = 15,
+    min_gap_hours: float = 12.0,
 ) -> dict:
     """Run one monitor pass over a staleness-ordered batch of the watchlist.
 
-    Only `batch_size` entries are touched per call so the 15-min scheduler
-    tick stays inside GeckoTerminal's free-tier budget (~30 RPM). The next
-    tick picks up the stalest remaining entries, giving a natural
-    round-robin pass across the whole pool.
+    Two budget guards keep us inside GeckoTerminal's ~30 RPM free-tier:
+
+      * `batch_size` caps the number of tokens we'll touch in a single
+        call (default 15).
+      * `min_gap_hours` skips any token we already analysed in the last
+        N hours — no point re-running the pattern check on a token that
+        just reported NOISE. Default 12h.
+
+    A hard circuit-breaker on 429 from GeckoTerminal aborts the rest of
+    the batch; the next scheduled tick resumes from the stalest entries.
     """
     entries = await repo.list_active_watchlist(
         limit=batch_size, order_by_staleness=True,
@@ -193,6 +200,17 @@ async def run_monitor_once(
     if not entries:
         log.info("[monitor] watchlist empty")
         return {"count": 0, "results": []}
+
+    # Drop entries that were checked recently (saves a ton of API budget)
+    if min_gap_hours > 0:
+        import datetime as _dt
+        cutoff = _dt.datetime.utcnow() - _dt.timedelta(hours=min_gap_hours)
+        fresh = [e for e in entries if (e.last_checked_at or _dt.datetime(1970, 1, 1)) < cutoff]
+        if not fresh:
+            log.info("[monitor] all %d entries checked within %dh — skipping tick",
+                     len(entries), int(min_gap_hours))
+            return {"count": 0, "results": []}
+        entries = fresh
 
     fetcher  = DataFetcher()
     detector = AccumulationDetector(cfg)
@@ -205,6 +223,9 @@ async def run_monitor_once(
                     results.append(r)
             except Exception as e:
                 log.error("monitor_one failed for %s: %s", entry.token_address, e)
+            if fetcher.rate_limited:
+                log.warning("[monitor] aborting batch after 429 — resume next tick")
+                break
             await asyncio.sleep(4.0)  # DexScreener/GeckoTerminal rate-limit guard
 
         expired = await repo.mark_stale_old_entries(max_age_days=60)

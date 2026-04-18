@@ -36,6 +36,12 @@ class DataFetcher:
         # single monitor cycle only hits DexScreener once per token.
         self._pair_cache: dict[tuple[str, str], tuple[float, Optional[dict]]] = {}
 
+        # Circuit-breaker: GeckoTerminal free tier will block the IP for
+        # minutes after we exceed ~30 RPM. When the monitor sees this
+        # flag flipped it aborts the current batch and waits for the
+        # next scheduler tick (by which time the rate window has reset).
+        self.rate_limited: bool = False
+
     async def close(self):
         await self._client.aclose()
 
@@ -134,6 +140,10 @@ class DataFetcher:
         params = {"aggregate": aggregate, "limit": limit, "currency": "usd"}
         try:
             r = await self._client.get(url, params=params)
+            if r.status_code == 429:
+                self.rate_limited = True
+                log.warning("GeckoTerminal rate limit hit — aborting batch")
+                return []
             r.raise_for_status()
             raw = r.json()
             candles = raw.get("data", {}).get("attributes", {}).get("ohlcv_list", [])
