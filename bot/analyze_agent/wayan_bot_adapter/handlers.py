@@ -55,9 +55,13 @@ def _is_admin(message: Message) -> bool:
 # /analyze — available to everyone (the public product surface)
 # ─────────────────────────────────────────────────────────────────────────
 
-@acc_router.message(Command("scan"))
-async def cmd_analyze(message: Message, command: CommandObject):
-    address = _extract_address(command.args or "")
+@acc_router.message(F.text.regexp(r"^/scan(\s|$|@)"))
+async def cmd_analyze(message: Message):
+    # Parse args manually — keeps us independent from the Command filter
+    # quirks we ran into earlier.
+    parts = (message.text or "").split(maxsplit=1)
+    args = parts[1] if len(parts) > 1 else ""
+    address = _extract_address(args)
     if not address:
         await message.reply(
             "Использование: <code>/scan &lt;адрес контракта&gt;</code>\n\n"
