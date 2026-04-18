@@ -26,7 +26,9 @@ ADMIN_IDS = {TELEGRAM_CHAT_ID, "422304752"}  # main admin + Viktor
 DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 DB_PATH = DATA_DIR / "bot.db"
-DATABASE_URL = f"sqlite+aiosqlite:///{DB_PATH}"
+# Allow tests (and local overrides) to point the engine at a different DB
+# without editing the source.
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite+aiosqlite:///{DB_PATH}")
 
 # === Bot Settings ===
 ALERT_THRESHOLD = int(os.getenv("ALERT_THRESHOLD", "60"))
