@@ -11,6 +11,8 @@ Runs:
 import asyncio
 import json
 import logging
+import resource
+import signal
 import sys
 import threading
 from logging.handlers import RotatingFileHandler
@@ -35,6 +37,20 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger("main")
+
+
+def _raise_fd_limit():
+    # Default RLIMIT_NOFILE on many VPS images is 1024. Under 8000 Helius
+    # webhook events/hour plus aiohttp connection pools that's close to the
+    # ceiling, and a leaked session on restart can push us over.
+    try:
+        soft, hard = resource.getrlimit(resource.RLIMIT_NOFILE)
+        target = min(hard, 65536)
+        if soft < target:
+            resource.setrlimit(resource.RLIMIT_NOFILE, (target, hard))
+            logger.info(f"Raised RLIMIT_NOFILE: {soft} → {target}")
+    except Exception as e:
+        logger.warning(f"Could not raise RLIMIT_NOFILE: {e}")
 
 
 async def init_database():
@@ -135,11 +151,43 @@ def run_webhook_server():
     )
 
 
+async def shutdown():
+    """Release long-lived resources on exit.
+
+    Without this, every systemctl restart leaks the aiohttp session opened by
+    the aiogram Bot and the SQLAlchemy connection pool — which is what caused
+    the ``OSError: [Errno 24] Too many open files`` observed 2026-04-18.
+    """
+    logger.info("Shutdown: releasing resources...")
+
+    try:
+        from core.scheduler import stop_scheduler
+        stop_scheduler()
+    except Exception as e:
+        logger.error(f"Scheduler stop error: {e}")
+
+    try:
+        from bot.telegram_bot import stop_bot
+        await stop_bot()
+    except Exception as e:
+        logger.error(f"Bot session close error: {e}")
+
+    try:
+        from db.repository import engine
+        await engine.dispose()
+    except Exception as e:
+        logger.error(f"DB engine dispose error: {e}")
+
+    logger.info("Shutdown complete.")
+
+
 async def main():
     """Main entry point."""
     logger.info("=" * 60)
     logger.info("WAYNE PIRATE SMART MONEY BOT — Starting...")
     logger.info("=" * 60)
+
+    _raise_fd_limit()
 
     await init_database()
 
@@ -150,8 +198,7 @@ async def main():
 
     await send_message(
         f"<b>Wayne Pirate Bot Started</b>\n\n"
-        f"Smart Money wallets: {active}\n"
-        f"⚠️ Signal monitoring: <b>DISABLED</b>\n\n"
+        f"Smart Money wallets: {active}\n\n"
         f"Use /status for details",
     )
 
@@ -159,7 +206,6 @@ async def main():
 
     # Helius webhook server — feeds `token_buys` with real SM trades which
     # in turn powers the accumulation-module discovery job.
-    from config.settings import HELIUS_WEBHOOK_URL
     webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
     webhook_thread.start()
     logger.info("Webhook server started on background thread")
@@ -170,10 +216,18 @@ async def main():
     start_scheduler()
     logger.info("Scheduler started")
 
-    # Run Telegram bot (blocking)
+    # Run Telegram bot (blocking until SIGTERM / SIGINT — aiogram installs its
+    # own signal handlers on start_polling, so we rely on try/finally below
+    # for cleanup rather than add_signal_handler here).
     logger.info("Starting Telegram bot polling...")
-    await run_telegram_bot()
+    try:
+        await run_telegram_bot()
+    finally:
+        await shutdown()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except (KeyboardInterrupt, SystemExit):
+        logger.info("Interrupt received — exiting.")
