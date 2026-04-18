@@ -2,7 +2,7 @@
 
 import json
 from datetime import datetime, timedelta
-from sqlalchemy import select, update, func
+from sqlalchemy import event, select, update, func
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 
@@ -12,6 +12,25 @@ from config.settings import DATABASE_URL
 
 engine = create_async_engine(DATABASE_URL, echo=False)
 async_session = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
+
+
+# SQLite tuning — without these, concurrent webhook handlers doing
+# SELECT-then-INSERT race to acquire the write lock and raise
+# ``OperationalError: database is locked``. WAL lets readers coexist with a
+# single writer; busy_timeout tells SQLite to wait (up to N ms) for the lock
+# instead of raising immediately. foreign_keys matches what our schema
+# expects.
+if DATABASE_URL.startswith("sqlite"):
+    @event.listens_for(engine.sync_engine, "connect")
+    def _sqlite_pragma_on_connect(dbapi_conn, _record):  # noqa: D401
+        cur = dbapi_conn.cursor()
+        try:
+            cur.execute("PRAGMA journal_mode=WAL")
+            cur.execute("PRAGMA busy_timeout=5000")
+            cur.execute("PRAGMA synchronous=NORMAL")
+            cur.execute("PRAGMA foreign_keys=ON")
+        finally:
+            cur.close()
 
 
 async def init_db():

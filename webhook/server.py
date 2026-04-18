@@ -98,11 +98,17 @@ async def helius_webhook(request: Request):
     # Helius sends array of transactions
     transactions = payload if isinstance(payload, list) else [payload]
 
+    from sqlalchemy.exc import OperationalError
+
     processed = 0
     for tx in transactions:
         try:
             await process_transaction(tx)
             processed += 1
+        except OperationalError as e:
+            # SQLite write contention past busy_timeout — transient and
+            # self-healing once concurrency drops. Don't alert on every one.
+            logger.warning(f"DB busy, dropping tx: {e}")
         except Exception as e:
             logger.error(f"Error processing tx: {e}", exc_info=True)
 
