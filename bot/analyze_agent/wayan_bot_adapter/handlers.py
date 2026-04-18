@@ -32,6 +32,15 @@ log = logging.getLogger(__name__)
 
 acc_router = Router(name="accumulation")
 
+
+# Router-scoped outer middleware — fires only for updates routed here,
+# does NOT swallow them (returns await handler(...)).
+@acc_router.message.outer_middleware()
+async def _acc_router_probe(handler, event, data):
+    log.info("[acc-probe] text=%r", getattr(event, "text", None))
+    return await handler(event, data)
+
+
 _ADDR_RE = re.compile(r"^(0x[a-fA-F0-9]{40}|[1-9A-HJ-NP-Za-km-z]{32,44})$")
 
 
@@ -55,10 +64,8 @@ def _is_admin(message: Message) -> bool:
 # /analyze — available to everyone (the public product surface)
 # ─────────────────────────────────────────────────────────────────────────
 
-@acc_router.message(F.text.regexp(r"^/scan(\s|$|@)"))
+@acc_router.message(F.text.startswith("/scan"))
 async def cmd_analyze(message: Message):
-    # Parse args manually — keeps us independent from the Command filter
-    # quirks we ran into earlier.
     parts = (message.text or "").split(maxsplit=1)
     args = parts[1] if len(parts) > 1 else ""
     address = _extract_address(args)
