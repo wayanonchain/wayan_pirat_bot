@@ -45,6 +45,10 @@ INACTIVE_DAYS_THRESHOLD = 7      # Days without activity -> INACTIVE
 HELIUS_RPC_URL = f"https://mainnet.helius-rpc.com/?api-key={HELIUS_API_KEY}"
 HELIUS_API_URL = f"https://api.helius.xyz/v0"
 HELIUS_WEBHOOK_URL = os.getenv("HELIUS_WEBHOOK_URL", "")
+# Shared secret Helius sends back in the Authorization header on each webhook
+# POST. If empty, the endpoint accepts unauthenticated requests (legacy) and
+# logs a warning at startup.
+HELIUS_WEBHOOK_AUTH = os.getenv("HELIUS_WEBHOOK_AUTH", "")
 
 # Webhook server
 WEBHOOK_HOST = os.getenv("WEBHOOK_HOST", "0.0.0.0")

@@ -1,5 +1,6 @@
 """FastAPI webhook server to receive Helius transaction notifications."""
 
+import hmac
 import json
 import logging
 import os
@@ -8,6 +9,7 @@ from fastapi.responses import JSONResponse
 
 from core.signal_detector import process_buy
 from bot.telegram_bot import send_signal, send_message
+from config.settings import HELIUS_WEBHOOK_AUTH
 from db import repository as repo
 from api.birdeye_client import get_sol_price
 
@@ -56,6 +58,12 @@ def load_tracked_tokens():
 async def startup():
     await load_monitored_addresses()
     load_tracked_tokens()
+    if not HELIUS_WEBHOOK_AUTH:
+        logger.warning(
+            "HELIUS_WEBHOOK_AUTH is not set — /webhook/helius accepts "
+            "unauthenticated requests. Set it in .env and update the Helius "
+            "webhook's Authorization header to enable validation."
+        )
 
 
 @app.get("/health")
@@ -75,6 +83,12 @@ async def helius_webhook(request: Request):
     Receive enhanced transaction webhooks from Helius.
     Helius sends an array of enhanced transactions.
     """
+    if HELIUS_WEBHOOK_AUTH:
+        provided = request.headers.get("authorization", "")
+        if not hmac.compare_digest(provided, HELIUS_WEBHOOK_AUTH):
+            logger.warning("webhook auth mismatch from %s", request.client.host if request.client else "?")
+            return JSONResponse({"error": "unauthorized"}, status_code=401)
+
     try:
         payload = await request.json()
     except Exception:

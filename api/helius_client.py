@@ -91,6 +91,9 @@ async def create_webhook(addresses: list[str], webhook_url: str) -> dict | None:
         "webhookType": "enhanced",
         "encoding": "jsonParsed",
     }
+    from config.settings import HELIUS_WEBHOOK_AUTH
+    if HELIUS_WEBHOOK_AUTH:
+        payload["authHeader"] = HELIUS_WEBHOOK_AUTH
 
     async with httpx.AsyncClient(timeout=30) as client:
         resp = await client.post(url, json=payload)
