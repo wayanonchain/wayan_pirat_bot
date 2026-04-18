@@ -1,5 +1,6 @@
 """Database operations for the Smart Money bot."""
 
+import asyncio
 import json
 from datetime import datetime, timedelta
 from sqlalchemy import event, select, update, func
@@ -8,6 +9,15 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, Asyn
 
 from db.models import Base, Wallet, TokenBuy, Signal, TokenMetadata, Subscriber, Payment
 from config.settings import DATABASE_URL
+
+
+# Cap concurrent write-path transactions. Without this, a boot-storm of
+# pent-up Helius retries (we saw 100+ tx/sec) all race for SQLite's single
+# writer slot, each holding a connection for busy_timeout=5s, which both
+# drains the SA pool and piles up lock errors. Serialising to ~4 slots
+# keeps write latency low and the pool spacious. Reads stay unbounded
+# thanks to WAL.
+_WRITE_SEMAPHORE = asyncio.Semaphore(4)
 
 
 # Pool sized for the current load:
@@ -168,22 +178,26 @@ async def record_buy(buy_data: dict) -> bool:
     INSERT; the unique index then raises ``IntegrityError`` on the loser. We
     treat that as "duplicate, return False" rather than propagating — the
     other handler already persisted the row.
+
+    The call is throttled via ``_WRITE_SEMAPHORE`` to keep burst load from
+    draining the connection pool.
     """
     tx_sig = buy_data["tx_signature"]
-    async with async_session() as session:
-        existing = await session.execute(
-            select(TokenBuy).where(func.lower(TokenBuy.tx_signature) == tx_sig.lower())
-        )
-        if existing.scalar_one_or_none():
-            return False
+    async with _WRITE_SEMAPHORE:
+        async with async_session() as session:
+            existing = await session.execute(
+                select(TokenBuy).where(func.lower(TokenBuy.tx_signature) == tx_sig.lower())
+            )
+            if existing.scalar_one_or_none():
+                return False
 
-        session.add(TokenBuy(**buy_data))
-        try:
-            await session.commit()
-            return True
-        except IntegrityError:
-            await session.rollback()
-            return False
+            session.add(TokenBuy(**buy_data))
+            try:
+                await session.commit()
+                return True
+            except IntegrityError:
+                await session.rollback()
+                return False
 
 
 async def get_recent_buys(token_address: str, minutes: int = 30) -> list[TokenBuy]:
@@ -395,12 +409,13 @@ async def record_payment(user_id: int, amount_sol: float, tx_signature: str,
             period_days=period_days,
             verified=True,
         ))
-        try:
-            await session.commit()
-            return True
-        except IntegrityError:
-            await session.rollback()
-            return False
+        async with _WRITE_SEMAPHORE:
+            try:
+                await session.commit()
+                return True
+            except IntegrityError:
+                await session.rollback()
+                return False
 
 
 # === Referral operations ===
