@@ -75,9 +75,46 @@ def test_cooldown_expires(monkeypatch):
     handler.emit(r)
     # Simulate time moving past the cooldown by rewinding the stored timestamp.
     key = "core.test:same-message"
-    handler._last_sent[key] = time.time() - 61
+    _, count = handler._buckets[key]
+    handler._buckets[key] = (time.time() - 61, count)
     handler.emit(r)
     assert len(calls) == 2
+
+
+def test_suppressed_count_reported(monkeypatch):
+    """After a burst of duplicates, the next emit should mention how many
+    were swallowed during the cooldown."""
+    texts: list[str] = []
+
+    def fake_submit(coro):
+        # The coroutine will hold the text as a closed-over local; grab it
+        # off its frame before closing.
+        try:
+            frame = coro.cr_frame
+            if frame is not None and "text" in frame.f_locals:
+                texts.append(frame.f_locals["text"])
+        finally:
+            coro.close()
+        return None
+
+    monkeypatch.setattr("bot.alerter.bot_bridge.submit", fake_submit)
+
+    handler = TelegramAlertHandler(chat_id="-1000", cooldown_seconds=60)
+    r = _record(logging.ERROR, "core.test", "loud")
+    handler.emit(r)        # first emit — sends, suppressed=0
+    handler.emit(r)        # in cooldown — bumps suppressed to 1
+    handler.emit(r)        # in cooldown — bumps to 2
+    handler.emit(r)        # in cooldown — bumps to 3
+
+    # Force cooldown expiry for the next emit.
+    key = "core.test:loud"
+    _, count = handler._buckets[key]
+    handler._buckets[key] = (time.time() - 61, count)
+    handler.emit(r)        # should send with "+3 suppressed" in header
+
+    assert len(texts) == 2
+    assert "suppressed" not in texts[0]
+    assert "+3 suppressed" in texts[1]
 
 
 def test_format_message_escapes_html():

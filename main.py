@@ -14,7 +14,6 @@ import logging
 import resource
 import signal
 import sys
-import threading
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
@@ -138,20 +137,36 @@ async def run_telegram_bot():
         logger.error(f"Telegram bot error: {e}")
 
 
-def run_webhook_server():
-    """Run FastAPI webhook server in a separate thread."""
+async def start_webhook_server() -> "uvicorn.Server":
+    """Start the FastAPI webhook server on the current (main) event loop.
+
+    Running uvicorn in a background thread (as we used to) gives it its own
+    event loop. That creates a minefield for any shared resource that's
+    bound to whichever loop first touched it — SQLAlchemy's aiosqlite
+    queues and aiogram's Bot session both raised ``"<X> is bound to a
+    different event loop"`` when the webhook handler tried to use them.
+    Embedding uvicorn in the main loop eliminates the whole class of bug.
+    """
     from config.settings import WEBHOOK_HOST, WEBHOOK_PORT
     from webhook.server import app
 
-    uvicorn.run(
+    config = uvicorn.Config(
         app,
         host=WEBHOOK_HOST,
         port=WEBHOOK_PORT,
         log_level="info",
+        # We install our own signal handlers in main(); let uvicorn defer.
+        lifespan="on",
     )
+    server = uvicorn.Server(config)
+    # install_signal_handlers=False keeps uvicorn from hijacking SIGTERM —
+    # main() handles the graceful shutdown for the whole process.
+    server.install_signal_handlers = lambda: None  # type: ignore[method-assign]
+    asyncio.create_task(server.serve(), name="webhook-server")
+    return server
 
 
-async def shutdown():
+async def shutdown(webhook_server=None):
     """Release long-lived resources on exit.
 
     Without this, every systemctl restart leaks the aiohttp session opened by
@@ -159,6 +174,12 @@ async def shutdown():
     the ``OSError: [Errno 24] Too many open files`` observed 2026-04-18.
     """
     logger.info("Shutdown: releasing resources...")
+
+    if webhook_server is not None:
+        try:
+            webhook_server.should_exit = True
+        except Exception as e:
+            logger.error(f"Webhook stop signal error: {e}")
 
     try:
         from core.scheduler import stop_scheduler
@@ -220,10 +241,11 @@ async def main():
     logger.info(f"Startup notification sent. {active} wallets in DB.")
 
     # Helius webhook server — feeds `token_buys` with real SM trades which
-    # in turn powers the accumulation-module discovery job.
-    webhook_thread = threading.Thread(target=run_webhook_server, daemon=True)
-    webhook_thread.start()
-    logger.info("Webhook server started on background thread")
+    # in turn powers the accumulation-module discovery job. Embedded on the
+    # main loop (not a separate thread) so the engine, aiogram Bot, and
+    # handler coroutines all share a single asyncio event loop.
+    webhook_server = await start_webhook_server()
+    logger.info("Webhook server started on main event loop")
     await setup_helius_webhook()
 
     # Start scheduler
@@ -238,7 +260,7 @@ async def main():
     try:
         await run_telegram_bot()
     finally:
-        await shutdown()
+        await shutdown(webhook_server)
 
 
 if __name__ == "__main__":

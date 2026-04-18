@@ -101,5 +101,8 @@ async def get_sol_price() -> float:
         logger.warning(f"All price APIs failed, using stale cache: ${_sol_price_cache['price']:.2f}")
         return _sol_price_cache["price"]
 
-    logger.error("All SOL price sources failed and no cache available")
+    # Transient: happens when all three APIs are 429'ing simultaneously and
+    # no price has been cached yet (e.g. during boot). Callers see 0 and
+    # skip the tx; the next webhook event hits a recovered source.
+    logger.warning("All SOL price sources failed and no cache available — returning 0")
     return 0.0

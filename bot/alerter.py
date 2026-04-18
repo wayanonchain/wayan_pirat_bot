@@ -46,7 +46,13 @@ _NOISE_SUBSTRINGS = (
 
 
 class TelegramAlertHandler(logging.Handler):
-    """Forward ERROR+ log records to the team log chat, de-duplicated."""
+    """Forward ERROR+ log records to the team log chat, de-duplicated.
+
+    Dedup bucket: ``(logger_name, first 120 chars of message)`` for the
+    configured cooldown. During a cooldown, repeated identical errors bump
+    a counter; when the bucket next emits, the message carries a
+    ``+N suppressed`` note so the frequency is visible without the flood.
+    """
 
     def __init__(self, chat_id: str | int, cooldown_seconds: int = 60,
                  level: int = logging.ERROR,
@@ -55,7 +61,8 @@ class TelegramAlertHandler(logging.Handler):
         self.chat_id = str(chat_id)
         self.cooldown = cooldown_seconds
         self.message_thread_id = message_thread_id
-        self._last_sent: dict[str, float] = defaultdict(float)
+        # key -> (last_sent_timestamp, suppressed_since_last_emit)
+        self._buckets: dict[str, tuple[float, int]] = defaultdict(lambda: (0.0, 0))
 
     def emit(self, record: logging.LogRecord) -> None:  # noqa: D401
         try:
@@ -64,11 +71,15 @@ class TelegramAlertHandler(logging.Handler):
 
             key = f"{record.name}:{record.getMessage()[:120]}"
             now = time.time()
-            if now - self._last_sent[key] < self.cooldown:
-                return
-            self._last_sent[key] = now
+            last_sent, suppressed = self._buckets[key]
 
-            text = self._format_message(record)
+            if now - last_sent < self.cooldown:
+                # Within cooldown — just bump the suppressed counter.
+                self._buckets[key] = (last_sent, suppressed + 1)
+                return
+
+            self._buckets[key] = (now, 0)
+            text = self._format_message(record, suppressed_count=suppressed)
             # Fire-and-forget on the main loop. If the main loop isn't up yet
             # (early startup errors), submit() logs a warning and drops it.
             bot_bridge.submit(self._send(text))
@@ -82,14 +93,19 @@ class TelegramAlertHandler(logging.Handler):
         msg = record.getMessage()
         return any(s in msg for s in _NOISE_SUBSTRINGS)
 
-    def _format_message(self, record: logging.LogRecord) -> str:
+    def _format_message(self, record: logging.LogRecord,
+                        suppressed_count: int = 0) -> str:
         level_emoji = "🚨" if record.levelno >= logging.CRITICAL else "⚠️"
         msg = html.escape(record.getMessage())
         if len(msg) > 1200:
             msg = msg[:1200] + "…"
 
+        header = f"{level_emoji} <b>{record.levelname}</b>"
+        if suppressed_count:
+            header += f"  <i>(+{suppressed_count} suppressed in last {self.cooldown}s)</i>"
+
         lines = [
-            f"{level_emoji} <b>{record.levelname}</b>",
+            header,
             f"<b>{html.escape(record.name)}</b>",
             f"<pre>{msg}</pre>",
         ]
