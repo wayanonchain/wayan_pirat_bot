@@ -197,11 +197,12 @@ async def main():
     register_main_loop()
 
     # Forward ERROR+ log records to the team chat so technical issues are
-    # visible without tailing journalctl.
+    # visible without tailing journalctl. Posts into a dedicated forum topic
+    # if one is configured, to keep the General topic clean for user events.
     from bot.alerter import install as install_alerter
-    from config.settings import LOG_CHAT_ID
+    from config.settings import LOG_CHAT_ID, LOG_CHAT_ERRORS_THREAD_ID
     if LOG_CHAT_ID:
-        install_alerter(LOG_CHAT_ID)
+        install_alerter(LOG_CHAT_ID, message_thread_id=LOG_CHAT_ERRORS_THREAD_ID)
 
     await init_database()
 

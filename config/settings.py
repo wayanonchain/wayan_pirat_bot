@@ -58,6 +58,11 @@ WEBHOOK_PORT = int(os.getenv("WEBHOOK_PORT", "8080"))
 
 # === Log Chat (team group for activity logs) ===
 LOG_CHAT_ID = os.getenv("LOG_CHAT_ID", "-1003833809842")
+# Forum topic (thread) inside the log chat where technical ERRORs are posted.
+# ``General`` is kept clear for user/sales events; set to empty string to
+# post errors in General instead.
+_thread_raw = os.getenv("LOG_CHAT_ERRORS_THREAD_ID", "60")
+LOG_CHAT_ERRORS_THREAD_ID: int | None = int(_thread_raw) if _thread_raw.strip() else None
 
 # === Subscription / Payment ===
 PAYMENT_WALLET = os.getenv("PAYMENT_WALLET", "")

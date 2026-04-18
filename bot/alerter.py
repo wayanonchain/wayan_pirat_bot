@@ -49,10 +49,12 @@ class TelegramAlertHandler(logging.Handler):
     """Forward ERROR+ log records to the team log chat, de-duplicated."""
 
     def __init__(self, chat_id: str | int, cooldown_seconds: int = 60,
-                 level: int = logging.ERROR):
+                 level: int = logging.ERROR,
+                 message_thread_id: int | None = None):
         super().__init__(level)
         self.chat_id = str(chat_id)
         self.cooldown = cooldown_seconds
+        self.message_thread_id = message_thread_id
         self._last_sent: dict[str, float] = defaultdict(float)
 
     def emit(self, record: logging.LogRecord) -> None:  # noqa: D401
@@ -104,22 +106,31 @@ class TelegramAlertHandler(logging.Handler):
     async def _send(self, text: str) -> None:
         try:
             from bot.telegram_bot import bot
-            await bot.send_message(
+            kwargs = dict(
                 chat_id=self.chat_id,
                 text=text,
                 parse_mode="HTML",
                 disable_web_page_preview=True,
                 disable_notification=True,
             )
+            if self.message_thread_id is not None:
+                kwargs["message_thread_id"] = self.message_thread_id
+            await bot.send_message(**kwargs)
         except Exception as e:
             # Don't re-emit — would recurse through this handler.
             logging.getLogger("bot.alerter").debug(f"alerter send failed: {e}")
 
 
-def install(chat_id: str | int, cooldown_seconds: int = 60) -> TelegramAlertHandler:
+def install(chat_id: str | int, cooldown_seconds: int = 60,
+            message_thread_id: int | None = None) -> TelegramAlertHandler:
     """Attach the handler to the root logger. Idempotent per-call."""
-    handler = TelegramAlertHandler(chat_id=chat_id, cooldown_seconds=cooldown_seconds)
+    handler = TelegramAlertHandler(
+        chat_id=chat_id,
+        cooldown_seconds=cooldown_seconds,
+        message_thread_id=message_thread_id,
+    )
     handler.setFormatter(logging.Formatter("%(message)s"))
     logging.getLogger().addHandler(handler)
-    logger.info(f"Telegram error alerter installed → chat {chat_id} (cooldown {cooldown_seconds}s)")
+    thread = f" (thread {message_thread_id})" if message_thread_id else ""
+    logger.info(f"Telegram error alerter installed → chat {chat_id}{thread} (cooldown {cooldown_seconds}s)")
     return handler

@@ -96,3 +96,49 @@ def test_format_message_truncates_long_output():
     # Large messages get a "…" suffix added by the truncation logic.
     assert "…" in text
     assert len(text) < 2000
+
+
+def test_thread_id_forwarded_to_send_message(monkeypatch):
+    """A configured message_thread_id must be propagated into bot.send_message."""
+    import asyncio
+
+    sent = {}
+
+    class FakeBot:
+        async def send_message(self, **kwargs):
+            sent.update(kwargs)
+
+    import sys
+    import types
+    fake_module = types.ModuleType("bot.telegram_bot")
+    fake_module.bot = FakeBot()
+    monkeypatch.setitem(sys.modules, "bot.telegram_bot", fake_module)
+
+    handler = TelegramAlertHandler(chat_id="-1000", message_thread_id=60)
+    asyncio.get_event_loop().run_until_complete(handler._send("hi"))
+
+    assert sent["chat_id"] == "-1000"
+    assert sent["message_thread_id"] == 60
+
+
+def test_no_thread_id_omits_the_param(monkeypatch):
+    """When no thread is configured, the send_message call must not carry
+    message_thread_id — Telegram treats the missing key as ``general``."""
+    import asyncio
+
+    sent = {}
+
+    class FakeBot:
+        async def send_message(self, **kwargs):
+            sent.update(kwargs)
+
+    import sys
+    import types
+    fake_module = types.ModuleType("bot.telegram_bot")
+    fake_module.bot = FakeBot()
+    monkeypatch.setitem(sys.modules, "bot.telegram_bot", fake_module)
+
+    handler = TelegramAlertHandler(chat_id="-1000")  # no thread
+    asyncio.get_event_loop().run_until_complete(handler._send("hi"))
+
+    assert "message_thread_id" not in sent
