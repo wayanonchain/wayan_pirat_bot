@@ -76,11 +76,21 @@ def start_scheduler():
         replace_existing=True,
     )
 
+    # Accumulation module — SM-discovery + Wyckoff-pattern monitor jobs.
+    try:
+        from bot.analyze_agent.wayan_bot_adapter.scheduler_jobs import (
+            register_accumulation_jobs,
+        )
+        register_accumulation_jobs(scheduler)
+    except Exception as e:
+        logger.error(f"Could not register accumulation jobs: {e}", exc_info=True)
+
     scheduler.start()
     logger.info(
         "Scheduler started: daily stats @ 21:00 MSK, "
         "weekly report @ Sun 20:00 MSK, "
-        "nansen signal @ 09:00 & 19:00 MSK"
+        "nansen signal @ 09:00 & 19:00 MSK, "
+        "accumulation discovery @ every 6h, monitor @ every 15m"
     )
 
 

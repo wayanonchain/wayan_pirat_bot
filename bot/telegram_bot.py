@@ -33,6 +33,9 @@ dp.include_router(router)
 from bot.course import course_router
 dp.include_router(course_router)
 
+from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
+dp.include_router(acc_router)
+
 
 # ============================================================
 #  Delayed Meteora reminder for new users (24h after /start)
