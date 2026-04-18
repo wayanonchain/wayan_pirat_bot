@@ -93,16 +93,28 @@ async def remove_from_watchlist(token_address: str, reason: str = "manual") -> N
         await db.commit()
 
 
-async def list_active_watchlist() -> list[WatchlistEntry]:
+async def list_active_watchlist(
+    limit: Optional[int] = None,
+    order_by_staleness: bool = False,
+) -> list[WatchlistEntry]:
+    """Return active watchlist entries.
+
+    order_by_staleness=True sorts so entries that were never checked
+    (last_checked_at IS NULL) come first, then oldest checks. This gives
+    the monitor a round-robin pass through the pool without dedicated
+    scheduling state.
+    """
+    order = (
+        "ORDER BY (last_checked_at IS NULL) DESC, last_checked_at ASC"
+        if order_by_staleness else
+        "ORDER BY added_at DESC"
+    )
+    sql = f"SELECT * FROM accumulation_watchlist WHERE status = 'monitoring' {order}"
+    if limit:
+        sql += f" LIMIT {int(limit)}"
     async with aiosqlite.connect(_db_path()) as db:
         db.row_factory = aiosqlite.Row
-        cur = await db.execute(
-            """
-            SELECT * FROM accumulation_watchlist
-             WHERE status = 'monitoring'
-             ORDER BY added_at DESC
-            """
-        )
+        cur = await db.execute(sql)
         rows = await cur.fetchall()
     return [_row_to_entry(r) for r in rows]
 

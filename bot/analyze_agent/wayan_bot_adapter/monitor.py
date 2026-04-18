@@ -175,9 +175,21 @@ async def monitor_one(
     }
 
 
-async def run_monitor_once(alerter=None, cfg: AgentConfig = BALANCED) -> dict:
-    """Run one full monitoring pass over the entire active watchlist."""
-    entries = await repo.list_active_watchlist()
+async def run_monitor_once(
+    alerter=None,
+    cfg: AgentConfig = BALANCED,
+    batch_size: int = 15,
+) -> dict:
+    """Run one monitor pass over a staleness-ordered batch of the watchlist.
+
+    Only `batch_size` entries are touched per call so the 15-min scheduler
+    tick stays inside GeckoTerminal's free-tier budget (~30 RPM). The next
+    tick picks up the stalest remaining entries, giving a natural
+    round-robin pass across the whole pool.
+    """
+    entries = await repo.list_active_watchlist(
+        limit=batch_size, order_by_staleness=True,
+    )
     if not entries:
         log.info("[monitor] watchlist empty")
         return {"count": 0, "results": []}
