@@ -122,11 +122,16 @@ async def wallet_count() -> dict:
 # === Token Buy operations ===
 
 async def record_buy(buy_data: dict) -> bool:
-    """Record a token buy. Returns False if duplicate tx."""
+    """Record a token buy. Returns False if duplicate tx.
+
+    Dedup is case-insensitive — explorers can return TX signatures in
+    different cases, and a case-sensitive unique index would let the same
+    transaction slip through twice.
+    """
+    tx_sig = buy_data["tx_signature"]
     async with async_session() as session:
-        # Check for duplicate
         existing = await session.execute(
-            select(TokenBuy).where(TokenBuy.tx_signature == buy_data["tx_signature"])
+            select(TokenBuy).where(func.lower(TokenBuy.tx_signature) == tx_sig.lower())
         )
         if existing.scalar_one_or_none():
             return False
@@ -325,10 +330,14 @@ async def get_active_subscriber_ids() -> dict[int, str]:
 
 async def record_payment(user_id: int, amount_sol: float, tx_signature: str,
                          tier: str, period_days: int) -> bool:
-    """Record a payment. Returns False if duplicate TX."""
+    """Record a payment. Returns False if duplicate TX.
+
+    Dedup is case-insensitive so a user can't double-redeem one on-chain
+    payment by resubmitting the signature with different letter case.
+    """
     async with async_session() as session:
         existing = await session.execute(
-            select(Payment).where(Payment.tx_signature == tx_signature)
+            select(Payment).where(func.lower(Payment.tx_signature) == tx_signature.lower())
         )
         if existing.scalar_one_or_none():
             return False
