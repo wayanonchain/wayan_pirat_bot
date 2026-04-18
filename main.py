@@ -229,12 +229,29 @@ async def main():
 
     from bot.telegram_bot import send_message
     from db.repository import wallet_count
+    from config.settings import (
+        WEBHOOK_SIGNALS_ENABLED, WEBHOOK_SELL_ALERTS_ENABLED,
+        NANSEN_SIGNALS_ENABLED, WEEKLY_SM_REPORT_ENABLED,
+    )
     counts = await wallet_count()
     active = counts.get("ACTIVE", 0)
 
+    def _flag(v: bool) -> str:
+        return "on" if v else "off"
+
+    legacy_summary = (
+        f"signals={_flag(WEBHOOK_SIGNALS_ENABLED)}, "
+        f"sell_alerts={_flag(WEBHOOK_SELL_ALERTS_ENABLED)}, "
+        f"nansen={_flag(NANSEN_SIGNALS_ENABLED)}, "
+        f"weekly_report={_flag(WEEKLY_SM_REPORT_ENABLED)}"
+    )
+    logger.info(f"Legacy alert features: {legacy_summary}")
+
     await send_message(
         f"<b>Wayne Pirate Bot Started</b>\n\n"
-        f"Smart Money wallets: {active}\n\n"
+        f"Smart Money wallets: {active}\n"
+        f"Legacy alerts: <code>{legacy_summary}</code>\n"
+        f"Accumulation module: on\n\n"
         f"Use /status for details",
     )
 

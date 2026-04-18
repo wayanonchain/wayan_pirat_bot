@@ -58,50 +58,69 @@ async def _run_weekly_report():
 
 
 def start_scheduler():
-    """Configure and start the scheduler."""
-    # Daily admin stats at 21:00 MSK (18:00 UTC)
-    scheduler.add_job(
-        _run_daily_stats,
-        CronTrigger(hour=21, minute=0, timezone=MSK),
-        id="daily_admin_stats",
-        name="Daily Admin Stats Report",
-        replace_existing=True,
+    """Configure and start the scheduler.
+
+    The scheduler runs two kinds of jobs:
+
+    * Legacy jobs (daily stats, weekly Dune report, Nansen community
+      signals) — each gated by its own env flag, all default OFF except
+      daily stats which is diagnostic-only.
+    * Accumulation-module jobs (Wyckoff discovery + monitor) — these are
+      the current live alerting feature and are always registered.
+    """
+    from config.settings import (
+        DAILY_ADMIN_STATS_ENABLED,
+        WEEKLY_SM_REPORT_ENABLED,
+        NANSEN_SIGNALS_ENABLED,
     )
 
-    # Weekly report on Sunday at 20:00 MSK (17:00 UTC)
-    scheduler.add_job(
-        _run_weekly_report,
-        CronTrigger(day_of_week="sun", hour=20, minute=0, timezone=MSK),
-        id="weekly_sm_report",
-        name="Weekly Smart Money Report",
-        replace_existing=True,
-    )
+    active: list[str] = []
 
-    # Nansen Smart Money signal at 09:00 and 19:00 MSK
-    scheduler.add_job(
-        _run_nansen_signal,
-        CronTrigger(hour="9,19", minute=0, timezone=MSK),
-        id="nansen_smart_money_signal",
-        name="Nansen Smart Money Signal to Community",
-        replace_existing=True,
-    )
+    if DAILY_ADMIN_STATS_ENABLED:
+        scheduler.add_job(
+            _run_daily_stats,
+            CronTrigger(hour=21, minute=0, timezone=MSK),
+            id="daily_admin_stats",
+            name="Daily Admin Stats Report",
+            replace_existing=True,
+        )
+        active.append("daily stats @ 21:00 MSK")
 
-    # Accumulation module — SM-discovery + Wyckoff-pattern monitor jobs.
+    if WEEKLY_SM_REPORT_ENABLED:
+        scheduler.add_job(
+            _run_weekly_report,
+            CronTrigger(day_of_week="sun", hour=20, minute=0, timezone=MSK),
+            id="weekly_sm_report",
+            name="Weekly Smart Money Report",
+            replace_existing=True,
+        )
+        active.append("weekly SM report @ Sun 20:00 MSK")
+
+    if NANSEN_SIGNALS_ENABLED:
+        scheduler.add_job(
+            _run_nansen_signal,
+            CronTrigger(hour="9,19", minute=0, timezone=MSK),
+            id="nansen_smart_money_signal",
+            name="Nansen Smart Money Signal to Community",
+            replace_existing=True,
+        )
+        active.append("nansen signal @ 09:00 & 19:00 MSK")
+
+    # Accumulation module — always on.
     try:
         from bot.analyze_agent.wayan_bot_adapter.scheduler_jobs import (
             register_accumulation_jobs,
         )
         register_accumulation_jobs(scheduler)
+        active.append("accumulation discovery every 6h + monitor every 15m")
     except Exception as e:
         logger.error(f"Could not register accumulation jobs: {e}", exc_info=True)
 
     scheduler.start()
-    logger.info(
-        "Scheduler started: daily stats @ 21:00 MSK, "
-        "weekly report @ Sun 20:00 MSK, "
-        "nansen signal @ 09:00 & 19:00 MSK, "
-        "accumulation discovery @ every 6h, monitor @ every 15m"
-    )
+    if active:
+        logger.info("Scheduler started: " + "; ".join(active))
+    else:
+        logger.warning("Scheduler started with no jobs — check feature flags")
 
 
 def stop_scheduler():

@@ -11,7 +11,11 @@ from fastapi.responses import JSONResponse
 from core.signal_detector import process_buy
 from bot.telegram_bot import send_signal, send_message
 from bot.bot_bridge import submit as submit_to_main_loop
-from config.settings import HELIUS_WEBHOOK_AUTH, WEBHOOK_SIGNALS_ENABLED
+from config.settings import (
+    HELIUS_WEBHOOK_AUTH,
+    WEBHOOK_SIGNALS_ENABLED,
+    WEBHOOK_SELL_ALERTS_ENABLED,
+)
 from db import repository as repo
 from api.birdeye_client import get_sol_price
 
@@ -151,13 +155,12 @@ async def process_transaction(tx: dict):
         if not swap_info:
             return
 
-    # Check if this is a SELL (SM selling a previously signaled token)
-    if swap_info.get("is_sell") and swap_info["token_address"] in _signaled_tokens:
-        await _handle_sell_alert(fee_payer, swap_info, signature)
-        return
-
+    # Sell alerts are a legacy feature — gated OFF by default along with
+    # the live signals. The accumulation module doesn't use this path.
     if swap_info.get("is_sell"):
-        return  # Sell of non-signaled token, ignore
+        if WEBHOOK_SELL_ALERTS_ENABLED and swap_info["token_address"] in _signaled_tokens:
+            await _handle_sell_alert(fee_payer, swap_info, signature)
+        return
 
     token_address = swap_info["token_address"]
     token_symbol = swap_info.get("token_symbol", "")

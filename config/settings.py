@@ -72,13 +72,23 @@ LOG_CHAT_SIGNALS_THREAD_ID: int | None = (
     int(_signals_thread_raw) if _signals_thread_raw.strip() else None
 )
 
-# Master switch for the webhook-driven "2+ SM wallets buy same token"
-# signal. Defaults OFF — it was disabled 2026-03-31 for API cost reasons
-# and should only be re-enabled deliberately. The accumulation module
-# (Wyckoff pattern alerts) runs on its own independent of this flag.
-WEBHOOK_SIGNALS_ENABLED = os.getenv("WEBHOOK_SIGNALS_ENABLED", "false").lower() in (
-    "1", "true", "yes", "on",
-)
+# ── Legacy alert feature toggles ────────────────────────────────────────
+# Everything below controls the pre-accumulation features. All default
+# OFF so the current bot runs in accumulation-only mode. Flip to true in
+# .env to re-enable any of them.
+def _bool_env(name: str, default: str = "false") -> bool:
+    return os.getenv(name, default).lower() in ("1", "true", "yes", "on")
+
+# Webhook-driven "2+ SM wallets buy same token" signals + admin DM +
+# subscriber fanout + log-chat mirror.
+WEBHOOK_SIGNALS_ENABLED = _bool_env("WEBHOOK_SIGNALS_ENABLED")
+# "SM wallet exits a previously-signaled token" alerts.
+WEBHOOK_SELL_ALERTS_ENABLED = _bool_env("WEBHOOK_SELL_ALERTS_ENABLED")
+# APScheduler jobs posting to community / admin:
+NANSEN_SIGNALS_ENABLED = _bool_env("NANSEN_SIGNALS_ENABLED")
+WEEKLY_SM_REPORT_ENABLED = _bool_env("WEEKLY_SM_REPORT_ENABLED")
+# Daily stats is diagnostic only — default ON.
+DAILY_ADMIN_STATS_ENABLED = _bool_env("DAILY_ADMIN_STATS_ENABLED", default="true")
 
 # === Subscription / Payment ===
 PAYMENT_WALLET = os.getenv("PAYMENT_WALLET", "")
