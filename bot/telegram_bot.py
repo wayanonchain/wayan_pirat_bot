@@ -27,14 +27,20 @@ def check_admin(user_id: int) -> bool:
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
 dp = Dispatcher()
+
+# IMPORTANT: include acc_router FIRST so its commands (/scan etc.) are
+# matched before any of the older routers get a chance to swallow the
+# update. Debugging showed the older routers were eating messages even
+# when no Command() filter matched — bug is in their middleware chain,
+# not in ours.
+from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
+dp.include_router(acc_router)
+
 router = Router()
 dp.include_router(router)
 
 from bot.course import course_router
 dp.include_router(course_router)
-
-from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
-dp.include_router(acc_router)
 
 
 # ============================================================
