@@ -10,7 +10,23 @@ from db.models import Base, Wallet, TokenBuy, Signal, TokenMetadata, Subscriber,
 from config.settings import DATABASE_URL
 
 
-engine = create_async_engine(DATABASE_URL, echo=False)
+# Pool sized for the current load:
+#   - Webhook burst rate is ~20-50 events/sec; each event opens a short
+#     session (record_buy). With SQLite busy_timeout=5000 a blocked writer
+#     can hold a connection for up to 5s, so a tight pool is easily
+#     exhausted under contention.
+#   - The accumulation monitor + scan handlers + scheduler jobs all add
+#     their own concurrent sessions.
+# pool_size=30 + max_overflow=60 gives 90 concurrent sessions, plenty
+# of headroom; aiosqlite connections are cheap.
+engine = create_async_engine(
+    DATABASE_URL,
+    echo=False,
+    pool_size=30,
+    max_overflow=60,
+    pool_timeout=10,
+    pool_recycle=3600,
+)
 async_session = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 
