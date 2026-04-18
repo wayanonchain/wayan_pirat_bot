@@ -14,9 +14,25 @@ from config.settings import BIRDEYE_API_KEY, SOLANATRACKER_API_KEY, HELIUS_API_K
 
 logger = logging.getLogger(__name__)
 
-# In-memory cache for analysis results (token_address -> (result, timestamp))
+# In-memory cache for analysis results (token_address -> (result, timestamp)).
+# Entries are pruned when the cache exceeds _CACHE_MAX; without this it grows
+# unbounded over weeks of uptime.
 _analysis_cache: dict[str, tuple[dict, float]] = {}
 CACHE_TTL = 300  # 5 minutes
+_CACHE_MAX = 2000
+
+
+def _prune_analysis_cache(now: float) -> None:
+    if len(_analysis_cache) < _CACHE_MAX:
+        return
+    stale = [k for k, (_, ts) in _analysis_cache.items() if now - ts >= CACHE_TTL]
+    for k in stale:
+        del _analysis_cache[k]
+    # If still over the cap (all entries fresh), drop the oldest.
+    if len(_analysis_cache) >= _CACHE_MAX:
+        oldest = sorted(_analysis_cache.items(), key=lambda kv: kv[1][1])
+        for k, _ in oldest[: len(_analysis_cache) - _CACHE_MAX // 2]:
+            del _analysis_cache[k]
 
 
 def safe_get(data, *keys, default=0):
@@ -55,6 +71,7 @@ async def analyze_token(token_address: str) -> dict | None:
 
         result = calculate_accumulation_score(birdeye_data, st_data, helius_data)
         _analysis_cache[token_address] = (result, now)
+        _prune_analysis_cache(now)
         return result
 
     except Exception as e:
