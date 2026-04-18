@@ -3,6 +3,7 @@
 import json
 from datetime import datetime, timedelta
 from sqlalchemy import select, update, func
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 
 from db.models import Base, Wallet, TokenBuy, Signal, TokenMetadata, Subscriber, Payment
@@ -127,6 +128,11 @@ async def record_buy(buy_data: dict) -> bool:
     Dedup is case-insensitive — explorers can return TX signatures in
     different cases, and a case-sensitive unique index would let the same
     transaction slip through twice.
+
+    Two concurrent webhook handlers can both pass the SELECT check and both
+    INSERT; the unique index then raises ``IntegrityError`` on the loser. We
+    treat that as "duplicate, return False" rather than propagating — the
+    other handler already persisted the row.
     """
     tx_sig = buy_data["tx_signature"]
     async with async_session() as session:
@@ -137,8 +143,12 @@ async def record_buy(buy_data: dict) -> bool:
             return False
 
         session.add(TokenBuy(**buy_data))
-        await session.commit()
-        return True
+        try:
+            await session.commit()
+            return True
+        except IntegrityError:
+            await session.rollback()
+            return False
 
 
 async def get_recent_buys(token_address: str, minutes: int = 30) -> list[TokenBuy]:
@@ -350,8 +360,12 @@ async def record_payment(user_id: int, amount_sol: float, tx_signature: str,
             period_days=period_days,
             verified=True,
         ))
-        await session.commit()
-        return True
+        try:
+            await session.commit()
+            return True
+        except IntegrityError:
+            await session.rollback()
+            return False
 
 
 # === Referral operations ===
