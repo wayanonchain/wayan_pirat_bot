@@ -37,43 +37,6 @@ from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
 dp.include_router(acc_router)
 
 
-# ── DIAGNOSTIC: raw update + message catch-all.
-from aiogram.types import Update
-
-
-@dp.update.outer_middleware()
-async def _diag_raw_update(handler, event: Update, data):
-    keys = [k for k, v in event.model_dump(exclude_none=True).items() if k != "update_id"]
-    txt = None
-    if event.message:
-        txt = event.message.text
-    logger.info("[raw-update] id=%s kind=%s text=%r", event.update_id, keys, txt)
-    return await handler(event, data)
-
-
-_diag_router = Router(name="_diag")
-
-
-@_diag_router.message()
-async def _diag_dp_catchall(message: Message):
-    logger.info(
-        "[dp-diag] fell through all routers: text=%r user=%s chat_type=%s",
-        message.text, message.from_user.id if message.from_user else None,
-        message.chat.type if message.chat else None,
-    )
-
-
-dp.include_router(_diag_router)
-
-
-# Direct dp.message registration (NOT via router) — will fire alongside
-# router-chain. If this triggers but _diag_dp_catchall doesn't, the
-# problem is in how aiogram iterates sub_routers.
-@dp.message()
-async def _diag_dp_direct(message: Message):
-    logger.info("[dp-direct] text=%r", message.text)
-
-
 # ============================================================
 #  Delayed Meteora reminder for new users (24h after /start)
 # ============================================================

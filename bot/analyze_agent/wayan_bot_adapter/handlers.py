@@ -214,13 +214,3 @@ async def cmd_acc_scan(message: Message):
     )
 
 
-# ── DIAGNOSTIC: temporary catch-all so we can see which messages
-#    reach this router but don't match any Command filter above.
-#    Registered LAST so it only fires when nothing else matched.
-@acc_router.message()
-async def _diag_catchall(message: Message):
-    log.info(
-        "[acc-diag] unhandled in acc_router: text=%r user=%s",
-        message.text,
-        message.from_user.id if message.from_user else None,
-    )
