@@ -72,6 +72,14 @@ LOG_CHAT_SIGNALS_THREAD_ID: int | None = (
     int(_signals_thread_raw) if _signals_thread_raw.strip() else None
 )
 
+# Master switch for the webhook-driven "2+ SM wallets buy same token"
+# signal. Defaults OFF — it was disabled 2026-03-31 for API cost reasons
+# and should only be re-enabled deliberately. The accumulation module
+# (Wyckoff pattern alerts) runs on its own independent of this flag.
+WEBHOOK_SIGNALS_ENABLED = os.getenv("WEBHOOK_SIGNALS_ENABLED", "false").lower() in (
+    "1", "true", "yes", "on",
+)
+
 # === Subscription / Payment ===
 PAYMENT_WALLET = os.getenv("PAYMENT_WALLET", "")
 PREMIUM_PRICE_SOL = float(os.getenv("PREMIUM_PRICE_SOL", "0.15"))

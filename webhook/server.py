@@ -4,13 +4,14 @@ import hmac
 import json
 import logging
 import os
+from datetime import datetime
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from core.signal_detector import process_buy
 from bot.telegram_bot import send_signal, send_message
 from bot.bot_bridge import submit as submit_to_main_loop
-from config.settings import HELIUS_WEBHOOK_AUTH
+from config.settings import HELIUS_WEBHOOK_AUTH, WEBHOOK_SIGNALS_ENABLED
 from db import repository as repo
 from api.birdeye_client import get_sol_price
 
@@ -163,6 +164,30 @@ async def process_transaction(tx: dict):
 
     logger.info(f"Buy detected: {fee_payer[:8]}... bought {token_symbol} "
                 f"({token_address[:8]}...) for ${swap_info['amount_usd']:.2f}")
+
+    # record_buy still runs inside process_buy — the accumulation module
+    # reads token_buys regardless of whether we alert. The alert path
+    # (send_signal → admin DM + subscribers + log-chat mirror) is gated:
+    # when WEBHOOK_SIGNALS_ENABLED is off we skip signal creation AND
+    # alerting so no Telegram traffic is generated.
+    if not WEBHOOK_SIGNALS_ENABLED:
+        # Just persist the buy for the accumulation-module pipeline.
+        from sqlalchemy.exc import OperationalError
+        try:
+            await repo.record_buy({
+                "wallet_address": fee_payer,
+                "token_address": token_address,
+                "token_symbol": token_symbol,
+                "amount_usd": swap_info["amount_usd"],
+                "amount_token": swap_info.get("amount_token", 0),
+                "amount_sol": swap_info.get("amount_sol", 0),
+                "tx_signature": signature,
+                "timestamp": datetime.utcnow(),
+                "mcap_at_buy": swap_info.get("mcap"),
+            })
+        except OperationalError as e:
+            logger.warning(f"DB busy recording buy: {e}")
+        return
 
     # Process through signal detector
     signal = await process_buy(
