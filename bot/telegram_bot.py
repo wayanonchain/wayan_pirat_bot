@@ -37,6 +37,25 @@ from bot.analyze_agent.wayan_bot_adapter.handlers import acc_router
 dp.include_router(acc_router)
 
 
+# ── DIAGNOSTIC: raw message logger at the dispatcher level.
+# Registered via a sentinel router so it sits LAST and only fires when
+# every other router skipped the update. Helps locate where /scan gets
+# silently swallowed.
+_diag_router = Router(name="_diag")
+
+
+@_diag_router.message()
+async def _diag_dp_catchall(message: Message):
+    logger.info(
+        "[dp-diag] fell through all routers: text=%r user=%s chat_type=%s",
+        message.text, message.from_user.id if message.from_user else None,
+        message.chat.type if message.chat else None,
+    )
+
+
+dp.include_router(_diag_router)
+
+
 # ============================================================
 #  Delayed Meteora reminder for new users (24h after /start)
 # ============================================================
