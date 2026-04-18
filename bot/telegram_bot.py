@@ -8,6 +8,7 @@ from aiogram import Bot, Dispatcher, Router
 from aiogram.filters import Command, CommandObject
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from aiogram import F
+from aiogram.exceptions import TelegramRetryAfter
 
 from config.settings import (
     TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ADMIN_IDS,
@@ -179,18 +180,28 @@ async def send_signal(signal: dict):
 
     # Mirror into the team log chat's "Signals" topic so every admin sees
     # every signal in one place. Independent of the admin-DM path above —
-    # a failure here shouldn't block subscriber delivery.
+    # a failure here shouldn't block subscriber delivery. Telegram flood
+    # control (TelegramRetryAfter) is handled with one sleep-and-retry;
+    # anything else is logged as a warning and swallowed.
     if LOG_CHAT_ID and LOG_CHAT_SIGNALS_THREAD_ID is not None:
-        try:
-            await bot.send_message(
-                chat_id=LOG_CHAT_ID,
-                text=text_full,
-                parse_mode="HTML",
-                disable_web_page_preview=True,
-                message_thread_id=LOG_CHAT_SIGNALS_THREAD_ID,
-            )
-        except Exception as e:
-            logger.warning(f"Failed to mirror signal to log chat thread: {e}")
+        for attempt in range(2):
+            try:
+                await bot.send_message(
+                    chat_id=LOG_CHAT_ID,
+                    text=text_full,
+                    parse_mode="HTML",
+                    disable_web_page_preview=True,
+                    message_thread_id=LOG_CHAT_SIGNALS_THREAD_ID,
+                )
+                break
+            except TelegramRetryAfter as e:
+                if attempt == 0:
+                    await asyncio.sleep(e.retry_after + 0.5)
+                    continue
+                logger.warning(f"Signal mirror dropped after retry: {e}")
+            except Exception as e:
+                logger.warning(f"Failed to mirror signal to log chat thread: {e}")
+                break
 
     subscribers = await repo.get_active_subscriber_ids()
     for user_id, tier in subscribers.items():
