@@ -32,6 +32,9 @@ class DataFetcher:
             timeout=timeout,
             headers={"User-Agent": "AccumulationAgent/1.0"},
         )
+        # Short-lived cache (key: (address, chain) → (ts, pair dict)) so a
+        # single monitor cycle only hits DexScreener once per token.
+        self._pair_cache: dict[tuple[str, str], tuple[float, Optional[dict]]] = {}
 
     async def close(self):
         await self._client.aclose()
@@ -40,62 +43,66 @@ class DataFetcher:
     # Token metadata via DexScreener
     # ─────────────────────────────────────────────────────────────
 
-    async def get_token_metadata(self, address: str, chain: str = "solana") -> Optional[TokenMetadata]:
-        """Fetch current token stats from DexScreener.
-
-        If chain is "auto" or missing, chain is inferred from the pair with
-        the deepest liquidity returned by DexScreener.
+    async def _fetch_best_pair(self, address: str, chain: str = "solana") -> Optional[dict]:
+        """Single DexScreener request; returns the best pair (by liquidity,
+        optionally filtered to the requested chain). Cached for a short
+        window so get_token_metadata and get_pool_address don't hit
+        DexScreener twice for the same token on the same pass.
         """
+        cache_key = (address, chain)
+        cached = self._pair_cache.get(cache_key)
+        if cached and (time.time() - cached[0]) < 30:
+            return cached[1]
         try:
             url = f"{DEXSCREENER_BASE}/tokens/{address}"
             r = await self._client.get(url)
             r.raise_for_status()
-            data = r.json()
-
-            pairs = data.get("pairs") or []
+            pairs = (r.json() or {}).get("pairs") or []
             if not pairs:
-                log.warning("No pairs found for %s", address)
+                self._pair_cache[cache_key] = (time.time(), None)
                 return None
-
-            # If a specific chain is requested, prefer pairs on that chain.
             chain_lower = (chain or "").lower()
             if chain_lower and chain_lower != "auto":
                 filtered = [p for p in pairs if (p.get("chainId") or "").lower() == chain_lower]
                 if filtered:
                     pairs = filtered
-
-            # берём пару с наибольшей ликвидностью
-            pair = max(pairs, key=lambda p: float(p.get("liquidity", {}).get("usd", 0) or 0))
-
-            base = pair.get("baseToken", {})
-            liq  = pair.get("liquidity", {})
-            mcap = pair.get("marketCap") or pair.get("fdv") or 0
-            price = float(pair.get("priceUsd") or 0)
-
-            # ATH mcap из DexScreener unavailable directly — используем h24 high как прокси
-            # Настоящий ATH придётся хранить в state.json и обновлять
-            ath_mcap = float(pair.get("marketCap") or mcap)  # placeholder, обновляется в state
-
-            pair_addr = pair.get("pairAddress", "")
-            chain_id  = pair.get("chainId", chain)
-
-            return TokenMetadata(
-                address=address,
-                symbol=base.get("symbol", "???"),
-                name=base.get("name", ""),
-                chain=chain_id,
-                current_price=price,
-                current_mcap=float(mcap),
-                ath_mcap=ath_mcap,
-                liquidity_usd=float(liq.get("usd", 0) or 0),
-                holders=0,    # DexScreener не даёт holders — обновляем из GeckoTerminal
-                age_days=self._compute_age_days(pair.get("pairCreatedAt")),
-                dexscreener_url=f"https://dexscreener.com/{chain_id}/{pair_addr}",
-                birdeye_url=f"https://birdeye.so/token/{address}",
-            )
+            best = max(pairs, key=lambda p: float((p.get("liquidity") or {}).get("usd", 0) or 0))
+            self._pair_cache[cache_key] = (time.time(), best)
+            return best
         except Exception as e:
-            log.error("get_token_metadata failed for %s: %s", address, e)
+            log.error("DexScreener fetch failed for %s: %s", address, e)
             return None
+
+    async def get_token_metadata(self, address: str, chain: str = "solana") -> Optional[TokenMetadata]:
+        """Fetch current token stats. Uses the per-request pair cache so a
+        subsequent get_pool_address does NOT make a second DexScreener call.
+        """
+        pair = await self._fetch_best_pair(address, chain)
+        if not pair:
+            return None
+
+        base = pair.get("baseToken", {})
+        liq  = pair.get("liquidity", {})
+        mcap = pair.get("marketCap") or pair.get("fdv") or 0
+        price = float(pair.get("priceUsd") or 0)
+        ath_mcap = float(pair.get("marketCap") or mcap)  # placeholder, updated via state
+        pair_addr = pair.get("pairAddress", "")
+        chain_id  = pair.get("chainId", chain)
+
+        return TokenMetadata(
+            address=address,
+            symbol=base.get("symbol", "???"),
+            name=base.get("name", ""),
+            chain=chain_id,
+            current_price=price,
+            current_mcap=float(mcap),
+            ath_mcap=ath_mcap,
+            liquidity_usd=float(liq.get("usd", 0) or 0),
+            holders=0,
+            age_days=self._compute_age_days(pair.get("pairCreatedAt")),
+            dexscreener_url=f"https://dexscreener.com/{chain_id}/{pair_addr}",
+            birdeye_url=f"https://birdeye.so/token/{address}",
+        )
 
     def _compute_age_days(self, created_at_ms: Optional[int]) -> float:
         if not created_at_ms:
@@ -154,29 +161,13 @@ class DataFetcher:
         token_address: str,
         chain: str = "solana",
     ) -> tuple[Optional[str], str]:
-        """Get primary pool address for a token from DexScreener.
-
-        Returns (pool_address, resolved_chain). resolved_chain is the chain
-        reported by DexScreener for the selected pool — useful when caller
-        passed chain="auto".
+        """Pool address + resolved chain. Reuses the cached pair from the
+        most recent get_token_metadata call on the same token.
         """
-        try:
-            url = f"{DEXSCREENER_BASE}/tokens/{token_address}"
-            r = await self._client.get(url)
-            r.raise_for_status()
-            pairs = r.json().get("pairs") or []
-            if not pairs:
-                return None, chain
-            chain_lower = (chain or "").lower()
-            if chain_lower and chain_lower != "auto":
-                filtered = [p for p in pairs if (p.get("chainId") or "").lower() == chain_lower]
-                if filtered:
-                    pairs = filtered
-            best = max(pairs, key=lambda p: float(p.get("liquidity", {}).get("usd", 0) or 0))
-            return best.get("pairAddress"), (best.get("chainId") or chain).lower()
-        except Exception as e:
-            log.error("get_pool_address failed: %s", e)
+        pair = await self._fetch_best_pair(token_address, chain)
+        if not pair:
             return None, chain
+        return pair.get("pairAddress"), (pair.get("chainId") or chain).lower()
 
     async def get_holders(self, token_address: str, chain: str = "solana") -> int:
         """Get holder count. Tries GeckoTerminal first (free, works for EVM
