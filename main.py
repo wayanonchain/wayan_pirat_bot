@@ -189,6 +189,20 @@ async def main():
 
     _raise_fd_limit()
 
+    # Register the main event loop so code running in the webhook thread
+    # (uvicorn's loop) can submit coroutines back to the Bot's loop via
+    # asyncio.run_coroutine_threadsafe — otherwise aiohttp raises "Timeout
+    # context manager should be used inside a task".
+    from bot.bot_bridge import register_main_loop
+    register_main_loop()
+
+    # Forward ERROR+ log records to the team chat so technical issues are
+    # visible without tailing journalctl.
+    from bot.alerter import install as install_alerter
+    from config.settings import LOG_CHAT_ID
+    if LOG_CHAT_ID:
+        install_alerter(LOG_CHAT_ID)
+
     await init_database()
 
     from bot.telegram_bot import send_message

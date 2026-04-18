@@ -9,6 +9,7 @@ from fastapi.responses import JSONResponse
 
 from core.signal_detector import process_buy
 from bot.telegram_bot import send_signal, send_message
+from bot.bot_bridge import submit as submit_to_main_loop
 from config.settings import HELIUS_WEBHOOK_AUTH
 from db import repository as repo
 from api.birdeye_client import get_sol_price
@@ -182,16 +183,29 @@ async def process_transaction(tx: dict):
         except Exception as e:
             logger.warning(f"Accumulation Score error: {e}")
 
-        await send_signal(signal)
+        # send_signal uses the aiogram Bot (aiohttp session) whose loop is the
+        # main one. We're running in uvicorn's loop here, so hop over.
+        submit_to_main_loop(send_signal(signal))
 
 
 async def _handle_sell_alert(wallet: str, swap_info: dict, signature: str):
-    """Send sell alert when SM wallet sells a previously signaled token."""
+    """Send sell alert when SM wallet sells a previously signaled token.
+
+    Kicks off the fanout on the main loop (the one the Bot session lives on).
+    """
     token_address = swap_info["token_address"]
     token_symbol = _signaled_tokens.get(token_address, swap_info.get("token_symbol", "???"))
     amount_usd = swap_info.get("amount_usd", 0)
     amount_sol = swap_info.get("amount_sol", 0)
 
+    submit_to_main_loop(_dispatch_sell_alert(
+        wallet, token_address, token_symbol, amount_usd, amount_sol, signature
+    ))
+
+
+async def _dispatch_sell_alert(wallet: str, token_address: str, token_symbol: str,
+                               amount_usd: float, amount_sol: float, signature: str):
+    """Runs on the main loop — safe to use the Bot session here."""
     short_addr = f"{wallet[:6]}...{wallet[-4:]}"
 
     subscribers = await repo.get_active_subscriber_ids()
@@ -213,14 +227,12 @@ async def _handle_sell_alert(wallet: str, swap_info: dict, signature: str):
         f'<a href="https://solscan.io/tx/{signature}">View TX</a>'
     )
 
-    # Send to admin
     try:
         await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=text, parse_mode="HTML",
                                disable_web_page_preview=True)
-    except Exception:
-        pass
+    except Exception as e:
+        logger.warning(f"Sell alert admin send failed: {e}")
 
-    # Send to premium subscribers
     sent_to = []
     for user_id in premium_plus_users:
         if str(user_id) == str(TELEGRAM_CHAT_ID):
@@ -234,7 +246,6 @@ async def _handle_sell_alert(wallet: str, swap_info: dict, signature: str):
         except Exception as e:
             logger.warning(f"Failed to send sell alert to {user_id}: {e}")
 
-    # Log sell alert delivery to team chat
     if sent_to:
         from bot.activity_log import _send_log
         recipients = ", ".join(sent_to)
