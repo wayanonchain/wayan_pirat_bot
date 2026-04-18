@@ -66,6 +66,14 @@ async def _diag_dp_catchall(message: Message):
 dp.include_router(_diag_router)
 
 
+# Direct dp.message registration (NOT via router) — will fire alongside
+# router-chain. If this triggers but _diag_dp_catchall doesn't, the
+# problem is in how aiogram iterates sub_routers.
+@dp.message()
+async def _diag_dp_direct(message: Message):
+    logger.info("[dp-direct] text=%r", message.text)
+
+
 # ============================================================
 #  Delayed Meteora reminder for new users (24h after /start)
 # ============================================================
