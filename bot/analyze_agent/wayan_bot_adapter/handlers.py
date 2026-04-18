@@ -32,15 +32,6 @@ log = logging.getLogger(__name__)
 
 acc_router = Router(name="accumulation")
 
-
-# Router-scoped outer middleware — fires only for updates routed here,
-# does NOT swallow them (returns await handler(...)).
-@acc_router.message.outer_middleware()
-async def _acc_router_probe(handler, event, data):
-    log.info("[acc-probe] text=%r", getattr(event, "text", None))
-    return await handler(event, data)
-
-
 _ADDR_RE = re.compile(r"^(0x[a-fA-F0-9]{40}|[1-9A-HJ-NP-Za-km-z]{32,44})$")
 
 
