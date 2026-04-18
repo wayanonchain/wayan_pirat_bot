@@ -72,9 +72,12 @@ async def get_discount_info(user_id: int) -> dict:
             else:
                 course_discount_reason = "promo"
 
+    # Cap stacked discount at 100% — a future promo code combined with
+    # referral could otherwise compute a negative price.
+    course_discount_pct = min(100, course_discount_pct)
     course_price = COURSE_PRICE_USDT
     if course_discount_pct:
-        course_price = COURSE_PRICE_USDT * (1 - course_discount_pct / 100)
+        course_price = max(0, COURSE_PRICE_USDT * (1 - course_discount_pct / 100))
 
     # Community discount: based on how many friends bought course (no course ownership needed)
     community_discount_pct = 0
@@ -87,9 +90,10 @@ async def get_discount_info(user_id: int) -> dict:
             community_discount_reason = f"referral_{paid_refs}"
             break
 
+    community_discount_pct = min(100, community_discount_pct)
     community_price = COMMUNITY_PRICE_USDT
     if community_discount_pct:
-        community_price = COMMUNITY_PRICE_USDT * (1 - community_discount_pct / 100)
+        community_price = max(0, COMMUNITY_PRICE_USDT * (1 - community_discount_pct / 100))
 
     return {
         "course_price": course_price,

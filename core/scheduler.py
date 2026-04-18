@@ -15,7 +15,17 @@ logger = logging.getLogger(__name__)
 
 MSK = timezone(timedelta(hours=3))
 
-scheduler = AsyncIOScheduler(timezone=MSK)
+# max_instances=1 + coalesce=True default on every job: prevents overlap when
+# a long-running job is still going when the next cron tick fires.
+# misfire_grace_time=600 lets a job fire up to 10 min late (e.g. after a
+# restart) instead of silently skipping.
+_JOB_DEFAULTS = {
+    "max_instances": 1,
+    "coalesce": True,
+    "misfire_grace_time": 600,
+}
+
+scheduler = AsyncIOScheduler(timezone=MSK, job_defaults=_JOB_DEFAULTS)
 
 
 async def _run_daily_stats():
