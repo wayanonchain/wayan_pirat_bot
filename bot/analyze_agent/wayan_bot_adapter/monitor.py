@@ -193,7 +193,7 @@ async def run_monitor_once(alerter=None, cfg: AgentConfig = BALANCED) -> dict:
                     results.append(r)
             except Exception as e:
                 log.error("monitor_one failed for %s: %s", entry.token_address, e)
-            await asyncio.sleep(0.5)  # light rate-limit guard
+            await asyncio.sleep(1.5)  # DexScreener/GeckoTerminal rate-limit guard
 
         expired = await repo.mark_stale_old_entries(max_age_days=60)
         if expired:

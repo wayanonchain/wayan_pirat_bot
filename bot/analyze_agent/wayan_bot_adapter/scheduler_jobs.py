@@ -35,7 +35,7 @@ async def _job_discover():
         await discovery.run_discovery(
             window_hours=72,
             min_unique_wallets=2,
-            min_total_usd=500,
+            min_total_usd=2_000,   # filter out dust buys
         )
     except Exception as e:
         log.exception("Accumulation discovery job failed: %s", e)

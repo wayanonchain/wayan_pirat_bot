@@ -1,7 +1,7 @@
 """
 Aiogram 3 router exposing accumulation commands:
 
-    /analyze <contract>    — one-shot deep analysis (any user)
+    /scan <contract>       — one-shot deep analysis (any user)
     /acc                   — show current watchlist state (admin)
     /acc_add <contract>    — manually enrol a token (admin)
     /acc_remove <contract> — remove a token (admin)
@@ -55,12 +55,12 @@ def _is_admin(message: Message) -> bool:
 # /analyze — available to everyone (the public product surface)
 # ─────────────────────────────────────────────────────────────────────────
 
-@acc_router.message(Command("analyze"))
+@acc_router.message(Command("scan"))
 async def cmd_analyze(message: Message, command: CommandObject):
     address = _extract_address(command.args or "")
     if not address:
         await message.reply(
-            "Использование: <code>/analyze &lt;адрес контракта&gt;</code>\n\n"
+            "Использование: <code>/scan &lt;адрес контракта&gt;</code>\n\n"
             "Поддержка: Solana, Ethereum, Base, BSC, Arbitrum.",
             parse_mode="HTML",
         )
@@ -170,7 +170,7 @@ async def cmd_acc_discover(message: Message):
     status = await message.reply("🔍 Запускаю SM-discovery...")
     try:
         result = await discovery.run_discovery(
-            window_hours=72, min_unique_wallets=2, min_total_usd=500,
+            window_hours=72, min_unique_wallets=2, min_total_usd=2_000,
         )
     except Exception as e:
         log.exception("discovery failed")

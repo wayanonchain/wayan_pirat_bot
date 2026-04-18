@@ -28,8 +28,9 @@ async def find_sm_candidates(
     db_path: str,
     window_hours: int = 72,
     min_unique_wallets: int = 2,
-    min_total_usd: float = 500.0,
+    min_total_usd: float = 2_000.0,
     max_mcap_at_buy: Optional[float] = None,
+    limit: int = 50,
 ) -> list[dict]:
     """Return token candidates matching the SM-coincidence threshold.
 
@@ -37,6 +38,10 @@ async def find_sm_candidates(
     most recent buy timestamp and the symbol seen on those buys. The
     optional max_mcap_at_buy guard filters out tokens that were already
     mega-cap when the wallets bought (we want low/mid-cap discovery).
+
+    Hard-capped at `limit` candidates (default 50) to keep the monitor's
+    per-tick cost bounded — each candidate triggers 3-4 external API
+    calls, so an unbounded list can blow through DexScreener rate limits.
     """
     cutoff = datetime.utcnow() - timedelta(hours=window_hours)
     cutoff_s = cutoff.strftime("%Y-%m-%d %H:%M:%S")
@@ -57,12 +62,13 @@ async def find_sm_candidates(
         HAVING n_wallets >= ?
            AND total_usd >= ?
         ORDER BY n_wallets DESC, total_usd DESC
+        LIMIT ?
     """
     async with aiosqlite.connect(db_path) as db:
         db.row_factory = aiosqlite.Row
         cur = await db.execute(
             query,
-            (cutoff_s, min_unique_wallets, min_total_usd),
+            (cutoff_s, min_unique_wallets, min_total_usd, limit),
         )
         rows = await cur.fetchall()
 
@@ -104,7 +110,7 @@ async def run_discovery(
     db_path: Optional[str] = None,
     window_hours: int = 72,
     min_unique_wallets: int = 2,
-    min_total_usd: float = 500.0,
+    min_total_usd: float = 2_000.0,
 ) -> dict:
     """One-shot discovery run. Safe to invoke from a scheduler wrapper."""
     path = db_path or repo._db_path()
@@ -135,7 +141,7 @@ if __name__ == "__main__":
     parser.add_argument("--db", help="Path to bot.db (default: env WAYAN_SM_DB_PATH)")
     parser.add_argument("--window", type=int, default=72)
     parser.add_argument("--min-wallets", type=int, default=2)
-    parser.add_argument("--min-usd", type=float, default=500.0)
+    parser.add_argument("--min-usd", type=float, default=2_000.0)
     args = parser.parse_args()
     result = asyncio.run(run_discovery(
         db_path=args.db,
