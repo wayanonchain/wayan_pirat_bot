@@ -23,6 +23,141 @@ from bot import bot_bridge
 
 logger = logging.getLogger(__name__)
 
+
+# Известные паттерны ошибок → человекопонятное объяснение на русском.
+# Матчим по подстроке (или regex) в тексте сообщения + traceback. Первый
+# совпавший паттерн выигрывает, порядок важен (конкретное выше общего).
+# Каждая подсказка должна отвечать на два вопроса: ЧТО случилось и
+# НАСКОЛЬКО это серьёзно / что делать.
+_ERROR_HINTS: list[tuple[str, str]] = [
+    # --- База данных / SQLAlchemy / SQLite ---
+    (
+        "QueuePool limit",
+        "БД: пул соединений исчерпан. Под нагрузкой webhook-а "
+        "слишком много одновременных запросов к SQLite. "
+        "Самовосстанавливается, когда бёрст спадает. Если повторяется часто — "
+        "поднимать pool_size/overflow в db/repository.py.",
+    ),
+    (
+        "database is locked",
+        "БД: SQLite не смог получить write-lock за busy_timeout. "
+        "Обычно это гонка нескольких писателей. "
+        "Самовосстанавливается; одиночные записи теряются и воспроизводятся "
+        "следующим событием.",
+    ),
+    (
+        "no such table",
+        "БД: таблица не найдена — не прогнали миграцию. "
+        "Запустить init_db() / migrate.py.",
+    ),
+    (
+        "UNIQUE constraint failed",
+        "БД: попытка вставить дубликат по уникальному индексу. "
+        "Обычно это гонка двух webhook-ов на один tx — не страшно.",
+    ),
+    (
+        "disk I/O error",
+        "БД: ошибка диска (возможно кончилось место или упал FS). "
+        "Проверить `df -h` на VPS.",
+    ),
+    # --- Telegram / aiogram ---
+    (
+        "TelegramNetworkError",
+        "Telegram: сеть моргнула / long-polling getUpdates таймаутнулся. "
+        "Штатный шум aiogram — бот сам переподключается, апдейты не теряются.",
+    ),
+    (
+        "Request timeout error",
+        "Telegram: запрос не уложился в таймаут HTTP-клиента. "
+        "Обычно это long-polling — aiogram сам перезапустит.",
+    ),
+    (
+        "Too Many Requests",
+        "Telegram: rate-limit 429 (flood control). "
+        "Ретраим через retry_after, ничего делать не нужно.",
+    ),
+    (
+        "bot was blocked by the user",
+        "Telegram: юзер забанил бота. Это норма — просто пропускаем рассылку.",
+    ),
+    (
+        "chat not found",
+        "Telegram: чат/юзер не найден (удалил аккаунт или не писал боту). Норма.",
+    ),
+    (
+        "message thread not found",
+        "Telegram: тред в супергруппе не существует. "
+        "Проверить message_thread_id в конфиге чата логов.",
+    ),
+    (
+        "can't parse entities",
+        "Telegram: битая HTML/Markdown разметка в исходящем сообщении. "
+        "Смотреть текст — скорее всего незакрытый тег или '<' без экранирования.",
+    ),
+    (
+        "Unauthorized",
+        "Telegram: токен бота невалиден или отозван. Критично — проверить BOT_TOKEN.",
+    ),
+    # --- Внешние API ---
+    (
+        "Helius",
+        "Helius API: ошибка внешнего провайдера. "
+        "Проверить ключ, лимиты плана, статус helius.dev.",
+    ),
+    (
+        "birdeye",
+        "Birdeye API: ошибка получения цены/метаданных токена. "
+        "Обычно 429/5xx — самовосстанавливается.",
+    ),
+    (
+        "SSLError",
+        "Сеть: ошибка SSL-рукопожатия с внешним API. Обычно транзиентная.",
+    ),
+    (
+        "ConnectionResetError",
+        "Сеть: удалённая сторона закрыла соединение. Ретраим.",
+    ),
+    (
+        "ClientConnectorError",
+        "Сеть: не смогли соединиться с внешним API (DNS/down). "
+        "Если повторяется — смотреть статус провайдера.",
+    ),
+    # --- Код / структурные ошибки ---
+    (
+        "KeyError",
+        "Код: отсутствует ожидаемый ключ в словаре. "
+        "Формат ответа API изменился или данные не того вида — смотреть traceback.",
+    ),
+    (
+        "AttributeError",
+        "Код: обращение к несуществующему атрибуту (None?). Смотреть traceback.",
+    ),
+    (
+        "TypeError",
+        "Код: несовпадение типов. Смотреть traceback.",
+    ),
+    (
+        "JSONDecodeError",
+        "Код: пришёл не-JSON от внешнего API (часто это HTML-страница ошибки).",
+    ),
+    (
+        "asyncio.TimeoutError",
+        "Код: await не уложился в timeout. Смотреть, кто именно таймаутит.",
+    ),
+]
+
+
+def _hint_for(record: logging.LogRecord) -> str | None:
+    """Подобрать русское пояснение по сообщению + traceback."""
+    haystack = record.getMessage()
+    if record.exc_info:
+        import traceback
+        haystack += "\n" + "".join(traceback.format_exception(*record.exc_info))
+    for needle, hint in _ERROR_HINTS:
+        if needle in haystack:
+            return hint
+    return None
+
 # Loggers whose output should never reach Telegram — either it's already
 # covered elsewhere (activity_log posts to the same chat) or it's noisy
 # transient failures that the system self-heals from.
@@ -109,6 +244,10 @@ class TelegramAlertHandler(logging.Handler):
             f"<b>{html.escape(record.name)}</b>",
             f"<pre>{msg}</pre>",
         ]
+
+        hint = _hint_for(record)
+        if hint:
+            lines.append(f"💡 <b>Причина:</b> {html.escape(hint)}")
 
         if record.exc_info:
             import traceback

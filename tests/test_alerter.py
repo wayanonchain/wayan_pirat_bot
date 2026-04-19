@@ -7,7 +7,7 @@ calls — ``bot_bridge.submit`` is stubbed in ``conftest.py``.
 import logging
 import time
 
-from bot.alerter import TelegramAlertHandler
+from bot.alerter import TelegramAlertHandler, _hint_for
 
 
 def _record(level, name, msg, exc_info=None):
@@ -115,6 +115,33 @@ def test_suppressed_count_reported(monkeypatch):
     assert len(texts) == 2
     assert "suppressed" not in texts[0]
     assert "+3 suppressed" in texts[1]
+
+
+def test_hint_matches_known_error():
+    r = _record(logging.ERROR, "webhook.server",
+                "QueuePool limit of size 5 overflow 10 reached")
+    assert "пул соединений исчерпан" in (_hint_for(r) or "")
+
+
+def test_hint_telegram_network_error():
+    r = _record(logging.ERROR, "aiogram.dispatcher",
+                "Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error")
+    hint = _hint_for(r) or ""
+    assert "Telegram" in hint
+
+
+def test_hint_none_for_unknown_error():
+    r = _record(logging.ERROR, "core.x", "some brand new error")
+    assert _hint_for(r) is None
+
+
+def test_format_message_includes_russian_hint():
+    handler = TelegramAlertHandler(chat_id="-1000")
+    r = _record(logging.ERROR, "webhook.server",
+                "QueuePool limit of size 5 overflow 10 reached")
+    text = handler._format_message(r)
+    assert "Причина:" in text
+    assert "пул соединений" in text
 
 
 def test_format_message_escapes_html():
