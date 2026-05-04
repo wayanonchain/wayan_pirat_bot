@@ -4,6 +4,7 @@ import hmac
 import json
 import logging
 import os
+import time
 from datetime import datetime
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
@@ -34,6 +35,11 @@ _monitored_addresses: set[str] = set()
 
 # Track tokens that had signals (for sell alerts)
 _signaled_tokens: dict[str, str] = {}  # {token_address: token_symbol}
+
+# Wall-clock of last successful webhook handling — read by /health so an
+# external watchdog can tell "process up but not receiving events" apart
+# from "process up and busy".
+_last_event_at: float = 0.0
 
 
 TRACKED_TOKENS_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "tracked_tokens.json")
@@ -74,12 +80,19 @@ async def startup():
 
 @app.get("/health")
 async def health():
-    sol_price = await get_sol_price()
+    """Lightweight liveness probe. No external API calls — must answer fast
+    so an external watchdog can detect a frozen event loop with a 5s timeout.
+    """
+    now = time.time()
+    seconds_since_last_event = (
+        int(now - _last_event_at) if _last_event_at else None
+    )
     return {
         "status": "ok",
         "monitored_wallets": len(_monitored_addresses),
-        "sol_price_usd": sol_price,
         "tracked_signal_tokens": len(_signaled_tokens),
+        "last_event_at": _last_event_at or None,
+        "seconds_since_last_event": seconds_since_last_event,
     }
 
 
@@ -119,6 +132,8 @@ async def helius_webhook(request: Request):
         except Exception as e:
             logger.error(f"Error processing tx: {e}", exc_info=True)
 
+    global _last_event_at
+    _last_event_at = time.time()
     return {"processed": processed}
 
 
