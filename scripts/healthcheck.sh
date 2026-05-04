@@ -7,9 +7,13 @@
 # to catch (see incident 2026-05-04 where retry-storm froze the loop while
 # the process stayed "active").
 #
-# On 1st consecutive failure: alert to Telegram error thread.
-# On 2nd consecutive failure: alert + `systemctl restart wayan-bot`.
+# On 1st consecutive failure: capture py-spy stack dump + alert to Telegram.
+# On 2nd consecutive failure: capture second dump + alert + restart service.
 # On success: reset the counter.
+#
+# Stack dumps are written to $DUMP_DIR/freeze-<timestamp>.txt — they tell us
+# where the loop was stuck when it stopped responding (added 2026-05-04 after
+# repeated freezes with no smoking-gun in journalctl).
 #
 # Designed to be run by a systemd timer every few minutes.
 
@@ -20,8 +24,12 @@ HEALTH_URL="${HEALTH_URL:-http://127.0.0.1:8080/health}"
 SERVICE="${SERVICE:-wayan-bot}"
 STATE_FILE="${STATE_FILE:-/var/lib/wayan-bot/health_failures}"
 TIMEOUT="${TIMEOUT:-5}"
+DUMP_DIR="${DUMP_DIR:-/var/log/wayan-bot}"
+PY_SPY="${PY_SPY:-/usr/local/bin/py-spy}"
+DUMP_RETAIN="${DUMP_RETAIN:-20}"
 
 mkdir -p "$(dirname "$STATE_FILE")"
+mkdir -p "$DUMP_DIR"
 
 # Load .env into the environment (only the keys we use, no expansion games).
 # shellcheck disable=SC1090
@@ -65,6 +73,42 @@ probe() {
     [[ "$http_code" == "200" ]]
 }
 
+# Capture a py-spy stack dump of the bot's main process. We do this *before*
+# the restart so we can see where the event loop was stuck. Output goes to
+# $DUMP_DIR/freeze-<UTC-timestamp>-<tag>.txt; only the most recent
+# $DUMP_RETAIN dumps are kept.
+capture_dump() {
+    local tag="$1"
+    local pid ts dump_path
+    pid="$(systemctl show -p MainPID --value "$SERVICE" 2>/dev/null || echo 0)"
+    if [[ -z "$pid" || "$pid" == "0" ]]; then
+        echo "no MainPID for $SERVICE, skipping py-spy dump" >&2
+        return 1
+    fi
+    if [[ ! -x "$PY_SPY" ]]; then
+        echo "py-spy not at $PY_SPY, skipping dump" >&2
+        return 1
+    fi
+    ts="$(date -u +%Y%m%dT%H%M%SZ)"
+    dump_path="${DUMP_DIR}/freeze-${ts}-${tag}.txt"
+    {
+        echo "# py-spy dump captured by healthcheck.sh"
+        echo "# host:    $(hostname -s)"
+        echo "# pid:     ${pid}"
+        echo "# tag:     ${tag}"
+        echo "# time:    ${ts}"
+        echo "# service: ${SERVICE}"
+        echo "----- py-spy dump -----"
+        timeout 15 "$PY_SPY" dump --pid "$pid" 2>&1
+    } > "$dump_path" 2>&1
+    # Trim old dumps (keep newest $DUMP_RETAIN).
+    ls -1t "$DUMP_DIR"/freeze-*.txt 2>/dev/null \
+        | tail -n +$((DUMP_RETAIN + 1)) \
+        | xargs -r rm -f
+    DUMP_PATH="$dump_path"
+    return 0
+}
+
 failures="$(read_failures)"
 hostname_short="$(hostname -s)"
 
@@ -79,10 +123,17 @@ fi
 failures=$((failures + 1))
 write_failures "$failures"
 
+DUMP_PATH=""
+if capture_dump "f${failures}"; then
+    dump_note=" Stack dump: <code>${DUMP_PATH}</code>"
+else
+    dump_note=" (stack dump not captured)"
+fi
+
 if [[ "$failures" -ge 2 ]]; then
-    tg_alert "🚨 <b>wayan-bot</b> healthcheck failed ${failures}× in a row on <code>${hostname_short}</code> — restarting service. URL: <code>${HEALTH_URL}</code>"
+    tg_alert "🚨 <b>wayan-bot</b> healthcheck failed ${failures}× in a row on <code>${hostname_short}</code> — restarting service. URL: <code>${HEALTH_URL}</code>.${dump_note}"
     systemctl restart "$SERVICE" || tg_alert "❌ <b>wayan-bot</b> restart command failed on <code>${hostname_short}</code>."
     write_failures 0
 else
-    tg_alert "⚠️ <b>wayan-bot</b> healthcheck failed (#${failures}) on <code>${hostname_short}</code>. Will restart on next failure. URL: <code>${HEALTH_URL}</code>"
+    tg_alert "⚠️ <b>wayan-bot</b> healthcheck failed (#${failures}) on <code>${hostname_short}</code>. Will restart on next failure. URL: <code>${HEALTH_URL}</code>.${dump_note}"
 fi
