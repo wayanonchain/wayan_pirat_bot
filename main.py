@@ -217,17 +217,14 @@ async def main():
     from bot.bot_bridge import register_main_loop
     register_main_loop()
 
-    # Forward ERROR+ log records to the team chat so technical issues are
-    # visible without tailing journalctl. Posts into a dedicated forum topic
-    # if one is configured, to keep the General topic clean for user events.
-    from bot.alerter import install as install_alerter
-    from config.settings import LOG_CHAT_ID, LOG_CHAT_ERRORS_THREAD_ID
-    if LOG_CHAT_ID:
-        install_alerter(LOG_CHAT_ID, message_thread_id=LOG_CHAT_ERRORS_THREAD_ID)
+    # Telegram error alerter intentionally not installed — transient ERRORs
+    # (Birdeye 4xx, db lock contention, aiogram network blips) flooded the
+    # log chat. The external watchdog (scripts/healthcheck.sh) is the only
+    # thing that pages now, and only when systemctl restart itself fails.
+    # ERRORs still go to journalctl + bot_log.txt.
 
     await init_database()
 
-    from bot.telegram_bot import send_message
     from db.repository import wallet_count
     from config.settings import (
         WEBHOOK_SIGNALS_ENABLED, WEBHOOK_SELL_ALERTS_ENABLED,
@@ -246,16 +243,7 @@ async def main():
         f"weekly_report={_flag(WEEKLY_SM_REPORT_ENABLED)}"
     )
     logger.info(f"Legacy alert features: {legacy_summary}")
-
-    await send_message(
-        f"<b>Wayne Pirate Bot Started</b>\n\n"
-        f"Smart Money wallets: {active}\n"
-        f"Legacy alerts: <code>{legacy_summary}</code>\n"
-        f"Accumulation module: on\n\n"
-        f"Use /status for details",
-    )
-
-    logger.info(f"Startup notification sent. {active} wallets in DB.")
+    logger.info(f"Startup complete. {active} wallets in DB.")
 
     # Helius webhook server — feeds `token_buys` with real SM trades which
     # in turn powers the accumulation-module discovery job. Embedded on the

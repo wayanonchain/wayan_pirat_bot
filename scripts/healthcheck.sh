@@ -7,9 +7,14 @@
 # to catch (see incident 2026-05-04 where retry-storm froze the loop while
 # the process stayed "active").
 #
-# On 1st consecutive failure: capture py-spy stack dump + alert to Telegram.
-# On 2nd consecutive failure: capture second dump + alert + restart service.
-# On success: reset the counter.
+# On 1st consecutive failure: capture py-spy stack dump (silent — no TG).
+# On 2nd consecutive failure: capture second dump + restart service (silent).
+# On restart-command failure: alert TG (this is the only path that pages now).
+# On success: reset the counter (silent).
+#
+# Telegram noise was deliberately removed 2026-05-05 — transient freezes
+# self-heal via restart, and the per-failure alerts were flooding the chat.
+# Stack dumps still land in $DUMP_DIR for post-mortem.
 #
 # Stack dumps are written to $DUMP_DIR/freeze-<timestamp>.txt — they tell us
 # where the loop was stuck when it stopped responding (added 2026-05-04 after
@@ -113,9 +118,6 @@ failures="$(read_failures)"
 hostname_short="$(hostname -s)"
 
 if probe; then
-    if [[ "$failures" -gt 0 ]]; then
-        tg_alert "✅ <b>wayan-bot</b> healthcheck recovered on <code>${hostname_short}</code> after ${failures} consecutive failures."
-    fi
     write_failures 0
     exit 0
 fi
@@ -123,17 +125,16 @@ fi
 failures=$((failures + 1))
 write_failures "$failures"
 
-DUMP_PATH=""
-if capture_dump "f${failures}"; then
-    dump_note=" Stack dump: <code>${DUMP_PATH}</code>"
-else
-    dump_note=" (stack dump not captured)"
-fi
+# Always capture a stack dump (cheap; written to disk only). Useful for
+# post-mortem of the freeze, but we no longer page TG on every freeze.
+capture_dump "f${failures}" || true
 
 if [[ "$failures" -ge 2 ]]; then
-    tg_alert "🚨 <b>wayan-bot</b> healthcheck failed ${failures}× in a row on <code>${hostname_short}</code> — restarting service. URL: <code>${HEALTH_URL}</code>.${dump_note}"
-    systemctl restart "$SERVICE" || tg_alert "❌ <b>wayan-bot</b> restart command failed on <code>${hostname_short}</code>."
+    # The "is the bot dead?" path. Restart usually fixes the freeze; only
+    # page TG if the restart command itself fails — that's the unrecoverable
+    # case the user actually wants to be woken up for.
+    if ! systemctl restart "$SERVICE"; then
+        tg_alert "❌ <b>wayan-bot</b> мёртв: <code>systemctl restart</code> упал на <code>${hostname_short}</code>. Бот не работает, нужно руками."
+    fi
     write_failures 0
-else
-    tg_alert "⚠️ <b>wayan-bot</b> healthcheck failed (#${failures}) on <code>${hostname_short}</code>. Will restart on next failure. URL: <code>${HEALTH_URL}</code>.${dump_note}"
 fi
