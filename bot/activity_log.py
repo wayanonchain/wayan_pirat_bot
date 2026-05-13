@@ -53,34 +53,13 @@ async def _send_log(text: str):
 #  Новый юзер
 # ────────────────────────────────────────
 
-async def log_new_user(user_id: int, username: str, first_name: str, referred_by: int = None):
+async def log_new_user(user_id: int, username: str, first_name: str):
     name, uid = _user_line(user_id, username, first_name)
-    ref = ""
-    if referred_by:
-        ref = f"\n   Пришёл по реферальной ссылке от ID <code>{referred_by}</code>"
     text = (
         f"👤 <b>Новый юзер в боте</b>\n"
         f"Юзер нажал /start и впервые попал в бота.\n\n"
         f"   Кто: {name}\n"
-        f"   ID: {uid}{ref}"
-    )
-    await _send_log(text)
-
-
-# ────────────────────────────────────────
-#  Реферальная ссылка активирована
-# ────────────────────────────────────────
-
-async def log_referral_activated(user_id: int, username: str, first_name: str,
-                                  referrer_id: int, referrer_name: str):
-    name, uid = _user_line(user_id, username, first_name)
-    text = (
-        f"🔗 <b>Юзер перешёл по реферальной ссылке</b>\n"
-        f"Кто-то кликнул на реферальную ссылку и зашёл в бота. "
-        f"Ему активирована скидка 20% на Курс.\n\n"
-        f"   Новый юзер: {name} (ID: {uid})\n"
-        f"   Пригласил: {referrer_name} (ID: <code>{referrer_id}</code>)\n"
-        f"   Скидка: 20% на Курс (400 → 320 USDT)"
+        f"   ID: {uid}"
     )
     await _send_log(text)
 
@@ -116,7 +95,6 @@ async def log_product_view(user_id: int, username: str, first_name: str,
 
 async def log_payment(user_id: int, username: str, first_name: str,
                       tier: str, amount_sol: float, tx_sig: str,
-                      referral_discount: bool = False,
                       amount_usdt: float = 0):
     name, uid = _user_line(user_id, username, first_name)
     tier_names = {
@@ -127,7 +105,6 @@ async def log_payment(user_id: int, username: str, first_name: str,
         "community": "Wayan Premium комьюнити",
     }
     tier_name = tier_names.get(tier, tier)
-    discount = "\n   Применена реферальная скидка 20%" if referral_discount else ""
     if amount_usdt > 0:
         amount_str = f"{amount_usdt:.0f} USDT"
     else:
@@ -137,7 +114,7 @@ async def log_payment(user_id: int, username: str, first_name: str,
         f"Админ подтвердил оплату и юзер получил доступ.\n\n"
         f"   Кто: {name} (ID: {uid})\n"
         f"   Продукт: {tier_name}\n"
-        f"   Сумма: {amount_str}{discount}\n"
+        f"   Сумма: {amount_str}\n"
         f"   TX: <code>{tx_sig[:20]}...</code>"
     )
     await _send_log(text)
@@ -173,32 +150,6 @@ async def log_community_granted(user_id: int, username: str, first_name: str):
         f"✅ <b>Комьюнити выдано юзеру</b>\n"
         f"Админ выполнил /grant_community — юзеру отправлена ссылка в Wayan Premium.\n\n"
         f"   Кто: {name} (ID: {uid})"
-    )
-    await _send_log(text)
-
-
-# ────────────────────────────────────────
-#  Реферальный кредит начислен
-# ────────────────────────────────────────
-
-async def log_referral_credit_earned(referrer_id: int, referrer_name: str,
-                                      buyer_id: int, buyer_name: str,
-                                      product: str, paid_referrals: int = 0):
-    if paid_referrals >= 3:
-        bonus = "комьюнити БЕСПЛАТНО"
-    elif paid_referrals >= 2:
-        bonus = "скидка 50% на комьюнити"
-    elif paid_referrals >= 1:
-        bonus = "скидка 20% на комьюнити"
-    else:
-        bonus = "—"
-    text = (
-        f"🎁 <b>Друг реферера купил курс</b>\n"
-        f"Друг реферера оплатил курс — реферер получает бонус на комьюнити.\n\n"
-        f"   Реферер: {referrer_name} (ID: <code>{referrer_id}</code>)\n"
-        f"   Друг: {buyer_name} (ID: <code>{buyer_id}</code>)\n"
-        f"   Всего оплативших друзей: {paid_referrals}\n"
-        f"   Бонус реферера: {bonus}"
     )
     await _send_log(text)
 
@@ -322,19 +273,3 @@ async def _flush_signal_log(signal_id: int):
     lines.append(f"   Всего получателей: {len(recipients)}")
 
     await _send_log("\n".join(lines))
-
-
-# ────────────────────────────────────────
-#  Реферальный бонус (старый, для совместимости)
-# ────────────────────────────────────────
-
-async def log_referral_bonus(referrer_id: int, referrer_name: str,
-                             referred_id: int, referred_name: str):
-    text = (
-        f"🤝 <b>Реферальный бонус активирован</b>\n"
-        f"Реферал оформил подписку — реферер получил бонус.\n\n"
-        f"   Реферал: {referred_name} (ID: <code>{referred_id}</code>)\n"
-        f"   Реферер: {referrer_name} (ID: <code>{referrer_id}</code>)\n"
-        f"   Бонус: 7 дней Premium"
-    )
-    await _send_log(text)

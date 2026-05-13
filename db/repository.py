@@ -313,15 +313,12 @@ async def upsert_subscriber(user_id: int, username: str = "", first_name: str = 
             if expires_at:
                 existing.expires_at = expires_at
         else:
-            import secrets
-            ref_code = secrets.token_hex(4)
             session.add(Subscriber(
                 user_id=user_id,
                 username=username,
                 first_name=first_name,
                 tier=tier,
                 expires_at=expires_at,
-                referral_code=ref_code,
             ))
         await session.commit()
 
@@ -331,8 +328,7 @@ async def activate_subscription(user_id: int, tier: str, days: int):
     async with async_session() as session:
         sub = await session.get(Subscriber, user_id)
         if not sub:
-            import secrets
-            sub = Subscriber(user_id=user_id, referral_code=secrets.token_hex(4))
+            sub = Subscriber(user_id=user_id)
             session.add(sub)
 
         now = datetime.utcnow()
@@ -418,32 +414,6 @@ async def record_payment(user_id: int, amount_sol: float, tx_signature: str,
                 return False
 
 
-# === Referral operations ===
-
-async def get_subscriber_by_referral_code(code: str) -> Subscriber | None:
-    """Find subscriber who owns this referral code."""
-    async with async_session() as session:
-        result = await session.execute(
-            select(Subscriber).where(Subscriber.referral_code == code)
-        )
-        return result.scalar_one_or_none()
-
-
-async def set_referred_by(user_id: int, referrer_id: int) -> bool:
-    """Set who referred this user. Returns False if already referred."""
-    async with async_session() as session:
-        sub = await session.get(Subscriber, user_id)
-        if not sub:
-            return False
-        if sub.referred_by:
-            return False  # Already has a referrer
-        if sub.user_id == referrer_id:
-            return False  # Can't refer yourself
-        sub.referred_by = referrer_id
-        await session.commit()
-        return True
-
-
 async def set_promo_code(user_id: int, code: str) -> bool:
     """Apply a promo code to user. Returns False if already has one."""
     async with async_session() as session:
@@ -455,40 +425,6 @@ async def set_promo_code(user_id: int, code: str) -> bool:
         sub.promo_code = code.upper()
         await session.commit()
         return True
-
-
-async def get_referral_stats(user_id: int) -> dict:
-    """Get referral stats for a user: total referrals, paid referrals."""
-    async with async_session() as session:
-        # Total referred users
-        total = await session.execute(
-            select(func.count()).select_from(Subscriber).where(
-                Subscriber.referred_by == user_id
-            )
-        )
-        total_count = total.scalar() or 0
-
-        # Paid referrals (those who bought course)
-        paid = await session.execute(
-            select(func.count()).select_from(Subscriber).where(
-                Subscriber.referred_by == user_id,
-                Subscriber.course_purchased == True,
-            )
-        )
-        paid_count = paid.scalar() or 0
-
-        return {
-            "total_referrals": total_count,
-            "paid_referrals": paid_count,
-        }
-
-
-async def get_referral_code(user_id: int) -> str | None:
-    """Get user's referral code."""
-    sub = await get_subscriber(user_id)
-    if sub:
-        return sub.referral_code
-    return None
 
 
 async def mark_course_purchased(user_id: int):
@@ -519,26 +455,6 @@ async def has_meteora_purchased(user_id: int) -> bool:
     """Check if user has purchased the Meteora course."""
     sub = await get_subscriber(user_id)
     return bool(sub and sub.meteora_purchased)
-
-
-async def add_referral_credit(user_id: int):
-    """Give user a 20%-off referral credit."""
-    async with async_session() as session:
-        sub = await session.get(Subscriber, user_id)
-        if sub:
-            sub.referral_credits = (sub.referral_credits or 0) + 1
-            await session.commit()
-
-
-async def use_referral_credit(user_id: int) -> bool:
-    """Use one referral credit. Returns True if used, False if none available."""
-    async with async_session() as session:
-        sub = await session.get(Subscriber, user_id)
-        if sub and (sub.referral_credits or 0) > 0:
-            sub.referral_credits -= 1
-            await session.commit()
-            return True
-        return False
 
 
 # === Course Access ===

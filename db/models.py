@@ -107,11 +107,8 @@ class Subscriber(Base):
     tier = Column(String(20), default="free")  # free / premium / premium_plus
     subscribed_at = Column(DateTime, nullable=True)
     expires_at = Column(DateTime, nullable=True)
-    referral_code = Column(String(20), unique=True, nullable=True)
-    referred_by = Column(Integer, nullable=True)
     course_purchased = Column(Boolean, default=False)
     meteora_purchased = Column(Boolean, default=False)
-    referral_credits = Column(Integer, default=0)  # 20%-off credits earned from referrals
     promo_code = Column(String(30), nullable=True)  # Applied promo code (e.g. "KATE")
     created_at = Column(DateTime, default=datetime.utcnow)
 

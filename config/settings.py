@@ -125,11 +125,6 @@ COMMUNITY_CHAT_ID = int(os.getenv("COMMUNITY_CHAT_ID", "-1003310009262"))
 USDT_MINT = "Es9vMFrzaCERmKfrNwnEUBLRKdPJg4kkjnBLTmM1JXWd"
 
 # === Discounts ===
-REFERRAL_COURSE_DISCOUNT = 0.20         # 20% off course for referred friend
-# Referral community discounts (based on how many friends bought course):
-# 1 friend → 20%, 2 friends → 50%, 3+ friends → 100% (free)
-REFERRAL_COMMUNITY_TIERS = {1: 0.20, 2: 0.50, 3: 1.00}
-
 # Promo codes: {code: {"discount": 0.10, "product": "course"}}
 PROMO_CODES = {
     "KATE": {"discount": 0.10, "product": "course", "label": "промокод KATE"},

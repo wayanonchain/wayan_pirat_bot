@@ -1,6 +1,6 @@
 """
 Comprehensive admin analytics for the bot.
-Commands: /analytics, /analytics_courses, /analytics_payments, /analytics_referrals, /analytics_growth
+Commands: /analytics, /analytics_courses, /analytics_payments, /analytics_growth
 """
 
 import logging
@@ -87,12 +87,6 @@ async def get_overview_analytics() -> str:
             .where(CourseAccess.is_test == False)
         )).scalar() or 0
 
-        # --- Referrals ---
-        users_with_referrer = (await session.execute(
-            select(func.count()).select_from(Subscriber)
-            .where(Subscriber.referred_by != None)
-        )).scalar() or 0
-
         users_with_promo = (await session.execute(
             select(func.count()).select_from(Subscriber)
             .where(Subscriber.promo_code != None)
@@ -132,14 +126,13 @@ async def get_overview_analytics() -> str:
         f"  Платный доступ (paid): {paid_course_access}",
         "",
         "🔗 <b>Маркетинг:</b>",
-        f"  Пришли по рефералке: {users_with_referrer}",
         f"  Активировали промокод: {users_with_promo}",
         "",
         "💰 <b>Платежи:</b>",
         f"  Всего: {total_payments} на <b>{total_revenue:.3f} SOL</b>",
         "",
         "━" * 28,
-        "<i>Детали: /ac /ap /ar /ag</i>",
+        "<i>Детали: /ac /ap /ag</i>",
     ]
     return "\n".join(lines)
 
@@ -377,96 +370,6 @@ async def get_payment_analytics() -> str:
         f"  Уникальных: <b>{unique_payers}</b>",
         f"  Повторных (2+ покупки): <b>{repeat_buyers}</b>",
     ])
-
-    return "\n".join(lines)
-
-
-async def get_referral_analytics() -> str:
-    """Referral and promo code analytics."""
-    now = datetime.utcnow()
-
-    async with async_session() as session:
-        # Total referrals
-        total_referred = (await session.execute(
-            select(func.count()).select_from(Subscriber)
-            .where(Subscriber.referred_by != None)
-        )).scalar() or 0
-
-        # Referred who bought course
-        referred_bought_course = (await session.execute(
-            select(func.count()).select_from(Subscriber)
-            .where(Subscriber.referred_by != None, Subscriber.course_purchased == True)
-        )).scalar() or 0
-
-        # Referred who bought meteora
-        referred_bought_meteora = (await session.execute(
-            select(func.count()).select_from(Subscriber)
-            .where(Subscriber.referred_by != None, Subscriber.meteora_purchased == True)
-        )).scalar() or 0
-
-        # Top referrers
-        top_referrers = (await session.execute(
-            select(
-                Subscriber.referred_by,
-                func.count().label("cnt"),
-            )
-            .where(Subscriber.referred_by != None)
-            .group_by(Subscriber.referred_by)
-            .order_by(func.count().desc())
-            .limit(10)
-        )).all()
-
-        # Load referrer names
-        referrer_names = {}
-        if top_referrers:
-            referrer_ids = [r[0] for r in top_referrers]
-            names = (await session.execute(
-                select(Subscriber.user_id, Subscriber.username, Subscriber.first_name)
-                .where(Subscriber.user_id.in_(referrer_ids))
-            )).all()
-            for uid, uname, fname in names:
-                referrer_names[uid] = fname or uname or str(uid)
-
-        # Promo code usage
-        promo_stats = (await session.execute(
-            select(Subscriber.promo_code, func.count())
-            .where(Subscriber.promo_code != None)
-            .group_by(Subscriber.promo_code)
-        )).all()
-
-        # Promo users who bought
-        promo_bought = (await session.execute(
-            select(Subscriber.promo_code, func.count())
-            .where(Subscriber.promo_code != None, Subscriber.course_purchased == True)
-            .group_by(Subscriber.promo_code)
-        )).all()
-        promo_bought_dict = dict(promo_bought)
-
-        # Referral conversion rate
-        ref_conversion = (referred_bought_course / total_referred * 100) if total_referred > 0 else 0
-
-    lines = [
-        "🔗 <b>АНАЛИТИКА — Рефералы и промокоды</b>",
-        "━" * 28,
-        "",
-        "📊 <b>Реферальная программа:</b>",
-        f"  Пришли по рефералке: <b>{total_referred}</b>",
-        f"  Из них купили Onchain: {referred_bought_course}",
-        f"  Из них купили Meteora: {referred_bought_meteora}",
-        f"  Конверсия реферал → покупка: <b>{ref_conversion:.1f}%</b>",
-    ]
-
-    if top_referrers:
-        lines.extend(["", "🏆 <b>Топ рефереров:</b>"])
-        for referrer_id, cnt in top_referrers:
-            name = referrer_names.get(referrer_id, str(referrer_id))
-            lines.append(f"  • {name} — <b>{cnt}</b> приглашённых")
-
-    if promo_stats:
-        lines.extend(["", "🏷 <b>Промокоды:</b>"])
-        for code, cnt in promo_stats:
-            bought = promo_bought_dict.get(code, 0)
-            lines.append(f"  • <code>{code}</code>: {cnt} активаций, {bought} покупок")
 
     return "\n".join(lines)
 

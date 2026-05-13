@@ -15,10 +15,6 @@ logger = logging.getLogger(__name__)
 # Tolerance for amount verification (+/-5%)
 AMOUNT_TOLERANCE = 0.05
 
-# Referral system
-REFERRAL_DISCOUNT = 0.20  # 20% discount for referred users
-REFERRAL_BONUS_DAYS = 7   # 7 days free Premium for referrer
-
 
 async def verify_sol_payment(tx_signature: str, expected_tier: str, user_id: int) -> dict:
     """
@@ -31,24 +27,7 @@ async def verify_sol_payment(tx_signature: str, expected_tier: str, user_id: int
     if not PAYMENT_WALLET:
         return {"ok": False, "error": "Кошелёк для оплаты не настроен. Обратись к админу."}
 
-    base_amount = PREMIUM_PRICE_SOL
-
-    # Check if user was referred — apply 20% discount
-    sub = await repo.get_subscriber(user_id)
-    has_referral_discount = False
-    if sub and sub.referred_by:
-        from sqlalchemy import select
-        from db.models import Payment
-        from db.repository import async_session
-        async with async_session() as session:
-            result = await session.execute(
-                select(Payment).where(Payment.user_id == user_id, Payment.verified == True)
-            )
-            prior_payments = result.scalars().all()
-        if not prior_payments:
-            has_referral_discount = True
-
-    expected_amount = base_amount * (1 - REFERRAL_DISCOUNT) if has_referral_discount else base_amount
+    expected_amount = PREMIUM_PRICE_SOL
 
     # Fetch transaction via Helius
     try:
@@ -86,31 +65,11 @@ async def verify_sol_payment(tx_signature: str, expected_tier: str, user_id: int
     logger.info(f"Subscription activated: user={user_id} tier={expected_tier} "
                 f"expires={expires_at} tx={tx_signature[:20]}...")
 
-    # Referral bonus: give referrer 7 days of Premium
-    referral_bonus_given = False
-    if sub and sub.referred_by and has_referral_discount:
-        try:
-            referrer_tier = await repo.get_user_tier(sub.referred_by)
-            bonus_tier = "premium" if referrer_tier == "free" else referrer_tier
-            await repo.activate_subscription(
-                user_id=sub.referred_by,
-                tier=bonus_tier,
-                days=REFERRAL_BONUS_DAYS,
-            )
-            referral_bonus_given = True
-            logger.info(f"Referral bonus: {REFERRAL_BONUS_DAYS} days {bonus_tier} "
-                        f"given to referrer {sub.referred_by}")
-        except Exception as e:
-            logger.error(f"Failed to give referral bonus: {e}")
-
     return {
         "ok": True,
         "expires_at": expires_at,
         "tier": expected_tier,
         "amount_sol": verification["amount_sol"],
-        "referral_discount": has_referral_discount,
-        "referral_bonus_given": referral_bonus_given,
-        "referrer_id": sub.referred_by if sub and sub.referred_by else None,
     }
 
 

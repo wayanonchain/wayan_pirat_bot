@@ -1,4 +1,4 @@
-"""Course & Community module — manual payment with referral discounts."""
+"""Course & Community module — manual payment with promo-code discounts."""
 
 import logging
 import re
@@ -21,8 +21,6 @@ from config.settings import (
     METEORA_PRICE_USDT, METEORA_PAYMENT_WALLET,
     PSYCHOLOGY_CHANNEL_ID,
     TELEGRAM_CHAT_ID, ADMIN_IDS,
-    REFERRAL_COURSE_DISCOUNT,
-    REFERRAL_COMMUNITY_TIERS,
     PROMO_CODES,
 )
 from db import repository as repo
@@ -43,65 +41,30 @@ TX_PATTERN = re.compile(r'^[1-9A-HJ-NP-Za-km-z]{80,100}$')
 # ──────────────────────────────────────
 
 async def get_discount_info(user_id: int) -> dict:
-    """Calculate discounts for a user.
-
-    Course discount: referral 20% + promo code (stacks).
-    Community discount (for course owners based on referral count):
-      1 paid referral → 20%, 2 → 50%, 3+ → 100% (free).
-    """
+    """Calculate promo-code discount for a user."""
     sub = await repo.get_subscriber(user_id)
     has_course = bool(sub and sub.course_purchased)
-    has_referrer = bool(sub and sub.referred_by)
 
-    # Course discount: referral + promo (stacking)
     course_discount_pct = 0
     course_discount_reason = ""
 
-    if has_referrer and not has_course:
-        course_discount_pct += int(REFERRAL_COURSE_DISCOUNT * 100)
-        course_discount_reason = "referral"
-
-    # Promo code discount (stacks with referral)
     if sub and sub.promo_code and not has_course:
         promo = PROMO_CODES.get(sub.promo_code)
         if promo and promo["product"] == "course":
-            promo_pct = int(promo["discount"] * 100)
-            course_discount_pct += promo_pct
-            if course_discount_reason:
-                course_discount_reason = f"referral+promo"
-            else:
-                course_discount_reason = "promo"
+            course_discount_pct = min(100, int(promo["discount"] * 100))
+            course_discount_reason = "promo"
 
-    # Cap stacked discount at 100% — a future promo code combined with
-    # referral could otherwise compute a negative price.
-    course_discount_pct = min(100, course_discount_pct)
     course_price = COURSE_PRICE_USDT
     if course_discount_pct:
         course_price = max(0, COURSE_PRICE_USDT * (1 - course_discount_pct / 100))
-
-    # Community discount: based on how many friends bought course (no course ownership needed)
-    community_discount_pct = 0
-    community_discount_reason = ""
-    stats = await repo.get_referral_stats(user_id)
-    paid_refs = stats.get("paid_referrals", 0)
-    for threshold in sorted(REFERRAL_COMMUNITY_TIERS.keys(), reverse=True):
-        if paid_refs >= threshold:
-            community_discount_pct = int(REFERRAL_COMMUNITY_TIERS[threshold] * 100)
-            community_discount_reason = f"referral_{paid_refs}"
-            break
-
-    community_discount_pct = min(100, community_discount_pct)
-    community_price = COMMUNITY_PRICE_USDT
-    if community_discount_pct:
-        community_price = max(0, COMMUNITY_PRICE_USDT * (1 - community_discount_pct / 100))
 
     return {
         "course_price": course_price,
         "course_discount_pct": course_discount_pct,
         "course_discount_reason": course_discount_reason,
-        "community_price": community_price,
-        "community_discount_pct": community_discount_pct,
-        "community_discount_reason": community_discount_reason,
+        "community_price": COMMUNITY_PRICE_USDT,
+        "community_discount_pct": 0,
+        "community_discount_reason": "",
         "has_course": has_course,
     }
 
@@ -143,16 +106,7 @@ def _back_kb() -> InlineKeyboardMarkup:
 def _price_text(original: float, discounted: float, discount_pct: int, reason: str) -> str:
     """Format price with optional strikethrough discount."""
     if discount_pct:
-        reason_map = {
-            "referral": "реферальная скидка",
-            "promo": "скидка по промокоду",
-            "referral+promo": "реферальная + промокод",
-        }
-        if reason.startswith("referral_"):
-            reason_text = "скидка за рефералов"
-        else:
-            reason_text = reason_map.get(reason, "скидка")
-
+        reason_text = "скидка по промокоду" if reason == "promo" else "скидка"
         if discount_pct >= 100:
             return f"🎁 <b>{reason_text} — БЕСПЛАТНО!</b>"
         return (
@@ -838,56 +792,6 @@ async def cmd_grant_course(message: Message, command: CommandObject):
             logger.error(f"[GRANT] Failed to send invite to user: {e}")
             await message.answer(f"⚠️ Не удалось отправить ссылку юзеру: <code>{e}</code>", parse_mode="HTML")
 
-    # Give referral bonus to referrer (community discount tiers)
-    sub = await repo.get_subscriber(target_user_id)
-    logger.info(f"[GRANT] sub={target_user_id} referred_by={sub.referred_by if sub else 'NO SUB'}")
-    referrer_info = ""
-    if sub and sub.referred_by:
-        referrer = await repo.get_subscriber(sub.referred_by)
-        referrer_name = (referrer.first_name or referrer.username or str(sub.referred_by)) if referrer else str(sub.referred_by)
-        buyer_name = sub.first_name or sub.username or str(target_user_id)
-
-        # Count paid referrals for the referrer
-        stats = await repo.get_referral_stats(sub.referred_by)
-        paid = stats.get("paid_referrals", 0)
-        logger.info(f"[GRANT] referrer={sub.referred_by} paid_referrals={paid} stats={stats}")
-
-        if paid >= 3:
-            bonus_text = "комьюнити БЕСПЛАТНО"
-        elif paid >= 2:
-            bonus_text = "скидку 50% на комьюнити"
-        elif paid >= 1:
-            bonus_text = "скидку 20% на комьюнити"
-        else:
-            bonus_text = "бонус"
-
-        referrer_info = f"\n🤝 Реферер {referrer_name} ({sub.referred_by}) получил {bonus_text} ({paid} друзей купили)"
-
-        # Log referral credit
-        from bot.activity_log import log_referral_credit_earned
-        await log_referral_credit_earned(
-            sub.referred_by, referrer_name,
-            target_user_id, buyer_name, "Курс",
-            paid_referrals=paid,
-        )
-
-        # Notify referrer
-        try:
-            await bot.send_message(
-                chat_id=sub.referred_by,
-                text=(
-                    f"🎁 <b>Реферальный бонус!</b>\n\n"
-                    f"Твой друг {buyer_name} купил курс.\n"
-                    f"У тебя уже <b>{paid}</b> друзей купили курс → тебе <b>{bonus_text}</b>!"
-                ),
-                parse_mode="HTML",
-            )
-            logger.info(f"[GRANT] Notification sent to referrer {sub.referred_by}")
-        except Exception as e:
-            logger.error(f"[GRANT] Failed to notify referrer: {e}")
-    else:
-        logger.info(f"[GRANT] No referrer for user {target_user_id}")
-
     # Log
     from bot.activity_log import log_course_granted
     target_sub = await repo.get_subscriber(target_user_id)
@@ -898,7 +802,7 @@ async def cmd_grant_course(message: Message, command: CommandObject):
     if invite_sent:
         await message.answer(
             f"✅ Курс выдан юзеру <code>{target_user_id}</code>.\n"
-            f"Ссылка отправлена.{referrer_info}",
+            f"Ссылка отправлена.",
             parse_mode="HTML",
         )
     elif not invite_link:
@@ -907,7 +811,7 @@ async def cmd_grant_course(message: Message, command: CommandObject):
     else:
         await message.answer(
             f"⚠️ Курс выдан юзеру <code>{target_user_id}</code>, "
-            f"но ссылку отправить не удалось.{referrer_info}",
+            f"но ссылку отправить не удалось.",
             parse_mode="HTML",
         )
 
@@ -1153,13 +1057,7 @@ async def _process_payment_request(message: Message, user_id: int,
 
     discount_line = ""
     if discount_pct:
-        reason_text = {
-            "referral": "реферальная",
-            "referral_credit": "за реферала",
-            "course_owner": "владелец курса",
-            "promo": "промокод",
-            "referral+promo": "реферальная + промокод",
-        }.get(discount_reason, "")
+        reason_text = "промокод" if discount_reason == "promo" else discount_reason
         original_prices = {"course": COURSE_PRICE_USDT, "community": COMMUNITY_PRICE_USDT, "meteora": METEORA_PRICE_USDT}
         original = original_prices.get(product, expected_price)
         discount_line = f"\n🎁 Скидка: {discount_pct}% ({reason_text}) — {original:.0f} → {expected_price:.0f} USDT"
